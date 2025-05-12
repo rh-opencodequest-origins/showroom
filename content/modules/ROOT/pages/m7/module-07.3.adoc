@@ -197,7 +197,7 @@ image:m7/orchestrator-workflow-run.png[]
 .. *Requester*: `dev1`
 .. *Size*: `small`
 .. *Reason*: you can leave this blank
-.. *Recipients*: `user: default/dev1`
+.. *Recipients*: `user:default/dev1`
 +
 image:m7/orchestrator-workflow-form.png[]
 . Click on *Next*. Expect to see an overview of your request.
@@ -225,7 +225,7 @@ image:m7/orchestrator-workflow-run-3.png[]
 .. *Requester*: `dev1`
 .. *Size*: `large`
 .. *Reason*: `I need this for my project`
-.. *Recipients*: `user: default/dev1`
+.. *Recipients*: `user:default/dev1`
 . Click on *Next* and *Run* to start the workflow.
 . Select the *Notifications* item in the left-hand menu. After a couple of seconds you will see a notification that an issue has been created in GitLab.
 . Click on the link of the notification. This opens the issue in GitLab.
