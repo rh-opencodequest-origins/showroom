@@ -78,7 +78,9 @@ The Software Templates for Developer Self Service are referenced in the _locatio
 Register this template using the {product_name_rhdh} UI:
 
 . Login to your https://backstage-backstage.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] as the `pe1` user with password `{common_password}`.
-. Select *Create* from the side menu.
+. Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Create* menu.
++
+image:m3/create-icon.png[] 
 . Click the *Register Existing Component* button.
 . Enter the following URL in the *Select URL* field and click *Analyze*:
 +
@@ -94,7 +96,7 @@ Three Software Templates will be imported: `namespace-small`,`namespace-large` a
 
 . Click *Import* when prompted.
 
-. Select the *Create...* item in the left-hand menu to see the new templates.
+. Select the image:common/plus-icon.png[width=15px] icon on the top navigation barto see the new templates.
 +
 image:m7/rhdh-developer-self-service-templates.png[Developer Self Service Software Templates]
 
@@ -103,7 +105,7 @@ The Software Templates to create namespaces are not meant to be used directly, b
 To demonstrate this:
 
 . Logout from your *pe1* user, and log back in as a developer with `dev1` / `{common_password}`. 
-. Select the *Create...* item on the left-hand side menu.
+. Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar.
 . Note that the `OpenShift Namespace Large Size` and the `OpenShift Namespace Small Size` Software Templates do not appear in the Software Template screen.
 +
 image:m7/rhdh-developer-self-service-templates-dev.png[Developer Self Service Software Templates]
@@ -170,7 +172,7 @@ image:m7/orchestrator-workflow-deployed.png[]
 
 === Developer Activity: Execute the Serverless Workflow
 
-Log out of {product_name_rhdh} and log in again as a *Developer* with `dev1` / `{common_password}`*.
+Log out of {product_name_rhdh} and log in again as a *Developer* with `dev1` / `{common_password}`.
 
 .Click to learn how to login as a Developer
 [%collapsible]
