@@ -1,5 +1,6 @@
 name: modules
-title: Platform Engineering Workshop
+title: |
+  LB1288 - Platform Engineering with Red Hat OpenShift and Red Hat Developer Hub: A Practical Guide
 version: master
 nav:
   - modules/ROOT/nav.adoc
@@ -19,5 +20,5 @@ asciidoc:
     - url: https://redhat.com
       text: Red Hat
     - url: https://www.redhat.com/en/engage/state-of-platform-engineering-age-of-ai
-      text: State of PE Report
+      text: State of PE Report 
   
