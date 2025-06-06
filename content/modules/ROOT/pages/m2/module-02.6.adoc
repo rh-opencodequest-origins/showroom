@@ -4,7 +4,7 @@
 
 include::../style.adoc[]
 
-Now that the import of User and Group entities, and authentication is enabled for those same users, let's focus on importing more Entities from your Git repositories.
+Now that the import of User and Group entities and authentication is enabled for those same users, let's focus on importing more Entities from your Git repositories. Having a rich and complete Software Catalog increases the value of the your IDP.
 
 === Enable GitLab Entity Discovery and TechDocs
 
@@ -33,7 +33,7 @@ image:m2/gitlab-catalog-provider.png[GitLab Catalog Provider, width=70%]
 . Commit your changes with the message `feat: add gitlab autodiscovery`.
 // +
 // image:m2/gitlab-discovery.png[GitLab code editor showing catalog providers configuration for {product_name_rhdh}]
-. Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`backstage` Application in OpenShift GitOps^, window="argo"].
+. Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`backstage` Application in OpenShift GitOps^, window="argo"] (login as `admin` / `{openshift_gitops_password}`).
 
 === Verify GitLab Entity Discovery is Active
 
