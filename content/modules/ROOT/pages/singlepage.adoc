@@ -2,6 +2,12 @@
 :doctype: book
 :imagesdir: assets/images
 
+++++
+    <style>
+.nav-container { display: none }
+</style>
+++++
+
 include::style.adoc[]
 
 include::index.adoc[] 
