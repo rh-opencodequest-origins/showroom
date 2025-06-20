@@ -31,8 +31,9 @@
 
 * xref:m7/module-07.0.adoc[6. Enable Continuous Improvement]
 ** xref:m7/module-07.1.adoc[6.1 Introduction]
-** xref:m7/module-07.2.adoc[6.2 Observability]
-** xref:m7/module-07.3.adoc[6.3 Developer Self Service]
+** xref:m7/module-07.2.adoc[6.2 Adoption Insights]
+** xref:m7/module-07.3.adoc[6.3 Observability]
+** xref:m7/module-07.4.adoc[6.4 Developer Self Service]
 
 * xref:env.adoc[My lab environment details]
 
