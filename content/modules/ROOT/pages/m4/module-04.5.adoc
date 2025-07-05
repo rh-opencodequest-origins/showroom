@@ -65,7 +65,10 @@ image:m4/parasol-branch-first-pipeline-success.png[]
 
 . Explore the other tabs to see how {product_name_rhdh} provides a single pane of glass for the Developer's ephemeral dev environment.
 .. The *Overview* tab provides easy access to the sourcecode and deployments
-.. The *Topology* tab provides a window to the deployment on OpenShift
+.. The *Topology* tab provides a window to the deployment on OpenShift, that gives a developer access to all the deployment parameters, labels and annotations - but also provides *searchable* access to the Pod logs, without the need to switch to OpenShift directly.
++
+image:m4/feature-branch-deployment-pod-log.png[]
+
 .. The *Issues and Pull/Merge Requests* tabs provide insights about the GitLab repo
 .. *CI* tab shows an easy view of the pipeline in both OpenShift (Tekton based pipeline), and on GitLab
 .. The *CD* tab shows the deployed components/systems in the namespace using Argo CD plugin
