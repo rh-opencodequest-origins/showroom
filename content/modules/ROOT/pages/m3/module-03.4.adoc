@@ -14,7 +14,7 @@ Create a new software Component and supporting infrastructure using the *Quarkus
 . Click the *Create* icon (plus symbol) in the top menu.
 +
 image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
-. Click the *Choose* button on the *Quarkus Service*. The *Software Templates* screen will be displayed.
+. Click the *Choose* button on the *Quarkus Service*. The Template parameters collection screen will be displayed.
 . In Step 1, you'll be prompted to enter a set of application parameters. Thankfully, defaults are provided by the template, so you can simply click *Next*.
 . In Step 2, when prompted to *Provide Image Registry Information*:
   * Select the *Quay* image registry.
