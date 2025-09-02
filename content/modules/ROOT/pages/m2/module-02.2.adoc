@@ -1,5 +1,11 @@
 :imagesdir: ../../assets/images
 
+== Pick the chosen one ! (add warning)
+
+This is a shared part. It means, one person will be able to go through those steps. The work accomplished will be useful for everyone !
+
+
+
 == Activity: Access {product_name_rhdh}
 
 include::../style.adoc[]

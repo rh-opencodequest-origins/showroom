@@ -10,6 +10,20 @@ Many organizations today are grappling with serious challenges that hinder their
 
 Red Hat provides the tools and know-how to help "The Providers" (Platform Engineers) to create "The Product" (their internal developer portal) based on the needs of "The Customers" (all Development Teams within the organization).
 
+== Team Organization
+
+Today, You will learn how to onboard new team members on an amazing platform. The Developer Internal Platform ! AKA Platform Engineering. You will be 3 people. Working closely to embrace severals roles to explore 3 main topcis :
+
+* Defining the plaftorm engineering according to existing tools in a fictive organization
+* Develop and deploy your application freshly onboarded thanks to your platform engineering previously created
+* Take steps back and improve your platform engineering 
+
+The workshop will be paced with 2 different roles. 
+The first is the platform engineer . It will be in charge to configure the internal developer platform and define templates according to application development requirements.
+The second is the developer. It will consume the internal developer platform, produce code and ship it to target environments
+
+As you will be a team of 3, you will drive parts sometimes individually or together. Together means someone from the team will own the "execution" of a "shared part" of the workshop and the rest of team will follow it carefully because each member will do a "shared part" in this session
+
 == Primary Audience
 
 This workshop is designed for Platform Engineers who are in charge of:
