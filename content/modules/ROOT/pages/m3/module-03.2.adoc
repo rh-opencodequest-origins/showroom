@@ -1,10 +1,11 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import the Software Template
+== Platform Engineer Activity: USER 1 Import the Software Template Quarkus-postgresql
 
 include::../style.adoc[]
 
 The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-quarkus-simple[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
+https://github.com/rh-opencodequest-origins/opencodequest-templates/tree/main/scaffolder-templates/quarkus-postgresql
 
 Register this template using the {product_name_rhdh} UI:
 
@@ -30,4 +31,4 @@ Return to the *Catalog* section, and set the _Kind_ filter to _Template_. Your n
 
 image:m3/rhdh-quarkus-template.png[Registering and Entity]
 
-Before using the Template, we'll need to onboard a developer. Continue to the next section to complete a developer-focused task.
+Before using the Template, we'll need to explore it ...

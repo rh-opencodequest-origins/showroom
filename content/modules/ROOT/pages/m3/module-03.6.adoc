@@ -43,6 +43,8 @@ image:m3/rhdh-template-refresh.png[Refresh Template Button]
 
 From this point forward any new Component created using the Template will display the CD tab automatically.
 
+== Safety Check - Kahoot time 
+
 == Conclusion
 
 Congratulations! You've learned how to:

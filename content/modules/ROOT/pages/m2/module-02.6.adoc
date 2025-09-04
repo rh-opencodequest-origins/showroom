@@ -82,7 +82,7 @@ It's possible to offload the TechDocs build process to a CI/CD pipeline that use
 
 Using the `external` builder strategy reduces load on the {product_name_rhdh} instance, but places the burden of building and publishing the TechDocs on authors. Repository owners and authors can build their TechDocs using the https://backstage.io/docs/features/techdocs/cli/[TechDocs CLI, window="content"].
 
-== Safety Checks
+== Safety Checks - Kahoot TIME 
 
 Wrap up the job done to your peers. Explain which capabilities (AuthN / SCM / RBAC) has been added to the internal developer platform
 
