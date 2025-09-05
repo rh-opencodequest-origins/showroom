@@ -16,7 +16,161 @@ u {
 summary  {
     cursor: pointer;
 }
+.developer {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+   
+}
 
+.developer .doc {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(30, 136, 229, 0.15);
+    border-left: 4px solid #1976d2;
+}
+
+.developer h1, .developer h2 {
+    color: #1565c0;
+    border-bottom: 2px solid #bbdefb;
+    padding-bottom: 8px;
+}
+
+.developer h3 {
+    color: #1976d2;
+}
+
+.developer .admonitionblock {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #2196f3;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
+}
+
+.developer .admonitionblock.note {
+    border-left-color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+.developer .admonitionblock.important {
+    border-left-color: #ff9800;
+    background-color: rgba(255, 152, 0, 0.05);
+}
+
+.developer .imageblock img {
+    border: 3px solid #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+}
+
+.developer .listingblock .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #bbdefb;
+    border-radius: 4px;
+}
+
+/* ===== CLASSE PE - THEME ROUGE ===== */
+.pe {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 50%, #ef9a9a 100%);
+}
+
+.pe .doc {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(211, 47, 47, 0.15);
+    border-left: 4px solid #d32f2f;
+}
+
+.pe h1, .pe h2 {
+    color: #c62828;
+    border-bottom: 2px solid #ffcdd2;
+    padding-bottom: 8px;
+}
+
+.pe h3 {
+    color: #d32f2f;
+}
+
+.pe .admonitionblock {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #f44336;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.1);
+}
+
+.pe .admonitionblock.note {
+    border-left-color: #f44336;
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+.pe .admonitionblock.important {
+    border-left-color: #ff5722;
+    background-color: rgba(255, 87, 34, 0.05);
+}
+
+.pe .imageblock img {
+    border: 3px solid #ffebee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.pe .listingblock .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ffcdd2;
+    border-radius: 4px;
+}
+
+/* ===== STYLES COMMUNS ===== */
+.developer .doc, .pe .doc {
+    transition: all 0.3s ease;
+}
+
+.developer .doc:hover, .pe .doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration des liens */
+.developer a {
+    color: #1976d2;
+    text-decoration: none;
+    border-bottom: 1px dotted #1976d2;
+}
+
+.developer a:hover {
+    color: #0d47a1;
+    border-bottom: 1px solid #0d47a1;
+}
+
+.pe a {
+    color: #d32f2f;
+    text-decoration: none;
+    border-bottom: 1px dotted #d32f2f;
+}
+
+.pe a:hover {
+    color: #b71c1c;
+    border-bottom: 1px solid #b71c1c;
+}
+
+/* Boutons et éléments interactifs */
+.developer .btn, .developer button {
+    background-color: #1976d2;
+    border-color: #1976d2;
+    color: white;
+}
+
+.pe .btn, .pe button {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    color: white;
+}
 </style>
 
 ++++

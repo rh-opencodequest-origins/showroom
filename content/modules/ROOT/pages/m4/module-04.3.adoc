@@ -7,7 +7,7 @@ include::../style.adoc[]
 
 In this module, you will import an existing API and an existing application (Component) using the Software Templates that were setup by the Platform Engineer in the previous section.
 
-IMPORTANT: Please make sure to log in as a *Developer* with `dev1` / `{common_password}`.
+IMPORTANT: Please make sure to log in as a *Developer* with `{dev-username}` / `{common_password}`.
 
 .Click here to view instructions to login as a Developer.
 [%collapsible]
@@ -51,7 +51,7 @@ Provide information about the new component you are registering. Fill out the fo
 | Component Repository name | Keep default value | `all-location-parasol` 
 | Component Name of API | Keep default value | `parasol-store-api`
 | System Name | Choose from dropdown | `system:default/parasol-system`
-| Owner | Keep default value | `user:default/dev1`
+| Owner | Keep default value | `user:default/{dev-username}`
 | A Short Description Of This Component |Enter a suitable description | `Open API specification for the parasol-store application`
 | Lifecycle | Enter value. Can be any lifecycle value, but take great care to establish a proper taxonomy for these. (Well-known values `experimental`, `production` and `deprecated`) | `production` 
 |====
@@ -126,7 +126,7 @@ Provide information about your existing app
 | Component Repository Name | Keep default value | `all-location-parasol` 
 | Component Name of the App | Keep default value | `parasol-store`
 | System name | System (auto-populated) | `system:default/parasol-system`
-| Owner | Keep default value | `user:default/dev1`
+| Owner | Keep default value | `user:default/{dev-username}`
 | A Short Description Of This Component | Keep default value | Core services for the Parasol application
 |====
 +

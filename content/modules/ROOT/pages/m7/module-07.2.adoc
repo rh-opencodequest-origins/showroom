@@ -22,7 +22,7 @@ NOTE: The Adoption Insights plugin is current in Developer Preview. Refer to the
 Adoption Insights is enabled similar to other plugins for {product_name_rhdh} - by updating the dynamic plugins configuration and supplying plugin specific configuration.
 
 . Open your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/blob/main/values.yaml[values.yaml file, window="gitlab"].
-. Make sure you're logged in to GitLab as `pe1` / `{common_password}`.
+. Make sure you're logged in to GitLab as `{pe-username}` / `{common_password}`.
 . Select *Edit > Edit single file*.
 . Find the YAML surrounded by `--- ADOPTION INSIGHTS PLUGIN ---` and uncomment it by highlighting it and pressing `CMD + /` or `CTRL + /`.
 . Don't commit the changes yet.
@@ -50,8 +50,8 @@ image:m7/adoption-insights-plugin-dashboard.png[]
 
 Once the new deployment has finished you'll need to interact with {product_name_rhdh} to generate events that the Adoption Insights dashboard can display. There are a few ways to do this:
 
-. Open a private browsing session and login as user `dev1` using the password `{common_password}`.
-. While logged in as `dev1` and `dev2`:
+. Open a private browsing session and login as user `{dev-username}` using the password `{common_password}`.
+. While logged in as `{dev-username}` and `dev2`:
     . Use the **Search Bar** in the top navigation menu to find APIs and Components.
     . Visit the **Docs** page and view the documentation for your Quarkus application.
     . Generate a new application using the Quarkus Software Template.
@@ -60,7 +60,7 @@ Perform multiple searches and view multiple APIs and Components to generate suff
 
 === Platform Engineer Activity: View Adoption Insights
 
-Now that you've generated some events, login to {product_name_rhdh} as the `pe1` user. Expand the **Administration** section in the side menu and click the **Adoption Insights** link.
+Now that you've generated some events, login to {product_name_rhdh} as the `{pe-username}` user. Expand the **Administration** section in the side menu and click the **Adoption Insights** link.
 
 image:m7/adoption-insights-with-data.png[]
 

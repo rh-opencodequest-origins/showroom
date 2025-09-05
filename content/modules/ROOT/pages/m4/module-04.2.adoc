@@ -7,7 +7,7 @@ include::../style.adoc[]
 
 As mentioned in the previous section, the Platform Engineering team created two Templates for importing existing applications/services (Components), and APIs into {product_name_rhdh}. While it is possible to use the same template to import both of them, there are some key differences in the data that must be gathered for API and Component Entities. 
 
-IMPORTANT: Please make sure to log in as a *Platform Engineer* with `pe1` / `{common_password}`. Refer to the below guide for assistance.
+IMPORTANT: Please make sure to log in as a *Platform Engineer* with `{pe-username}` / `{common_password}`. Refer to the below guide for assistance.
 
 .Click to learn how to login as a Platform Engineer
 [%collapsible]
@@ -39,7 +39,7 @@ The *import-existing-app* template does the following:
 
 === Add Templates to Catalog Configuration
 
-. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `pe1` / `{common_password}`.
+. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `{pe-username}` / `{common_password}`.
 . You should already be in Edit mode of the `values.yaml` file if you clicked the link above.
 . Locate the `catalog:` section and find the `locations:` array. 
 . Add the following two new entries to the `locations:` array to import both Software Templates:
@@ -77,7 +77,7 @@ The new templates require plugins to function, and ensure the newly created Enti
 
 === Enable the Plugins 
 
-. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `pe1` / `{common_password}`.
+. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `{pe-username}` / `{common_password}`.
 . You should already be in Edit mode of the `values.yaml` file.
 . Locate the comment `--- DYNAMIC_PLUGINS_IMPORT_COMPONENTS ---`
 . Highlight the YAML section shown in the below screenshot, and uncomment those lines. Use `CMD + /` or `CTRL + /` to do so.

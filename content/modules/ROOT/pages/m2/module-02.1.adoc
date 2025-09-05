@@ -67,7 +67,7 @@ spec:
   lifecycle: development
 
   # Reference to the User or Group Entity that is responsible this Component
-  owner: "pe1"
+  owner: "{pe-username}"
 ```
 
 Users and Groups can be specified as owners of other Entities. If this seems abstract, don't worry, you'll see it in definitive terms shortly. A well curated Software Catalog will enable your developers to find API documentation and teams that are responsible for the Components powering those APIs, for example.
@@ -127,9 +127,8 @@ Your workshop environment has been pre-configured such that this repository in G
 
 With that out of the way, let's get to work on configuring your instance of {product_name_rhdh}!
 
-=== Safety Checks
+=== Quizz time - Check your knowledge !
 
-Challenge each other to explain what are the following concept without paying attention to the guide.
 
 What is a software template ?
 
