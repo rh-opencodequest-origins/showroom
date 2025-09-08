@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import the Software Template Quarkus-postgresql
+== Platform Engineer Activity: Import Entity and Domain
 
 include::../style.adoc[]
 
@@ -54,18 +54,43 @@ image:m3/rhdh-catalog-create.png[The empty Create UI]
 +
 [source,bash,role=execute,subs=attributes+]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-quarkus-simple/-/blob/main/template.yaml?ref_type=heads
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads
+
+
+
+
+
+
+
 ----
 . You'll be asked to review the entities being imported, as shown:
 +
 image:m3/rhdh-register-template.png[Registering and Entity]
 . Click *Import* when prompted.
 
-Return to the *Catalog* section, and set the _Kind_ filter to _Template_. Your new *Quarkus Service* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
+Return to the *Catalog* section, and set the _Kind_ filter to Domain. Your new *opencodequest-team{team-id}* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
 
 image:m3/rhdh-quarkus-template.png[Registering and Entity]
 
-NOTE: Before using the Template, we'll need to explore it ...
+// screen-shot to add
+
+
++
+image:m3/rhdh-register-template.png[Registering and Entity]
+. Click *Import* when prompted.
+
+Return to the *Catalog* section, and set the _Kind_ filter to System. Your new *opencodequest-team{team-id}* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
+
+
+// screen-shot to add
+image:m3/rhdh-quarkus-template.png[Registering and Entity]
+
+
+
+
+
+
+Before using the Template, we'll need to explore it ...
 
 
 ++++

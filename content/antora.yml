@@ -20,6 +20,7 @@ asciidoc:
     common_password: user-password
     openshift_cluster_ingress_domain: mon-cluster-ocp
     openshift_gitops_password: gitops-password
+    team-id: 6
     page-links:
     - url: https://redhat.com
       text: Red Hat
