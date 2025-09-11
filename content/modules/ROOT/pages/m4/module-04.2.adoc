@@ -24,8 +24,8 @@ You learned how to create and import Software Templates using the {product_name_
 
 The two Software Templates you'll be importing are:
 
-* *import-existing-api* - Available in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/import-existing-api-template/-/blob/main/template.yaml[import-existing-api-template/template.yaml^, window="gitlab"] file in GitLab
-* *import-existing-app* - Available in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/import-existing-app-template/-/blob/main/template.yaml[import-existing-app-template/template.yaml^, window="gitlab"] file in GitLab
+* *import-existing-api* - Available in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/import-existing-api-template/-/blob/main/template.yaml[import-existing-api-template/template.yaml^, window="gitlab"] file in GitLab
+* *import-existing-app* - Available in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/import-existing-app-template/-/blob/main/template.yaml[import-existing-app-template/template.yaml^, window="gitlab"] file in GitLab
 
 The *import-existing-api* template does the following:
 
@@ -39,7 +39,7 @@ The *import-existing-app* template does the following:
 
 === Add Templates to Catalog Configuration
 
-. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `{pe-username}` / `{common_password}`.
+. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `{pe-username}` / `{common_password}`.
 . You should already be in Edit mode of the `values.yaml` file if you clicked the link above.
 . Locate the `catalog:` section and find the `locations:` array. 
 . Add the following two new entries to the `locations:` array to import both Software Templates:
@@ -49,9 +49,9 @@ The *import-existing-app* template does the following:
 catalog:
   locations:
     - type: url
-      target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/import-existing-api-template/-/blob/main/template.yaml
+      target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/import-existing-api-template/-/blob/main/template.yaml
     - type: url
-      target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/import-existing-app-template/-/blob/main/template.yaml
+      target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/import-existing-app-template/-/blob/main/template.yaml
 ----
 +
 NOTE: Make sure to maintain proper YAML indentation and alignment with the existing `locations:` entries.
@@ -77,7 +77,7 @@ The new templates require plugins to function, and ensure the newly created Enti
 
 === Enable the Plugins 
 
-. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `{pe-username}` / `{common_password}`.
+. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/edit/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"]. If prompted, login with `{pe-username}` / `{common_password}`.
 . You should already be in Edit mode of the `values.yaml` file.
 . Locate the comment `--- DYNAMIC_PLUGINS_IMPORT_COMPONENTS ---`
 . Highlight the YAML section shown in the below screenshot, and uncomment those lines. Use `CMD + /` or `CTRL + /` to do so.
@@ -107,7 +107,7 @@ In a previous chapter you learned how https://backstage.io/docs/features/softwar
 +
 [source,bash,role=execute,subs="attributes"]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/rhdh-entities/-/blob/main/locations.yaml
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/rhdh-entities/-/blob/main/locations.yaml
 ----
 . Click *Import* in the Review section.
 . The Systems and Domain are setup. 

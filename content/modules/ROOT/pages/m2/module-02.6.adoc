@@ -13,7 +13,7 @@ https://npmjs.com/package/@backstage/plugin-catalog-backend-module-gitlab/v/0.3.
 
 To install and configure this plugin:
 
-. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository^, window="gitlab"] in your GitLab instance.
+. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository^, window="gitlab"] in your GitLab instance.
 . Select *Edit > Edit single file*.
 . Uncomment the `--- TECHDOCS_PLUGIN ---` section in `dynamic.plugins` section of the YAML, to enable the TechDocs and GitLab dynamic plugins.
 +
@@ -62,7 +62,7 @@ image:m2/global-techdocs-docs.png[Global TechDocs being rendered]
 
 == TechDocs Generation and Storage Configuration
 
-Recall the `techdocs` configuration from your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/blob/main/values.yaml[values.yaml file in GitLab, window="gitlab"]. It should resemble the following example:
+Recall the `techdocs` configuration from your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in GitLab, window="gitlab"]. It should resemble the following example:
 
 [source,yaml,subs=attributes+]
 ----

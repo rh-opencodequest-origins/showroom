@@ -34,7 +34,7 @@ include::../login-pe.adoc[]
 +
 [source,bash,role=execute,subs="attributes"]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/parasol-store-dev-template/-/blob/main/template.yaml
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/parasol-store-dev-template/-/blob/main/template.yaml
 ----
 . Click on the *Analyze* button followed by clicking the *Import* button to import the template.
 . The Template will appear on the Create screen.

@@ -15,25 +15,10 @@ include::../style.adoc[]
 
 In this activity you'll configure an OpenID Connect authentication provider - this will enable developers within your organization to login using their single sign-on (SSO) credentials.
 
-=== High-Level Workflow
-
-A complete set of documentation for configuring OpenID Connect authentication using https://access.redhat.com/products/red-hat-single-sign-on[Red Hat Single Sign-On^, window="content"] is available in the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html/authentication_in_red_hat_developer_hub/assembly-authenticating-with-rhbk[{product_name_rhdh} documentation^, window="content"].
-
-NOTE: Don't worry if some of the following bullet points are hard to understand upon first reading them. You'll be guided through each piece step-by-step.
-
-The high-level steps involve:
-
-. Creating a Realm and Client in Red Hat Single Sign-On. These have been pre-configured for you. View the `backstage` Realm using the following URL and credentials:
-    * *URL*: {sso-link}[Backstage Realm on Red Hat Single Sign-On^, window=sso]
-    * *Credentials*: https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/keycloak/secrets/keycloak-initial-admin[View on OpenShift, window="content"]. (If needed, login to OpenShift as `admin`/`{common_password}`)
-. Configuring the {product_name_rhdh} Keycloak plugin to synchronize users from Red Hat Single Sign-On to {product_name_rhdh}.
-. Configuring the `oidc` {product_name_rhdh} authentication provider with the Realm details.
-. Setting `oidc` as `signInPage` page type for {product_name_rhdh}.
-. Enabling session support in {product_name_rhdh}.
 
 === Configure the OpenID Connect Authentication Provider
 
-. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/[rhdh/developer-hub-config repository on GitLab, window="gitlab"].
+. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/[rhdh/developer-hub-config repository on GitLab, window="gitlab"].
 . Open the *values.yaml* file, then select *Edit > Edit single file*.
 . Locate the `appConfig.auth` object in the YAML. You can search for `--- AUTHENTICATION ---` in this file to locate this section.
 . Delete the existing `auth` configuration that contains the `guest` provider.

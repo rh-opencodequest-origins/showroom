@@ -22,7 +22,7 @@ include::../login-pe.adoc[]
 
 === Update the Quarkus Service template in GitLab
 
-. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-quarkus-simple/-/blob/main/skeleton/catalog-info.yaml[rhdh/template-quarkus-simple/skeleton/catalog-info.yaml,  window="gitlab"] file in GitLab.
+. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-quarkus-simple/-/blob/main/skeleton/catalog-info.yaml[rhdh/template-quarkus-simple/skeleton/catalog-info.yaml,  window="gitlab"] file in GitLab.
 . Select _Edit > Edit single file_.
 . Uncomment the following in the `annotations` section of the file:
 +

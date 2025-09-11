@@ -40,7 +40,7 @@ The result is that users belonging to the `platformengineers` group can create C
 
 As with other {product_name_rhdh} plugins, enabling RBAC involves modifying the configuration file stored in GitLab.
 
-. Access the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config configuration on GitLab, window="gitlab"].
+. Access the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config configuration on GitLab, window="gitlab"].
 . Select *Edit > Edit single file*. When prompted, login as `{pe-username}` / `{common_password}`.
 . There are *2 sections* in the {product_name_rhdh} configuration which refer to the RBAC setup, both under `-- RBAC --` blocks. You can use `CMD + /` or `CTRL + /` keys to uncomment the blocks.
 .. Look for the *first block*; This enables the `backstage-community-plugin-rbac` dynamic plugin which allows you to assign permissions to users and groups; highlight this block and uncomment it.

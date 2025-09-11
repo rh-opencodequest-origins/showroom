@@ -89,7 +89,7 @@ This is why the *Sofware Catalog* exists ! A clear definition of UI elements bas
         catalogInfoPath: "/catalog-info.yaml"
 ```
 The template creates a *Software Catalog* thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-quarkus-simple/-/blob/main/template.yaml[template.yaml, window="gitlab"].
+Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-quarkus-simple/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 
 ++++
 </div>

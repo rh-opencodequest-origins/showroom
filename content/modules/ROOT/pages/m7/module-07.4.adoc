@@ -31,7 +31,7 @@ include::../login-pe.adoc[]
 
 === Configure the Orchestrator Plugin
 
-. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/[rhdh/developer-hub-config repository on GitLab, window="gitlab"].
+. Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/[rhdh/developer-hub-config repository on GitLab, window="gitlab"].
 . Open the `values.yaml` file, then select *Edit > Edit single file*.
 . Uncomment the `--- ORCHESTRATOR PLUGIN ---` section in the `dynamic.plugins` section of the YAML, to enable the Orchestrator and Notification dynamic plugins.
 +
@@ -73,7 +73,7 @@ To illustrate the possibilities of the Orchestrator plugin, let's imagine the fo
 The workflow instance that will be deployed later in the lab launches a software template, eventually after approval, to create a namespace for the user. +
 So before deploying the workflow itself, we need to import the software templates to create the namespace.
 
-The Software Templates for Developer Self Service are referenced in the _location.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-developer-self-service[rhdh/template-developer-self-service, window="gitlab"] repository in GitLab.
+The Software Templates for Developer Self Service are referenced in the _location.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-developer-self-service[rhdh/template-developer-self-service, window="gitlab"] repository in GitLab.
 
 Register this template using the {product_name_rhdh} UI:
 
@@ -86,7 +86,7 @@ image:m3/create-icon.png[]
 +
 [source,bash,role=execute,subs=attributes+]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-developer-self-service/-/blob/main/location.yaml?ref_type=heads
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-developer-self-service/-/blob/main/location.yaml?ref_type=heads
 ----
 . You'll be asked to review the entities being imported, as shown:
 +
@@ -112,7 +112,7 @@ image:m7/rhdh-developer-self-service-templates-dev.png[Developer Self Service So
 
 This is accomplished by applying conditional RBAC rules.
 
-The `OpenShift Namespace Large Size` and the `OpenShift Namespace Small Size` Software Templates are annotated with the `backstage.io/managed-by: orchestrator` annotation, as can be seen in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-developer-self-service/-/blob/main/namespace/template-large.yaml?ref_type=heads[Template file in GitLab, window="gitlab"] file.
+The `OpenShift Namespace Large Size` and the `OpenShift Namespace Small Size` Software Templates are annotated with the `backstage.io/managed-by: orchestrator` annotation, as can be seen in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-developer-self-service/-/blob/main/namespace/template-large.yaml?ref_type=heads[Template file in GitLab, window="gitlab"] file.
 
 image:m7/template-large-namespace-annotation.png[Template Namespace Large Annotation]
 
@@ -140,7 +140,7 @@ This rule states that users with the role `default/location_read_developer` can 
 
 A Serverless Worflow is deployed through a `SonataFlow` Custom Resource. As with the other deployments in this workshop, we use GitOps and ArgoCD to deploy the Serverless Workflow.
 
-. Open the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/orchestrator-workflows/-/blob/main/manifests/create-ocp-namespace-swt/application.yaml?ref_type=heads[ArgoCD Application manifest in GitLab^, window="gitlab"]
+. Open the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/orchestrator-workflows/-/blob/main/manifests/create-ocp-namespace-swt/application.yaml?ref_type=heads[ArgoCD Application manifest in GitLab^, window="gitlab"]
 . Click on the *Copy file contents* button on the top right menu.
 +
 image:m7/gitlab-copy-file-contents.png[GitLab Copy File Contents]
@@ -252,7 +252,7 @@ image:m7/notification-2.png[]
 The workflow instance checks the status of GitLab issue at a regular interval (every 60 sec. in this case). When the workflow detects the *Approved* label on the issue, it proceeds to create the namespace and closes the ticket afterwards.
 . You can check the https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/cluster/projects/{dev-username}-large-1[Namespace in the OpenShift console^, window="console"] in your OpenShift cluster.
 +
-Also notice that the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/rhdh-issues/-/issues/1[Issue in GitLab^, window="gitlab"] has been closed by the workflow.
+Also notice that the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/rhdh-issues/-/issues/1[Issue in GitLab^, window="gitlab"] has been closed by the workflow.
 +
 image:m7/gitlab-issue-5.png[]
 . Feel free to create another request for a large namespace, but this time label the issue as *Denied*. In this case, you should see a notification in 

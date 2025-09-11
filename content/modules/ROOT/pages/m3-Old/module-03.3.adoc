@@ -19,7 +19,7 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
-The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/template-quarkus-simple[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
+The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-quarkus-simple[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
 https://github.com/rh-opencodequest-origins/opencodequest-templates/tree/main/scaffolder-templates/quarkus-postgresql
 
 Register this template using the {product_name_rhdh} UI:
