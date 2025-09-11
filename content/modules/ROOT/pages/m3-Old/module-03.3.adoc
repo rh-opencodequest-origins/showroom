@@ -7,37 +7,6 @@ include::../style.adoc[]
 
 
 
-=== Role switch ! 
-
-In this workshop, you will switch between the developer role and the platform engineer role.
-
-++++
-<div class="developer">
-++++
-Parts related to the developer role will be with a blue background color
-++++
-</div>
-++++
-
-++++
-<div class="pe">
-++++
-Parts related to the platform engineer role will be with a red background color
-++++
-</div>
-++++
-
-=== Let's paralellize our work !
-
-Each team member will explore one kind of template 
-
-*User 1 -> stay here*
-
-*User 2 -> follow the  xref:m3/module-03.3-USER2.adoc[link]*
-
-*User 3 -> follow the  xref:m3/module-03.3-USER3.adoc[link]* 
-
-
 
 
 .Click to learn how to login as a Platform Engineer

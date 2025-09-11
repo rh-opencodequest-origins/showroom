@@ -51,7 +51,7 @@ image:m3/template-full-execution.png[A full template run in {product_name_rhdh}]
 
 
 === Good Job ! Let's code !
-Follow the steps here ! https://red.ht/opencodequest
+Follow the steps here ! red.ht/opencodequest
 
 
 ++++

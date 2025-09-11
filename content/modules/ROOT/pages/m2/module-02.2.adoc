@@ -1,9 +1,10 @@
 :imagesdir: ../../assets/images
 
-== *Pick the chosen one* ! (add warning)
+== *Pick the chosen one* ! 
 
-NOTE : This is a shared part. It means, one person will be able to go through those steps. The work accomplished will be useful for everyone !
-
+====
+ This is a *Shared part*. It means, one person will be able to go through those steps. The work accomplished will be useful for everyone !
+====
 
 
 

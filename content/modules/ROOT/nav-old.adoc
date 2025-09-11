@@ -16,15 +16,25 @@
 ** xref:m3/module-03.5.adoc[3.5 Developer Activity: Developer Activity: Instantiate the template corrected]
 ** xref:m3/module-03.6.adoc[3.6 Platform Engineer Activity: Add steps to the template]
 ** xref:m3/module-03.7.adoc[3.7 Developer Activity: Instantiate the template ]
-** xref:m3/module-03.3-USER2.adoc[3.3 Platform Engineer Activity: Import the Software Template]
-** xref:m3/module-03.4-USER2.adoc[3.4 Developer Activity: Explore a Software Template]
-** xref:m3/module-03.5-USER2.adoc[3.5 Developer Activity: Developer Activity: Instantiate the template corrected]
-** xref:m3/module-03.6-USER2.adoc[3.6 Platform Engineer Activity: Add steps to the template]
-** xref:m3/module-03.7-USER2.adoc[3.7 Developer Activity: Instantiate the template ]
-** xref:m3/module-03.3-USER3.adoc[3.3 Platform Engineer Activity: Import the Software Template]
-** xref:m3/module-03.4-USER3.adoc[3.4 Developer Activity: Explore a Software Template]
-** xref:m3/module-03.5-USER3.adoc[3.5 Developer Activity: Developer Activity: Instantiate the template corrected]
-** xref:m3/module-03.6-USER3.adoc[3.6 Platform Engineer Activity: Add steps to the template]
-** xref:m3/module-03.7-USER3.adoc[3.7 Developer Activity: Instantiate the template ]
+** xref:m3/module-03.8.adoc[3.8 Platform Engineer Activity: Setup RBAC]
+
+* xref:m4/module-04.0.adoc[4. Accelerate Developer Inner-Loop]
+** xref:m4/module-04.1.adoc[4.1 Introduction to Concepts]
+** xref:m4/module-04.2.adoc[4.2 Platform Engineer Activity: Software Templates to Import Existing Components]]
+** xref:m4/module-04.3.adoc[4.3 Developer Activity: Onboard Parasol API and Parasol Store service]
+** xref:m4/module-04.4.adoc[4.4 Platform Engineer Activity: Template to Setup Dev Environment]
+** xref:m4/module-04.5.adoc[4.5 Developer Activity: Work on feature branch]
+
+
+* xref:m5/module-05.0.adoc[5. Setup Build, Test, & Deploy Outer-Loop]
+** xref:m5/module-05.1.adoc[5.1 Developer Activity: Merge request from feature branch to main]
+** xref:m5/module-05.2.adoc[5.2 Updates to Production Argo CD Manifests]
+
+* xref:m7/module-07.0.adoc[6. Enable Continuous Improvement]
+** xref:m7/module-07.1.adoc[6.1 Introduction]
+** xref:m7/module-07.2.adoc[6.2 Adoption Insights]
+** xref:m7/module-07.3.adoc[6.3 Observability]
+** xref:m7/module-07.4.adoc[6.4 Developer Self Service]
+
 * xref:env.adoc[My lab environment details]
 

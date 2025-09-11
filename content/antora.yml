@@ -1,5 +1,5 @@
 name: modules
-title: Platform Engineering Workshop
+title: Open Code Quest Origins
 version: master
 nav:
   - modules/ROOT/nav.adoc
@@ -15,12 +15,12 @@ asciidoc:
     ssh_user: devops
     ssh_password: devops
     ssh_command: ssh someone@example.com
-    dev-username: spiderman-dev
-    pe-username: spiderman-pe
-    common_password: user-password
-    openshift_cluster_ingress_domain: mon-cluster-ocp
-    openshift_gitops_password: gitops-password
-    team-id: 6
+    dev-username: mon-user-dev
+    pe-username: mon-user-pe
+    common_password: sWtbXGQy
+    openshift_cluster_ingress_domain: apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com
+    openshift_gitops_password: cX5eivaNP8nOz4AGwChTZBpt3RUKJl6V
+    team-id: 2
     page-links:
     - url: https://redhat.com
       text: Red Hat
