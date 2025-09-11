@@ -53,7 +53,7 @@ This section contains configuration for the orchestrator plugin.
 
 === Verify that the Orchestrator and Notification plugins are enabled
 
-. After a few moments your new {product_name_rhdh} configuration will finish rolling out. Visit your https://backstage-backstage.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] and view the Home page. Note two new menu items in the left-hand side menu, *Orchestrator* and *Notifications*.
+. After a few moments your new {product_name_rhdh} configuration will finish rolling out. Visit your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] and view the Home page. Note two new menu items in the left-hand side menu, *Orchestrator* and *Notifications*.
 +
 image:m7/orchestrator-notification-menu.png[Orchestrator and Notification in RHDH, width=60%]
 . Select *Orchestrator* from the left-hand side menu.
@@ -77,7 +77,7 @@ The Software Templates for Developer Self Service are referenced in the _locatio
 
 Register this template using the {product_name_rhdh} UI:
 
-. Login to your https://backstage-backstage.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] as the `{pe-username}` user with password `{common_password}`.
+. Login to your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] as the `{pe-username}` user with password `{common_password}`.
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +
 image:m3/create-icon.png[] 
@@ -154,12 +154,12 @@ image:m7/openshift-console-import-create.png[OpenShift Console Import Create]
 . Verify in the https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/orchestrator/core%7Ev1%7EPod[Orchestrator namespace in OpenShift^, window="console"] that a pod is created for the Serverless Workflow instance. The pod name starts with `create-ocp-namespace-swt`.
 +
 image:m7/openshift-console-orchestrator-namespace.png[OpenShift Pods in orchestrator namespace]
-. Visit your https://backstage-backstage.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"]. Ensure you're logged in as a Platform Engineer.
+. Visit your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"]. Ensure you're logged in as a Platform Engineer.
 +
 .Click to see how
 [%collapsible]
 ====
-* Navigate to {product_name_rhdh}'s https://backstage-backstage.{openshift_cluster_ingress_domain}/settings[Settings, window="rhdh"] screen and check the logged-in user's name under the Profile section. 
+* Navigate to {product_name_rhdh}'s https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/settings[Settings, window="rhdh"] screen and check the logged-in user's name under the Profile section. 
 * If you are not logged in as a Platform Engineer (`pe` user), Click on Sign Out.
 * Log in as `{pe-username}` / `{common_password}`.
 +

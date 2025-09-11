@@ -34,7 +34,7 @@ image:m3/argocd-label.png[Argo CD Details with Labels]
 
 === Refresh the Entity's Catalog Info
 
-. Return to your https://backstage-backstage.{openshift_cluster_ingress_domain}/catalog/default/component/my-quarkus-app[instance of {product_name_rhdh}^, window="rhdh"] after committing the change to view the newly created `my-quarkus-app` Component. Use the *Schedule entity refresh* button to pull this change from Git to {product_name_rhdh} for your Quarkus application. 
+. Return to your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/my-quarkus-app[instance of {product_name_rhdh}^, window="rhdh"] after committing the change to view the newly created `my-quarkus-app` Component. Use the *Schedule entity refresh* button to pull this change from Git to {product_name_rhdh} for your Quarkus application. 
 +
 image:m3/rhdh-entity-refresh.png[Entity Refresh Button]
 

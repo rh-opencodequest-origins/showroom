@@ -6,7 +6,7 @@
 include::../style.adoc[]
 
 
-. Navigate to the https://backstage-backstage.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch[feature branch component, window="rhdh"] you had created. If prompted, login as `{dev-username}` / `{common_password}`.
+. Navigate to the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch[feature branch component, window="rhdh"] you had created. If prompted, login as `{dev-username}` / `{common_password}`.
 . Click on the *View Source* link to access the git repo of this Component.
 . You will see an alert asking you to create a *merge request*.
 +
@@ -16,7 +16,7 @@ NOTE: If you don't see this alert, you can access this via the *Code -> Merge Re
 . In the *New merge request* page, create a merge request by clicking on the *Create merge request* button at the bottom of the page.
 +
 image:m5/create-merge-alert.png[width=60%]
-. Since this merge request is to the `parasol-store` Component, the `parasol-store-build-pr-open` pipeline gets triggered and can be viewed in the https://backstage-backstage.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/ci[`parasol-store` component, window="rhdh"].
+. Since this merge request is to the `parasol-store` Component, the `parasol-store-build-pr-open` pipeline gets triggered and can be viewed in the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/ci[`parasol-store` component, window="rhdh"].
 +
 image:m5/parasol-store-pr-open-pipeline-start.png[]
 . Once the pipeline completes, make note of the final task `gitlab-update-task`, which updates GitLab's Merge Request with the status of the pipeline.
@@ -45,7 +45,7 @@ In reality, the merge would happen after a peer review, or a team lead would rev
 +
 image:m5/parasol-store-gitlab-pr-merge.png[]
 
-. The `Merge` action triggers another Pipeline in the https://backstage-backstage.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/ci[`parasol-store` component, window="rhdh"] on {product_name_rhdh}, which will update the Argo CD manifests with the new image tag.
+. The `Merge` action triggers another Pipeline in the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/ci[`parasol-store` component, window="rhdh"] on {product_name_rhdh}, which will update the Argo CD manifests with the new image tag.
 +
 image:m5/parasol-store-pr-merge-start.png[]
 
@@ -61,7 +61,7 @@ image:m5/parasol-store-pr-merge-done.png[]
 
 Let us now see what happened to the Dev and Staging Argo CD manifests updates. 
 
-. In {product_name_rhdh}, access the CD tab of the https://backstage-backstage.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/cd[parasol-store component^, window="rhdh"].
+. In {product_name_rhdh}, access the CD tab of the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/cd[parasol-store component^, window="rhdh"].
 +
 image:m5/parasol-store-argo.png[]
 . Click on the outgoing-arrow icon next to *parasol-store-dev* to access the *rhdh-gitops* instance of Argo CD that's used to manage deployed applications. Login as `admin` / `{common_password}`.

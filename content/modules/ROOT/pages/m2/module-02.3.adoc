@@ -48,13 +48,13 @@ Let's ensure that a new deployment of {product_name_rhdh} is triggered and your 
 +
 image:m2/rhdh-new-pod.png[{product_name_rhdh} with a Custom Title]
 
-. Once the new Pod has started, visit your https://backstage-backstage.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]. You should see the new title *PE Developer Hub* in the page header.
+. Once the new Pod has started, visit your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]. You should see the new title *PE Developer Hub* in the page header.
 +
 image:m2/rhdh-title.png[{product_name_rhdh} with a Custom Title]
 
 [NOTE]
 ====
-You may need to logout to see the title change. Click the Guest user icon in the top right corner and select *Sign out*. Then log back in to the https://backstage-backstage.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]  as a Platform Engineer with `{pe-username}` / `{common_password}`.
+You may need to logout to see the title change. Click the Guest user icon in the top right corner and select *Sign out*. Then log back in to the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]  as a Platform Engineer with `{pe-username}` / `{common_password}`.
 
 image:m2/rhdh-title-logout.png[] 
 ====

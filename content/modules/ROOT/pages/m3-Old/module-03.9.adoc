@@ -61,13 +61,13 @@ image:m3/rbac-block2.png[width=60%]
 .Click to see how
 [%collapsible]
 ====
-* Navigate to {product_name_rhdh}'s https://backstage-backstage.{openshift_cluster_ingress_domain}/settings[Settings, window="rhdh"] screen and check the logged-in user's name under the Profile section. 
+* Navigate to {product_name_rhdh}'s https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/settings[Settings, window="rhdh"] screen and check the logged-in user's name under the Profile section. 
 * If you are not logged in as a Platform Engineer (`pe` user), Click on Sign Out.
 * Log in as `{pe-username}` / `{common_password}`.
 +
 image:m3/pe-signout.png[width=70%]
 ====
-. You will now be able to view the RBAC policies you setup in the https://backstage-backstage.{openshift_cluster_ingress_domain}/rbac[Administration > RBAC, window="rhdh"] left-hand menu.
+. You will now be able to view the RBAC policies you setup in the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/rbac[Administration > RBAC, window="rhdh"] left-hand menu.
 . Policies managed using a CSV file cannot be edited or deleted using the {product_name_rhdh} Web UI. 
 . You can download the list of users in CSV format using the {product_name_rhdh} web interface.
 +
@@ -81,12 +81,12 @@ user:default/{dev-username},{dev-username} rhdh,{dev-username}@rhdemo.com,"Tue, 
 user:default/{pe-username},{pe-username} rhdh,{pe-username}@rhdemo.com,"Tue, 10 Dec 2024 05:25:22 GMT"
 ```
 
-. Navigate to the https://backstage-backstage.{openshift_cluster_ingress_domain}/create[*Create* screen, window="rhdh"] and confirm you can see the *Register Existing Component* button. 
+. Navigate to the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/create[*Create* screen, window="rhdh"] and confirm you can see the *Register Existing Component* button. 
 
 === As a Developer
 . Logout from your *{pe-username}* user, and log back in as a developer with `{dev-username}` / `{common_password}`. 
 . You will not be able to see the *Administration > RBAC* menu, since developers are not assigned the `admin` role in the {product_name_rhdh} configuration.
-. Navigate to the https://backstage-backstage.{openshift_cluster_ingress_domain}/create[*Create* screen, window="rhdh"]. 
+. Navigate to the https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/create[*Create* screen, window="rhdh"]. 
 . Note that you cannot see the *Register Existing Component* button. You can still use the templates already created.
 +
 image:m3/rbac-developer-create.png[]

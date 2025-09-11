@@ -44,7 +44,7 @@ image:m2/rhdh-logs-gitlab-discovery.png[GitLab Autodiscovery Logs in the OpenShi
 +
 image:m2/global-techdocs-cat-info.png[Global TechDocs catalog-info.yaml file]
 
-. Visit your https://backstage-backstage.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] and view the Software Catalog. Make sure that the `Kind` dropdown is set to _Component_. You should see the _global-techdocs_ Component.
+. Visit your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] and view the Software Catalog. Make sure that the `Kind` dropdown is set to _Component_. You should see the _global-techdocs_ Component.
 +
 image:m2/global-techdocs-component.png[The Global TechDocs Component in the Software Catalog]
 

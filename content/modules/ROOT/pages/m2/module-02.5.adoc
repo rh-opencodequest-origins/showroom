@@ -78,7 +78,7 @@ signInPage: oidc
 
 === Login using OpenID Connect Authentication
 
-. Once the latest version of your `appConfig` has been synchronized and rolled out, visit your https://backstage-backstage.{openshift_cluster_ingress_domain}/[{product_name_rhdh} instance^, window="rhdh"]. You will be prompted to sign-in using OpenID Connect.
+. Once the latest version of your `appConfig` has been synchronized and rolled out, visit your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[{product_name_rhdh} instance^, window="rhdh"]. You will be prompted to sign-in using OpenID Connect.
 +
 image:m2/rhdh-oidc-login.png[OIDC Sign-In Prompt]
 . Login using the username `{pe-username}` and password `{common_password}` in the popup that appears. After logging in, visit the *Settings* page in {product_name_rhdh} to confirm you're logged in as the `{pe-username}` user.

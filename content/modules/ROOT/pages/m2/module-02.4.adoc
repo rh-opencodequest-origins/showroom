@@ -37,7 +37,7 @@ Once the new Pod has started, navigate to https://console-openshift-console.{ope
 
 image:m2/openshift-pod-logs.png[{product_name_rhdh} Pod logs as seen in the OpenShift Console]
 
-You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-backstage.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
+You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
 
 image:m2/rhdh-users-list.png[User Entities listed in {product_name_rhdh}]
 

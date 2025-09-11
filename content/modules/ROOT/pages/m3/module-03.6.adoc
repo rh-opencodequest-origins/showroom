@@ -27,7 +27,7 @@ As we wid to edit template previously to correct a title, we will do it again !
 This flow is a new part of the development lifecycle. Platform engineer share the knowledge about project development on-boarding with developers !
 
 
-. Access https://backstage-backstage.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
+. Access https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
 +
 image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
