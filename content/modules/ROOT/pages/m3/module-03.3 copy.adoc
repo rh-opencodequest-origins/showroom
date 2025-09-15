@@ -1,6 +1,13 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import the Software Template Quarkus-postgresql
+== Parallelize work !
+
+Add a dedicated part to guide users to one link each
+
+* maybe one module per user to soft the nav bar panel on the left side
+* or find a way to hide session in the nav bar ..
+
+
 
 include::../style.adoc[]
 

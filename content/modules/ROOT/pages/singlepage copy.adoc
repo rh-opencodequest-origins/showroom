@@ -37,8 +37,12 @@ include::m3/module-03.6.adoc[]
 include::m3/module-03.7.adoc[]
 
 // module 4
-include::m4-user1/module-04.0.adoc[]
-
+include::m4/module-04.0.adoc[]
+include::m4/module-04.1.adoc[]
+include::m4/module-04.2.adoc[]
+include::m4/module-04.3.adoc[]
+include::m4/module-04.4.adoc[]
+include::m4/module-04.5.adoc[]
 
 // module 5
 include::m5/module-05.0.adoc[]

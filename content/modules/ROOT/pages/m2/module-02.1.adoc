@@ -121,7 +121,7 @@ techdocs:
     runIn: local
 ```
 
-Since you'll be using the {product_name_rhdh} Helm Chart to install and manage your internal developer portal, your configuration is nested under an `upstream.backstage.appConfig` property in a Helm Values file. View your configuration by visiting your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rhdh/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"].
+Since you'll be using the {product_name_rhdh} Helm Chart to install and manage your internal developer portal, your configuration is nested under an `upstream.backstage.appConfig` property in a Helm Values file. View your configuration by visiting your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"].
 
 Your workshop environment has been pre-configured such that this repository in GitLab is continuously monitored and deployed using OpenShift GitOps. We'll cover this in more detail shortly.
 

@@ -26,5 +26,7 @@
 ** xref:m3/module-03.5-USER3.adoc[3.5 Developer Activity: Developer Activity: Instantiate the template corrected]
 ** xref:m3/module-03.6-USER3.adoc[3.6 Platform Engineer Activity: Add steps to the template]
 ** xref:m3/module-03.7-USER3.adoc[3.7 Developer Activity: Instantiate the template ]
+** xref:m4-user1/module-04.0.adoc[4.1 Platform Engineer Activity: Import the Software Template]
+
 * xref:env.adoc[My lab environment details]
 
