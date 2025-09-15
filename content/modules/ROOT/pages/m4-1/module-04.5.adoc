@@ -28,7 +28,7 @@ image:m4/create-branch-name.png[width=70%]
 
 == Onboard the Feature Branch using template
 
-. Visit your instance of https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"]. If prompted, login as `{dev-username}` / `{common_password}`.
+. Visit your instance of https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"]. If prompted, login as `{dev-username}` / `{common_password}`.
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu and view the available templates.
 . Click *Choose* button on the *Parasol Store Development* template. 
 +
@@ -88,7 +88,7 @@ image:m4/parasol-branch-deployment1.png[]
 
 == Add Features to the Application
 
-. Click on the *< > View Source* button on the {product_name_rhdh} https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch[Component Overview page^, window="rhdh"] to access the source code repository.
+. Click on the *< > View Source* button on the {product_name_rhdh} https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch[Component Overview page^, window="rhdh"] to access the source code repository.
 +
 image:m4/parasol-branch-component-overview.png[]
 
@@ -115,7 +115,7 @@ image:m4/parasol-un-commented-prodcount.png[]
 
 == View `parasol-store` component on {product_name_rhdh}
 
-. Navigate to `parasol-store-my-feature-branch` component https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch/ci[from your {product_name_rhdh}^, window="rhdh"] 
+. Navigate to `parasol-store-my-feature-branch` component https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch/ci[from your {product_name_rhdh}^, window="rhdh"] 
 . Access the *CI tab* to view the pipeline.  You will see a new pipeline being triggered for the change you just made.
 +
 image:m4/parasol-innerloop-pipeline1.png[width=80%]

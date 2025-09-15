@@ -10,7 +10,7 @@ include::../style.adoc[]
 
 The Argo CD Backstage plugin brings sync status, health status, and update history of your Argo CD Application to your {product_name_rhdh}'s Component view. However, simply installing the Argo CD plugin doesn't automatically make the associated deployment information visible when viewing Components in the Software Catalog. An `argocd/app-selector` annotation must be added to the Component's YAML definition. This annotation instructs the Argo CD plugin to fetch the information related to the Component from the Argo CD instance you configured.
 
-Your lab environment's {product_name_rhdh} has the Argo CD plugin enabled and preconfigured, as can be seen in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[valyes.yaml in the rhdh/developer-hub-config^, window="gitlab"].
+Your lab environment's {product_name_rhdh} has the Argo CD plugin enabled and preconfigured, as can be seen in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[valyes.yaml in the rhdh/developer-hub-config^, window="gitlab"].
 
 IMPORTANT: Please ensure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in a previous step.
 
@@ -34,7 +34,7 @@ image:m3/argocd-label.png[Argo CD Details with Labels]
 
 === Refresh the Entity's Catalog Info
 
-. Return to your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/my-quarkus-app[instance of {product_name_rhdh}^, window="rhdh"] after committing the change to view the newly created `my-quarkus-app` Component. Use the *Schedule entity refresh* button to pull this change from Git to {product_name_rhdh} for your Quarkus application. 
+. Return to your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/my-quarkus-app[instance of {product_name_rhdh}^, window="rhdh"] after committing the change to view the newly created `my-quarkus-app` Component. Use the *Schedule entity refresh* button to pull this change from Git to {product_name_rhdh} for your Quarkus application. 
 +
 image:m3/rhdh-entity-refresh.png[Entity Refresh Button]
 

@@ -50,12 +50,12 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
-The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/template-quarkus-simple[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
+The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/template-quarkus-simple[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
 https://github.com/rh-opencodequest-origins/opencodequest-templates/tree/main/scaffolder-templates/quarkus-postgresql
 
 Register this template using the {product_name_rhdh} UI:
 
-. Login to your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] as the `{pe-username}` user with password `{common_password}`.
+. Login to your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] as the `{pe-username}` user with password `{common_password}`.
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +
 image:m3/create-icon.png[] 
@@ -66,7 +66,7 @@ image:m3/rhdh-catalog-create.png[The empty Create UI]
 +
 [source,bash,role=execute,subs=attributes+]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads
 ----
 . You'll be asked to review the entities being imported, as shown:
 +

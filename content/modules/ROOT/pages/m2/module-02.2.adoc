@@ -21,7 +21,7 @@ Login to {product_name_rhdh}:
 . Select the *backstage-developer-hub* Deployment in the Topology View.
 +
 image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]
-. Click the URL listed under the *Resources* tab; it will be similar to https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}^, window="rhdh"]
+. Click the URL listed under the *Resources* tab; it will be similar to https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}^, window="rhdh"]
 
 The sign-in page will be displayed, with the option to login as a Guest. Click the *Enter* button to use the Guest sign-in.
 

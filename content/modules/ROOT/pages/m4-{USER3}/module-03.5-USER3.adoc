@@ -13,7 +13,7 @@ Create a new software Component and supporting infrastructure using the *OpenCod
 
 === Run the Template
 
-. Access https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
+. Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
 +
 image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
@@ -33,7 +33,7 @@ NOTE: Your username is automatically determined by the Template using your curre
 +
 . Click *Review*.
 +
-. Confirm you're satisfied with your parameters and click *Create*. These will be passed to the scaffolder when it runs the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-ai/template.yaml?ref_type=heads[steps defined in the template, window="gitlab"].
+. Confirm you're satisfied with your parameters and click *Create*. These will be passed to the scaffolder when it runs the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-ai/template.yaml?ref_type=heads[steps defined in the template, window="gitlab"].
 +
 image:m3/rhdh-template-review.png[Reviewing template parameters in {product_name_rhdh}]
 

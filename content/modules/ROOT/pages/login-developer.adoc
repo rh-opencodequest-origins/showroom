@@ -1,7 +1,7 @@
 *Login as Developer*
 
 * You will perform this activity as a Developer. 
-* Logout from https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"]
+* Logout from https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"]
 ** Click the dropdown in the top-right of {product_name_rhdh}, then click on the **Logout** link.
 +
 image::common/rhdh-sign-out.png[Signing out of {product_name_rhdh}]

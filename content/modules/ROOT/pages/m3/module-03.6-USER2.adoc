@@ -27,7 +27,7 @@ As we wid to edit template previously to correct a title, we will do it again !
 This flow is a new part of the development lifecycle. Platform engineer share the knowledge about project development on-boarding with developers !
 
 
-. Access https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
+. Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
 +
 image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
@@ -89,7 +89,7 @@ This is why the *Sofware Catalog* exists ! A clear definition of UI elements bas
         catalogInfoPath: "/catalog-info.yaml"
 ```
 The template creates a *Software Catalog* thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/quarkus-with-spring-postgresql/-/blob/main/template.yaml[template.yaml, window="gitlab"].
+Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-with-spring-postgresql/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 
 ++++
 </div>

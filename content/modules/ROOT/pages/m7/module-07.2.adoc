@@ -21,7 +21,7 @@ NOTE: The Adoption Insights plugin is current in Developer Preview. Refer to the
 
 Adoption Insights is enabled similar to other plugins for {product_name_rhdh} - by updating the dynamic plugins configuration and supplying plugin specific configuration.
 
-. Open your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file, window="gitlab"].
+. Open your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file, window="gitlab"].
 . Make sure you're logged in to GitLab as `{pe-username}` / `{common_password}`.
 . Select *Edit > Edit single file*.
 . Find the YAML surrounded by `--- ADOPTION INSIGHTS PLUGIN ---` and uncomment it by highlighting it and pressing `CMD + /` or `CTRL + /`.

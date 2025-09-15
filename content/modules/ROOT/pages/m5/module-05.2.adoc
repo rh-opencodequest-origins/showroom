@@ -5,7 +5,7 @@ include::../style.adoc[]
 == Explore updates to Production Argo CD Manifests
 
 * In the previous section, we noted that a Merge Request has been raised on the Prod Argo CD manifest to update the prod image.
-* On {product_name_rhdh}, in the `parasol-store` component's https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/pr[Pull/Merge Requests page, window="rhdh"], you can view the a list of Gitlab Merge Request Statuses.
+* On {product_name_rhdh}, in the `parasol-store` component's https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/pr[Pull/Merge Requests page, window="rhdh"], you can view the a list of Gitlab Merge Request Statuses.
 * Click on the Revision link shown for `parasol-store-prod`. This will take you to the `parasol-store-manifests` repo showing the current commits to the `parasol-store-manifests` repository. 
 +
 image:m5/parasol-store-deployment-summary.png[]
@@ -24,7 +24,7 @@ image:m5/parasol-store-prod-pr-changes.png[]
 +
 image:m5/parasol-store-prod-pr-merge.png[width=70%]
 
-* Navigate to the {product_name_rhdh} https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store[`parasol-store` component, window="rhdh"]. From the *CD* tab, access the `parasol-store-prod` Argo CD app by clicking on the arrow.
+* Navigate to the {product_name_rhdh} https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store[`parasol-store` component, window="rhdh"]. From the *CD* tab, access the `parasol-store-prod` Argo CD app by clicking on the arrow.
 +
 image:m5/parasol-store-go2argo.png[width=80%]
 

@@ -51,7 +51,7 @@ Objects created will be organized thanks to 2 main concepts. The *System* and th
 The *System* is a collection for entities that coorporate to perform some function. For instance, in 3 tier application, the 3 components belong to the same system. It eases their management.
 
 The *Domain* is a set of *System* . It encapsultates the systems according to their organizational goal, impact ..
-this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
+this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
 
 Register those objects using the {product_name_rhdh} UI:
 
@@ -65,7 +65,7 @@ image:m3/rhdh-catalog-create.png[The empty Create UI]
 +
 [source,bash,role=execute,subs=attributes+]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads
 
 
 ----
@@ -74,7 +74,7 @@ https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/rhdh-en
 image:m3/rhdh-register-template.png[Registering and Entity]
 . Click *Import* when prompted.
 
-Return to the *Catalog* section, and set the _Kind_ filter to Domain. Your new *opencodequest-team{team-id}* domain will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
+Return to the *Catalog* section, and set the _Kind_ filter to Domain. Your new *opencodequest-{team-id}* domain will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
 
 
 
@@ -87,7 +87,7 @@ image:m3/rhdh-register-template.png[Registering and Entity]
 image:m3/import-entity-domain-pe.png[Registering and Entity]
 
 
-Return to the *Catalog* section, and set the _Kind_ filter to System. Your new *opencodequest-team{team-id}* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
+Return to the *Catalog* section, and set the _Kind_ filter to System. Your new *opencodequest-{team-id}* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
 ++++
 </div>
 ++++

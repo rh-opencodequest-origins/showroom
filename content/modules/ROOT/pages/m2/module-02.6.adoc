@@ -13,7 +13,7 @@ https://npmjs.com/package/@backstage/plugin-catalog-backend-module-gitlab/v/0.3.
 
 To install and configure this plugin:
 
-. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository^, window="gitlab"] in your GitLab instance.
+. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository^, window="gitlab"] in your GitLab instance.
 . Select *Edit > Edit single file*.
 . Uncomment the `--- TECHDOCS_PLUGIN ---` section in `dynamic.plugins` section of the YAML, to enable the TechDocs and GitLab dynamic plugins.
 +
@@ -44,7 +44,7 @@ image:m2/rhdh-logs-gitlab-discovery.png[GitLab Autodiscovery Logs in the OpenShi
 +
 image:m2/global-techdocs-cat-info.png[Global TechDocs catalog-info.yaml file]
 
-. Visit your https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] and view the Software Catalog. Make sure that the `Kind` dropdown is set to _Component_. You should see the _global-techdocs_ Component.
+. Visit your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] and view the Software Catalog. Make sure that the `Kind` dropdown is set to _Component_. You should see the _global-techdocs_ Component.
 +
 image:m2/global-techdocs-component.png[The Global TechDocs Component in the Software Catalog]
 
@@ -62,7 +62,7 @@ image:m2/global-techdocs-docs.png[Global TechDocs being rendered]
 
 == TechDocs Generation and Storage Configuration
 
-Recall the `techdocs` configuration from your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in GitLab, window="gitlab"]. It should resemble the following example:
+Recall the `techdocs` configuration from your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in GitLab, window="gitlab"]. It should resemble the following example:
 
 [source,yaml,subs=attributes+]
 ----

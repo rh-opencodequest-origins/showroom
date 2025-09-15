@@ -10,7 +10,7 @@ An option for dynamically importing and synchronizing Entities is via _providers
 
 NOTE: Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users that have a corresponding User Entity in the Software Catalog can successfully login to {product_name_rhdh}.
 
-. View your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/peteam{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in the developer-hub-config repository^, window="gitlab"].
+. View your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in the developer-hub-config repository^, window="gitlab"].
 . Select **Edit > Edit single file**. When prompted, login as `{pe-username}` / `{common_password}`.
 . You will find the `backstage-community-plugin-catalog-backend-module-keycloak-dynamic` package under the `dynamic.plugins` field that is set to `disabled: false`. This means that, this plugin has been enabled in your installation.
 +
@@ -37,7 +37,7 @@ Once the new Pod has started, navigate to https://console-openshift-console.{ope
 
 image:m2/openshift-pod-logs.png[{product_name_rhdh} Pod logs as seen in the OpenShift Console]
 
-You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-team{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
+You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
 
 image:m2/rhdh-users-list.png[User Entities listed in {product_name_rhdh}]
 
