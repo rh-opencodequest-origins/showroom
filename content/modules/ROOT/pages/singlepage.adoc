@@ -36,8 +36,29 @@ include::m3/module-03.5.adoc[]
 include::m3/module-03.6.adoc[]
 include::m3/module-03.7.adoc[]
 
-// module 4
+// module 4 - user1
 include::m4-user1/module-04.0.adoc[]
+include::m4-user1/module-04.1.adoc[]
+include::m4-user1/module-04.2.adoc[]
+include::m4-user1/module-04.3.adoc[]
+include::m4-user1/module-04.4.adoc[]
+
+// module 4 - user2
+
+include::m4-user2/module-04.0.adoc[]
+include::m4-user2/module-04.1.adoc[]
+include::m4-user2/module-04.2.adoc[]
+include::m4-user2/module-04.3.adoc[]
+include::m4-user2/module-04.4.adoc[]
+
+// module 4 - user3
+
+
+include::m4-user3/module-04.0.adoc[]
+include::m4-user3/module-04.1.adoc[]
+include::m4-user3/module-04.2.adoc[]
+include::m4-user3/module-04.3.adoc[]
+include::m4-user3/module-04.4.adoc[]
 
 
 // module 5

@@ -21,7 +21,7 @@ asciidoc:
     common_password: sWtbXGQy
     openshift_cluster_ingress_domain: apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com
     openshift_gitops_password: cX5eivaNP8nOz4AGwChTZBpt3RUKJl6V
-    team-id: 2
+    team-id: team1
     page-links:
     - url: https://redhat.com
       text: Red Hat

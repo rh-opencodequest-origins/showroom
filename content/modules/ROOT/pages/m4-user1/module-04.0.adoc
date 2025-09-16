@@ -1,13 +1,11 @@
+= USER-1 - Platform Engineer Activity
+
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import the Software Template Quarkus-postgresql
 
 include::../style.adoc[]
 
-
-
-
-=== Role switch ! 
+== Role switch ! 
 
 In this workshop, you will switch between the developer role and the platform engineer role.
 
