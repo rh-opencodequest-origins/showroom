@@ -53,7 +53,7 @@ signInPage: oidc
 * Enable the OpenID Connect provider (`providers.oidc`) with the following configuration:
 ** Provide a `production` configuration (corresponding to the `environment` defined previously).
 ** Use the `backstage` Realm (`metadataUrl`).
-** Load the `clientId` and `clientSecret` from environment variables (loaded from the precreated https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/backstage/secrets/oauth-client[*oauth-client*] Secret, specified in `extraEnvVarsSecrets` in the _values.yaml_)
+** Load the `clientId` and `clientSecret` from environment variables (loaded from the precreated https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/secrets/oauth-client[*oauth-client*] Secret, specified in `extraEnvVarsSecrets` in the _values.yaml_)
 ** Map any signing in user identity to a User Entity in {product_name_rhdh} using the specified https://backstage.io/docs/auth/identity-resolver/[resolver^, window="console"]. These Users and Groups have already been synchronised to the catalog due to your work in the prior module.
 * The `signInPage` property is specific to {product_name_rhdh}. It ensures the correct sign-in UI is rendered. In upstream Backstage this requires React code changes.
 

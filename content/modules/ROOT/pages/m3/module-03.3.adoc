@@ -10,11 +10,62 @@ include::../style.adoc[]
 *Time to explore platform engineering for everyone !*
 
 
+Now our platform engineering has the addtional capabilities such as :
 
-.Click to learn how to login as a Platform Engineer
-[%collapsible]
-====
-include::../login-pe.adoc[]
-====
+(Rajouter schéma )
+* Authentication with Keycloak 
+* Source code management with Gitlab
+* Organization and entities  
+
+Your mission to onboard the OpenCode Quest project.
+
+
+## The application
+
+In this workshop you will develop an application that allows super-heroes to fight against villains. 
+
+image:m3/fight-ui.png[]
+
+Being a workshop about microservices, you will be developing several microservices communicating synchronously via REST API endpoints:
+
+- `frontend`: a web application that allows users to pick up a random super-hero, a random villain and makes them fight. The Super Hero UI invokes the Hero, Villain and Fight REST endpoints.
+- `hero-service`: a Quarkus microservice that provides CRUD operations on Heroes which are stored in a PostgresSQL database.
+- `villain-service`: the counterpart of the hero service, for villains.
+- `fight-service`: a microservice that simulates a fight between a hero and a villain. The simulation is done using a _Large Language Model_ (LLM) that is deployed on OpenShift AI/ML Services. The result also includes a short narration of the fight:
+
+image:m3/fight-result.png[]
+
+## The architecture
+
+image:m3/architecture.png[]
+
+
+[ "Hero and Villain services"
+    The `hero-service` and `villain-service` are very similar, yet they use different _development models_. While both are Quarkus applications, the hero service uses the idiomatic Quarkus development model, while the villain service uses the Spring compatibility support from Quarkus.]
+
+
+Each team member will create a template following the golden rules of the software template. The template is specific to a stack. 
+A set of tools will be also configured. Yes you will leverage the integrations done previously ;) 
+
+A template here will have the following structure : 
+
+* a skeleton for the source code repository
+* a source code repository
+* a IDE Cloud
+* a CI/CD pipeline
+* a container image registry repository
+* a gitops application
+
+[Add schema to illustrate users split ?]
+=== Be ready to practise !
+
+Please select one link per user 
+
+*User 1 -> Quarkus + postgreSQL template   xref:m4-user1/module-04.0.adoc[link]*
+
+*User 2 -> Quarkus Spring compatible + postgreSQL the  xref:m4-user2/module-04.0.adoc[link]*
+
+*User 3 -> Quarkus with AI capabilities  xref:m4-user3/module-04.0.adoc[link]* 
+
 
 

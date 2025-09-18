@@ -37,7 +37,7 @@ image:m2/gitlab-catalog-provider.png[GitLab Catalog Provider, width=70%]
 
 === Verify GitLab Entity Discovery is Active
 
-. After a few moments your new {product_name_rhdh} configuration will finish rolling out. Check the logs for the new https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/backstage/core%7Ev1%7EPod[{product_name_rhdh} Pod^, window="console"]. You should see that a repository was discovered - that means the repository contains https://backstage.io/docs/features/software-catalog/descriptor-format/[catalog-info.yaml, window="blank"] file.
+. After a few moments your new {product_name_rhdh} configuration will finish rolling out. Check the logs for the new https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/core%7Ev1%7EPod[{product_name_rhdh} Pod^, window="console"]. You should see that a repository was discovered - that means the repository contains https://backstage.io/docs/features/software-catalog/descriptor-format/[catalog-info.yaml, window="blank"] file.
 +
 image:m2/rhdh-logs-gitlab-discovery.png[GitLab Autodiscovery Logs in the OpenShift Console]
 . The repository in question is the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/global/global-techdocs[global/global-techdocs^, window="gitlab"]. This repository contains a __catalog-info.yaml__ that defines a Component, and an annotation `backstage.io/techdocs-ref` that tells the TechDocs plugin where to find the source for documentation builds for the Component.

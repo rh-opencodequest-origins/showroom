@@ -29,11 +29,11 @@ If needed, login using `admin`/`{openshift_gitops_password}`.
 +
 NOTE: Argo CD has been setup to auto-sync every two minutes. Instead of having to wait for auto-sync to kick in, you are instructed to manually sync the Argo CD application.
 
-Your changes will start to rollout. Confirm this by visiting the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/backstage?view=graph[backstage project, window="console"] on OpenShift and checking that a new Pod is being started, or waiting until the Application in OpenShift GitOps reports *Healthy* instead of *Progressing*.
+Your changes will start to rollout. Confirm this by visiting the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project, window="console"] on OpenShift and checking that a new Pod is being started, or waiting until the Application in OpenShift GitOps reports *Healthy* instead of *Progressing*.
 
 image:m2/gitops-progressing.png[Backstage Application in Progressing Status]
 
-Once the new Pod has started, navigate to https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/backstage/core%7Ev1%7EPod[OpenShift^, window="console"]. If needed, login as `admin`/`{common_password}`. Check the logs for lines that reference the `KeycloakOrgEntityProvider`. You should see a line stating that a number of Users and Groups have been read from Keycloak.
+Once the new Pod has started, navigate to https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/core%7Ev1%7EPod[OpenShift^, window="console"]. If needed, login as `admin`/`{common_password}`. Check the logs for lines that reference the `KeycloakOrgEntityProvider`. You should see a line stating that a number of Users and Groups have been read from Keycloak.
 
 image:m2/openshift-pod-logs.png[{product_name_rhdh} Pod logs as seen in the OpenShift Console]
 

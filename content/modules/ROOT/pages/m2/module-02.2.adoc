@@ -13,11 +13,11 @@
 include::../style.adoc[]
 
 Check if a user-pe can configure plaftform engineer
-{product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/backstage[backstage project on OpenShift^, window="console"].
+{product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[backstage project on OpenShift^, window="console"].
 
 Login to {product_name_rhdh}:
 
-. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/backstage?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can login as *admin/{common_password}*
+. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can login as *admin/{common_password}*
 . Select the *backstage-developer-hub* Deployment in the Topology View.
 +
 image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]

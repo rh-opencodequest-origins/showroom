@@ -8,12 +8,33 @@ include::../style.adoc[]
 
 
 
+== Role switch ! 
+
+In this workshop, you will switch between the developer role and the platform engineer role.
+
+++++
+<div class="developer">
+++++
+Parts related to the developer role will be with a blue background color
+++++
+</div>
+++++
+
+++++
+<div class="pe">
+++++
+Parts related to the platform engineer role will be with a red background color
+++++
+</div>
+++++
+
 
 .Click to learn how to login as a Platform Engineer
 [%collapsible]
 ====
 include::../login-pe.adoc[]
 ====
+
 
 
 ++++

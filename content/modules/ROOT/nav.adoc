@@ -11,18 +11,20 @@
 * xref:m3/module-03.0.adoc[3. Create your first software template {product_name_rhdh}]
 ** xref:m3/module-03.1.adoc[3.1 Introduction to Concepts]
 ** xref:m3/module-03.2.adoc[3.2 Platform Engineer Activity: Import Domain & Entity]
-** xref:m3/module-03.3.adoc[3.3 Platform Engineer Activity: Import the Software Template]
-** xref:m3/module-03.4.adoc[3.4 Developer Activity: Explore a Software Template]
-** xref:m3/module-03.5.adoc[3.5 Developer Activity: Developer Activity: Instantiate the template corrected]
-** xref:m3/module-03.6.adoc[3.6 Platform Engineer Activity: Add steps to the template]
-** xref:m3/module-03.7.adoc[3.7 Developer Activity: Instantiate the template ]
+** xref:m3/module-03.3.adoc[3.3 Team split]
 
 
-* xref:m4-user1/module-04.0.adoc[4. USER 1 - Platform Engineer Activity: Import the Software Template]
+* xref:m4-user1/module-04.0.adoc[4. USER 1 - Hero microservice]
 ** xref:m4-user1/module-04.1.adoc[4.1 Platform Engineer Activity: Import the Software Template]
 ** xref:m4-user1/module-04.2.adoc[4.2 Developer Activity: Explore a Software Template]
 ** xref:m4-user1/module-04.3.adoc[4.3 Developer Activity: Developer Activity: Instantiate the template corrected]
 ** xref:m4-user1/module-04.4.adoc[4.4 Platform Engineer Activity: Add steps to the template]
+** xref:m4-user1/module-04.5.adoc[4.5 Welcome onboard in "Première Classe"]
+** xref:m4-user1/module-04.6.adoc[4.6 Implement the database]
+** xref:m4-user1/module-04.7.adoc[4.6 Open API]
+** xref:m4-user1/module-04.8.adoc[4.7 From Git to OpenShift]
+** xref:m4-user1/module-04.9.adoc[4.8 Secure your appplication deployment]
+
 
 * xref:m4-user2/module-04.0.adoc[4. USER 2 - Platform Engineer Activity: Import the Software Template]
 ** xref:m4-user2/module-04.1.adoc[4.1 Platform Engineer Activity: Import the Software Template]
@@ -35,6 +37,8 @@
 ** xref:m4-user3/module-04.2.adoc[4.2 Developer Activity: Explore a Software Template]
 ** xref:m4-user3/module-04.3.adoc[4.3 Developer Activity: Developer Activity: Instantiate the template corrected]
 ** xref:m4-user3/module-04.4.adoc[4.4 Platform Engineer Activity: Add steps to the template]
+
+* xref:m5/module-05.0.adoc[5. OpenCodeQuest]
 
 * xref:env.adoc[My lab environment details]
 

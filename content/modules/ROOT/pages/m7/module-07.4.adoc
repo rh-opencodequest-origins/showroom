@@ -116,7 +116,7 @@ The `OpenShift Namespace Large Size` and the `OpenShift Namespace Small Size` So
 
 image:m7/template-large-namespace-annotation.png[Template Namespace Large Annotation]
 
-The `rbac-conditional-policies.yaml` file in the https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/backstage/configmaps/rbac-policy[Configmap with RBAC rules^, window="console"] (if needed, login with `admin/{common_password}`) contains the following conditional rule:
+The `rbac-conditional-policies.yaml` file in the https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/configmaps/rbac-policy[Configmap with RBAC rules^, window="console"] (if needed, login with `admin/{common_password}`) contains the following conditional rule:
 
 ----
 conditions:

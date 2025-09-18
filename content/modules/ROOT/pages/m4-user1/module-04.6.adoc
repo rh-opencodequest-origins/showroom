@@ -1,0 +1,528 @@
+:imagesdir: ../../assets/images
+
+== Developer Activity: Implement the database !
+
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+
+include::../style.adoc[]
+++++
+<div class="developer">
+++++
+
+# Transactions and ORM
+
+The Hero API's role is to allow CRUD operations on Super Heroes.
+In this module we will create a Hero entity and persist/update/delete/retrieve it from a Postgres database in a transactional way.
+
+## Database dependencies
+
+This microservice:
+
+* interacts with a PostGreSQL database - so it needs a driver
+* uses Hibernate with Panache - so need the dependency on it
+* validates payloads and entities - so need a validator
+* consumes and produces JSON - so we need a mapper
+
+Hibernate ORM is the de-facto JPA implementation and offers you the full breadth of an Object Relational Mapper.
+It makes complex mappings possible, but it does not make simple and common mappings trivial.
+[Hibernate ORM with Panache](https://github.com/quarkusio/quarkus/tree/master/extensions/panache) focuses on making your entities trivial and fun to write in Quarkus.
+
+Because JPA and Bean Validation work well together, we will use Bean Validation to constrain our business model.
+
+All the needed dependencies to access the database are already in the `pom.xml` file. 
+
+#Check that you have the following
+
+```xml
+  <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-orm-panache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-jackson</artifactId>
+        </dependency>
+```
+
+
+## Hero Entity
+
+At this point we need an Entity class.
+There is already a `Hero.java` file under `src/main/java/io/quarkus/workshop/hero` so you don't need to create it.
+However this file is empty.
+To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity` and add your columns as public fields (no need to have getters and setters).
+
+#Edit the `Hero.java` file under `src/main/java/io/quarkus/workshop/hero` and copy the following content#
+
+```java
+
+package io.quarkus.workshop.hero;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+import java.util.Random;
+
+
+@Entity
+public class Hero extends PanacheEntity {
+
+    @NotNull
+    @Size(min = 3, max = 50)
+    public String name;
+
+    public String otherName;
+
+    @NotNull
+    @Min(1)
+    public int level;
+    public String picture;
+
+    @Column(columnDefinition = "TEXT")
+    public String powers;
+
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", otherName='" + otherName + '\'' +
+                ", level=" + level +
+                ", picture='" + picture + '\'' +
+                ", powers='" + powers + '\'' +
+                '}';
+    }
+
+    public static Hero findRandom() {
+        Random random = new Random();
+        var count = count();
+        var index = random.nextInt((int) count);
+        return findAll().page(index, 1).firstResult();
+    }
+}
+
+```
+
+
+Notice that you can put all your JPA column annotations and Bean Validation constraint annotations on the public fields.
+
+### Adding Operations
+
+For our workshop we need returning a random hero.
+#For that it's just a matter to add the following method to our `Hero.java` entity#
+
+```java
+ public static Hero findRandom() {
+        Random random = new Random();
+        var count = count();
+        var index = random.nextInt((int) count);
+        return findAll().page(index, 1).firstResult();
+    }
+```
+
+
+NOTE: You would need to add the following import statement if not done automatically by your IDE `import java.util.Random;`
+
+
+
+## Configuring Hibernate
+
+As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don't need at the moment to configure anything regarding the database access. 
+Quarkus will automatically start a Postgresql service and wire up your application to use this service. 
+
+Quarkus development mode is great for apps that combine front-end, services, and database access. By using quarkus.hibernate-orm.database.generation=drop-and-create with import.sql, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.
+
+#For that, make sure to have the following configuration in your `application.properties` (located in `src/main/resources`)#
+
+```shell 
+%dev.quarkus.hibernate-orm.database.generation=drop-and-create
+
+```
+
+### Adding Data
+
+#To load some data when Hibernate ORM starts, run the following command on a Terminal#
+
+```shell
+curl https://raw.githubusercontent.com/cescoffier/quarkus-openshift-workshop/03d5a943c0948bc53c598b6ee78a71e50ef77cee/hero-service/src/main/resources/import.sql -fL -o src/main/resources/import.sql
+```
+
+It will download the specified file and copy the content in your `/src/resources/import.sql` file.
+Now, you have around 500 heroes that will be loaded in the database.
+
+
+## HeroResource Endpoint
+
+The `HeroResource` Endpoint was bootstrapped with only one method `hello()`.
+We need to add extra methods that will allow CRUD operations on heroes.
+
+### Making HeroResource Transactional
+
+To manipulate the `Hero` entity we need make `HeroResource` transactional.
+The idea is to wrap methods modifying the database (e.g. `entity.persist()`) within a transaction.
+Marking a CDI bean method `@Transactional` will do it and make that method a transaction boundary.
+
+#Replace the content of the `HeroResource.java` by the following one. It contains the new methods for accessing data#
+
+```java
+@GET
+    @Path("/random")
+    public RestResponse<Hero> getRandomHero() {
+        var hero = Hero.findRandom();
+        if (hero != null) {
+            Log.debugf("Found random hero: %s", hero);
+            return RestResponse.ok(hero);
+        } else {
+            Log.debug("No random hero found");
+            return RestResponse.notFound();
+        }
+    }
+
+    @GET
+    public List<Hero> getAllHeroes() {
+        return Hero.listAll();
+    }
+
+    @GET
+    @Path("/{id}")
+    public RestResponse<Hero> getHero(Long id) {
+        var hero = Hero.<Hero>findById(id);
+        if (hero != null) {
+            return RestResponse.ok(hero);
+        } else {
+            Log.debugf("No Hero found with id %d", id);
+            return RestResponse.notFound();
+        }
+    }
+
+    @POST
+    @Transactional
+    public RestResponse<URI> createHero(@Valid Hero hero, @Context UriInfo uriInfo) {
+        hero.persist();
+        UriBuilder builder = uriInfo.getAbsolutePathBuilder().path(Long.toString(hero.id));
+        Log.debugf("New Hero created with URI %s", builder.build().toString());
+        return RestResponse.created(builder.build());
+    }
+
+    @PUT
+    @Transactional
+    public Hero updateHero(@Valid Hero hero) {
+        Hero retrieved = Hero.findById(hero.id);
+        retrieved.name = hero.name;
+        retrieved.otherName = hero.otherName;
+        retrieved.level = hero.level;
+        retrieved.picture = hero.picture;
+        retrieved.powers = hero.powers;
+        Log.debugf("Hero updated with new valued %s", retrieved);
+        return retrieved;
+    }
+
+    @DELETE
+    @Path("/{id}")
+    @Transactional
+    public RestResponse<Void> deleteHero(Long id) {
+        if (Hero.deleteById(id)) {
+            Log.debugf("Hero deleted with %d", id);
+        }
+        return RestResponse.noContent();
+    }
+```
+
+Notice that both methods that persist and update a hero, pass a `Hero` object as a parameter.
+Thanks to the Bean Validation's `@Valid` annotation, the `Hero` object will be checked to see if it's valid or not.
+It it's not, the transaction will be rollback-ed.
+
+#If you didn't yet, open a Terminal and start the application in dev mode#
+
+```shell
+./mvnw quarkus:dev
+
+```
+or
+
+```shell
+$ quarkus dev
+
+```
+
+#Then, in a __new__ terminal#
+```shell
+curl http://localhost:8080/api/heroes
+```
+You should see lots of heroes...
+
+## CRUD Tests in HeroResourceTest
+
+We added a few methods to the HeroResource, we should test them!
+
+#For testing the new methods added to the HeroResource, replace the content of the `HeroResourceTest.java` by the following#
+
+```java 
+package io.quarkus.workshop.hero;
+
+import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.common.mapper.TypeRef;
+import org.hamcrest.core.Is;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+import java.util.List;
+import java.util.Random;
+
+import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.given;
+import static jakarta.ws.rs.core.HttpHeaders.ACCEPT;
+import static jakarta.ws.rs.core.HttpHeaders.CONTENT_TYPE;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
+import static jakarta.ws.rs.core.Response.Status.BAD_REQUEST;
+import static jakarta.ws.rs.core.Response.Status.CREATED;
+import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
+import static jakarta.ws.rs.core.Response.Status.NO_CONTENT;
+import static jakarta.ws.rs.core.Response.Status.OK;
+import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@QuarkusTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class HeroResourceTest {
+
+    @Test
+    public void testHelloEndpoint() {
+        given()
+                .when()
+                .get("/api/heroes/hello")
+                .then()
+                .statusCode(200)
+                .body(is("Hello from Quarkus REST"));
+    }
+
+    private static final String JSON = "application/json;charset=UTF-8";
+
+    private static final String DEFAULT_NAME = "Super Baguette";
+    private static final String UPDATED_NAME = "Super Baguette (updated)";
+    private static final String DEFAULT_OTHER_NAME = "Super Baguette Tradition";
+    private static final String UPDATED_OTHER_NAME = "Super Baguette Tradition (updated)";
+    private static final String DEFAULT_PICTURE = "super_baguette.png";
+    private static final String UPDATED_PICTURE = "super_baguette_updated.png";
+    private static final String DEFAULT_POWERS = "eats baguette really quickly";
+    private static final String UPDATED_POWERS = "eats baguette really quickly (updated)";
+    private static final int DEFAULT_LEVEL = 42;
+    private static final int UPDATED_LEVEL = 43;
+
+    private static final int NB_HEROES = 500;
+    private static String heroId;
+
+
+    @Test
+    void shouldNotGetUnknownHero() {
+        Long randomId = new Random().nextLong();
+        given()
+                .pathParam("id", randomId)
+                .when()
+                .get("/api/heroes/{id}")
+                .then()
+                .statusCode(NOT_FOUND.getStatusCode());
+    }
+
+    @Test
+    void shouldGetRandomHero() {
+        given()
+                .when()
+                .get("/api/heroes/random")
+                .then()
+                .statusCode(OK.getStatusCode())
+                .contentType(APPLICATION_JSON);
+    }
+
+    @Test
+    void shouldNotAddInvalidItem() {
+        Hero hero = new Hero();
+        hero.name = null;
+        hero.otherName = DEFAULT_OTHER_NAME;
+        hero.picture = DEFAULT_PICTURE;
+        hero.powers = DEFAULT_POWERS;
+        hero.level = 0;
+
+        given()
+                .body(hero)
+                .header(CONTENT_TYPE, APPLICATION_JSON)
+                .header(ACCEPT, APPLICATION_JSON)
+                .when()
+                .post("/api/heroes")
+                .then()
+                .statusCode(BAD_REQUEST.getStatusCode());
+    }
+
+    @Test
+    @Order(1)
+    void shouldGetInitialItems() {
+        List<Hero> heroes = get("/api/heroes").then()
+                .statusCode(OK.getStatusCode())
+                .contentType(APPLICATION_JSON)
+                .extract()
+                .body()
+                .as(getHeroTypeRef());
+        assertEquals(NB_HEROES, heroes.size());
+    }
+
+    @Test
+    @Order(2)
+    void shouldAddAnItem() {
+        Hero hero = new Hero();
+        hero.name = DEFAULT_NAME;
+        hero.otherName = DEFAULT_OTHER_NAME;
+        hero.picture = DEFAULT_PICTURE;
+        hero.powers = DEFAULT_POWERS;
+        hero.level = DEFAULT_LEVEL;
+
+        String location = given()
+                .body(hero)
+                .header(CONTENT_TYPE, APPLICATION_JSON)
+                .header(ACCEPT, APPLICATION_JSON)
+                .when()
+                .post("/api/heroes")
+                .then()
+                .statusCode(CREATED.getStatusCode())
+                .extract()
+                .header("Location");
+        assertTrue(location.contains("/api/heroes"));
+
+        // Stores the id
+        String[] segments = location.split("/");
+        heroId = segments[segments.length - 1];
+        assertNotNull(heroId);
+
+        given()
+                .pathParam("id", heroId)
+                .when()
+                .get("/api/heroes/{id}")
+                .then()
+                .statusCode(OK.getStatusCode())
+                .body("name", Is.is(DEFAULT_NAME))
+                .body("otherName", Is.is(DEFAULT_OTHER_NAME))
+                .body("level", Is.is(DEFAULT_LEVEL))
+                .body("picture", Is.is(DEFAULT_PICTURE))
+                .body("powers", Is.is(DEFAULT_POWERS));
+
+        List<Hero> heroes = get("/api/heroes").then()
+                .statusCode(OK.getStatusCode())
+                .extract()
+                .body()
+                .as(getHeroTypeRef());
+        assertEquals(NB_HEROES + 1, heroes.size());
+    }
+
+    @Test
+    @Order(3)
+    void shouldUpdateAnItem() {
+        Hero hero = new Hero();
+        hero.id = Long.valueOf(heroId);
+        hero.name = UPDATED_NAME;
+        hero.otherName = UPDATED_OTHER_NAME;
+        hero.picture = UPDATED_PICTURE;
+        hero.powers = UPDATED_POWERS;
+        hero.level = UPDATED_LEVEL;
+
+        given()
+                .body(hero)
+                .header(CONTENT_TYPE, APPLICATION_JSON)
+                .header(ACCEPT, APPLICATION_JSON)
+                .when()
+                .put("/api/heroes")
+                .then()
+                .statusCode(OK.getStatusCode())
+                .contentType(APPLICATION_JSON)
+                .body("name", Is.is(UPDATED_NAME))
+                .body("otherName", Is.is(UPDATED_OTHER_NAME))
+                .body("level", Is.is(UPDATED_LEVEL))
+                .body("picture", Is.is(UPDATED_PICTURE))
+                .body("powers", Is.is(UPDATED_POWERS));
+
+        List<Hero> heroes = get("/api/heroes").then()
+                .statusCode(OK.getStatusCode())
+                .contentType(APPLICATION_JSON)
+                .extract()
+                .body()
+                .as(getHeroTypeRef());
+        assertEquals(NB_HEROES + 1, heroes.size());
+    }
+
+    @Test
+    @Order(4)
+    void shouldRemoveAnItem() {
+        given()
+                .pathParam("id", heroId)
+                .when()
+                .delete("/api/heroes/{id}")
+                .then()
+                .statusCode(NO_CONTENT.getStatusCode());
+
+        List<Hero> heroes = get("/api/heroes").then()
+                .statusCode(OK.getStatusCode())
+                .contentType(APPLICATION_JSON)
+                .extract()
+                .body()
+                .as(getHeroTypeRef());
+        assertEquals(NB_HEROES, heroes.size());
+    }
+
+    private TypeRef<List<Hero>> getHeroTypeRef() {
+        return new TypeRef<List<Hero>>() {
+            // Kept empty on purpose
+        };
+    }
+
+   
+}
+```
+
+The following test methods have been added to the `HeroResourceTest` class:
+
+* `shouldNotGetUnknownHero`: giving a random Hero identifier, the `HeroResource` endpoint should return a 204 (No content)
+* `shouldGetRandomHero`: checks that the `HeroResource` endpoint returns a random hero
+* `shouldNotAddInvalidItem`: passing an invalid `Hero` should fail when creating it (thanks to the `@Valid` annotation)
+* `shouldGetInitialItems`: checks that the `HeroResource` endpoint returns the list of heroes
+* `shouldAddAnItem`: checks that the `HeroResource` endpoint creates a valid `Hero`
+* `shouldUpdateAnItem`: checks that the `HeroResource` endpoint updates a newly created `Hero`
+* `shouldRemoveAnItem`: checks that the `HeroResource` endpoint deletes a hero from the database
+
+#Press `r` in the terminal you have Quarkus dev running. Tests will start running and they should pass#
+
+## Configuring the Datasource for Production
+
+Production databases need to be configured as normal. 
+So if you want to include a production database config in your `application.properties` and continue to use Dev Services,
+we recommend that you use the `%prod` profile to define your database settings.
+
+#Just add the following datasource configuration in the `src/main/resources/application.properties` file#
+
+```properties 
+%prod.quarkus.datasource.db-kind=postgresql
+%prod.quarkus.datasource.username=${POSTGRESQL_USERNAME}
+%prod.quarkus.datasource.password=${POSTGRESQL_USERNAME}
+%prod.quarkus.datasource.jdbc.url=jdbc:postgresql://hero-database:5432/${POSTGRESQL_DATABASE}
+%prod.quarkus.hibernate-orm.sql-load-script=import.sql
+%prod.quarkus.hibernate-orm.database.generation=drop-and-create
+```
+
+
+
+++++
+</div>
+++++
