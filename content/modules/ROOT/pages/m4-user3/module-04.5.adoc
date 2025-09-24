@@ -1,0 +1,233 @@
+:imagesdir: ../../assets/images
+
+# Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne
+
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+
+include::../style.adoc[]
+++++
+<div class="developer">
+++++
+
+image:m4/fight-success-rhdh.png[]
+
+Once in the fight-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)
+
+image:m4/fight-home-page-rhdh.png[]
+
+You should see the following page while the Dev Spaces is starting up:
+
+image:m4/dev-spaces-starting-up.png[]
+
+
+## The Fight Service
+
+The Fight service is a Quarkus intelligent service. 
+Instead of randomly selecting a winner in the battle between heroes and villains, he can interact with a language model (LLM) and delegate the decision to it.
+Furthermore, this consultation will not only provide a winner but also a detailed description of how the fight unfolded.
+
+First, let’s have a look at the big picture. When integrating an LLM into a Quarkus application, 
+you need to describe what you want the AI to do. 
+Unlike traditional code, you are going to explain the behavior of the AI using natural language. 
+
+The following diagram illustrates the interactions between the Fight service and the LLM.
+
+image:m4/fight-architecture.png[]
+
+### The Quarkus-LangChain4j Extension
+
+This extension is based on the LangChain4j library, which provides a common API to interact with LLMs. 
+The LangChain4j project is a Java re-implementation of the famous langchain library.
+
+#Note that the extension is already present in the `pom.xml` file of your Fight service:#
+
+```xml
+<dependency>
+    <groupId>io.quarkiverse.langchain4j</groupId>
+    <artifactId>quarkus-langchain4j-openai</artifactId>
+    <version>${quarkus-langchain4j.version}</version>
+</dependency>
+```
+### Configuration
+
+Configuring OpenAI models mandates an API key or API url among others.
+
+#Copy the following configuration in your `fight-service/src/main/resources/application.properties` file #
+
+```properties
+quarkus.langchain4j.openai.base-url=<enter-base-url>
+quarkus.langchain4j.openai.chat-model.model-name=<enter-model-name>
+quarkus.langchain4j.openai.api-key=${OPENAI_API_KEY:none}
+quarkus.langchain4j.openai.chat-model.temperature=1
+quarkus.langchain4j.log-requests=true
+quarkus.langchain4j.log-responses=true
+quarkus.langchain4j.openai.timeout=60s
+```
+
+**Update the values with the ones given by your teachers.**
+
+They are self-explanatory, but you can check the documentation for more information.
+
+## Directory Structure
+
+Notice that by bootstrapping the project with the specific `OpenCodeQuest - AI-Infused application with Quarkus` template, you get the following directory structure with a few Java classes already created and other artifacts
+
+image:m4/fight-directory-structure.svg[]
+
+It generates the following in the `fight-service` folder:
+
+* the Maven structure with a `pom.xml`
+* an `io.quarkus.workshop.fight.FightResource.java` resource exposed on `/api/fights`.
+* a straightforward java Record `Fight.java` that encapsulates the hero and villain inputs for a fight.
+* the corresponding `Hero.java` and `Villain.java`.
+* a java Record `FightResult.java`. Quarkus automatically creates an instance of `FightResult` from the LLM’s JSON response.
+* an intelligent service `FightSimulatorService.java`. This is where we will define the interaction with the LLM.
+* the `application.properties` configuration file.
+
+### Defining LLM interactions
+
+It’s time to tell the LLM what we want to do. 
+The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions. 
+We model the interaction using an interface annotated with `@RegisterAiService`.
+
+#Edit the java interface `src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java` and copy the following content:#
+
+```java
+package io.quarkus.workshop.fight;
+
+import dev.langchain4j.service.UserMessage;
+import io.quarkiverse.langchain4j.RegisterAiService;
+import org.eclipse.microprofile.faulttolerance.Timeout;
+
+import java.time.temporal.ChronoUnit;
+
+@RegisterAiService
+public interface FightSimulatorService {
+
+
+    @UserMessage("""
+            <|system|>
+            You are a simulation service that can simulate fights between heroes and villains.
+            Heroes and villains are represented with their name, level and superpowers.
+            Your goal is to simulate a fight and provide the winner and a short narration of the fight.
+            Include a part of randomness in the simulation to make it more interesting.
+            You must only use the information provided in the hero and villain objects to simulate the fight.
+            {response_schema}
+            
+            <|user|>
+            Input: Hero[name=julien, level=2, powers=[python, javascript]]
+            Villain[name=clement, level=3, powers=[java, javascript]]
+            
+            <|assistant|>
+            Output: {"winner": "Clement","narration": "Clement's intimate knowledge of Java and JavaScript allowed him to quickly adapt to the battle and use his powers to counter Julien's attempts to exploit his Python skills."}
+            
+            <|user|>
+            Input: Hero[name=luke skywalker, level=100, powers=[the force, lightsaber]]
+            Villain[name=darth vader, level=90, powers=[the dark force, lightsaber]]
+            
+            <|assistant|>
+            Output: {"winner": "luke skywalker","narration": "Luke Skywalker's mastery of the force and his lightsaber skills allowed him to defeat Darth Vader in a fierce battle. Despite Darth Vader's experience and power, Luke's determination and skill proved to be too much for him."}
+
+            <|user|>
+            Input: Hero[name=jar jar been, level=10, powers=[agility]]
+            Villain[name=super frog, level=20, powers=[super leap, speed]]
+            
+            <|assistant|>
+            Output: {"winner": "super frog","narration": "Super frog super leaping ability allowed him to defeat jar jar been in a fierce battle. Despite jar jar been's experience and agility, super frog's skills proved to be too much for him."}
+            
+            <|user|>
+            {hero}
+            {villain}
+            
+            <|assistant|>
+            Output:
+            """)
+    @Timeout(value = 1, unit = ChronoUnit.MINUTES)
+    FightResult fight(Hero hero, Villain villain);
+
+}
+
+```
+
+The rest of the application would be able to use the LLM by injecting the `FightSimulatorService` interface and calling the methods.
+
+Speaking about methods, that’s where the magic happens. 
+These methods accept parameters and are annotated with `@SystemMessage` and `@UserMessage` to define instructions directed to the LLM.
+You should describe what you want the LLM to do using natural language. 
+
+The system defines the scope and initial instructions, serving as the first message sent to the LLM. 
+It delineates the AI service’s role in the interaction.
+
+#### User Message (Prompt)
+
+==Notice the presence of the `@UserMessage` annotation `FightSimulatorService`==. 
+It defines primary instructions dispatched to the LLM. 
+It typically encompasses requests and the expected response format.
+As you can note, we are using a prompt template with following format. 
+This format is expected by the model.
+
+```
+<|system|>
+system prompt
+<|user|>
+content of the question
+<|assistant|>
+new line for the model's answer
+```
+
+#### Parameter Passing and Referencing
+AI methods can take parameters referenced in system and user messages using the {parameter} syntax. Note the `{hero}` and `{villain}` references.
+
+#### AI Method Return Type
+
+The fight method returns a `FightResult`. The JSON response will be mapped to that object directly.
+
+
+#### Fault Tolerance
+
+The distributed nature of microservices makes external communication unreliable, increasing the need for application resiliency. 
+Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroProfile Fault Tolerance specification.
+
+In the pom, you can see the corresponding smallrye dependencies: 
+
+```java
+   <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
+        </dependency>
+```
+
+Then, in the code, #notice the presence of the `@Timeout` annotation in the fight method#
+
+If the LLM invocation is taking too long, the `@Timeout` annotation can stop it after 1 minute, preventing it from hanging indefinitely.
+
+### The Fight Resource
+
+Now, #let's take a look to the `fight-service/src/main/java/io/quarkus/workshop/fight/FightResource.java`.#
+#This is a JAX-RS resource just like the Hero endpoint where the FightSimulatorService is injected.# 
+#Then the intelligent `fight` method is called from the exposed `fight` method.# 
+
+### Start the Fight service in dev mode
+
+We are now ready to run our application.
+
+#Open a Terminal and run one of the following commands#
+
+`./mvnw quarkus:dev`
+
+#or#
+
+`quarkus dev`
+
+
+### Verify the Fight service
+
+#For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui#
+
+#by clicking the `Open in New Tab` button when a pop up will be shown#
+
+image:m4/open-quarkus-dev-in-new-tab.png[]
+
+++++
+</div>
+++++

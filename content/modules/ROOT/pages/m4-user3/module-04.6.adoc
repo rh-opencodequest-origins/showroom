@@ -18,26 +18,27 @@ To do this, follow these steps:
 * Enter your commit message
 * Click the Commit button.
 
-![ds-source-control-view.png](images/ds-source-control-view.png)
+image:m4/ds-source-control-view.png[]
+
 
 * After committing, click the Sync Changes button to push your changes.
 
-![git-push-button.png](images%2Fgit-push-button.png)
+image:m4/git-push-button.png[]
 
 This action will trigger a pipeline, which you can monitor in the CI tab of the RHDH.
 Once the pipeline completes successfully, you will see the corresponding pod in the Topology tab. 
-From there, you can access your hero microservice by clicking on the pod.
+From there, you can access your fight microservice by clicking on the pod.
 
 ## Exploring the pipeline
 
-Let's switch to the Developer Hub console, in your hero component.
+Let's switch to the Developer Hub console, in your fight component.
 
-==Click the CI tab==
+#Click the CI tab#
 
 Once you commited your code, an OpenShift pipeline has been automaticaly triggered.
 This pipeline was created automaticaly for your project when you instanciated the template.
 
-![CI of the hero-service](images/rhdh-cicd.png)
+image:m4/rhdh-cicd.png[]
 
 As you can see, a lot of steps are now running so let's explore a little.
 
@@ -46,7 +47,7 @@ The first step in the pipeline is a simple git clone. The next step is basically
 ### build-sign-image
 It is the build-sign-image where things get super interesting.
 
-![build-sign-image](images/rhdh-build-sign-image.png)
+image:m4/rhdh-build-sign-image.png[]
 
 The template is leveraging Tekton Chains, a Kubernetes Custom Resource Definition (CRD) controller, that nicely augments the supply chain security within OpenShift Pipelines. This tool’s capacity to automatically sign task runs, and its adoption of advanced attestation formats like in-toto and SLA provenance, bring a higher degree of trust and verification to our processes. Tekton Chains works like an independent observer within the cluster, it signs, attests and stores additional artifacts as OCI images alongside with your container image.
 
@@ -60,57 +61,86 @@ As a developer, I want to see my handy work, did my application really deploy to
 
 You can check that your newly built application has been automatically sync using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.
 
-![rhdh-overview-dev-ready](images/rhdp-overview-dev-ready.png)
+image:m4/rhdp-overview-dev-ready.png[]
 
-==Click on Topology==
+
+
+## Houston, we've got a problem
+
+At this stage, you should observe an issue during the CI pipeline. The step **acs-image-check** (responsible of verifying that we are not violating any policies in our cluster) is now failing.
+
+image:m4/acs-check.png[]
+
+#Click the task to get the logs and understand what policy has been violated#
+
+image:m4/acs-image-check-error.png[]
+
+As you can see, it looks like a **SuperVillain**  has introduced a bad dependency in our code ! 
+
+#Open the `pom.xml` file in DevSpaces IDE#
+
+image:m4/devspaces-CVE.png[]
+
+Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics) IDE extension, you can even see that the dependency is automatically underlined suggesting there's an issue with it.
+
+#Remove the dependency as it's not needed in our code#
+
+## Deploy the Villain microservice after fixing the issue
+Once you have corrected the dependency issue and comited your code, #you can tag and release# your code in GitLab to promote in preprod and prod.
+
+
+
+
+#Click on Topology#
 
 This should look familiar to you if you regularly use the topology view from OpenShift.
-![rhdh-topology-dev](images/rhdh-topology-dev.png)
+image:m4/rhdh-topology-dev.png[]
 
 
-Note: pre-prod and prod have NOT yet deployed
+[NOTE] pre-prod and prod have NOT yet deployed
 
-==Click the arrow.== This will open a new tab on your browser showing your deployed hero-service !
+#Click the arrow.# This will open a new tab on your browser showing your deployed fight-service !
 
 Oops!! A `Resource Not Found` may be shown. 
 
-![resource-not-found.png](images%2Fresource-not-found.png)
+image:m4/resource-not-found.png[]
 
-==You can add `/api/heroes/hello` , `/api/heroes/random` or `/api/heroes` to the URL in you browser to attack the good endpoints and check your work==
+// how to test fight service with terminal ?  
+#You can add `/api/villain/hello` , `/api/heroes/random` or `/api/villaib` to the URL in you browser to attack the good endpoints and check your work#
 
 Note that during the deployment with OpenShift GitOps, we also deployed automatically the Database containing all the superheroes using the EDB Cluster CRD that automaticaly manage our database.
 
-==Verify that the fight-ui dev environment is now able to retrieve the characters==
+#Verify that the fight-ui dev environment is now able to retrieve the characters#
 
 
 ### Promote to Pre-Prod
-First access the GitLab UI, there is a convenient link on ==the Overview tab==
+First access the GitLab UI, there is a convenient link on #the Overview tab#
 
-![promote1](images/promote1.png)
+image:m4/promote1.png[]
 
-==Click on Tags==
+#Click on Tags#
 
-![promote2](images/promote2.png)
+image:m4/promote2.png[]
 
-==New Tag==
+#New Tag#
 
-![promote3](images/promote3.png)
+image:m4/promote3.png[]
 
-Give the tag a name like ==v1.0==
+Give the tag a name like #v1.0#
 
-and click ==Create tag==
+and click #Create tag#
 
-![promote4](images/promote4.png)
+image:m4/promote4.png[]
 
-Back to the portal and the ==CI tab== to see the promotion pipeline in action
+Back to the portal and the #CI tab# to see the promotion pipeline in action
 
-![promote5](images/promote5.png)
+image:m4/promote5.png[]
 
 This pipeline has a special task called verify-enterprise-contract
 
 Enterprise Contract (EC) is a special CLI that compliments Sigstore’s cosign. If you remember the build-sign-image task that produced and stored the .sig and .att artifacts into the container registry, EC evaluates that signature and attestation. EC is based on the rego policy language from Open Policy Agent and allows you to create custom rules to review cosign attest attestations. By default, EC works with the SLSA provence attestation coming out of Tekton Chains.
 
-![promote6](images/promote6.png)
+image:m4/promote6.png[]
 
 Enterprise Contract, as part of this promotion pipeline, is verifing that the container image did in fact come from the corporate standard/approved build system. In other words, this container image was not built on some random person’s laptop, it was built in the secure build system. The .att, .sbom and .sig are stored alongside the container image and a tool like skopeo can be used to move all items together.
 
@@ -120,38 +150,38 @@ Enterprise Contract, as part of this promotion pipeline, is verifing that the co
 
 Once the release pipeline has completed, you can see your application has been promoted to pre-prod and is available via the Topology plug-in.
 
-![promote7](images/promote7.png)
+image:m4/promote7.png[]
 
 
 ### Promote to Prod
-To promote to Production use the ==Create Release feature of the GitLab UI==.
+To promote to Production use the #Create Release feature of the GitLab UI#.
 
-![promote8](images/promote8.png)
+image:m4/promote8.png[]
 
-Give the release a title and click the ==Create release== button
+Give the release a title and click the #Create release# button
 
-![promote9](images/promote9.png)
+image:m4/promote9.png[]
 
 Another release pipeline will be triggered and if the Enterprise Contract passes then the container image will be promoted production.
 
-![promote10](images/promote10.png)
+image:m4/promote10.png[]
 
-![promote11](images/promote11.png)
+image:m4/promote11.png[]
 
 
-==Promotion to preprod and prod should be done for every services (villains/fight)==
+#Promotion to preprod and prod should be done for every services fight#
 
 
 ### Stop your DevSpaces Workspace
 As you now have fully deployed your microservice, you do not need anymore the DevSpaces workspace so let's just stop it to preserve resources.
 
-==Click the grey button **"><"** on the bottom left of DevSpaces IDE==
+#Click the grey button **"><"** on the bottom left of DevSpaces IDE#
 
-![devspaces-stop1](images/devspaces-stop1.png)
+image:m4/devspaces-stop1.png[]
 
-==Then Click "Dev Spaces : Stop Workspace==
+#Then Click "Dev Spaces : Stop Workspace#
 
-![devspaces-stop2](images/devspaces-stop2.png)
+image:m4/devspaces-stop2.png[]
 
 
 

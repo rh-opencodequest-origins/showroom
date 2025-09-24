@@ -53,6 +53,10 @@ include::m4-user2/module-04.1.adoc[]
 include::m4-user2/module-04.2.adoc[]
 include::m4-user2/module-04.3.adoc[]
 include::m4-user2/module-04.4.adoc[]
+include::m4-user2/module-04.5.adoc[]
+include::m4-user2/module-04.6.adoc[]
+include::m4-user2/module-04.7.adoc[]
+
 
 // module 4 - user3
 
@@ -62,6 +66,9 @@ include::m4-user3/module-04.1.adoc[]
 include::m4-user3/module-04.2.adoc[]
 include::m4-user3/module-04.3.adoc[]
 include::m4-user3/module-04.4.adoc[]
+include::m4-user3/module-04.5.adoc[]
+include::m4-user3/module-04.6.adoc[]
+
 
 
 // module 5

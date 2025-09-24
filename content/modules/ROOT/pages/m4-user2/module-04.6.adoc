@@ -1,0 +1,147 @@
+:imagesdir: ../../assets/images
+
+# Developer Activity: Implement the database 
+
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+
+include::../style.adoc[]
+++++
+<div class="developer">
+++++
+
+## Accessing Database
+
+As everything is in place the `import.sql` file contains already all SQL statements to populate the villain database.
+
+### The Villain repository
+
+As we are following a Spring Data programming model with JPA,we need to extend the JPA specific Repository interface, JpaRepository. 
+This will enable Quarkus to find this interface and automatically create an implementation for it.
+By extending the interface, we get the most relevant CRUD methods automatically. 
+
+You can check the `VillainRepository.java` code. It also contains a more specific method to retrieve a villain randomly from database:
+
+```java
+    default Villain findRandom() {
+        var count = count();
+        var index = (int) (Math.random() * count);
+        return findAll().get(index);
+    }
+```
+
+### The Villain entity
+
+Finally we have an entity class representing the villains.
+
+```java
+package io.quarkus.workshop.villain;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+
+@Entity
+public class Villain {
+
+    @Id
+    @SequenceGenerator(name = "villainSequence", sequenceName = "villain_seq", allocationSize = 1, initialValue = 10)
+    @GeneratedValue(generator = "villainSequence")
+    private Long id;
+
+    private String name;
+
+    private String otherName;
+
+
+    private int level;
+    private String picture;
+
+    @Column(columnDefinition = "TEXT")
+    public String powers;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public @NotNull @Size(min = 3, max = 50) String getName() {
+        return name;
+    }
+
+    public void setName(@NotNull @Size(min = 3, max = 50) String name) {
+        this.name = name;
+    }
+
+    public String getOtherName() {
+        return otherName;
+    }
+
+    public void setOtherName(String otherName) {
+        this.otherName = otherName;
+    }
+
+    @NotNull
+    @Min(1)
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(@NotNull @Min(1) int level) {
+        this.level = level;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String setPowers() {
+        return powers;
+    }
+
+    public void setPowers(String powers) {
+        this.powers = powers;
+    }
+}
+
+```
+
+### Tests
+
+As in the case of the heroes, the tests could not be missing here. 
+A test class is provided and contains the basic tests to ensure that the villain microservice works correctly.
+
+You can check that everything works fine by starting the application in development mode.
+
+#Run one of the following commands: #
+
+`./mvnw quarkus:dev`
+
+or
+
+`quarkus dev`
+
+Note that the tests have been successful run. 
+
+==Also, you can curl the villains endopoint and you should get lots of villains==
+
+```shell
+curl http://localhost:8080/api/villains
+```
+
+
+++++
+</div>
+++++

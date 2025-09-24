@@ -1,0 +1,202 @@
+:imagesdir: ../../assets/images
+
+# Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne
+
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+
+include::../style.adoc[]
+++++
+<div class="developer">
+++++
+
+# Creating the Villain Microservice
+
+New microservice, new project! 
+In this section we will see the counterpart of the Hero microservice: the Villain microservice.
+The Villain REST Endpoint is really similar to the Hero Endpoint but has been developed using the Spring compatibility layer provided by Quarkus.
+While users are encouraged to use Quarkus extensions, this compatibility layer is provided to make developing new applications with Quarkus a natural getting started experience.
+
+
+
+## Bootstrapping the Villain Rest Endpoint
+
+#The code is now fully available and you will not have to write any of this microservice.#
+Like we did for hero-service, we will create the villain-service from a Red Hat Developer Hub template, which will automatically pull the complete code from the GitHub repository.
+
+
+
+* #If everything went well, you should see the following successful page. Click on the `Open Component in Catalog`#:
+
+image:m4/villain-success-rhdh.png[]
+
+* #Once in the villain-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)#
+
+image:m4/villain-home-page-rhdh.png[]
+
+
+
+
+## The Villain Service
+
+At the heart of the Super Hero application come also  _villains_.
+
+We need to expose a REST API allowing CRUD operations on _super heroes_.
+This microservice is also a *classical* microservice.
+It uses HTTP to expose a REST API, and it internally stores data into a database.
+
+This service will be used by the *fight* microservice.
+
+#The code is fully provided. You will not have to write any of this microservice.#
+
+## Directory Structure
+
+Once you bootstrap the project, you get the following directory structure with a few Java classes and other artifacts:
+
+image:m4/villain-directory-structure.svg[]
+
+You get the following in the `villain-service` folder:
+
+* the Maven structure with a `pom.xml`
+* an `io.quarkus.workshop.villain.VillainController` controller exposed on `/api/heroes`
+* an associated unit test `VillainControllerTest`
+* example `Dockerfile` files for both native and jvm modes in `src/main/docker`
+* the `application.properties` configuration file
+
+#Look at the `pom.xml`.#
+
+The `pom.xml` is basically the same than for heroes apart that it contains a few more dependencies: `quarkus-spring-web` and `quarkus-spring-data`.
+
+The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing extensions that have already been optimized for fast startup, reduced memory utilization and native compilation, like RestEasy and CDI.
+
+#Be aware that Quarkus Spring compatibility extensions do not utilize the Spring application context.#
+For this reason, attempting to utilize additional Spring libraries will likely not work.
+
+## The Controller
+
+We get a rest controller, the `VillainController.java` with the following content:
+
+```java
+package io.quarkus.workshop.villain;
+
+import io.quarkus.logging.Log;
+import io.smallrye.common.annotation.RunOnVirtualThread;
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriInfo;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.net.URI;
+import java.util.List;
+
+@RunOnVirtualThread
+@RestController
+@RequestMapping(value = "/api/villains")
+public class VillainController {
+
+
+    private final VillainRepository repository;
+
+    public VillainController(VillainRepository repository) {
+        this.repository = repository;
+    }
+
+    @GetMapping("/random")
+    public ResponseEntity<Villain> getRandomVillain() {
+        var villain = repository.findRandom();
+        if (villain != null) {
+            Log.debugf("Found random villain: %s", villain);
+            return ResponseEntity.ok(villain);
+        } else {
+            Log.debug("No random villain found");
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping
+    public List<Villain> getAllVillains() {
+        return repository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Villain> getVillain(Long id) {
+        var villain = repository.findById(id).orElse(null);
+        if (villain != null) {
+            return ResponseEntity.ok(villain);
+        } else {
+            Log.debugf("No Villain found with id %d", id);
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PostMapping
+    @Transactional
+    public ResponseEntity<URI> createVillain(@Valid Villain villain, @Context UriInfo uriInfo) {
+        var persisted = repository.save(villain);
+        UriBuilder builder = uriInfo.getAbsolutePathBuilder().path(Long.toString(persisted.getId()));
+        Log.debugf("New Villain created with URI %s", builder.build().toString());
+        return ResponseEntity.created(builder.build()).build();
+    }
+
+    @PutMapping
+    @Transactional
+    public Villain updateVillain(@Valid Villain villain) {
+        Villain retrieved = repository.findById(villain.getId()).orElseThrow(
+                () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Villain not found"));
+        retrieved.setName(villain.getName());
+        retrieved.setOtherName(villain.getOtherName());
+        retrieved.setLevel(villain.getLevel());
+        retrieved.setPicture(villain.getPicture());
+        retrieved.setPowers(villain.setPowers());
+        Log.debugf("Villain updated with new valued %s", retrieved);
+        return retrieved;
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity<Void> deleteVillain(Long id) {
+        repository.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello Villain Service";
+    }
+}
+
+
+```
+
+This controller exposes CRUD operations to "villains" and leverages Spring Web and Spring Data JPA annotations for handling HTTP requests and transactions:
+
+1. **@RestController**: Marks the class as a RESTful controller where every method returns a JSON response instead of a view. 
+
+2. **@RequestMapping**: Specifies the base URL path (`/api/villains`) for all the endpoints within this controller. It replaces the standard JAX-RS `@Path`
+
+3. **@GetMapping, @PostMapping, @PutMapping, @DeleteMapping**: These annotations define HTTP methods (GET, POST, PUT, DELETE) to map specific endpoints to CRUD operations.
+
+Not Spring specific annotations but used like in the hero-service:
+
+1. **@Transactional**: Ensures that the methods annotated with it are executed within a transaction context, which automatically commits or rolls back the transaction.
+
+5. **@Valid**: Validates the input entity (`Villain`) based on the constraints defined on its fields.
+
+6. **@Context**: Injects `UriInfo`, which provides contextual information about the current URI to help in creating new URIs for created resources.
+
+7. **@RunOnVirtualThread**: Runs the controller on a virtual thread for better concurrency management. This is specific to the SmallRye library.
+
+
+
+++++
+</div>
+++++

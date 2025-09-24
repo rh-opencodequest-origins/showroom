@@ -27,11 +27,11 @@ image:m4/git-push-button.png[]
 
 This action will trigger a pipeline, which you can monitor in the CI tab of the RHDH.
 Once the pipeline completes successfully, you will see the corresponding pod in the Topology tab. 
-From there, you can access your hero microservice by clicking on the pod.
+From there, you can access your villain microservice by clicking on the pod.
 
 ## Exploring the pipeline
 
-Let's switch to the Developer Hub console, in your hero component.
+Let's switch to the Developer Hub console, in your villain component.
 
 #Click the CI tab#
 
@@ -63,6 +63,34 @@ You can check that your newly built application has been automatically sync usin
 
 image:m4/rhdp-overview-dev-ready.png[]
 
+
+
+## Houston, we've got a problem
+
+At this stage, you should observe an issue during the CI pipeline. The step **acs-image-check** (responsible of verifying that we are not violating any policies in our cluster) is now failing.
+
+image:m4/acs-check.png[]
+
+#Click the task to get the logs and understand what policy has been violated#
+
+image:m4/acs-image-check-error.png[]
+
+As you can see, it looks like a **SuperVillain**  has introduced a bad dependency in our code ! 
+
+#Open the `pom.xml` file in DevSpaces IDE#
+
+image:m4/devspaces-CVE.png[]
+
+Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics) IDE extension, you can even see that the dependency is automatically underlined suggesting there's an issue with it.
+
+#Remove the dependency as it's not needed in our code#
+
+## Deploy the Villain microservice after fixing the issue
+Once you have corrected the dependency issue and comited your code, #you can tag and release# your code in GitLab to promote in preprod and prod.
+
+
+
+
 #Click on Topology#
 
 This should look familiar to you if you regularly use the topology view from OpenShift.
@@ -71,13 +99,14 @@ image:m4/rhdh-topology-dev.png[]
 
 [NOTE] pre-prod and prod have NOT yet deployed
 
-#Click the arrow.# This will open a new tab on your browser showing your deployed hero-service !
+#Click the arrow.# This will open a new tab on your browser showing your deployed villain-service !
 
 Oops!! A `Resource Not Found` may be shown. 
 
 image:m4/resource-not-found.png[]
 
-#You can add `/api/heroes/hello` , `/api/heroes/random` or `/api/heroes` to the URL in you browser to attack the good endpoints and check your work#
+// check new endpoint replacing heroes by villain ? 
+#You can add `/api/villain/hello` , `/api/heroes/random` or `/api/villaib` to the URL in you browser to attack the good endpoints and check your work#
 
 Note that during the deployment with OpenShift GitOps, we also deployed automatically the Database containing all the superheroes using the EDB Cluster CRD that automaticaly manage our database.
 
