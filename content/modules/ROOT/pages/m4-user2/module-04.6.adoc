@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-# Developer Activity: Implement the database 
+# Developer Activity: From Git to OpenShift !
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 
@@ -8,138 +8,181 @@ include::../style.adoc[]
 ++++
 <div class="developer">
 ++++
+## Deploying to OpenShift cluster.
 
-## Accessing Database
+This approach will be followed for all the microservices.
+With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository. 
+To do this, follow these steps:
 
-As everything is in place the `import.sql` file contains already all SQL statements to populate the villain database.
+* In Dev Spaces, go to the source control view.
+* Enter your commit message
+* Click the Commit button.
 
-### The Villain repository
-
-As we are following a Spring Data programming model with JPA,we need to extend the JPA specific Repository interface, JpaRepository. 
-This will enable Quarkus to find this interface and automatically create an implementation for it.
-By extending the interface, we get the most relevant CRUD methods automatically. 
-
-You can check the `VillainRepository.java` code. It also contains a more specific method to retrieve a villain randomly from database:
-
-```java
-    default Villain findRandom() {
-        var count = count();
-        var index = (int) (Math.random() * count);
-        return findAll().get(index);
-    }
-```
-
-### The Villain entity
-
-Finally we have an entity class representing the villains.
-
-```java
-package io.quarkus.workshop.villain;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+image:m4/ds-source-control-view.png[]
 
 
-@Entity
-public class Villain {
+* After committing, click the Sync Changes button to push your changes.
 
-    @Id
-    @SequenceGenerator(name = "villainSequence", sequenceName = "villain_seq", allocationSize = 1, initialValue = 10)
-    @GeneratedValue(generator = "villainSequence")
-    private Long id;
+image:m4/git-push-button.png[]
 
-    private String name;
+This action will trigger a pipeline, which you can monitor in the CI tab of the RHDH.
+Once the pipeline completes successfully, you will see the corresponding pod in the Topology tab. 
+From there, you can access your villain microservice by clicking on the pod.
 
-    private String otherName;
+## Exploring the pipeline
+
+Let's switch to the Developer Hub console, in your villain component.
+
+#Click the CI tab#
+
+Once you commited your code, an OpenShift pipeline has been automaticaly triggered.
+This pipeline was created automaticaly for your project when you instanciated the template.
+
+image:m4/rhdh-cicd.png[]
+
+As you can see, a lot of steps are now running so let's explore a little.
+
+The first step in the pipeline is a simple git clone. The next step is basically a mvn package and then running of Sonarqube scan-source for static analysis. All pretty standard for CI pipelines. Get the code, compile/build the code, run some scans.
+
+### build-sign-image
+It is the build-sign-image where things get super interesting.
+
+image:m4/rhdh-build-sign-image.png[]
+
+The template is leveraging Tekton Chains, a Kubernetes Custom Resource Definition (CRD) controller, that nicely augments the supply chain security within OpenShift Pipelines. This tool’s capacity to automatically sign task runs, and its adoption of advanced attestation formats like in-toto and SLA provenance, bring a higher degree of trust and verification to our processes. Tekton Chains works like an independent observer within the cluster, it signs, attests and stores additional artifacts as OCI images alongside with your container image.
+
+Also, you can see we are using this step to automatically create a SBOM (Software Bill Of Materials) which is a kind of ingredients list for your software.
+
+More information regarding the pipeline can be seen in next section [Trusted Application Pipeline](./trusted-apps.md)
 
 
-    private int level;
-    private String picture;
+### Dev Deployment
+As a developer, I want to see my handy work, did my application really deploy to the dev environment ?
 
-    @Column(columnDefinition = "TEXT")
-    public String powers;
+You can check that your newly built application has been automatically sync using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.
 
-    public Long getId() {
-        return id;
-    }
+image:m4/rhdp-overview-dev-ready.png[]
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public @NotNull @Size(min = 3, max = 50) String getName() {
-        return name;
-    }
 
-    public void setName(@NotNull @Size(min = 3, max = 50) String name) {
-        this.name = name;
-    }
+## Houston, we've got a problem
 
-    public String getOtherName() {
-        return otherName;
-    }
+At this stage, you should observe an issue during the CI pipeline. The step **acs-image-check** (responsible of verifying that we are not violating any policies in our cluster) is now failing.
 
-    public void setOtherName(String otherName) {
-        this.otherName = otherName;
-    }
+image:m4/acs-check.png[]
 
-    @NotNull
-    @Min(1)
-    public int getLevel() {
-        return level;
-    }
+#Click the task to get the logs and understand what policy has been violated#
 
-    public void setLevel(@NotNull @Min(1) int level) {
-        this.level = level;
-    }
+image:m4/acs-image-check-error.png[]
 
-    public String getPicture() {
-        return picture;
-    }
+As you can see, it looks like a **SuperVillain**  has introduced a bad dependency in our code ! 
 
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
+#Open the `pom.xml` file in DevSpaces IDE#
 
-    public String setPowers() {
-        return powers;
-    }
+image:m4/devspaces-CVE.png[]
 
-    public void setPowers(String powers) {
-        this.powers = powers;
-    }
-}
+Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics) IDE extension, you can even see that the dependency is automatically underlined suggesting there's an issue with it.
 
-```
+#Remove the dependency as it's not needed in our code#
 
-### Tests
+## Deploy the Villain microservice after fixing the issue
+Once you have corrected the dependency issue and comited your code, #you can tag and release# your code in GitLab to promote in preprod and prod.
 
-As in the case of the heroes, the tests could not be missing here. 
-A test class is provided and contains the basic tests to ensure that the villain microservice works correctly.
 
-You can check that everything works fine by starting the application in development mode.
 
-#Run one of the following commands: #
 
-`./mvnw quarkus:dev`
+#Click on Topology#
 
-or
+This should look familiar to you if you regularly use the topology view from OpenShift.
+image:m4/rhdh-topology-dev.png[]
 
-`quarkus dev`
 
-Note that the tests have been successful run. 
+[NOTE] pre-prod and prod have NOT yet deployed
 
-==Also, you can curl the villains endopoint and you should get lots of villains==
+#Click the arrow.# This will open a new tab on your browser showing your deployed villain-service !
 
-```shell
-curl http://localhost:8080/api/villains
-```
+Oops!! A `Resource Not Found` may be shown. 
+
+image:m4/resource-not-found.png[]
+
+// check new endpoint replacing heroes by villain ? 
+#You can add `/api/villain/hello` , `/api/heroes/random` or `/api/villaib` to the URL in you browser to attack the good endpoints and check your work#
+
+Note that during the deployment with OpenShift GitOps, we also deployed automatically the Database containing all the superheroes using the EDB Cluster CRD that automaticaly manage our database.
+
+#Verify that the fight-ui dev environment is now able to retrieve the characters#
+
+
+### Promote to Pre-Prod
+First access the GitLab UI, there is a convenient link on #the Overview tab#
+
+image:m4/promote1.png[]
+
+#Click on Tags#
+
+image:m4/promote2.png[]
+
+#New Tag#
+
+image:m4/promote3.png[]
+
+Give the tag a name like #v1.0#
+
+and click #Create tag#
+
+image:m4/promote4.png[]
+
+Back to the portal and the #CI tab# to see the promotion pipeline in action
+
+image:m4/promote5.png[]
+
+This pipeline has a special task called verify-enterprise-contract
+
+Enterprise Contract (EC) is a special CLI that compliments Sigstore’s cosign. If you remember the build-sign-image task that produced and stored the .sig and .att artifacts into the container registry, EC evaluates that signature and attestation. EC is based on the rego policy language from Open Policy Agent and allows you to create custom rules to review cosign attest attestations. By default, EC works with the SLSA provence attestation coming out of Tekton Chains.
+
+image:m4/promote6.png[]
+
+Enterprise Contract, as part of this promotion pipeline, is verifing that the container image did in fact come from the corporate standard/approved build system. In other words, this container image was not built on some random person’s laptop, it was built in the secure build system. The .att, .sbom and .sig are stored alongside the container image and a tool like skopeo can be used to move all items together.
+
+[https://enterprisecontract.dev/](https://enterprisecontract.dev/)
+
+[The Hitchhiker’s Guide](https://enterprisecontract.dev/docs/user-guide/hitchhikers-guide.html) is particularly good way to get started understanding EC.
+
+Once the release pipeline has completed, you can see your application has been promoted to pre-prod and is available via the Topology plug-in.
+
+image:m4/promote7.png[]
+
+
+### Promote to Prod
+To promote to Production use the #Create Release feature of the GitLab UI#.
+
+image:m4/promote8.png[]
+
+Give the release a title and click the #Create release# button
+
+image:m4/promote9.png[]
+
+Another release pipeline will be triggered and if the Enterprise Contract passes then the container image will be promoted production.
+
+image:m4/promote10.png[]
+
+image:m4/promote11.png[]
+
+
+#Promotion to preprod and prod should be done for every services (villains/fight)#
+
+
+### Stop your DevSpaces Workspace
+As you now have fully deployed your microservice, you do not need anymore the DevSpaces workspace so let's just stop it to preserve resources.
+
+#Click the grey button **"><"** on the bottom left of DevSpaces IDE#
+
+image:m4/devspaces-stop1.png[]
+
+#Then Click "Dev Spaces : Stop Workspace#
+
+image:m4/devspaces-stop2.png[]
+
 
 
 ++++
