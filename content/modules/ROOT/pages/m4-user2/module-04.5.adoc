@@ -9,14 +9,30 @@ include::../style.adoc[]
 <div class="developer">
 ++++
 
-# Creating the Villain Microservice
+##Creating the Villain Microservice
 
-New microservice, new project! 
-In this section we will see the counterpart of the Hero microservice: the Villain microservice.
-The Villain REST Endpoint is really similar to the Hero Endpoint but has been developed using the Spring compatibility layer provided by Quarkus.
+
+The Villain REST Endpoint uses the Spring compatibility layer provided by Quarkus.
 While users are encouraged to use Quarkus extensions, this compatibility layer is provided to make developing new applications with Quarkus a natural getting started experience.
 
+## Import the code base 
 
+Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external gitlab repository. Let's import it !
+
+### Open the terminal to import the zip file
+
+* Click on the "Burger icon" on the upper left side
+* Click on File > Terminal > Open a new terminal
+* Run the following command 
+image:m4/open-terminal.png[]
+
+```bash
+wget https://github.com/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/villain-service.zip -O villain-service.zip && unzip villain-service.zip && rm villain-service.zip
+```
+
+Confirm you have this directory : 
+
+image:m4/villain-directory.png[]
 
 ## Bootstrapping the Villain Rest Endpoint
 

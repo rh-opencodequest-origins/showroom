@@ -40,7 +40,7 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
-The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-ai[rhdh/quarkus-with-spring-postgresql, window="gitlab"] repository in GitLab.
+The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-with-spring-postgresql[quarkus-with-spring-postgresql, window="gitlab"] repository in GitLab.
 https://github.com/rh-opencodequest-origins/opencodequest-templates/tree/main/scaffolder-templates/quarkus-ai
 Register this template using the {product_name_rhdh} UI:
 
@@ -55,7 +55,7 @@ image:m3/rhdh-catalog-create.png[The empty Create UI]
 +
 [source,bash,role=execute,subs=attributes+]
 ----
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-ai/template.yaml?ref_type=heads
+https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-with-spring-postgresql/template.yaml?ref_type=heads
 ----
 . You'll be asked to review the entities being imported, as shown:
 +

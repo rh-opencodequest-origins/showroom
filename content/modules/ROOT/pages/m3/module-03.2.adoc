@@ -33,7 +33,7 @@ Objects created will be organized thanks to 2 main concepts. The *System* and th
 The *System* is a collection for entities that coorporate to perform some function. For instance, in 3 tier application, the 3 components belong to the same system. It eases their management.
 
 The *Domain* is a set of *System* . It encapsultates the systems according to their organizational goal, impact ..
-this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[rhdh/template-quarkus-simple, window="gitlab"] repository in GitLab.
+this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[template-quarkus-simple, window="gitlab"] repository in GitLab.
 
 Register those objects using the {product_name_rhdh} UI:
 

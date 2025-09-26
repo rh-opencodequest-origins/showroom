@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Activity: Enabling GitLab Entity Discovery & TechDocs
+== Activity: Enabling GitLab Entity Discovery Remove TECHDOCS== 
 
 include::../style.adoc[]
 
@@ -13,7 +13,7 @@ https://npmjs.com/package/@backstage/plugin-catalog-backend-module-gitlab/v/0.3.
 
 To install and configure this plugin:
 
-. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository^, window="gitlab"] in your GitLab instance.
+. Visit the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[developer-hub-config repository^, window="gitlab"] in your GitLab instance.
 . Select *Edit > Edit single file*.
 . Uncomment the `--- TECHDOCS_PLUGIN ---` section in `dynamic.plugins` section of the YAML, to enable the TechDocs and GitLab dynamic plugins.
 +

@@ -3,7 +3,7 @@
 == *Pick the chosen one* ! 
 
 
-[NOTE] This is a *Shared part*. It means, one person will be able to go through those steps. The work accomplished will be useful for everyone !
+##This is a *Shared part*. It means, one person will be able to go through those steps. The work accomplished will be useful for everyone !##
 
 
 
@@ -17,7 +17,7 @@ Check if a user-pe can configure plaftform engineer
 
 Login to {product_name_rhdh}:
 
-. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can login as *admin/{common_password}*
+. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can login as *{pe-username}/{common_password}*
 . Select the *backstage-developer-hub* Deployment in the Topology View.
 +
 image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]

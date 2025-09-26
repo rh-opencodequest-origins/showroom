@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Developer Activity: Instantiate the template corrected
+== Platform Engineer Activity: Instantiate the template corrected
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 

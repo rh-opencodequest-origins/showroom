@@ -25,7 +25,7 @@ This block of configuration instructs the Keycloak provider to synchronize *User
 . Click the *Commit* button.
 . Visit the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`backstage` Application in OpenShift GitOps^, window="argo"] and click *Refresh*. 
 +
-If needed, login using `admin`/`{openshift_gitops_password}`.
+If needed, login using `{pe-username}`/`{openshift_gitops_password}`.
 +
 NOTE: Argo CD has been setup to auto-sync every two minutes. Instead of having to wait for auto-sync to kick in, you are instructed to manually sync the Argo CD application.
 

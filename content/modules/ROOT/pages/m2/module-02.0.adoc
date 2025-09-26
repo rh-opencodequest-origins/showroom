@@ -23,14 +23,7 @@ Satisfying the previously defined use cases involves configuring {product_name_r
 
 It could be said that the value of an internal developer portal is proportional to the thought and energy invested into it by the platform engineer(s), and developers using it.
 
-In this module you'll:
-
-* Identify the platform requirements and dependencies, such as single sign-on (SSO), source code management (SCM), RBAC, resources, existing assets
-* Integrate {product_name_rhdh} with the dependant services, such as GitLab and Keycloak
-* Learn about https://backstage.io/docs/features/software-catalog/[Backstage Entities^, window="content"], e.g. Components, APIs, and Docs
-* Ready the platform for developer onboarding
-
-== Workshop Environment
+== ADD picture with the girl laptop 
 
 Your workshop environment has been preconfigured with the following software and platform components:
 
@@ -40,3 +33,14 @@ Your workshop environment has been preconfigured with the following software and
 * GitLab
 
 For the purposes of this workshop, we'll assume that your organization has standardized on these tools, and it's your objective as the platform engineer to integrate them with {product_name_rhdh}.
+
+ADD picture with the girl laptop 
+In this module you'll:
+
+* Identify the platform requirements and dependencies, such as single sign-on (SSO), source code management (SCM), RBAC, resources, existing assets
+* Integrate {product_name_rhdh} with the dependant services, such as GitLab and Keycloak
+* Learn about https://backstage.io/docs/features/software-catalog/[Backstage Entities^, window="content"], e.g. Components, APIs, and Docs
+* Ready the platform for developer onboarding
+
+
+

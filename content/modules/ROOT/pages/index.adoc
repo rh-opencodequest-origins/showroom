@@ -26,8 +26,7 @@ Today, You will learn how to onboard new team members on an amazing platform. Th
 * Take steps back and improve your platform engineering 
 
 The workshop will be paced with *2 different roles*. 
-The first is the *Platform Engineer* . It will be in charge to configure the internal developer platform and define templates according to application development requirements.
-The second is the *Developer*. It will consume the internal developer platform, produce code and ship it to target environments
+
 
 As you will be a team of 3, you will drive parts sometimes *individually* or *together*. Together means someone from the team will own the "execution" of a *"Shared Part"* of the workshop and the rest of team will follow it carefully. Each member will do a *"shared part"* in this session
 
@@ -48,19 +47,5 @@ This workshop can also help *Development Teams* who are in charge of creating a 
 Learn how Red Hat transform the developer onboarding and secure their deliveries from inner loop to the outter loop seamessly 
 
 
-== Key Takeways
 
-After completing this workshop you'll:
-
-TO COMPLETE WITH OCQ info 
-* Understand the need to implement Platform Engineering disciplines within your organization.
-* See clear benefits from improving Developer Productivity.
-* Be ready to deploy a Thinnest Viable Platform (TVP) based on the needs of the development teams in your organization, and focus on increasing their productivity.
-* Assess the investments into your own IDP and understand how it can be enhanced, and convince development teams to start adopting it.
-* View Red Hat as a partner in your Platform Engineering journey.
-
-
-The following image is a journey map of the workshop modules. The modules must be executed sequentially.
-
-image:common/pew-journey-map.png[]
 

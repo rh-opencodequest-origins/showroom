@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-= Module 1: Discovery
+= Module USER TEAM DEFINITION: Discovery
 
 include::../style.adoc[]
 
@@ -10,7 +10,7 @@ include::../style.adoc[]
 * Discuss the challenges currently faced by developers and the need for an Internal Developer Platform
 * Learn why a developer platform is necessary for rapid innovation
 
-== Hello Open Code Quest Organization ! ==
+== Hello Open Code Quest Organization !
 
  Open Code Quest Organization is an super heroe developer company ! With business booming, and their online presence increasing, the teams also grow in numbers. But the team, while being quite technically proficient, is quite siloed in their way of working especially because they are widespread and this results in difficulties in collaborating with each other.
 
@@ -25,6 +25,11 @@ With a rapidly evolving and expanding team, it is getting harder and harder for 
 The team hears about the magic words - _Internal Developer Platform (IDP)_, and some research shows that {product_name_rhdh} would be perfect because of how customizable it is and especially the fact that it can run on on-prem to air gap sensitive content.
 
 
+== Hello {product_name_rhdh}!
+
+{product_name_rhdh} streamlines development through a unified and open platform that reduces cognitive load and frustration for developers. It provides pre-architected and supported approaches that can help Parasol get their applications into production faster and more securely—without sacrificing code quality.
+
+{product_name_rhdh} and its associated plugins extend the popular upstream Backstage project by providing additional features such as integration with OpenShift, enterprise role-based access control (RBAC), and dynamic plugins - while including all the nice goodies that come with Backstage project itself.
 
 
 == Hello Internal Development Portal!
