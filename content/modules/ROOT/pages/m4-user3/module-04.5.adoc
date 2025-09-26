@@ -20,6 +20,27 @@ You should see the following page while the Dev Spaces is starting up:
 image:m4/dev-spaces-starting-up.png[]
 
 
+## Import the code base 
+
+Our workspace directory looks empty. In order to start the project quickly, the fight service code base is located in an external gitlab repository. Let's import it !
+
+### Open the terminal to import the zip file
+
+* Click on the "Burger icon" on the upper left side
+* Click on File > Terminal > Open a new terminal
+
+image:m4/open-terminal.png[]
+
+* Run the following command 
+
+```bash
+wget https://github.com/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/fight-service.zip -O fight-service.zip && unzip fight-service.zip && rm fight-service.zip
+```
+
+Confirm you have this directory : 
+
+image:m4/fight-service-directory.png[]
+
 ## The Fight Service
 
 The Fight service is a Quarkus intelligent service. 
@@ -33,6 +54,8 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 The following diagram illustrates the interactions between the Fight service and the LLM.
 
 image:m4/fight-architecture.png[]
+
+
 
 ### The Quarkus-LangChain4j Extension
 
@@ -90,64 +113,20 @@ It’s time to tell the LLM what we want to do.
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions. 
 We model the interaction using an interface annotated with `@RegisterAiService`.
 
-#Edit the java interface `src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java` and copy the following content:#
+#### Uncomment the FightSimulatorService file
 
-```java
-package io.quarkus.workshop.fight;
+The file is located in *src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java*
 
-import dev.langchain4j.service.UserMessage;
-import io.quarkiverse.langchain4j.RegisterAiService;
-import org.eclipse.microprofile.faulttolerance.Timeout;
+Open it and remove the first of the file:
 
-import java.time.temporal.ChronoUnit;
+image:m4/start-comment-line.png[]
 
-@RegisterAiService
-public interface FightSimulatorService {
+and the last one:
+
+image:m4/end-comment-line.png[]
 
 
-    @UserMessage("""
-            <|system|>
-            You are a simulation service that can simulate fights between heroes and villains.
-            Heroes and villains are represented with their name, level and superpowers.
-            Your goal is to simulate a fight and provide the winner and a short narration of the fight.
-            Include a part of randomness in the simulation to make it more interesting.
-            You must only use the information provided in the hero and villain objects to simulate the fight.
-            {response_schema}
-            
-            <|user|>
-            Input: Hero[name=julien, level=2, powers=[python, javascript]]
-            Villain[name=clement, level=3, powers=[java, javascript]]
-            
-            <|assistant|>
-            Output: {"winner": "Clement","narration": "Clement's intimate knowledge of Java and JavaScript allowed him to quickly adapt to the battle and use his powers to counter Julien's attempts to exploit his Python skills."}
-            
-            <|user|>
-            Input: Hero[name=luke skywalker, level=100, powers=[the force, lightsaber]]
-            Villain[name=darth vader, level=90, powers=[the dark force, lightsaber]]
-            
-            <|assistant|>
-            Output: {"winner": "luke skywalker","narration": "Luke Skywalker's mastery of the force and his lightsaber skills allowed him to defeat Darth Vader in a fierce battle. Despite Darth Vader's experience and power, Luke's determination and skill proved to be too much for him."}
 
-            <|user|>
-            Input: Hero[name=jar jar been, level=10, powers=[agility]]
-            Villain[name=super frog, level=20, powers=[super leap, speed]]
-            
-            <|assistant|>
-            Output: {"winner": "super frog","narration": "Super frog super leaping ability allowed him to defeat jar jar been in a fierce battle. Despite jar jar been's experience and agility, super frog's skills proved to be too much for him."}
-            
-            <|user|>
-            {hero}
-            {villain}
-            
-            <|assistant|>
-            Output:
-            """)
-    @Timeout(value = 1, unit = ChronoUnit.MINUTES)
-    FightResult fight(Hero hero, Villain villain);
-
-}
-
-```
 
 The rest of the application would be able to use the LLM by injecting the `FightSimulatorService` interface and calling the methods.
 

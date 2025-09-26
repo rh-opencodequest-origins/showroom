@@ -12,7 +12,8 @@ include::../style.adoc[]
 
 Now our platform engineering has the addtional capabilities such as :
 
-(Rajouter schéma )
+image:m2/developerhub-tooling.png[]
+
 * Authentication with Keycloak 
 * Source code management with Gitlab
 * Organization and entities  
@@ -40,8 +41,6 @@ image:m3/fight-result.png[]
 image:m3/architecture.png[]
 
 
-[ "Hero and Villain services"
-    The `hero-service` and `villain-service` are very similar, yet they use different _development models_. While both are Quarkus applications, the hero service uses the idiomatic Quarkus development model, while the villain service uses the Spring compatibility support from Quarkus.]
 
 
 Each team member will create a template following the golden rules of the software template. The template is specific to a stack. 
@@ -49,23 +48,23 @@ A set of tools will be also configured. Yes you will leverage the integrations d
 
 A template here will have the following structure : 
 
-* a skeleton for the source code repository
-* a source code repository
-* a IDE Cloud
-* a CI/CD pipeline
-* a container image registry repository
-* a gitops application
+* Skeleton for the source code repository
+* Source code repository
+* IDE Cloud
+* CI/CD pipeline
+* Container image registry repository
+* Gitops application
 
 [Add schema to illustrate users split ?]
 === Be ready to practise !
 
 Please select one link per user 
 
-*User 1 -> Quarkus + postgreSQL template   xref:m4-user1/module-04.0.adoc[link]*
+*User 1 -> The Hero service   xref:m4-user1/module-04.0.adoc[link]*
 
-*User 2 -> Quarkus Spring compatible + postgreSQL the  xref:m4-user2/module-04.0.adoc[link]*
+*User 2 -> The Villain service  xref:m4-user2/module-04.0.adoc[link]*
 
-*User 3 -> Quarkus with AI capabilities  xref:m4-user3/module-04.0.adoc[link]* 
+*User 3 -> The Fight Service  xref:m4-user3/module-04.0.adoc[link]* 
 
 
 

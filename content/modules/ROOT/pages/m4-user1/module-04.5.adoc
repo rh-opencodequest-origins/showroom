@@ -92,10 +92,7 @@ and the last one:
 image:m4/end-comment-line.png[]
 
 
-
-
-
-It's a very simple REST endpoint, returning "hello" to HTTP GET requests to `/api/heroes`.
+This file has a set of simple REST endpoints. For instance, returning "hello" to HTTP GET requests to `/api/heroes`.
 
 
 ```java

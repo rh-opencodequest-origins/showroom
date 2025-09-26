@@ -12,7 +12,7 @@
 
 include::../style.adoc[]
 
-Check if a user-pe can configure plaftform engineer
+Once you have chosen a user from team, go head !
 {product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[backstage project on OpenShift^, window="console"].
 
 Login to {product_name_rhdh}:

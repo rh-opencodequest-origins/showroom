@@ -127,8 +127,7 @@ Your workshop environment has been pre-configured such that this repository in G
 
 With that out of the way, let's get to work on configuring your instance of {product_name_rhdh}!
 
-=== Quizz time - Check your knowledge  ADD IMAGE ! 
-
+=== Quizz time - Check your knowledge : need rework to interact with attendees
 
 What is a software template ?
 

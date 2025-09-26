@@ -23,7 +23,7 @@ Satisfying the previously defined use cases involves configuring {product_name_r
 
 It could be said that the value of an internal developer portal is proportional to the thought and energy invested into it by the platform engineer(s), and developers using it.
 
-== ADD picture with the girl laptop 
+image:m2/developerhub-tooling.png[]
 
 Your workshop environment has been preconfigured with the following software and platform components:
 
