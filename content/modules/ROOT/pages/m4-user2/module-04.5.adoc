@@ -17,18 +17,6 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 
 
 
-## Bootstrapping the Villain Rest Endpoint
-
-We will create the villain-service from a Red Hat Developer Hub template. It will instanciates the following tools for the project :
-
-* Gitlab repositiory
-* IDE Cloud with toolkit and runtimes
-* Building pipelines
-* Container image repository
-* GitOps flows
-
-
-
 * If everything went well, you should see the following successful page. 
 
 
@@ -36,9 +24,15 @@ image:m4/villain-success-rhdh.png[]
 
 #Click on the `Open Component in Catalog`#
 
+
+## Bootstrapping the Villain Rest Endpoint
+
+
 * #Once in the villain-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)#
 
 image:m4/villain-home-page-rhdh.png[]
+
+
 
 ## Import the code base 
 

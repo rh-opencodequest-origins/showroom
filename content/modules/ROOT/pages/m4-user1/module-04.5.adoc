@@ -21,6 +21,8 @@ image:m4/dev-spaces-starting-up.png[]
 
 ## The Hero Service
 
+
+
 The Super Heroes microservice stores super-heroes, with their names, powers, and so on.
 We need to expose a REST API allowing CRUD operations on _super heroes_.
 This microservice is a *classical* microservice.
@@ -29,6 +31,31 @@ It uses HTTP to expose a REST API, and it internally stores data into a database
 This service will be used by the *fight* microservice.
 
 image:m4/rest-physical-architecture.svg[]
+
+
+## Import the code base 
+
+Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external gitlab repository. Let's import it !
+
+
+### Open the terminal to import the zip file
+
+* Click on the "Burger icon" on the upper left side
+* Click on File > Terminal > Open a new terminal
+
+image:m4/open-terminal.png[]
+
+* Run the following command 
+
+```bash
+wget https://github.com/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/hero-service.zip -O hero-service.zip && unzip hero-service.zip && rm hero-service.zip
+```
+
+Confirm you have this directory : 
+
+image:m4/hero-directory.png[]
+
+
 
 ## Directory Structure
 
@@ -52,75 +79,35 @@ Regarding the dependencies section, you can see the extension allowing the devel
 
 ## The JAX-RS Resource
 
-During the project creation, the `hero-service/src/main/java/io/quarkus/workshop/hero/HeroResource.java` file has been created with the following content:
+During the project creation, the `hero-service/src/main/java/io/quarkus/workshop/hero/HeroResource.java` file has been created with the following content. 
 
-```java
+### Uncomment the file content
 
-    @GET
-    @Path("/random")
-    public RestResponse<Hero> getRandomHero() {
-        var hero = Hero.findRandom();
-        if (hero != null) {
-            Log.debugf("Found random hero: %s", hero);
-            return RestResponse.ok(hero);
-        } else {
-            Log.debug("No random hero found");
-            return RestResponse.notFound();
-        }
-    }
+Open it and remove the first of the file:
 
-    @GET
-    public List<Hero> getAllHeroes() {
-        return Hero.listAll();
-    }
+image:m4/start-comment-line.png[]
 
-    @GET
-    @Path("/{id}")
-    public RestResponse<Hero> getHero(Long id) {
-        var hero = Hero.<Hero>findById(id);
-        if (hero != null) {
-            return RestResponse.ok(hero);
-        } else {
-            Log.debugf("No Hero found with id %d", id);
-            return RestResponse.notFound();
-        }
-    }
+and the last one:
 
-    @POST
-    @Transactional
-    public RestResponse<URI> createHero(@Valid Hero hero, @Context UriInfo uriInfo) {
-        hero.persist();
-        UriBuilder builder = uriInfo.getAbsolutePathBuilder().path(Long.toString(hero.id));
-        Log.debugf("New Hero created with URI %s", builder.build().toString());
-        return RestResponse.created(builder.build());
-    }
+image:m4/end-comment-line.png[]
 
-    @PUT
-    @Transactional
-    public Hero updateHero(@Valid Hero hero) {
-        Hero retrieved = Hero.findById(hero.id);
-        retrieved.name = hero.name;
-        retrieved.otherName = hero.otherName;
-        retrieved.level = hero.level;
-        retrieved.picture = hero.picture;
-        retrieved.powers = hero.powers;
-        Log.debugf("Hero updated with new valued %s", retrieved);
-        return retrieved;
-    }
 
-    @DELETE
-    @Path("/{id}")
-    @Transactional
-    public RestResponse<Void> deleteHero(Long id) {
-        if (Hero.deleteById(id)) {
-            Log.debugf("Hero deleted with %d", id);
-        }
-        return RestResponse.noContent();
-    }
-```
+
+
 
 It's a very simple REST endpoint, returning "hello" to HTTP GET requests to `/api/heroes`.
 
+
+```java
+
+
+    @GET
+    @Path("/hello")
+    public String hello() {
+        return "Hello from Quarkus REST";
+    }
+
+``` 
 ## Running the Application
 
 We are now ready to run our application.
@@ -252,9 +239,10 @@ In the generated `pom.xml` file, you can see 2 test dependencies:
 ```
 The generated project contains a simple test in `hero-service/src/test/java/io/quarkus/workshop/hero/HeroResourceTest.java`.
 
-```java linenums="1"
-{{ insert('hero-service/src/test/java/io/quarkus/workshop/hero/HeroResourceTest.java', 'docHeroResourceTest', ['docCrudTests','docHelloPath']) }}
-```
+### Uncomment the HeroResourceTest.java
+
+The file content to uncomment is located here : `hero-service/src/test/java/io/quarkus/workshop/hero/HeroResourceTest.java`.
+
 
 By using the `QuarkusTest` runner, the `HeroResourceTest` class instructs JUnit to start the application before the tests.
 Then, the `testHelloEndpoint` method checks the HTTP response status code and content.
@@ -278,6 +266,98 @@ You should see the status change down the bottom of the screen as they are runni
 All 1 test is passing (0 skipped), 1 test was run in 8053ms. Tests completed at 12:11:25.
 Press [e] to edit command line args (currently ''), [r] to re-run, [o] Toggle test output, [:] for the terminal, [h] for more options>
 ```
+
+
+## Database dependencies
+
+This microservice:
+
+* interacts with a PostGreSQL database - so it needs a driver
+* uses Hibernate with Panache - so need the dependency on it
+* validates payloads and entities - so need a validator
+* consumes and produces JSON - so we need a mapper
+
+Hibernate ORM is the de-facto JPA implementation and offers you the full breadth of an Object Relational Mapper.
+It makes complex mappings possible, but it does not make simple and common mappings trivial.
+[Hibernate ORM with Panache](https://github.com/quarkusio/quarkus/tree/master/extensions/panache) focuses on making your entities trivial and fun to write in Quarkus.
+
+Because JPA and Bean Validation work well together, we will use Bean Validation to constrain our business model.
+
+All the needed dependencies to access the database are already in the `pom.xml` file. 
+
+#Check that you have the following
+
+```xml
+  <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-orm-panache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-jackson</artifactId>
+        </dependency>
+```
+
+
+## Hero Entity
+
+At this point we need an Entity class.
+There is already a `Hero.java` file under `src/main/java/io/quarkus/workshop/hero` so you don't need to create it.
+However this file is empty.
+To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity` and add your columns as public fields (no need to have getters and setters).
+
+### Uncomment the Hero.java file 
+
+It is located under #`src/main/java/io/quarkus/workshop/hero`#
+
+
+
+Notice that you can put all your JPA column annotations and Bean Validation constraint annotations on the public fields.
+
+For our workshop we need returning a random hero.
+
+
+```java
+ public static Hero findRandom() {
+        Random random = new Random();
+        var count = count();
+        var index = random.nextInt((int) count);
+        return findAll().page(index, 1).firstResult();
+    }
+```
+
+
+
+
+## Configuring Hibernate
+
+As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don't need at the moment to configure anything regarding the database access. 
+Quarkus will automatically start a Postgresql service and wire up your application to use this service. 
+
+Quarkus development mode is great for apps that combine front-end, services, and database access. By using quarkus.hibernate-orm.database.generation=drop-and-create with import.sql, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.
+
+
+### Adding Data
+
+#To load some data when Hibernate ORM starts, run the following command on a Terminal#
+
+```shell
+curl https://raw.githubusercontent.com/cescoffier/quarkus-openshift-workshop/03d5a943c0948bc53c598b6ee78a71e50ef77cee/hero-service/src/main/resources/import.sql -fL -o src/main/resources/import.sql
+```
+
+It will download the specified file and copy the content in your `/src/resources/import.sql` file.
+Now, you have around 500 heroes that will be loaded in the database.
+
+
+
 
 ++++
 </div>
