@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Introduction to Concepts
+= Introduction to Concepts
 
 include::../style.adoc[]
 
@@ -15,13 +15,13 @@ The core features of {product_name_rhdh} are the:
 * Dynamic Plugins
 * Role-Based Access Control (RBAC)
 
-=== Software Templates
+== Software Templates
 
 Software Templates have been referred to as "Golden Paths" in the past. These templates are designed and curated by platform engineers to provide a starting point for new software components that adhere to best practices within an organization. Templates can also be used to patch and update existing source code repositories, and provide general automation and self-service for developer chores.
 
 We'll dive deeper into Software Templates in another module!
 
-=== Software Catalog
+== Software Catalog
 
 The Software Catalog is a centralised asset tracker for all of the software in your organization. It stores and tracks *Entities*:
 
@@ -72,7 +72,7 @@ spec:
 
 Users and Groups can be specified as owners of other Entities. If this seems abstract, don't worry, you'll see it in definitive terms shortly. A well curated Software Catalog will enable your developers to find API documentation and teams that are responsible for the Components powering those APIs, for example.
 
-=== Plugins
+== Plugins
 
 Backstage - and by extension {product_name_rhdh} - supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.
 
@@ -89,7 +89,7 @@ The ability to load plugins dynamically is a value added feature included in {pr
 
 You'll see dynamic plugins in action shortly.
 
-=== Understanding the {product_name_rhdh} Configuration
+== Understanding the {product_name_rhdh} Configuration
 
 Upstream Backstage uses an https://backstage.io/docs/conf/[app-config.yaml^, window="content"] file to define configuration values. {product_name_rhdh} is no different.
 
