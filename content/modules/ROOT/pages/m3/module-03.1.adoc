@@ -67,7 +67,7 @@ spec:
           description: Maven Group Id
 ```
 
-You might have recognized this as a https://json-schema.org/[JSON Schema] structure. By using JSON Schema you can define the parameters that are supported by the template, and, more importantly, enforce validation on those parameters. The rendering of the form in the {product_name_rhdh} UI is managed by the https://github.com/rjsf-team/react-jsonschema-form[react-jsonschema-form^, window="content"] library.
+You might have recognized this as a https://json-schema.org/[JSON Schema] structure. By using JSON Schema you can define the parameters that are supported by the template, and, more importantly, enforce validation on those parameters. The rendering of the form in the {product_name_rhdh} UI is managed by the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rjsf-team/react-jsonschema-form[react-jsonschema-form^, window="content"] library.
 
 
 [NOTE]

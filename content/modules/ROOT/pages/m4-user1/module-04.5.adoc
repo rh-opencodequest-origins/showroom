@@ -48,7 +48,7 @@ image:m4/open-terminal.png[]
 * Run the following command 
 
 ```bash
-wget https://github.com/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/hero-service.zip -O hero-service.zip && unzip hero-service.zip && rm hero-service.zip
+wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/hero-service.zip -O hero-service.zip && unzip hero-service.zip && rm hero-service.zip
 ```
 
 Confirm you have this directory : 
@@ -276,7 +276,7 @@ This microservice:
 
 Hibernate ORM is the de-facto JPA implementation and offers you the full breadth of an Object Relational Mapper.
 It makes complex mappings possible, but it does not make simple and common mappings trivial.
-[Hibernate ORM with Panache](https://github.com/quarkusio/quarkus/tree/master/extensions/panache) focuses on making your entities trivial and fun to write in Quarkus.
+[Hibernate ORM with Panache](https://gitlab-gitlab.{openshift_cluster_ingress_domain}/quarkusio/quarkus/tree/master/extensions/panache) focuses on making your entities trivial and fun to write in Quarkus.
 
 Because JPA and Bean Validation work well together, we will use Bean Validation to constrain our business model.
 

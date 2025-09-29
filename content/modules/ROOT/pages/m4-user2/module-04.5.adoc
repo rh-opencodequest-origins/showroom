@@ -48,7 +48,7 @@ image:m4/open-terminal.png[]
 * Run the following command 
 
 ```bash
-wget https://github.com/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/villain-service.zip -O villain-service.zip && unzip villain-service.zip && rm villain-service.zip
+wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/villain-service.zip -O villain-service.zip && unzip villain-service.zip && rm villain-service.zip
 ```
 
 Confirm you have this directory : 

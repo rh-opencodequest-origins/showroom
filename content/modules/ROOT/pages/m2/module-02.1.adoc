@@ -109,7 +109,7 @@ catalog:
     - allow: [Component, System, API, Resource, Location, Template]
   locations:
     - type: file
-      target: https://github.com/org-name/repo-name/entities.yaml
+      target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/org-name/repo-name/entities.yaml
 
 # A configuration for the TechDocs plugin. This example instructs the plugin to
 # build documentation at runtime, instead of pulling prebuilt HTML from S3

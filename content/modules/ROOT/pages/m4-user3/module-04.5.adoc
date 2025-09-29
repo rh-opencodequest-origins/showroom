@@ -34,7 +34,7 @@ image:m4/open-terminal.png[]
 * Run the following command 
 
 ```bash
-wget https://github.com/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/fight-service.zip -O fight-service.zip && unzip fight-service.zip && rm fight-service.zip
+wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/fight-service.zip -O fight-service.zip && unzip fight-service.zip && rm fight-service.zip
 ```
 
 Confirm you have this directory : 
