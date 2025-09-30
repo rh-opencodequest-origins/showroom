@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Instantiate the template corrected
+= Platform Engineer Activity: Instantiate the template corrected
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 
@@ -11,7 +11,7 @@ include::../style.adoc[]
 
 Create a new software Component and supporting infrastructure using the *OpenCodeQuest - Quarkus CRUD microservice* template that was created by the platform engineer:
 
-=== Run the Template
+== Run the Template
 
 . Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
@@ -50,8 +50,9 @@ image:m3/template-empty-execution.png[A empty template run in {product_name_rhdh
 ++++
 
 
-=== Oupsi ! Something is missing !
+== Oupsi ! Something is missing !
 
+[ADD MORE DETAILS ABOUT MISSING ELEMENTS]
 *Our template execution looks empty !*
 
 Where are the steps to create a repository in GitLab ? 

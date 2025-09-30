@@ -1,14 +1,13 @@
 :imagesdir: ../../assets/images
-include::../style.adoc[]
 
 
-== Platform Engineer Activity: Add steps to the template
+= Platform Engineer Activity: Add steps to the template
 
 :imagesdir: ../../assets/images
+
 include::../style.adoc[]
 
-
-=== Find the template to edit  !
+== Find the template to edit  !
 
 ++++
 <div class="pe">
@@ -46,7 +45,7 @@ Remember Templates imported previously are located in Gitlab. We will edit it an
 ++++
 
 
-=== Mind the step !
+== Mind the step !
 ++++
 <div class="pe">
 ++++
@@ -96,7 +95,7 @@ Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_dom
 ++++
 
 
-=== Uncomment the steps !
+== Uncomment the steps !
 ++++
 <div class="pe">
 ++++
@@ -116,7 +115,7 @@ image:m3/gitops-steps-uncomment.png[edit]
 ++++
 
 
-=== Refresh the template updated 
+== Refresh the template updated 
 
 ++++
 <div class="pe">
@@ -142,7 +141,7 @@ image:/m3/template-refresh-button.png[Customizing the Title]
 </div>
 ++++
 
-=== Summary
+== Summary
 
 Nice work! The template is definetly ready to be used ! 
 Let's developer consume it !

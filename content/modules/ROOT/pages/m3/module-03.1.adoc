@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Introduction to Concepts
+= Introduction to Concepts
 
 include::../style.adoc[]
 
@@ -8,7 +8,7 @@ As mentioned earlier, Templates are defined using YAML and rendered as a rich fo
 
 Let's explore the Template structure using a sample Template in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/template-quarkus-simple[rhdh/template-quarkus-simple^, window="gitlab"] repository in GitLab. 
 
-=== Template YAML Structure
+== Template YAML Structure
 
 At a basic level, the Template Entity is similar to the Component Entity you encountered in the _catalog-info.yaml_ in the prior module; resembling a Kubernetes Custom Resource.
 
@@ -36,7 +36,7 @@ Where the Template Entity differs is that it contains additional fields. Let's e
 * `spec.steps` (Steps)
 * `spec.output` (Output)
 
-=== Parameters
+== Parameters
 
 The _spec.parameters_ field is used by platform engineers to enable developers to pass values (parameters) to the Template. Typically this will be parameters such as the name of the Component, a Java package name, repository name, etc.
 
@@ -67,18 +67,14 @@ spec:
           description: Maven Group Id
 ```
 
-You might have recognized this as a https://json-schema.org/[JSON Schema] structure. By using JSON Schema you can define the parameters that are supported by the template, and, more importantly, enforce validation on those parameters. The rendering of the form in the {product_name_rhdh} UI is managed by the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rjsf-team/react-jsonschema-form[react-jsonschema-form^, window="content"] library.
 
 
-[NOTE]
-====
-`react-jsonschema-form` is a set of React components for building web forms from JSON Schema. It is core to scaffolder plugin's frontend functionality. These React components are responsible for rendering the form in which developers and end users fill out data needed to use the Software Template.
-====
+
 
 The properties that have a `ui` prefix might have piqued your interest. These are special properties that provide instructions to the form, for example, to enable autocomplete or autofocus certain form fields when it is displayed in the {product_name_rhdh} UI.
 
 
-=== Steps
+== Steps
 
 Once a developer has entered and confirmed their parameters, the Template is executed by the scaffolder - a service within the {product_name_rhdh} backend.
 
@@ -111,7 +107,7 @@ Notice how the `parameters` are referenced in the `steps`? Another point of note
 
 The `output` values are documented on a per plugin basis. You can find the values for the specific version of your installed plugins by accessing the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/create/actions[/create/actions^, window="rhdh"] endpoint on your {product_name_rhdh} instance.
 
-=== Output
+== Output
 
 The _spec.output_ can use of the outputs from the `steps` to do display useful information such as: 
 

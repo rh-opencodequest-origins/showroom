@@ -1,16 +1,12 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import the Software Template Quarkus-with-spring-postgresql
+= Platform Engineer Activity: Import the Software Template Quarkus-with-spring-postgresql
 
 include::../style.adoc[]
 
-
-
-
-
 == Role switch ! 
 
-In this workshop, you will switch between the developer role and the platform engineer role.
+IMPORTANT: In this workshop, you will switch between the developer role and the platform engineer role.
 
 ++++
 <div class="developer">
@@ -40,8 +36,8 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
-The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-with-spring-postgresql[quarkus-with-spring-postgresql, window="gitlab"] repository in GitLab.
-https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/opencodequest-templates/tree/main/scaffolder-templates/quarkus-ai
+The Software Template you'll be using in this activity is stored in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/opencodequest-templates/tree/main/scaffolder-templates/quarkus-with-spring-postgresql[template.yaml, window="gitlab"] file in repository in GitLab.
+
 Register this template using the {product_name_rhdh} UI:
 
 . Login to your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/[instance of {product_name_rhdh}^, window="rhdh"] as the `{pe-username}` user with password `{common_password}`.

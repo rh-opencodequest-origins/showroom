@@ -1,13 +1,13 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import Entity and Domain
+= Platform Engineer Activity: Import Entity and Domain
 
 include::../style.adoc[]
 
 
 
 
-*It's a shared part ! please choose someone else from the team to accomplish this step !*
+IMPORTANT: *It's a shared part ! please choose someone else from the team to accomplish this step !*
 
 NOTE: The following part is a platform engineering activity so the user to use is {pe-username} / {common_password}
 
@@ -21,7 +21,7 @@ include::../login-pe.adoc[]
 
 
 
-=== System and Domain 
+== System and Domain 
 
 ++++
 <div class="pe">
@@ -33,9 +33,9 @@ Objects created will be organized thanks to 2 main concepts. The *System* and th
 The *System* is a collection for entities that coorporate to perform some function. For instance, in 3 tier application, the 3 components belong to the same system. It eases their management.
 
 The *Domain* is a set of *System* . It encapsultates the systems according to their organizational goal, impact ..
-this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[template-quarkus-simple, window="gitlab"] repository in GitLab.
+this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[system-domain, window="gitlab"] repository in GitLab.
 
-Register those objects using the {product_name_rhdh} UI:
+=== Register those objects using the {product_name_rhdh} UI:
 
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +

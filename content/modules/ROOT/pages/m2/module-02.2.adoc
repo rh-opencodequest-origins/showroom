@@ -1,9 +1,11 @@
 :imagesdir: ../../assets/images
 
+= First step in Red Hat Developer Hub
+
 == *Pick the chosen one* ! 
 
 
-[IMPORTANT] ##This is a *Shared part*. It means, *one person* will be able to go through those steps The work accomplished will be useful for everyone !##
+IMPORTANT: This is a *Shared part*. It means, *one person* will be able to go through those steps The work accomplished will be useful for everyone !
 
 
 

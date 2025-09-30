@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-# Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne
+= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 
@@ -9,7 +9,7 @@ include::../style.adoc[]
 <div class="developer">
 ++++
 
-## Creating the Villain Microservice
+== Creating the Villain Microservice
 
 
 The Villain REST Endpoint uses the Spring compatibility layer provided by Quarkus.
@@ -25,7 +25,7 @@ image:m4/villain-success-rhdh.png[]
 #Click on the `Open Component in Catalog`#
 
 
-## Bootstrapping the Villain Rest Endpoint
+== Bootstrapping the Villain Rest Endpoint
 
 
 * #Once in the villain-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)#
@@ -34,11 +34,11 @@ image:m4/villain-home-page-rhdh.png[]
 
 
 
-## Import the code base 
+== Import the code base 
 
 Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external gitlab repository. Let's import it !
 
-### Open the terminal to import the zip file
+=== Open the terminal to import the zip file
 
 * Click on the "Burger icon" on the upper left side
 * Click on File > Terminal > Open a new terminal
@@ -56,7 +56,7 @@ Confirm you have this directory :
 image:m4/villain-directory.png[]
 
 
-## The Villain Service
+== The Villain Service
 
 At the heart of the Super Hero application come also  _villains_.
 
@@ -68,7 +68,7 @@ This service will be used by the *fight* microservice.
 
 #The codebase is provided but you will have to bring some guided modifications ;) !#
 
-## Directory Structure
+=== Directory Structure
 
 Once you bootstrap the project, you get the following directory structure with a few Java classes and other artifacts:
 
@@ -91,7 +91,7 @@ The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing 
 #Be aware that Quarkus Spring compatibility extensions do not utilize the Spring application context.#
 For this reason, attempting to utilize additional Spring libraries will likely not work.
 
-## The Controller
+== The Controller
 
 We get a rest controller, the `VillainController.java`.
 This class is commented. Please uncomment it before explore it.
@@ -126,11 +126,11 @@ Not Spring specific annotations but used like in the hero-service:
 7. **@RunOnVirtualThread**: Runs the controller on a virtual thread for better concurrency management. This is specific to the SmallRye library.
 
 
-## Accessing Database
+== Accessing Database
 
 As everything is in place the `import.sql` file contains already all SQL statements to populate the villain database.
 
-### The Villain repository
+=== The Villain repository
 
 As we are following a Spring Data programming model with JPA,we need to extend the JPA specific Repository interface, JpaRepository. 
 This will enable Quarkus to find this interface and automatically create an implementation for it.
@@ -151,7 +151,7 @@ You can check the `VillainRepository.java` code. It also contains a more specifi
     }
 ```
 
-### The Villain entity
+=== The Villain entity
 
 Finally we have an entity class representing the villains.
 
@@ -161,7 +161,7 @@ The file is located in *villain-service > src > main > java > io > quarkus > wor
 
 
 
-### Tests
+== Tests
 
 As in the case of the heroes, the tests could not be missing here. 
 A test class is provided and contains the basic tests to ensure that the villain microservice works correctly.

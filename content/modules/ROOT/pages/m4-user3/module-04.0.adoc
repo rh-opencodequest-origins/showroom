@@ -1,13 +1,13 @@
 :imagesdir: ../../assets/images
 
-== Platform Engineer Activity: Import the Software Template Quarkus-AI
+= Platform Engineer Activity: Import the Software Template Quarkus-AI
 
 include::../style.adoc[]
 
 
 == Role switch ! 
 
-In this workshop, you will switch between the developer role and the platform engineer role.
+IMPORTANT: In this workshop, you will switch between the developer role and the platform engineer role.
 
 ++++
 <div class="developer">
@@ -37,7 +37,7 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
-The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-ai[quarkus-ai, window="gitlab"] repository in GitLab.
+The Software Template you'll be using in this activity is stored in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-ai[template.yaml, window="gitlab"] file repository in GitLab.
 
 Register this template using the {product_name_rhdh} UI:
 

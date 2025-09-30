@@ -34,7 +34,6 @@ Your workshop environment has been preconfigured with the following software and
 
 For the purposes of this workshop, we'll assume that your organization has standardized on these tools, and it's your objective as the platform engineer to integrate them with {product_name_rhdh}.
 
-ADD picture with the girl laptop 
 In this module you'll:
 
 * Identify the platform requirements and dependencies, such as single sign-on (SSO), source code management (SCM), RBAC, resources, existing assets

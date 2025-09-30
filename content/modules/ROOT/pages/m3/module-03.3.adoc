@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Team Split
+= Team Split
 
 include::../style.adoc[]
 
@@ -18,7 +18,7 @@ image:m2/developerhub-tooling.png[]
 * Source code management with Gitlab
 * Organization and entities  
 
-Your mission to onboard the OpenCode Quest project.
+Your mission is to onboard your developer team to the OpenCode Quest project.
 
 
 ## The application

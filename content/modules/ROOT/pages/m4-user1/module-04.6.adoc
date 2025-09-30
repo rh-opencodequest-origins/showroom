@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-# Developer Activity: From Git to OpenShift !
+= Developer Activity: From Git to OpenShift !
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 
@@ -8,7 +8,7 @@ include::../style.adoc[]
 ++++
 <div class="developer">
 ++++
-## Deploying to OpenShift cluster.
+== Deploying to OpenShift cluster.
 
 This approach will be followed for all the microservices.
 With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository. 
@@ -29,7 +29,7 @@ This action will trigger a pipeline, which you can monitor in the CI tab of the 
 Once the pipeline completes successfully, you will see the corresponding pod in the Topology tab. 
 From there, you can access your hero microservice by clicking on the pod.
 
-## Exploring the pipeline
+== Exploring the pipeline
 
 Let's switch to the Developer Hub console, in your hero component.
 
@@ -44,7 +44,7 @@ As you can see, a lot of steps are now running so let's explore a little.
 
 The first step in the pipeline is a simple git clone. The next step is basically a mvn package and then running of Sonarqube scan-source for static analysis. All pretty standard for CI pipelines. Get the code, compile/build the code, run some scans.
 
-### build-sign-image
+=== build-sign-image
 It is the build-sign-image where things get super interesting.
 
 image:m4/rhdh-build-sign-image.png[]
@@ -56,7 +56,7 @@ Also, you can see we are using this step to automatically create a SBOM (Softwar
 More information regarding the pipeline can be seen in next section [Trusted Application Pipeline](./trusted-apps.md)
 
 
-### Dev Deployment
+=== Dev Deployment
 As a developer, I want to see my handy work, did my application really deploy to the dev environment ?
 
 You can check that your newly built application has been automatically sync using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.
@@ -84,7 +84,7 @@ Note that during the deployment with OpenShift GitOps, we also deployed automati
 #Verify that the fight-ui dev environment is now able to retrieve the characters#
 
 
-### Promote to Pre-Prod
+=== Promote to Pre-Prod
 First access the GitLab UI, there is a convenient link on #the Overview tab#
 
 image:m4/promote1.png[]
@@ -124,7 +124,7 @@ Once the release pipeline has completed, you can see your application has been p
 image:m4/promote7.png[]
 
 
-### Promote to Prod
+=== Promote to Prod
 To promote to Production use the #Create Release feature of the GitLab UI#.
 
 image:m4/promote8.png[]
@@ -143,7 +143,7 @@ image:m4/promote11.png[]
 #Promotion to preprod and prod should be done for every services (villains/fight)#
 
 
-### Stop your DevSpaces Workspace
+=== Stop your DevSpaces Workspace
 As you now have fully deployed your microservice, you do not need anymore the DevSpaces workspace so let's just stop it to preserve resources.
 
 #Click the grey button **"><"** on the bottom left of DevSpaces IDE#

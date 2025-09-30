@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-## How secure your application deployment !
+= How secure your application deployment !
 
 
 
@@ -8,7 +8,7 @@ include::../style.adoc[]
 
 *Red Hat Advanced Developer Suite* is a set of Red Hat products able to build secured pipelines by signing and verify your build artifacts.
 
-### Red Hat Advanced Cluster Security (ACS) 
+== Red Hat Advanced Cluster Security (ACS) 
 
 Back to the pipeline itself and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl
 
@@ -27,7 +27,7 @@ image:m4/rhdh-acs-3.png[]
 These 3 aspects of roxctl are a great example of the "shift-left" idea by bringing these critical checks into the pipeline itself to be executed on each `git push`.
 
 
-### scan-export-sbom
+== scan-export-sbom
 
 Pushes the SBOM to a CycloneDX repository. Currently, the SBOM is stored in Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.
 

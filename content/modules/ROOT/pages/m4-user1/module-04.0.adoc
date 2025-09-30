@@ -7,7 +7,7 @@ include::../style.adoc[]
 
 == Role switch ! 
 
-In this workshop, you will switch between the developer role and the platform engineer role.
+IMPORTANT: In this workshop, you will switch between the developer role and the platform engineer role.
 
 ++++
 <div class="developer">
@@ -36,7 +36,8 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
-The Software Template you'll be using in this activity is stored in the _template.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads
+The Software Template you'll be using in this activity is stored in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads[template.yaml, window="rhdh"]
+
 Register this template using the {product_name_rhdh} UI:
 
 

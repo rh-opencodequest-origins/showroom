@@ -1,12 +1,20 @@
 :imagesdir: ../../assets/images
 
-= How secure your application deployment !
+= Improve your project dashboard !
 
 
 
 include::../style.adoc[]
 
-*Red Hat Advanced Developer Suite* is a set of Red Hat products able to build secured pipelines by signing and verify your build artifacts.
+Now you have leveraged the magic internal developer portal by contributing / committing / deploying in your microservice, you will extend capabilies.
+
+As you know, the GitOps flow is a part of the continous deployment but there is no view related to this flow. In a normal world, this view is more relevant to the Ops teams in charge to deploy. In the platform engineering philosophy, we want to unify the view related to objects created inside a development project.
+
+To do so, you will update your dashboard definition within your codebase. 
+Remember, the dashboard is defined by the catalog-info.yaml xref:m4-user1/module-04.0.adoc[link]*
+
+In your codebase, the catalog-info.yaml : 
+
 
 == Red Hat Advanced Cluster Security (ACS) 
 

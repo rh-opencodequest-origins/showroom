@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-== Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
+= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 
@@ -9,7 +9,7 @@ include::../style.adoc[]
 <div class="developer">
 ++++
 
-#Once in the hero-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)#
+Once in the hero-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)
 
 image:m4/hero-home-page-rhdh.png[] 
 
@@ -26,11 +26,11 @@ image:m4/dev-spaces-starting-up.png[]
 The Super Heroes microservice stores super-heroes, with their names, powers, and so on.
 We need to expose a REST API allowing CRUD operations on _super heroes_.
 This microservice is a *classical* microservice.
+
 It uses HTTP to expose a REST API, and it internally stores data into a database.
 
 This service will be used by the *fight* microservice.
 
-image:m4/rest-physical-architecture.svg[]
 
 
 ## Import the code base 
@@ -63,6 +63,9 @@ Once you bootstrap the project, you get the following directory structure with a
 
 image:m4/hero-directory-structure.svg[]
 
+image:m4/rest-physical-architecture.svg[]
+
+
 It generates the following in the `hero-service` folder:
 
 * the Maven structure with a `pom.xml`
@@ -76,6 +79,7 @@ You will find here the import of the Quarkus BOM (_bill of materials_), allowing
 In addition, you can see the `quarkus-maven-plugin`, responsible for the packaging of the application and also providing the development mode support.
 
 Regarding the dependencies section, you can see the extension allowing the development of REST applications.
+
 
 ## The JAX-RS Resource
 
