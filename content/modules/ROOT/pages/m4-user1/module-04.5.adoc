@@ -48,7 +48,7 @@ image:m4/open-terminal.png[]
 * Run the following command 
 
 ```bash
-wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullcodebase/-/blob/main/hero-service.zip?ref_type=heads -O hero-service.zip && unzip hero-service.zip && rm hero-service.zip
+wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullcodebase/-/raw/main/hero-service.zip?ref_type=heads -O hero-service.zip && unzip -o hero-service.zip && rm hero-service.zip
 ```
 
 Confirm you have this directory : 
