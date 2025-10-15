@@ -1,10 +1,11 @@
 :imagesdir: ../../assets/images
+include::../style.adoc[]
 
 = Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne
 
 IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
 
-include::../style.adoc[]
+
 ++++
 <div class="developer">
 ++++
@@ -73,26 +74,39 @@ The LangChain4j project is a Java re-implementation of the famous langchain libr
 ```
 == Configuration
 
-Configuring OpenAI models mandates an API key or API url among others.
+Configuring OpenAI models mandates an API key or API url among others oto
+
+
 
 #Copy the following configuration in your `fight-service/src/main/resources/application.properties` file #
 
-```properties
-quarkus.langchain4j.openai.base-url=<enter-base-url>
-quarkus.langchain4j.openai.chat-model.model-name=<enter-model-name>
-quarkus.langchain4j.openai.api-key=${OPENAI_API_KEY:none}
+[source,properties,subs=attributes]
+====
+quarkus.langchain4j.openai.base-url={openai-url}
+quarkus.langchain4j.openai.chat-model.model-name={openai-model}
+quarkus.langchain4j.openai.api-key={openai-key}
 quarkus.langchain4j.openai.chat-model.temperature=1
 quarkus.langchain4j.log-requests=true
 quarkus.langchain4j.log-responses=true
 quarkus.langchain4j.openai.timeout=60s
-```
+====
+
+
+[,haskell,subs=attributes+quotes]
+----
+main :: IO ()
+main = putStrLn "Hello, World!"
+quarkus.langchain4j.openai.base-url={openai-url}
+quarkus.langchain4j.openai.chat-model.model-name={openai-model}
+----
+
+
 
 **Update the values with the ones given by your teachers.**
 
 They are self-explanatory, but you can check the documentation for more information.
 
 == Directory Structure
-
 Notice that by bootstrapping the project with the specific `OpenCodeQuest - AI-Infused application with Quarkus` template, you get the following directory structure with a few Java classes already created and other artifacts
 
 image:m4/fight-directory-structure.svg[]
@@ -113,7 +127,7 @@ It’s time to tell the LLM what we want to do.
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions. 
 We model the interaction using an interface annotated with `@RegisterAiService`.
 
-=== Uncomment the FightSimulatorService file
+=== Uncomment the FightSimulatorService.java file
 
 The file is located in *src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java*
 

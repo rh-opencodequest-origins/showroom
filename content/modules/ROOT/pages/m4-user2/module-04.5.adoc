@@ -139,6 +139,15 @@ This will enable Quarkus to find this interface and automatically create an impl
 
 The file is located in *villain-service > src > main > java > io > quarkus > workshop > villain >VillainRepository.java* 
 
+
+Open it and remove the first of the file:
+
+image:m4/start-comment-line.png[]
+
+and the last one:
+
+image:m4/end-comment-line.png[]
+
 By extending the interface, we get the most relevant CRUD methods automatically. 
 
 You can check the `VillainRepository.java` code. It also contains a more specific method to retrieve a villain randomly from database:
@@ -159,6 +168,13 @@ Finally we have an entity class representing the villains.
 
 The file is located in *villain-service > src > main > java > io > quarkus > workshop > villain > Villain.java*  
 
+Open it and remove the first of the file:
+
+image:m4/start-comment-line.png[]
+
+and the last one:
+
+image:m4/end-comment-line.png[]
 
 
 == Tests

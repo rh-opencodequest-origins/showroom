@@ -36,7 +36,30 @@ include::../login-pe.adoc[]
 ++++
 <div class="pe">
 ++++
+
+We need a template to create the essentials resources to let developer start to contribute quickly :
+image:m3/template-components.png[] 
+
+
+Here a grocery list : 
+
+* Create a *Gitlab repository* with a skeleton depending on the technology stack (runtimes, database ...)
+* *Pipeline* to build and test codes
+* *Image registry* to store built artefacts
+* *GitOps resources* to automate deployments
+
+The template should follow the steps to accomplish the creation of the components above 
+
+image:m4/full-steps-template.png[] 
+
+
+
+NOTE: We have asked ChatGPT to generate the template for us. We should be careful using it ... 
+
+
 The Software Template you'll be using in this activity is stored in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads[template.yaml, window="rhdh"]
+
+
 
 Register this template using the {product_name_rhdh} UI:
 
@@ -57,13 +80,14 @@ https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodeque
 . You'll be asked to review the entities being imported, as shown:
 +
 image:m3/rhdh-register-template.png[Registering and Entity]
+
+
 . Click *Import* when prompted.
 
 Return to the *Catalog* section, and set the _Kind_ filter to _Template_. Your new *OpenCodeQuest - Quarkus CRUD microservice* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
 
 image:m3/template-quarkus-pg-import.png[Registering and Entity]
 
-NOTE: Before using the Template, we'll need to explore it ...
 
 
 ++++

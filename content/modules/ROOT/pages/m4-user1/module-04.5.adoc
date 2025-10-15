@@ -63,7 +63,6 @@ Once you bootstrap the project, you get the following directory structure with a
 
 image:m4/hero-directory-structure.svg[]
 
-image:m4/rest-physical-architecture.svg[]
 
 
 It generates the following in the `hero-service` folder:
@@ -83,7 +82,7 @@ Regarding the dependencies section, you can see the extension allowing the devel
 
 ## The JAX-RS Resource
 
-During the project creation, the `hero-service/src/main/java/io/quarkus/workshop/hero/HeroResource.java` file has been created with the following content. 
+During the project creation, the *hero-service > src > main > java > io > quarkus > workshop > hero > HeroResource.java* file has been created with the following content. 
 
 ### Uncomment the file content
 
@@ -238,11 +237,19 @@ In the generated `pom.xml` file, you can see 2 test dependencies:
 </dependency>
 
 ```
-The generated project contains a simple test in `hero-service/src/test/java/io/quarkus/workshop/hero/HeroResourceTest.java`.
 
 ### Uncomment the HeroResourceTest.java
 
-The file content to uncomment is located here : `hero-service/src/test/java/io/quarkus/workshop/hero/HeroResourceTest.java`.
+The generated project contains a simple test.
+The file content to uncomment is located here : *hero-service > src > test > java > io > quarkus > workshop > hero > HeroResourceTest.java*
+
+Open it and remove the first of the file:
+
+image:m4/start-comment-line.png[]
+
+and the last one:
+
+image:m4/end-comment-line.png[]
 
 
 By using the `QuarkusTest` runner, the `HeroResourceTest` class instructs JUnit to start the application before the tests.
@@ -286,7 +293,6 @@ Because JPA and Bean Validation work well together, we will use Bean Validation 
 
 All the needed dependencies to access the database are already in the `pom.xml` file. 
 
-#Check that you have the following
 
 ```xml
   <dependency>
@@ -311,14 +317,21 @@ All the needed dependencies to access the database are already in the `pom.xml` 
 ## Hero Entity
 
 At this point we need an Entity class.
-There is already a `Hero.java` file under `src/main/java/io/quarkus/workshop/hero` so you don't need to create it.
+There is already a `Hero.java` file under *src > main > java > io > quarkus > workshop > hero.java* so you don't need to create it.
 However this file is empty.
 To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity` and add your columns as public fields (no need to have getters and setters).
 
 ### Uncomment the Hero.java file 
 
-It is located under #`src/main/java/io/quarkus/workshop/hero`#
+It is located under *src > main > java > io > quarkus > workshop > hero.java*
 
+Open it and remove the first of the file:
+
+image:m4/start-comment-line.png[]
+
+and the last one:
+
+image:m4/end-comment-line.png[]
 
 
 Notice that you can put all your JPA column annotations and Bean Validation constraint annotations on the public fields.

@@ -23,7 +23,7 @@ include::../login-pe.adoc[]
 
 
 
-As we wid to edit template previously to correct a title, we will do it again ! 
+As we did to edit template previously to correct a title, we will do it again ! 
 This flow is a new part of the development lifecycle. Platform engineer share the knowledge about project development on-boarding with developers !
 
 

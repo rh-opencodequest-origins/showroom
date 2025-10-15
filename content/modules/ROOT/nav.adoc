@@ -6,7 +6,7 @@
 ** xref:m2/module-02.3.adoc[2.3. Activity: Deploying Developer Hub]
 ** xref:m2/module-02.4.adoc[2.4 Activity: Synchronize User & Group Entities]
 ** xref:m2/module-02.5.adoc[2.5 Activity: Configure OpenID Connect Authentication]
-** xref:m2/module-02.6.adoc[2.6 Activity: Enabling GitLab Entity Discovery & TechDocs to delete]
+** xref:m2/module-02.6.adoc[2.6 Activity: Enabling GitLab Entity Discovery]
 
 * xref:m3/module-03.0.adoc[3. Create your first software template {product_name_rhdh}]
 ** xref:m3/module-03.1.adoc[3.1 Introduction to Concepts]

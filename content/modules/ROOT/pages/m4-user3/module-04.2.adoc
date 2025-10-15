@@ -13,6 +13,11 @@ Create a new software Component and supporting infrastructure using the *OpenCod
 
 == Run the Template
 
+Remember we need the following steps to start the project : 
+image:m4/full-steps-template.png[] 
+
+Now the form has been fixed, it should easy-peasy !  
+
 . Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
 +

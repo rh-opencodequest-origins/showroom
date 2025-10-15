@@ -13,6 +13,11 @@ Create a new software Component and supporting infrastructure using the *OpenCod
 
 == Run the Template
 
+Remember we need the following steps to start the project : 
+image:m4/full-steps-template.png[] 
+
+Now the form has been fixed, it should easy-peasy !  
+
 . Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
 +
@@ -52,11 +57,12 @@ image:m3/template-empty-execution.png[A empty template run in {product_name_rhdh
 
 == Oupsi ! Something is missing !
 
-[ADD MORE DETAILS ABOUT MISSING ELEMENTS]
+
 *Our template execution looks empty !*
 
-Where are the steps to create a repository in GitLab ? 
-Where are the steps to create our ArgoCD resources for our project ?
+image:m4/missing-steps-template.png[] 
+
+Yes, blue steps are missing ! You can suspect that ChatGPT made some errors. It's the opportunity to explore how steps are defined in the template and fix it !
 
 We need to call our *Platform engineer* to fix it !
 

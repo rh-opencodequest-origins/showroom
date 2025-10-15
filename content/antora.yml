@@ -21,6 +21,9 @@ asciidoc:
     common_password: sWtbXGQy
     openshift_cluster_ingress_domain: apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com
     team-id: team1
+    openai-url: url-open-ai
+    openai-model: mon-modele
+    openai-key: ma-clé
     page-links:
     - url: https://www.redhat.com/fr/technologies/cloud-computing/developer-hub
       text: Red Hat

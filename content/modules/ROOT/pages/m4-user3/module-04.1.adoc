@@ -73,7 +73,7 @@ Templates are refreshed asynchronously by Red Hat Developer Hub. We will see how
 
 . Step *1* - Click on *Catalog*
 . Step *2* - Select *Template* type
-. Step *3* - Choose the template to refresh
+. Step *3* - Click on the template *OpenCodeQuest - AI-Infused application with Quarkus* : - the name could be different from the screenshot image:/m3/template-location-steps.png[Customizing the Title]
 image:/m3/template-location-steps.png[Customizing the Title]
 
 
