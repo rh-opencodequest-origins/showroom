@@ -34,9 +34,14 @@ image:m4/open-terminal.png[]
 
 * Run the following command 
 
-```bash
+[,bash,subs=attributes]
+
+====
+
 wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/fight-service.zip -O fight-service.zip && unzip fight-service.zip && rm fight-service.zip
-```
+
+====
+
 
 Confirm you have this directory : 
 
@@ -80,15 +85,23 @@ Configuring OpenAI models mandates an API key or API url among others oto
 
 #Copy the following configuration in your `fight-service/src/main/resources/application.properties` file #
 
-[source,properties,subs=attributes]
+[,bash,subs=attributes]
+
 ====
 quarkus.langchain4j.openai.base-url={openai-url}
+
 quarkus.langchain4j.openai.chat-model.model-name={openai-model}
+
 quarkus.langchain4j.openai.api-key={openai-key}
+
 quarkus.langchain4j.openai.chat-model.temperature=1
+
 quarkus.langchain4j.log-requests=true
+
 quarkus.langchain4j.log-responses=true
+
 quarkus.langchain4j.openai.timeout=60s
+
 ====
 
 

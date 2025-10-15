@@ -47,7 +47,7 @@ image:m4/open-terminal.png[]
 
 * Run the following command 
 
-[source,bash,subs=attributes]
+[,bash,subs=attributes]
 
 ====
 wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/hero-service.zip -O hero-service.zip && unzip hero-service.zip && rm hero-service.zip
