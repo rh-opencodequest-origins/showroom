@@ -1,44 +1,87 @@
 :imagesdir: ../../assets/images
 
-= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne
-
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
-
-include::../style.adoc[]
 ++++
 <div class="developer">
 ++++
 
-== Creating the Villain Microservice
+
+= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
+
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+
+include::../style.adoc[]
+
+## The home page dashboard
+
+On the development home page, all tools needed are represented by different tabs such as :
+
+* Topology
+* Issues
+* CI 
+* Image Registry
+* Docs etc..
+
+It maps with the following integrations performed backstage ;)
+
+image:m3/template-components.png[]
+
+It's the entry point for everything !! 
+
+Our first mission is to add a new tab to monitor changes performed by our GitOps engine. 
+
+NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs !
+
+## Customize your development project dashboard 
+
+Since the beginning of the workshop,we leverage GitOps mecanisms thanks to ArgoCD. As a developer it would be nice to get an overview of the objects we  manage through our development environment without leaving our new hometown. The Internal Developer Portal !
+To do so, we will enable the ArgoCD view in our dashboard freshly instanciated.
+The *CD* shortcut in the dashboard will display this view :
+
+image:m4/argocd-view.png[]
+
+### You are the owner of your dashboard
+
+Dashboard definition is located in the git repo instanciated to host your code base. In our Gitlab repository. It's a way to bring tooling and coding consistently. 
+Dashboard UI components are defined in a file named *catalog-info.yaml*.
+Let's open the IDE cloud, *Openshift Devspaces* and jump into the dashboard edit !
+
+image:m4/hero-home-page-rhdh.png[] 
+
+You may be asked to authenticate again. Please, proceed. 
+You should see the following page while the Dev Spaces is starting up:
+
+image:m4/dev-spaces-starting-up.png[]
+
+Open the IDE cloud here : 
+
+image:m4/catalog-info-location.png[]
+
+Please open the *catalog-info.yaml* and uncomment the following annotation.
+
+* Remove the  *#* 
+
+image:m4/uncomment-catalog-info.png[]
+
+* It must look like this. Be sure to respect the right YAML identation 
+
+image:m4/uncommented-catalog-info.png[]
+
+
+
+NOTE: To simplify the developement flow, we'll commit later with the changes done on our code base. The dashboard will be updated automatically
+
+## The Villain Microservice
 
 
 The Villain REST Endpoint uses the Spring compatibility layer provided by Quarkus.
 While users are encouraged to use Quarkus extensions, this compatibility layer is provided to make developing new applications with Quarkus a natural getting started experience.
 
 
-
-* If everything went well, you should see the following successful page. 
-
-
-image:m4/villain-success-rhdh.png[]
-
-#Click on the `Open Component in Catalog`#
-
-
-== Bootstrapping the Villain Rest Endpoint
-
-
-* #Once in the villain-service component home page, you can launch the Dev Spaces opening by clicking the link OpenShift Dev Spaces (VS Code)#
-
-image:m4/villain-home-page-rhdh.png[]
-
-
-
-== Import the code base 
+### Import the code base 
 
 Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external gitlab repository. Let's import it !
 
-=== Open the terminal to import the zip file
+### Open the terminal to import the zip file
 
 * Click on the "Burger icon" on the upper left side
 * Click on File > Terminal > Open a new terminal
@@ -61,7 +104,7 @@ Confirm you have this directory :
 image:m4/villain-directory.png[]
 
 
-== The Villain Service
+### Architecture
 
 At the heart of the Super Hero application come also  _villains_.
 
@@ -73,7 +116,7 @@ This service will be used by the *fight* microservice.
 
 #The codebase is provided but you will have to bring some guided modifications ;) !#
 
-=== Directory Structure
+### Directory Structure
 
 Once you bootstrap the project, you get the following directory structure with a few Java classes and other artifacts:
 
@@ -96,7 +139,7 @@ The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing 
 #Be aware that Quarkus Spring compatibility extensions do not utilize the Spring application context.#
 For this reason, attempting to utilize additional Spring libraries will likely not work.
 
-== The Controller
+### The Controller
 
 We get a rest controller, the `VillainController.java`.
 This class is commented. Please uncomment it before explore it.
@@ -131,11 +174,11 @@ Not Spring specific annotations but used like in the hero-service:
 7. **@RunOnVirtualThread**: Runs the controller on a virtual thread for better concurrency management. This is specific to the SmallRye library.
 
 
-== Accessing Database
+## Accessing Database
 
 As everything is in place the `import.sql` file contains already all SQL statements to populate the villain database.
 
-=== The Villain repository
+### The Villain repository
 
 As we are following a Spring Data programming model with JPA,we need to extend the JPA specific Repository interface, JpaRepository. 
 This will enable Quarkus to find this interface and automatically create an implementation for it.
@@ -165,7 +208,7 @@ You can check the `VillainRepository.java` code. It also contains a more specifi
     }
 ```
 
-=== The Villain entity
+### The Villain entity
 
 Finally we have an entity class representing the villains.
 
@@ -182,7 +225,7 @@ and the last one:
 image:m4/end-comment-line.png[]
 
 
-== Tests
+## Tests
 
 As in the case of the heroes, the tests could not be missing here. 
 A test class is provided and contains the basic tests to ensure that the villain microservice works correctly.

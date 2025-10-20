@@ -6,7 +6,7 @@ include::../style.adoc[]
 
 {product_name_rhdh}, and internal developer portals in general, can be thought of as a modular system where you aggregate and display data related to the software within an organization.
 
-The core features of {product_name_rhdh} are the:
+The core features of {product_name_rhdh} are:
 
 * Software Catalog
 * Software Templates
@@ -30,10 +30,10 @@ The Software Catalog is a centralised asset tracker for all of the software in y
 * APIs: Represent interfaces such as REST, gRPC, and GraphQL APIs.
 * Systems: Collections of Components that make up an application or platform.
 * Domains: A higher-level grouping of Systems and Entities.
-* User: Individual users that are part of your organization.
+* User: Individual users who are part of your organization.
 * Group: Groups of Users.
 
-NOTE: Custom Entity types can be defined and added to the Software Catalog using plugins. We'll talk more about on plugins in subsequent sections.
+NOTE: Custom Entity types can be defined and added to the Software Catalog using plugins. We’ll talk more about plugins in subsequent sections.
 
 Entities are typically imported and synchronized in one of three ways:
 
@@ -43,7 +43,7 @@ Entities are typically imported and synchronized in one of three ways:
 
 In all cases, the Entities will be synchronized on a regular schedule to ensure the information in the Software Catalog remains up to date. You'll utilize all three methods throughout this workshop.
 
-If Entity information is stored in a Git repository, the convention is to place them in a _catalog-info.yaml_. This file will look similar to the following example:
+If Entity information is stored in a Git repository, the convention is to place it in a catalog-info.yaml.
 
 ```yaml
 apiVersion: backstage.io/v1alpha1
@@ -70,22 +70,24 @@ spec:
   owner: "{pe-username}"
 ```
 
-Users and Groups can be specified as owners of other Entities. If this seems abstract, don't worry, you'll see it in definitive terms shortly. A well curated Software Catalog will enable your developers to find API documentation and teams that are responsible for the Components powering those APIs, for example.
+Users and Groups can be specified as owners of other Entities. If this seems abstract, don’t worry, you’ll see it in definitive terms shortly. A well-curated Software Catalog will enable your developers to find API documentation and teams that are responsible for the Components powering those APIs, for example.
+
 
 == Plugins
 
-Backstage - and by extension {product_name_rhdh} - supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.
+Backstage — and by extension Red Hat Developer Hub — supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.
 
 Currently, running an instance of Backstage and adding plugins to upstream Backstage requires a platform engineer to:
 
-. Create a Backstage project using Node.js and npm.
-. Manage new releases and updates via Backstage CLI.
-. Install plugin(s) from npm.
-. Edit the Backstage React and Node.js source code to load plugins, and add customizations.
-. Test their changes.
-. Build a container image and deploy it.
+.Create a Backstage project using Node.js and npm.
+.Manage new releases and updates via Backstage CLI.
+.Install plugin(s) from npm.
+.Edit the Backstage React and Node.js source code to load plugins and add customizations.
+.Test their changes.
+.Build a container image and deploy it.
 
-The ability to load plugins dynamically is a value added feature included in {product_name_rhdh} that's currently unavailable in upstream Backstage - you can read more about it in the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html/introduction_to_plugins/index#con-rhdh-plugins[{product_name_rhdh} documentation^, window="content"]. The dynamic plugin support in {product_name_rhdh} means that new plugins can be installed without the need to edit code and rebuild the {product_name_rhdh} container image.
+
+The ability to load plugins dynamically is a  added value feature included in {product_name_rhdh} that's currently unavailable in upstream Backstage - you can read more about it in the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html/introduction_to_plugins/index#con-rhdh-plugins[{product_name_rhdh} documentation^, window="content"]. The dynamic plugin support in {product_name_rhdh} means that new plugins can be installed without the need to edit code and rebuild the {product_name_rhdh} container image.
 
 You'll see dynamic plugins in action shortly.
 
@@ -127,12 +129,11 @@ Your workshop environment has been pre-configured such that this repository in G
 
 With that out of the way, let's get to work on configuring your instance of {product_name_rhdh}!
 
-=== Quizz time - Check your knowledge : need rework to interact with attendees
-
-What is a software template ?
-
-What is a software catalog ?
-
-What is a plugin ?
+image::m2/openshift-backstage.png[{product_name_rhdh} deployment on OpenShift]
 
 
+= Quiz !
+
+Be prepared to answer to our questions based on what you have learnt in this section! 
+
+image::m2/quizz-time.png[{product_name_rhdh} deployment on OpenShift]

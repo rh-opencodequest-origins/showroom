@@ -8,7 +8,7 @@ include::style.adoc[]
 == Introduction
 
 
-Your mission today is to equip a team of super developers to make them super heroe developers !
+Your mission today is to equip a team of super developers to make them super hero developers!
 
 Many organizations today are facing serious challenges that impact their development teams’ productivity. High cognitive load, lack of standardization, and fragmented domain knowledge are common issues that lead to inefficiencies, increased maintenance costs, and even security vulnerabilities.
 
@@ -19,7 +19,7 @@ Red Hat provides the tools and know-how to help "The Providers" (Platform Engine
 image:common/developers-trio.png[]
 
 
-Today, You will learn how to onboard new team members on an amazing platform. The *Internal Developer Platform (IDP)* ! AKA Platform Engineering. You will be a team *3 people*. Working closely to embrace severals roles to explore 3 main topics :
+Today, You will learn how to onboard new team members on an amazing platform. The *Internal Developer Platform (IDP)* ! AKA Platform Engineering. You will be in a team *3 people*. Working closely to embrace severals roles to explore 3 main topics :
 
 * Define the plaftorm engineering in a fictive organization
 * Develop and deploy your application leveraging your platform engineering previously created
@@ -37,9 +37,10 @@ As you will be a team of 3, you will drive parts sometimes *individually* or *to
 This workshop is designed for *Platform Engineers* who are in charge of:
 
 * Creating standards for technologies that are used across environments (Development, Testing, Production)
-* Defining processes that maximize Development Teams' efficiency, by relieving them from platform details.
+* Defining processes that maximize Development Teams' efficiency by relieving them from platform details.
 
-This workshop is built in a learn-by-example style, where we show you how to create, set up, and manage an IDP using Red Hat Developer Hub. The workshop is opinionated and should be viewed as an example of how to approach things. As always, make sure you, as a Platform Engineer, build what your customers (Development Teams) need by soliciting early feedback to ensure you're on the right track.
+This workshop can also help Development Teams who are in charge of creating a software solution, and empower them (traditionally speaking) in picking their own tools for coding, building, deploying, running, monitoring, and documentation. Learn how Red Hat transforms the developer onboarding and secures their deliveries from the inner loop to the outer loop seamlessly.
+
 
 == Developer Role
 

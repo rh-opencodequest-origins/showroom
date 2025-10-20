@@ -13,7 +13,7 @@ include::../style.adoc[]
 * GitHub
 * Microsoft Azure
 
-In this activity you'll configure an OpenID Connect authentication provider - this will enable developers within your organization to login using their single sign-on (SSO) credentials.
+In this activity you'll configure an OpenID Connect authentication provider - this will enable developers within your organization to log in using their single sign-on (SSO) credentials.
 
 
 == Configure the OpenID Connect Authentication Provider
@@ -58,7 +58,13 @@ signInPage: oidc
 * The `signInPage` property is specific to {product_name_rhdh}. It ensures the correct sign-in UI is rendered. In upstream Backstage this requires React code changes.
 
 . Commit the changes with a message similar to `feat: enable openid connect`
-. Click Refresh on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`backstage` Application in OpenShift GitOps^, window="argo"]. If prompted, login as `admin/{common_password}`.
+. Click Refresh on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"]. If prompted, login as `{pe-username}/{common_password}`.
+
+. Choose  *rhsso* as the identity provider
+image:m2/ocp-sso-login.png[width=60%]
+
+
+
 . Wait until the Application reports being in a *Healthy* state.
 
 == Login using OpenID Connect Authentication

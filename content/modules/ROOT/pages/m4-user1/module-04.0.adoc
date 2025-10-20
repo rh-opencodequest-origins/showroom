@@ -54,7 +54,7 @@ image:m4/full-steps-template.png[]
 
 
 
-NOTE: We have asked ChatGPT to generate the template for us. We should be careful using it ... 
+NOTE: We have asked our favorite LLM to generate the template for us. We should be careful using it ... 
 
 
 The Software Template you'll be using in this activity is stored in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads[template.yaml, window="rhdh"]

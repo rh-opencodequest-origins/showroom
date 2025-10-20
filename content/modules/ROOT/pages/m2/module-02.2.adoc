@@ -8,19 +8,23 @@
 IMPORTANT: This is a *Shared part*. It means, *one person* will be able to go through those steps The work accomplished will be useful for everyone !
 
 
-
+image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog]
 
 == Activity: Access {product_name_rhdh}
 
 include::../style.adoc[]
 
-Once you have chosen a user from team, go head !
+Once you have chosen a user from the team, go head !
 {product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[backstage project on OpenShift^, window="console"].
 
-Login to {product_name_rhdh}:
+Log in to {product_name_rhdh}:
 
-. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can login as *{pe-username}/{common_password}*
-. Select the *backstage-developer-hub* Deployment in the Topology View.
+. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can log in with the platform engineer user chosen. Take the user with the *pe* suffix for instance superman-*pe* and the password /*{common_password}*
+
+. Choose  *rhsso* as the identity provider
+image:m2/ocp-sso-login.png[width=60%]
+
+. Select the *rhdh-{team-id}* Deployment in the Topology View.
 +
 image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]
 . Click the URL listed under the *Resources* tab; it will be similar to https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}^, window="rhdh"]

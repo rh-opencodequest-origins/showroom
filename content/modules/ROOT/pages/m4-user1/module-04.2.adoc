@@ -2,7 +2,7 @@
 
 = Platform Engineer Activity: Instantiate the template corrected
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Platform Engineer with `{pe-username}` / `{common_password}` as you were guided to in the previous step.
 
 include::../style.adoc[]
 ++++
@@ -27,11 +27,8 @@ image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
 . In Step 2, you'll be prompted to enter a set of application parameters and choose the *System"* and the *"entity"* . Thankfully, application parameters are set.
 . Pick the right *System* according to your team *{team-id}* . In our example, the team is team1 
 image:m3/template-pick-system.png[] 
-. Pick the right *Owner* according to your team *{team-id}* . In our example, the team is team1 
-image:m3/template-pick-owner.png[] 
 . You can simply click *Next*.
 image:m3/quarkus-service-step3.png[] 
-
 . In Step 3, select the default *Repository Location*. In this case we just have GitLab available so you can't change this.
 +
 NOTE: Your username is automatically determined by the Template using your current session.
@@ -63,8 +60,6 @@ image:m3/template-empty-execution.png[A empty template run in {product_name_rhdh
 image:m4/missing-steps-template.png[] 
 
 Yes, blue steps are missing ! You can suspect that ChatGPT made some errors. It's the opportunity to explore how steps are defined in the template and fix it !
-
-We need to call our *Platform engineer* to fix it !
 
 ++++
 </div>

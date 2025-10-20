@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-= Red Hat Dev Zone 
+= OpenCode Quest Origins Discovery
 
 include::../style.adoc[]
 
@@ -9,6 +9,7 @@ include::../style.adoc[]
 
 * Discuss the challenges currently faced by developers and the need for an Internal Developer Platform
 * Learn why a developer platform is necessary for rapid innovation
+* Discover how to onboard on a development project with Internal Developer Platform
 
 == Hello Open Code Quest Organization
 
@@ -17,7 +18,7 @@ Open Code Quest Organization is a superhero developer company! With business boo
 With a rapidly evolving and expanding team, it is getting harder and harder for the team to keep up with
 
 * knowing who is doing what
-* onboarding new team members and get them to be effective ASAP
+* onboarding new team members and getting them to be effective ASAP
 * identifying existing reusable artifacts - reuse please!
 * providing self-service for developers without need to be listening to a please-wait music tone
 * offering choices of features, and easy ways to hit the road running
@@ -27,7 +28,7 @@ The team heard about the magic words— *Internal Developer Platform (IDP)* —a
 
 == Hello {product_name_rhdh}!
 
-{product_name_rhdh} streamlines development through a unified and open platform that reduces cognitive load and frustration for developers. It provides pre-architected and supported approaches that can help Parasol get their applications into production faster and more securely—without sacrificing code quality.
+{product_name_rhdh} streamlines development through a unified and open platform that reduces cognitive load and frustration for developers. It provides pre-architected and supported approaches that can help OpenCodeQuest Origins  get their applications into production faster and more securely—without sacrificing code quality.
 
 {product_name_rhdh} and its associated plugins extend the popular upstream Backstage project by providing additional features such as integration with OpenShift, enterprise role-based access control (RBAC), and dynamic plugins - while including all the nice goodies that come with Backstage project itself.
 
