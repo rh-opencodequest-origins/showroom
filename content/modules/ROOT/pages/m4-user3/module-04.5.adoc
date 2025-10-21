@@ -7,7 +7,7 @@
 
 = Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
 
@@ -24,6 +24,10 @@ On the development home page, all tools needed are represented by different tabs
 It maps with the following integrations performed backstage ;)
 
 image:m3/template-components.png[]
+
+++++
+</div>
+++++
 
 It's the entry point for everything !! 
 
@@ -261,6 +265,3 @@ We are now ready to run our application.
 
 image:m4/open-quarkus-dev-in-new-tab.png[]
 
-++++
-</div>
-++++

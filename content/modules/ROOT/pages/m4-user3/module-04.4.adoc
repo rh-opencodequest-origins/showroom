@@ -2,7 +2,7 @@
 
 = Developer Activity: Instantiate the template 
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
 ++++
@@ -17,6 +17,11 @@ Create a new software Component and supporting infrastructure using the *OpenCod
 . Click the *Create* icon (plus symbol) in the top menu.
 +
 image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
+
+++++
+</div>
+++++
+
 . Click the *Choose* button on the *OpenCodeQuest - AI-Infused application with Quarkus*. The Template parameters collection screen will be displayed.
 . In Step 1, Set the right OpenShift Cluster and let  default variables
 . In Step 2, you'll be prompted to enter a set of application parameters and choose the *System"* and the *"entity"* . Thankfully, application parameters are set.
@@ -41,19 +46,10 @@ After a few moments the process should be finished, and you'll see a screen with
 
 image:m3/template-full-execution.png[A full template run in {product_name_rhdh}]
 
-++++
-</div>
-++++
 
-++++
-<div class="pe">
-++++
 
 
 == Good Job ! Let's code !
 
 Go to the next part !
 
-++++
-</div>
-++++

@@ -2,13 +2,15 @@
 
 = Developer Activity: From Git to OpenShift !
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
+
+== Deploying to OpenShift cluster.
+
 ++++
 <div class="developer">
 ++++
-== Deploying to OpenShift cluster.
 
 This approach will be followed for all the microservices.
 With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository. 
@@ -18,6 +20,9 @@ To do this, follow these steps:
 * Enter your commit message
 * Click the Commit button.
 
+++++
+</div>
+++++
 image:m4/ds-source-control-view.png[]
 
 
@@ -75,7 +80,7 @@ image:m4/acs-check.png[]
 
 image:m4/acs-image-check-error.png[]
 
-As you can see, it looks like a **SuperVillain**  has introduced a bad dependency in our code ! 
+As you can see, it looks like a **bad dependancy**  has introduced a bad dependency in our code ! 
 
 #Open the `pom.xml` file in DevSpaces IDE#
 
@@ -85,11 +90,9 @@ Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.co
 
 Remove the dependency as it's not needed in our code
 
-## Deploy the Villain microservice after fixing the issue
-Once you have corrected the dependency issue and comited your code, #you can tag and release# your code in GitLab to promote in preprod and prod.
+## Deploy the Fight microservice after fixing the issue
 
-
-
+NOTE: Once you have corrected the dependency issue, commit your code ! The pipeline will run again !
 
 #Click on Topology#
 
@@ -97,7 +100,7 @@ This should look familiar to you if you regularly use the topology view from Ope
 image:m4/rhdh-topology-dev.png[]
 
 
-[NOTE] pre-prod and prod have NOT yet deployed
+NOTE: Pre-prod and prod have NOT yet deployed
 
 #Click the arrow.# This will open a new tab on your browser showing your deployed fight-service !
 
@@ -184,7 +187,3 @@ image:m4/devspaces-stop1.png[]
 image:m4/devspaces-stop2.png[]
 
 
-
-++++
-</div>
-++++

@@ -45,9 +45,7 @@ Remember Templates imported previously are located in Gitlab. We will edit it an
 
 
 === Mind the step !
-++++
-<div class="pe">
-++++
+
 image:m3/mind-the-step.png[edit] 
 
 *Explore steps definition*
@@ -89,9 +87,6 @@ This is why the *Sofware Catalog* exists ! A clear definition of UI elements bas
 The template creates a *Software Catalog* thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
 Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-ai/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 
-++++
-</div>
-++++
 
 
 == Uncomment the steps !
@@ -109,16 +104,9 @@ image:m3/gitops-steps-uncomment.png[edit]
 
 . Scroll down and enter a commit message `uncomment steps`.
 . Click the *Commit changes* button.
-++++
-</div>
-++++
-
 
 == Refresh the template updated 
 
-++++
-<div class="pe">
-++++
 
 Templates are refreshed asynchronously by Red Hat Developer Hub. We will see how to refresh it manually.
 
@@ -136,9 +124,7 @@ image:/m3/template-refresh-button.png[Customizing the Title]
 . Click on *circle arrows*
 
 
-++++
-</div>
-++++
+
 
 == Summary
 

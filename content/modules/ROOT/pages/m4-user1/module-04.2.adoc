@@ -2,7 +2,7 @@
 
 = Platform Engineer Activity: Instantiate the template corrected
 
-IMPORTANT: Please make sure you are logged in as a Platform Engineer with `{pe-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Platform Engineer with `{pe-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
 ++++
@@ -10,6 +10,10 @@ include::../style.adoc[]
 ++++
 
 Create a new software Component and supporting infrastructure using the *OpenCodeQuest - Quarkus CRUD microservice* template that was created by the platform engineer:
+
+++++
+</div>
+++++
 
 == Run the Template
 
@@ -43,13 +47,8 @@ After a few moments the process should be finished, and you'll see a screen with
 
 image:m3/template-empty-execution.png[A empty template run in {product_name_rhdh}]
 
-++++
-</div>
-++++
 
-++++
-<div class="pe">
-++++
+
 
 
 == Oupsi ! Something is missing !
@@ -61,6 +60,3 @@ image:m4/missing-steps-template.png[]
 
 Yes, blue steps are missing ! You can suspect that ChatGPT made some errors. It's the opportunity to explore how steps are defined in the template and fix it !
 
-++++
-</div>
-++++

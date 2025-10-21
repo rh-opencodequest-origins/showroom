@@ -2,13 +2,15 @@
 
 = Developer Activity: From Git to OpenShift !
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
+
+== Deploying to OpenShift cluster.
+
 ++++
 <div class="developer">
 ++++
-== Deploying to OpenShift cluster.
 
 This approach will be followed for all the microservices.
 With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository. 
@@ -17,6 +19,11 @@ To do this, follow these steps:
 * In Dev Spaces, go to the source control view.
 * Enter your commit message
 * Click the Commit button.
+
+
+++++
+</div>
+++++
 
 image:m4/ds-source-control-view.png[]
 
@@ -56,6 +63,7 @@ Also, you can see we are using this step to automatically create a SBOM (Softwar
 More information regarding the pipeline can be seen in next section [Trusted Application Pipeline](./trusted-apps.md)
 
 
+
 === Dev Deployment
 As a developer, I want to see my handy work, did my application really deploy to the dev environment ?
 
@@ -63,13 +71,37 @@ You can check that your newly built application has been automatically sync usin
 
 image:m4/rhdp-overview-dev-ready.png[]
 
+== Houston, we've got a problem
+
+At this stage, you should observe an issue during the CI pipeline. The step **acs-image-check** (responsible of verifying that we are not violating any policies in our cluster) is now failing.
+
+image:m4/acs-check.png[]
+
+#Click the task to get the logs and understand what policy has been violated#
+
+image:m4/acs-image-check-error.png[]
+
+As you can see, it looks like a **SuperHero**  has introduced a bad dependency in our code ! 
+
+#Open the `pom.xml` file in DevSpaces IDE#
+
+image:m4/devspaces-CVE.png[]
+
+Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics) IDE extension, you can even see that the dependency is automatically underlined suggesting there's an issue with it.
+
+IMPORTANT: Remove the dependency as it's not needed in our code
+
+== Deploy the Hero microservice after fixing the issue
+
+NOTE: Once you have corrected the dependency issue, commit your code ! The pipeline will run again !
+
 #Click on Topology#
 
 This should look familiar to you if you regularly use the topology view from OpenShift.
 image:m4/rhdh-topology-dev.png[]
 
 
-[NOTE] pre-prod and prod have NOT yet deployed
+NOTE: Pre-prod and prod have NOT yet deployed
 
 #Click the arrow.# This will open a new tab on your browser showing your deployed hero-service !
 
@@ -140,7 +172,7 @@ image:m4/promote10.png[]
 image:m4/promote11.png[]
 
 
-#Promotion to preprod and prod should be done for every services (villains/fight)#
+NOTE: Promotion to preprod and prod will be done for every service. Each team member accomplishes this step !
 
 
 === Stop your DevSpaces Workspace
@@ -155,7 +187,3 @@ image:m4/devspaces-stop1.png[]
 image:m4/devspaces-stop2.png[]
 
 
-
-++++
-</div>
-++++

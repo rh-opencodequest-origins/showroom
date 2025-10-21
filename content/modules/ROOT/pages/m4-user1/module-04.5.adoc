@@ -7,9 +7,14 @@
 
 = Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
+
+
+++++
+</div>
+++++
 
 ## The home page dashboard
 
@@ -169,11 +174,7 @@ We are now ready to run our application.
 
 You can use either the `quarkus` cli or `Apache Maven` command-line interface in a Terminal.
 
-#Open a Terminal by clicking on the hamburger menu (three horizontal lines) located in the upper-left corner of the screen#
-
-#Navigate to Terminal and select New Terminal from the dropdown menu#
-
-#Then, run one of the following commands :#
+#Run one of the following commands :#
 
 `./mvnw quarkus:dev`
 
@@ -411,23 +412,17 @@ For our workshop we need returning a random hero.
 As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don't need at the moment to configure anything regarding the database access. 
 Quarkus will automatically start a Postgresql service and wire up your application to use this service. 
 
-Quarkus development mode is great for apps that combine front-end, services, and database access. By using quarkus.hibernate-orm.database.generation=drop-and-create with import.sql, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.
+Quarkus development mode is great for apps that combine front-end, services, and database access. By using `quarkus.hibernate-orm.database.generation=drop-and-create` with `import.sql``, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.
 
+Look at the import.sql file located here `/src/resources/import.sql`. Around 500 heroes has been loaded in the database.
 
-### Adding Data
+Now check the method findRandom defined above to confirm you can get random heroes ! 
 
-#To load some data when Hibernate ORM starts, run the following command on a Terminal#
+#Open a new Terminal and run the following command#
 
 ```shell
-curl https://raw.githubusercontent.com/cescoffier/quarkus-openshift-workshop/03d5a943c0948bc53c598b6ee78a71e50ef77cee/hero-service/src/main/resources/import.sql -fL -o src/main/resources/import.sql
+curl http://localhost:8080/api/heroes/random
 ```
 
-It will download the specified file and copy the content in your `/src/resources/import.sql` file.
-Now, you have around 500 heroes that will be loaded in the database.
 
 
-
-
-++++
-</div>
-++++

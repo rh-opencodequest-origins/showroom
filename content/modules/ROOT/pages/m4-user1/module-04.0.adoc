@@ -12,7 +12,7 @@ IMPORTANT: In this workshop, you will switch between the developer role and the 
 ++++
 <div class="developer">
 ++++
-Parts related to the developer role will be with a blue background color
+Parts related to the developer role will start with a blue background color
 ++++
 </div>
 ++++
@@ -20,7 +20,7 @@ Parts related to the developer role will be with a blue background color
 ++++
 <div class="pe">
 ++++
-Parts related to the platform engineer role will be with a red background color
+Parts related to the platform engineer role will start with a red background color
 ++++
 </div>
 ++++
@@ -41,12 +41,19 @@ We need a template to create the essentials resources to let developer start to 
 image:m3/template-components.png[] 
 
 
+
+
 Here a grocery list : 
 
 * Create a *Gitlab repository* with a skeleton depending on the technology stack (runtimes, database ...)
 * *Pipeline* to build and test codes
 * *Image registry* to store built artefacts
 * *GitOps resources* to automate deployments
+
+++++
+</div>
+++++
+
 
 The template should follow the steps to accomplish the creation of the components above 
 
@@ -89,7 +96,3 @@ Return to the *Catalog* section, and set the _Kind_ filter to _Template_. Your n
 image:m3/template-quarkus-pg-import.png[Registering and Entity]
 
 
-
-++++
-</div>
-++++

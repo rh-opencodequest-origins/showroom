@@ -2,7 +2,7 @@
 
 = Developer Activity: Instantiate the template 
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step.
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
 
 include::../style.adoc[]
 ++++
@@ -18,6 +18,11 @@ We will create the villain-service from a Red Hat Developer Hub template. It wil
 * Building pipelines
 * Container image repository
 * GitOps flows
+
+++++
+</div>
+++++
+
 
 
 == Run the Template
@@ -50,19 +55,10 @@ After a few moments the process should be finished, and you'll see a screen with
 
 image:m3/template-full-execution.png[A full template run in {product_name_rhdh}]
 
-++++
-</div>
-++++
 
-++++
-<div class="pe">
-++++
 
 
 == Good Job ! Let's code !
 
 Go to the next part !
 
-++++
-</div>
-++++

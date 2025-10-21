@@ -76,12 +76,3 @@ include::m5/module-05.0.adoc[]
 include::m5/module-05.1.adoc[]
 include::m5/module-05.2.adoc[]
 
-// module 6
-// include::m6/module-06.adoc[]
-
-// module 7
-include::m7/module-07.0.adoc[]
-include::m7/module-07.1.adoc[]
-include::m7/module-07.2.adoc[]
-include::m7/module-07.3.adoc[]
-include::m7/module-07.4.adoc[]
