@@ -6,11 +6,17 @@ include::../style.adoc[]
 
 
 
+IMPORTANT: This is again a *Shared part*. It means, *one person* will be able to go through those steps The work accomplished will be useful for everyone ! Feel free to let someone else do this part !
 
-IMPORTANT: *It's a shared part ! please choose someone else from the team to accomplish this step !*
 
-NOTE: The following part is a platform engineering activity so the user to use is {pe-username} / {common_password}
 
+
+
+image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog]
+
+* User1 is : *{user1}*
+* User2 is : *{user2}*
+* User3 is : *{user3}*
 
 .Click to learn how to login as a Platform Engineer
 [%collapsible]
@@ -19,18 +25,13 @@ include::../login-pe.adoc[]
 ====
 
 
-
-
 == System and Domain 
 
-++++
-<div class="pe">
-++++
 Objects created will be organized thanks to 2 main concepts. The *System* and the *Domain* . 
 
 
 
-The *System* is a collection for entities that coorporate to perform some function. For instance, in 3 tier application, the 3 components belong to the same system. It eases their management.
+The *System* is a collection for entities that coorporate to perform some function. For instance, in 3-tier application, the 3 components belong to the same system. It eases their management.
 
 The *Domain* is a set of *System* . It encapsultates the systems according to their organizational goal, impact ..
 this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[system-domain, window="gitlab"] repository in GitLab.
@@ -64,12 +65,11 @@ More informations here : https://backstage.io/docs/features/software-catalog/sys
 
 +
 image:m3/rhdh-register-template.png[Registering and Entity]
-. Click *Import* when prompted.
+ Click *Import* when prompted.
 
 image:m3/import-entity-domain-pe.png[Registering and Entity]
 
-
+1. Click on *Catalog* section
+2. Set the _Kind_  filter to: *Domain*
+3. Your new Domain should be listed.
 Return to the *Catalog* section, and set the _Kind_ filter to System. Your new *opencodequest-{team-id}* template will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.
-++++
-</div>
-++++

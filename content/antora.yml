@@ -17,7 +17,9 @@ asciidoc:
     ssh_command: ssh someone@example.com
     dev-username: mon-user-dev
     pe-username: mon-user-pe
-    user1: spiderman
+    user1: user1
+    user2: user2
+    user3: user3
     common_password: sWtbXGQy
     openshift_cluster_ingress_domain: apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com
     team-id: team1

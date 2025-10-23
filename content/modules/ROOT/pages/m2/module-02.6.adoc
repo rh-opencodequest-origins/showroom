@@ -36,6 +36,12 @@ image:m2/gitlab-catalog-provider.png[GitLab Catalog Provider, width=70%]
 +
 image:m2/rhdh-logs-gitlab-discovery.png[GitLab Autodiscovery Logs in the OpenShift Console]
 
+.If the pod is running but there is no change on Developer Hub UI, have look here 
+[%collapsible]
+====
+include::../debug-pod-placement.adoc[]
+====
+
 
 
 == Quiz

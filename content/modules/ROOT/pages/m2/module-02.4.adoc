@@ -16,8 +16,19 @@ NOTE: Synchronizing Users and Groups to your Software Catalog is important for t
 +
 image:m2/keycloak-dynamic-plugin.png[width=60%]
 . Uncomment the `keycloakOrg` configuration within the `appConfig.catalog.providers` block (look for `--- KEYCLOAK_CATALOG_PROVIDERS ---`, highlight the block, then press `CMD + /` or `CTRL + /`).
-+
+
+[NOTE]
+====
+If the keyboard shortcut to uncomment through the web browser doesn't , edit the piece of code in your local IDE and paste after ! 
+====
+
+
+
 image:m2/keycloak-commented-block.png[width=70%]
+
+The uncommented piece of code should look like this :
+
+image:m2/keycloak-org.png[]
 
 This block of configuration instructs the Keycloak provider to synchronize *Users and Groups* from the specified Keycloak Realm to the Software Catalog.
 
@@ -36,6 +47,13 @@ image:m2/gitops-progressing.png[RHDH Application in Progressing Status]
 Once the new Pod has started, navigate to https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/core%7Ev1%7EPod[OpenShift^, window="console"]. If needed, log in as `{pe-username}`` number of Users and Groups have been read from Keycloak.
 
 image:m2/openshift-pod-logs.png[{product_name_rhdh} Pod logs as seen in the OpenShift Console]
+
+.If the pod is running but there is no change on Developer Hub UI, have look here 
+[%collapsible]
+====
+include::../debug-pod-placement.adoc[]
+====
+
 
 You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
 

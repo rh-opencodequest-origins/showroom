@@ -61,11 +61,20 @@ signInPage: oidc
 . Click Refresh on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"]. If prompted, login as `{pe-username}/{common_password}`.
 
 . Choose  *rhsso* as the identity provider
+
 image:m2/ocp-sso-login.png[width=60%]
 
 
 
 . Wait until the Application reports being in a *Healthy* state.
+
+.If the application is healthy has started but there is no change on Developer Hub UI, have look here 
+[%collapsible]
+====
+include::../debug-pod-placement.adoc[]
+====
+
+
 
 == Login using OpenID Connect Authentication
 

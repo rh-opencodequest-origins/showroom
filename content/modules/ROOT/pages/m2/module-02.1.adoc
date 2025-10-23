@@ -93,7 +93,7 @@ You'll see dynamic plugins in action shortly.
 
 == Understanding the {product_name_rhdh} Configuration
 
-Upstream Backstage uses an https://backstage.io/docs/conf/[app-config.yaml^, window="content"] file to define configuration values. {product_name_rhdh} is no different.
+The https://backstage.io/docs/conf/[app-config.yaml^, window="content"] is a concept file to define configuration values
 
 A simple Backstage configuration file looks similar to the following example:
 

@@ -60,11 +60,11 @@ A template here will have the following structure :
 
 Please select one link per user 
 
-*User 1 -> The Hero service   xref:m4-user1/module-04.0.adoc[link]*
+*{user1} -> The Hero service   xref:m4-user1/module-04.0.adoc[link]*
 
-*User 2 -> The Villain service  xref:m4-user2/module-04.0.adoc[link]*
+*{user2} -> The Villain service  xref:m4-user2/module-04.0.adoc[link]*
 
-*User 3 -> The Fight Service  xref:m4-user3/module-04.0.adoc[link]* 
+*{user3} -> The Fight Service  xref:m4-user3/module-04.0.adoc[link]* 
 
 
 

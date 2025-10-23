@@ -18,6 +18,7 @@ NOTE: https://www.redhat.com/en/topics/devops/what-is-gitops[GitOps] is the prac
 
 
 image:m2/gitops-helm.png[GitOps Architecture Overview, width=80%]
+
 Since this isn’t a GitOps-focused workshop, we’ve set up the basic GitOps workflow ahead of time. Specifically, we’ve pre-created a https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[rhdh-bootstrap Application in OpenShift GitOps, window="argo"] - you can view this by clicking the link and logging in as the {pe-username} user with the password `{common_password}`.
 
 image:m2/argocd-login.png[GitOps Architecture Overview, width=80%]
@@ -28,17 +29,39 @@ The  Argo CD Application creates Secrets, ConfigMaps, and another Argo CD Applic
 
 image:m2/gitops-sources.png[GitOps Sources for the Developer Hub Application]
 
-== Platform Engineer Activity: Verify GitOps is Working
+== Verify GitOps is Working
 
 *Update the App Title of {product_name_rhdh}*
 
 Let's verify that changes to the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in GitLab, window="gitlab"] actually get rolled out by OpenShift GitOps.
 
 . Open your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file, window="gitlab"].
-. Select *Edit > Edit single file*. When prompted, log in as a Platform Engineer with `{pe-username}` / `{common_password}`
+
+
+. Select *Edit > Edit single file*. 
+. When prompted, log in as a Platform Engineer with 
+
+image:m2/gitlab-login.png[]
+
+Remember, it's the same user, the platform engineer you have chosen who is performing actions also on Gitlab !
+
+* Username or primary email : `{pe-username}`
+* Password :`{common_password}`
+
 . Find the YAML surrounded by `--- APP TITLE ---` and uncomment it by highlighting it and pressing `CMD + /` or `CTRL + /`.
-+
+
+[NOTE]
+====
+If the keyboard shortcut to uncomment through the web browser doesn't , edit the piece of code in your local IDE and paste after ! 
+====
+
+
 image:m2/gitlab-change-app-title.png[Customizing the Title]
+
+The uncommented part should look like :
+
+image:m2/appConfig-title.png[]
+
 . Scroll down and enter a commit message `feat: change application title`.
 . Click the *Commit changes* button.
 
@@ -54,6 +77,15 @@ image:m2/rhdh-new-pod.png[{product_name_rhdh} with a Custom Title]
 . Once the new Pod has started, visit your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]. You should see the new title *PE Developer Hub* in the page header.
 +
 image:m2/rhdh-title.png[{product_name_rhdh} with a Custom Title]
+
+
+.If the pod is ready but there is no change on Developer Hub UI, have look here 
+[%collapsible]
+====
+include::../debug-pod-placement.adoc[]
+====
+
+
 
 [NOTE]
 ====

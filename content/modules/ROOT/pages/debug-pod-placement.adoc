@@ -1,0 +1,19 @@
+*Debug stuck deployment*
+
+The problem is the deployment of Red Hat Developer Hub has been performed on a cluster node different from the initial storage (PVC) location. 
+To fix it, we will trigger a new deployment.
+To do so, go to  https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}/deployments/rhdh-{team-id}-developer-hub/yaml[backstage project on OpenShift^, window="console"].
+
+* Search for `replicas` in the yaml file 
+* Set it to 0
+ 
+image::common/replica-zero.png[]
+
+* Click on Save at the left bottom
+
+image::common/save-replicas.png[]
+
+Automatically, the deployment will be relaunched by OpenShift GitOps !
+
+Congrats, you have fixed the Developer Hub deployment. Come back to your work 
+
