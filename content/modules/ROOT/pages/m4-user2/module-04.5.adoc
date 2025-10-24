@@ -100,7 +100,7 @@ image:m4/open-terminal.png[]
 
 ====
 
-wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/rh-opencodequest-origins/fullcodebase/raw/refs/heads/main/villain-service.zip -O villain-service.zip && unzip villain-service.zip && rm villain-service.zip
+wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullcodebase/-/raw/main/villain-service.zip -O villain-service.zip && unzip -o villain-service.zip && rm villain-service.zip
 
 ====
 
