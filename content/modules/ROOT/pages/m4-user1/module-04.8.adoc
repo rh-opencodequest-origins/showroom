@@ -1,14 +1,14 @@
 :imagesdir: ../../assets/images
 
-= Improve your project dashboard !
+= Improve your project dashboard!
 
 
 
 include::../style.adoc[]
 
-Now you have leveraged the magic internal developer portal by contributing / committing / deploying in your microservice, you will extend capabilies.
+Now that you have leveraged the magic internal developer portal by contributing/committing/deploying in your microservice, you will extend capabilities.
 
-As you know, the GitOps flow is a part of the continous deployment but there is no view related to this flow. In a normal world, this view is more relevant to the Ops teams in charge to deploy. In the platform engineering philosophy, we want to unify the view related to objects created inside a development project.
+As you know, the GitOps flow is a part of the continuous deployment, but there is no view related to this flow. In a normal world, this view is more relevant to the Ops teams in charge of deploying. In the platform engineering philosophy, we want to unify the view related to objects created inside a development project.
 
 To do so, you will update your dashboard definition within your codebase. 
 Remember, the dashboard is defined by the catalog-info.yaml xref:m4-user1/module-04.0.adoc[link]*
@@ -18,15 +18,15 @@ In your codebase, the catalog-info.yaml :
 
 == Red Hat Advanced Cluster Security (ACS) 
 
-Back to the pipeline itself and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl
+Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl
 
 The bottom-most task is performing CVE scanning via roxctl image scan.
 
-The middle task is performing a policy check via roxctl image check. These policies might be things like 'No log4j allowed' or perhaps no curl, wget nor a package manager in a production image.
+The middle task is performing a policy check via roxctl image check. These policies might be things like 'No log4j allowed' or perhaps no curl, wget, or a package manager in a production image.
 
-The top-most task is perform yaml scanning via roxctl deployment check and it might identify that your Deployment.yaml has not properly configured its resource request and limit.
+The top-most task is to perform YAML scanning via roxctl deployment check, and it might identify that your Deployment.yaml has not properly configured its resource request and limit.
 
-A series of dashboards visualize the reporting from these 3 roxctl tasks, click on the View Output icon under ACTIONS
+A series of dashboards visualizes the reporting from these 3 Roxctl tasks. Click on the View Output icon under ACTIONS
 
 image:m4/rhdh-acs-1.png[]
 image:m4/rhdh-acs-2.png[]
@@ -39,7 +39,7 @@ These 3 aspects of roxctl are a great example of the "shift-left" idea by bringi
 
 Pushes the SBOM to a CycloneDX repository. Currently, the SBOM is stored in Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.
 
-The SBOM is an artifact that deserves special mention. Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store and picked up an item and reviewed its packaging. On the back of the product there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish) or perhaps nuts. Well, if you are allergic to nuts you might also be allergic to struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million American’s private data to end up on the dark web Struts 2 hack.
+The SBOM is an artifact that deserves special mention. Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.
 
 The SBOM is either a JSON or XML file and is stored in the container registry as the ingredient list associated with the container image.
 

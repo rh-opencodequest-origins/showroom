@@ -2,7 +2,7 @@
 
 = Developer Activity: Instantiate the template 
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
 
 include::../style.adoc[]
 ++++
@@ -23,16 +23,16 @@ image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
 ++++
 
 . Click the *Choose* button on the *OpenCodeQuest - AI-Infused application with Quarkus*. The Template parameters collection screen will be displayed.
-. In Step 1, Set the right OpenShift Cluster and let  default variables
-. In Step 2, you'll be prompted to enter a set of application parameters and choose the *System"* and the *"entity"* . Thankfully, application parameters are set.
-. Pick the right *System* according to your team *{team-id}* . In our example, the team is team1 
+. In Step 1, set the right OpenShift Cluster and let the default variables
+. In Step 2, you'll be prompted to enter a set of application parameters and choose the *System"* and the *"entity"*. Thankfully, application parameters are set.
+. Pick the right *System* according to your team *{team-id}*. In our example, the team is team1 
 image:m3/template-pick-system.png[] 
-. Pick the right *Owner* according to your team *{team-id}* . In our example, the team is team1 
+. Pick the right *Owner* according to your team *{team-id}*. In our example, the team is team1 
 image:m3/template-pick-owner.png[] 
 . You can simply click *Next*.
 image:m3/quarkus-service-step3.png[] 
 
-. In Step 3, select the default *Repository Location*. In this case we just have GitLab available so you can't change this.
+. In Step 3, select the default *Repository Location*. In this case, we just have GitLab available, so you can't change this.
 +
 NOTE: Your username is automatically determined by the Template using your current session.
 +
@@ -42,14 +42,14 @@ NOTE: Your username is automatically determined by the Template using your curre
 +
 image:m3/rhdh-template-review.png[Reviewing template parameters in {product_name_rhdh}]
 
-After a few moments the process should be finished, and you'll see a screen with a series of green checkmarks.
+After a few moments, the process should be finished, and you'll see a screen with a series of green checkmarks.
 
 image:m3/template-full-execution.png[A full template run in {product_name_rhdh}]
 
 
 
 
-== Good Job ! Let's code !
+== Good Job! Let's code!
 
-Go to the next part !
+Go to the next part!
 

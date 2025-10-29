@@ -60,7 +60,7 @@ metadata:
 
   # Arbitrary list of string that can be used to filter Entities in the Software Catalog
   tags:
-    - docs
+ - docs
 
 spec:
   type: Documentation
@@ -87,7 +87,7 @@ Currently, running an instance of Backstage and adding plugins to upstream Backs
 .Build a container image and deploy it.
 
 
-The ability to load plugins dynamically is a  added value feature included in {product_name_rhdh} that's currently unavailable in upstream Backstage - you can read more about it in the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html/introduction_to_plugins/index#con-rhdh-plugins[{product_name_rhdh} documentation^, window="content"]. The dynamic plugin support in {product_name_rhdh} means that new plugins can be installed without the need to edit code and rebuild the {product_name_rhdh} container image.
+The ability to load plugins dynamically is an added value feature included in {product_name_rhdh} that's currently unavailable in upstream Backstage - you can read more about it in the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html/introduction_to_plugins/index#con-rhdh-plugins[{product_name_rhdh} documentation^, window="content"]. The dynamic plugin support in {product_name_rhdh} means that new plugins can be installed without the need to edit code and rebuild the {product_name_rhdh} container image.
 
 You'll see dynamic plugins in action shortly.
 
@@ -108,9 +108,9 @@ auth:
 # entities on startup, and restrict the entity types that can be imported.
 catalog:
   rules:
-    - allow: [Component, System, API, Resource, Location, Template]
+ - allow: [Component, System, API, Resource, Location, Template]
   locations:
-    - type: file
+ - type: file
       target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/org-name/repo-name/entities.yaml
 
 # A configuration for the TechDocs plugin. This example instructs the plugin to
@@ -132,8 +132,8 @@ With that out of the way, let's get to work on configuring your instance of {pro
 image::m2/openshift-backstage.png[{product_name_rhdh} deployment on OpenShift]
 
 
-= Quiz !
+= Quiz!
 
-Be prepared to answer to our questions based on what you have learnt in this section! 
+Be prepared to answer our questions based on what you have learnt in this section! 
 
 image::m2/quizz-time.png[{product_name_rhdh} deployment on OpenShift]

@@ -5,9 +5,9 @@
 ++++
 
 
-= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
+= Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
 
 include::../style.adoc[]
 
@@ -35,21 +35,21 @@ It's the entry point for everything !!
 
 Our first mission is to add a new tab to monitor changes performed by our GitOps engine. 
 
-NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs !
+NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
 ## Customize your development project dashboard 
 
-Since the beginning of the workshop,we leverage GitOps mecanisms thanks to ArgoCD. As a developer it would be nice to get an overview of the objects we  manage through our development environment without leaving our new hometown. The Internal Developer Portal !
-To do so, we will enable the ArgoCD view in our dashboard freshly instanciated.
+Since the beginning of the workshop, we have leveraged GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal !
+To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
 The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
 ### You are the owner of your dashboard
 
-Dashboard definition is located in the git repo instanciated to host your code base. In our Gitlab repository. It's a way to bring tooling and coding consistently. 
+Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
-Let's open the IDE cloud, *Openshift Devspaces* and jump into the dashboard edit !
+Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
 image:m4/hero-home-page-rhdh.png[] 
 
@@ -74,18 +74,18 @@ image:m4/uncommented-catalog-info.png[]
 
 
 
-NOTE: To simplify the developement flow, we'll commit later with the changes done on our code base. The dashboard will be updated automatically
+NOTE: To simplify the development flow, we'll commit later with the changes done on our code base. The dashboard will be updated automatically.
 
 ## The Villain Microservice
 
 
 The Villain REST Endpoint uses the Spring compatibility layer provided by Quarkus.
-While users are encouraged to use Quarkus extensions, this compatibility layer is provided to make developing new applications with Quarkus a natural getting started experience.
+While users are encouraged to use Quarkus extensions, this compatibility layer is provided to make developing new applications with Quarkus a natural getting-started experience.
 
 
 ### Import the code base 
 
-Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external gitlab repository. Let's import it !
+Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let's import it !
 
 ### Open the terminal to import the zip file
 
@@ -116,7 +116,7 @@ At the heart of the Super Hero application come also  _villains_.
 
 We need to expose a REST API allowing CRUD operations on _super heroes_.
 This microservice is also a *classical* microservice.
-It uses HTTP to expose a REST API, and it internally stores data into a database.
+It uses HTTP to expose a REST API, and it internally stores data in a database.
 
 This service will be used by the *fight* microservice.
 
@@ -133,14 +133,14 @@ You get the following in the `villain-service` folder:
 * the Maven structure with a `pom.xml`
 * an `io.quarkus.workshop.villain.VillainController` controller exposed on `/api/heroes`
 * an associated unit test `VillainControllerTest`
-* example `Dockerfile` files for both native and jvm modes in `src/main/docker`
+* example `Dockerfile` files for both native and JVM modes in `src/main/docker`
 * the `application.properties` configuration file
 
 #Look at the `pom.xml`.#
 
-The `pom.xml` is basically the same than for heroes apart that it contains a few more dependencies: `quarkus-spring-web` and `quarkus-spring-data`.
+The `pom.xml` is basically the same as for heroes, apart from the fact that it contains a few more dependencies: `quarkus-spring-web` and `quarkus-spring-data`.
 
-The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing extensions that have already been optimized for fast startup, reduced memory utilization and native compilation, like RestEasy and CDI.
+The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing extensions that have already been optimized for fast startup, reduced memory utilization, and native compilation, like RestEasy and CDI.
 
 #Be aware that Quarkus Spring compatibility extensions do not utilize the Spring application context.#
 For this reason, attempting to utilize additional Spring libraries will likely not work.
@@ -148,14 +148,14 @@ For this reason, attempting to utilize additional Spring libraries will likely n
 ### The Controller
 
 We get a rest controller, the `VillainController.java`.
-This class is commented. Please uncomment it before explore it.
+This class is commented. Please uncomment it before exploring it.
 The file is located in *villain-service > src > main > java > io > quarkus > workshop > villain VillainController.java*
 
-Open it and remove the first of the file:
+Open it and remove the first part of the file:
 
 image:m4/start-comment-line.png[]
 
-and the last one:
+And the last one:
 
 image:m4/end-comment-line.png[]
 
@@ -169,7 +169,7 @@ This controller exposes CRUD operations to "villains" and leverages Spring Web a
 
 3. **@GetMapping, @PostMapping, @PutMapping, @DeleteMapping**: These annotations define HTTP methods (GET, POST, PUT, DELETE) to map specific endpoints to CRUD operations.
 
-Not Spring specific annotations but used like in the hero-service:
+Not Spring-specific annotations, but used like in the hero-service:
 
 1. **@Transactional**: Ensures that the methods annotated with it are executed within a transaction context, which automatically commits or rolls back the transaction.
 
@@ -182,11 +182,11 @@ Not Spring specific annotations but used like in the hero-service:
 
 ## Accessing Database
 
-As everything is in place the `import.sql` file contains already all SQL statements to populate the villain database.
+As everything is in place, the `import.sql` file already contains all SQL statements to populate the villain database.
 
 ### The Villain repository
 
-As we are following a Spring Data programming model with JPA,we need to extend the JPA specific Repository interface, JpaRepository. 
+As we are following a Spring Data programming model with JPA,we need to extend the JPA-specific Repository interface, JpaRepository. 
 This will enable Quarkus to find this interface and automatically create an implementation for it.
 
 #Uncomment VillainRepository as you did previously#
@@ -198,25 +198,25 @@ Open it and remove the first of the file:
 
 image:m4/start-comment-line.png[]
 
-and the last one:
+And the last one:
 
 image:m4/end-comment-line.png[]
 
 By extending the interface, we get the most relevant CRUD methods automatically. 
 
-You can check the `VillainRepository.java` code. It also contains a more specific method to retrieve a villain randomly from database:
+You can check the `VillainRepository.java` code. It also contains a more specific method to retrieve a villain randomly from the database:
 
 ```java
     default Villain findRandom() {
         var count = count();
         var index = (int) (Math.random() * count);
         return findAll().get(index);
-    }
+ }
 ```
 
 ### The Villain entity
 
-Finally we have an entity class representing the villains.
+Finally, we have an entity class representing the villains.
 
 #Uncomment Villain Entity as you did previously#
 
@@ -226,7 +226,7 @@ Open it and remove the first of the file:
 
 image:m4/start-comment-line.png[]
 
-and the last one:
+And the last one:
 
 image:m4/end-comment-line.png[]
 
@@ -246,13 +246,13 @@ or
 
 `quarkus dev`
 
-Note that the tests have been successful run. 
+Note that the tests have been successfully run. 
 
-#Also, you can curl the villains endopoint and you should get lots of villains#
+#Also, you can curl the villains endpoint and you should get lots of villains#
 
 ```shell
 curl http://localhost:8080/api/villains
 ```
 
-Now, we are ready to value our code with the trusted pipelines !
+Now, we are ready to value our code with the trusted pipelines!
 

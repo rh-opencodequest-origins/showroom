@@ -5,15 +5,15 @@
 ++++
 
 
-= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
+= Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
 
 include::../style.adoc[]
 
 ## The home page dashboard
 
-On the development home page, all tools needed are represented by different tabs such as :
+On the development home page, all tools needed are represented by different tabs, such as :
 
 * Topology
 * Issues
@@ -33,26 +33,26 @@ It's the entry point for everything !!
 
 Our first mission is to add a new tab to monitor changes performed by our GitOps engine. 
 
-NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs !
+NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
 ## Customize your development project dashboard 
 
-Since the beginning of the workshop,we leverage GitOps mecanisms thanks to ArgoCD. As a developer it would be nice to get an overview of the objects we  manage through our development environment without leaving our new hometown. The Internal Developer Portal !
-To do so, we will enable the ArgoCD view in our dashboard freshly instanciated.
+Since the beginning of the workshop, we have leveraged GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
+To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
 The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
 ### You are the owner of your dashboard
 
-Dashboard definition is located in the git repo instanciated to host your code base. In our Gitlab repository. It's a way to bring tooling and coding consistently. 
+Dashboard definition is located in the git repo instantiated to host your code base in our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
-Let's open the IDE cloud, *Openshift Devspaces* and jump into the dashboard edit !
+Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
 image:m4/hero-home-page-rhdh.png[] 
 
 You may be asked to authenticate again. Please, proceed. 
-You should see the following page while the Dev Spaces is starting up:
+You should see the following page while the Dev Spaces are starting up:
 
 image:m4/dev-spaces-starting-up.png[]
 
@@ -66,13 +66,13 @@ Please open the *catalog-info.yaml* and uncomment the following annotation.
 
 image:m4/uncomment-catalog-info.png[]
 
-* It must look like this. Be sure to respect the right YAML identation 
+* It must look like this. Be sure to respect the right YAML indentation 
 
 image:m4/uncommented-catalog-info.png[]
 
 
 
-NOTE: The UI dashboard will be updated once the commit done. To simplify the developement flow, we'll commit later with the changes done on our code base
+NOTE: The UI dashboard will be updated once the commit is done. To simplify the development flow, we'll commit later with the changes done on our code base
 
 Confirm you have this directory : 
 
@@ -85,7 +85,7 @@ Instead of randomly selecting a winner in the battle between heroes and villains
 Furthermore, this consultation will not only provide a winner but also a detailed description of how the fight unfolded.
 
 First, let’s have a look at the big picture. When integrating an LLM into a Quarkus application, 
-you need to describe what you want the AI to do. 
+You need to describe what you want the AI to do. 
 Unlike traditional code, you are going to explain the behavior of the AI using natural language. 
 
 The following diagram illustrates the interactions between the Fight service and the LLM.
@@ -97,7 +97,7 @@ image:m4/fight-architecture.png[]
 ## The Quarkus-LangChain4j Extension
 
 This extension is based on the LangChain4j library, which provides a common API to interact with LLMs. 
-The LangChain4j project is a Java re-implementation of the famous langchain library.
+The LangChain4j project is a Java re-implementation of the famous LangChain library.
 
 #Note that the extension is already present in the `pom.xml` file of your Fight service:#
 
@@ -110,7 +110,7 @@ The LangChain4j project is a Java re-implementation of the famous langchain libr
 ```
 == Configuration
 
-Configuring OpenAI models mandates an API key or API url among others oto
+Configuring OpenAI models mandates an API key or API URL among others oto
 
 
 
@@ -151,7 +151,7 @@ quarkus.langchain4j.openai.chat-model.model-name={openai-model}
 They are self-explanatory, but you can check the documentation for more information.
 
 ## Directory Structure
-Notice that by bootstrapping the project with the specific `OpenCodeQuest - AI-Infused application with Quarkus` template, you get the following directory structure with a few Java classes already created and other artifacts
+Notice that by bootstrapping the project with the specific `OpenCodeQuest - AI-Infused application with Quarkus` template, you get the following directory structure with a few Java classes already created and other artifacts.
 
 image:m4/fight-directory-structure.svg[]
 
@@ -159,9 +159,9 @@ It generates the following in the `fight-service` folder:
 
 * the Maven structure with a `pom.xml`
 * an `io.quarkus.workshop.fight.FightResource.java` resource exposed on `/api/fights`.
-* a straightforward java Record `Fight.java` that encapsulates the hero and villain inputs for a fight.
+* a straightforward Java record `Fight.java` that encapsulates the hero and villain inputs for a fight.
 * the corresponding `Hero.java` and `Villain.java`.
-* a java Record `FightResult.java`. Quarkus automatically creates an instance of `FightResult` from the LLM’s JSON response.
+* a Java record `FightResult.java`. Quarkus automatically creates an instance of `FightResult` from the LLM’s JSON response.
 * an intelligent service `FightSimulatorService.java`. This is where we will define the interaction with the LLM.
 * the `application.properties` configuration file.
 
@@ -175,11 +175,11 @@ We model the interaction using an interface annotated with `@RegisterAiService`.
 
 The file is located in *src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java*
 
-Open it and remove the first of the file:
+Open it and remove the first part of the file:
 
 image:m4/start-comment-line.png[]
 
-and the last one:
+And the last one:
 
 image:m4/end-comment-line.png[]
 
@@ -200,7 +200,7 @@ It delineates the AI service’s role in the interaction.
 ==Notice the presence of the `@UserMessage` annotation `FightSimulatorService`==. 
 It defines primary instructions dispatched to the LLM. 
 It typically encompasses requests and the expected response format.
-As you can note, we are using a prompt template with following format. 
+As you can note, we are using a prompt template with the following format. 
 This format is expected by the model.
 
 ```
@@ -228,10 +228,10 @@ Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroP
 In the pom, you can see the corresponding smallrye dependencies: 
 
 ```java
-   <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
-        </dependency>
+ <dependency>
+ <groupId>io.quarkus</groupId>
+ <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
+ </dependency>
 ```
 
 Then, in the code, #notice the presence of the `@Timeout` annotation in the fight method#
@@ -240,7 +240,7 @@ If the LLM invocation is taking too long, the `@Timeout` annotation can stop it 
 
 ## The Fight Resource
 
-Now, #let's take a look to the `fight-service/src/main/java/io/quarkus/workshop/fight/FightResource.java`.#
+Now, #let's take a look at the `fight-service/src/main/java/io/quarkus/workshop/fight/FightResource.java`.#
 #This is a JAX-RS resource just like the Hero endpoint where the FightSimulatorService is injected.# 
 #Then the intelligent `fight` method is called from the exposed `fight` method.# 
 
@@ -261,7 +261,7 @@ We are now ready to run our application.
 
 #For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui#
 
-#by clicking the `Open in New Tab` button when a pop up will be shown#
+#by clicking the `Open in New Tab` button, a pop-up will be shown#
 
 image:m4/open-quarkus-dev-in-new-tab.png[]
 
