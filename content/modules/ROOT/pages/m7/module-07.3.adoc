@@ -30,11 +30,11 @@ image:m7/create-yaml.png[]
 apiVersion: v1
 kind: ConfigMap
 metadata:
- name: cluster-monitoring-config
- namespace: openshift-monitoring
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
 data:
- config.yaml: |
- enableUserWorkload: true
+  config.yaml: |
+    enableUserWorkload: true
 ----
 . Click the *Save* button to create this ConfigMap.
 +

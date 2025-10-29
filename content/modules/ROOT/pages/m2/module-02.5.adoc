@@ -34,16 +34,16 @@ auth:
   session:
     secret: ${BACKEND_SECRET}
   environment: production
-   providers:
-   oidc:
-   production:
-   prompt: auto
-   metadataUrl: https://sso.{openshift_cluster_ingress_domain}/realms/backstage/.well-known/openid-configuration
-   clientId: ${OAUTH_CLIENT_ID}
-   clientSecret: ${OAUTH_CLIENT_SECRET}
-   signIn:
-   resolvers:
-   - resolver: preferredUsernameMatchingUserEntityName
+    providers:
+      oidc:
+        production:
+          prompt: auto
+          metadataUrl: https://sso.{openshift_cluster_ingress_domain}/realms/backstage/.well-known/openid-configuration
+          clientId: ${OAUTH_CLIENT_ID}
+          clientSecret: ${OAUTH_CLIENT_SECRET}
+          signIn:
+            resolvers:
+              - resolver: preferredUsernameMatchingUserEntityName
 signInPage: oidc
 ----
 

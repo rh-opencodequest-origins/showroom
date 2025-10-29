@@ -228,10 +228,10 @@ Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroP
 In the pom, you can see the corresponding smallrye dependencies: 
 
 ```java
- <dependency>
- <groupId>io.quarkus</groupId>
- <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
- </dependency>
+<dependency>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
+</dependency>
 ```
 
 Then, in the code, #notice the presence of the `@Timeout` annotation in the fight method#

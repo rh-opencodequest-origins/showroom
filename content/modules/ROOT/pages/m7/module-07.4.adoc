@@ -120,12 +120,12 @@ The `rbac-conditional-policies.yaml` file in the https://console-openshift-conso
 
 ----
 conditions:
- not:
- params:
- annotation: backstage.io/managed-by
- value: orchestrator
- resourceType: catalog-entity
- rule: HAS_ANNOTATION
+  not:
+    params:
+      annotation: backstage.io/managed-by
+      value: orchestrator
+    resourceType: catalog-entity
+    rule: HAS_ANNOTATION
 permissionMapping:
 - read
 pluginId: catalog

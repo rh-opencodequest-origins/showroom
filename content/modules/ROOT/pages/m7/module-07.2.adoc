@@ -52,9 +52,9 @@ Once the new deployment has finished, you'll need to interact with {product_name
 
 . Open a private browsing session and log in as user `{dev-username}` using the password `{common_password}`.
 . While logged in as `{dev-username}` and `dev2`:
- . Use the **Search Bar** in the top navigation menu to find APIs and Components.
- . Visit the **Docs** page and view the documentation for your Quarkus application.
- . Generate a new application using the Quarkus Software Template.
+    . Use the **Search Bar** in the top navigation menu to find APIs and Components.
+    . Visit the **Docs** page and view the documentation for your Quarkus application.
+    . Generate a new application using the Quarkus Software Template.
 
 Perform multiple searches and view multiple APIs and Components to generate sufficient data for the next step. Logout and perform the same steps using the `dev2` user.
 

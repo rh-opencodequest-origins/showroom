@@ -20,10 +20,10 @@ metadata:
   title: Quarkus Service
   description: Create a simple microservice using Quarkus with Argo CD
   tags:
- - recommended
- - java
- - quarkus
- - maven
+    - recommended
+    - java
+    - quarkus
+    - maven
 spec:
   owner: rhdh
   type: service
@@ -47,10 +47,10 @@ spec:
   parameters:
     # Parameters can be spread across multiple forms/pages, each
     # with their own titles and set of parameters
- - title: Provide Information for Application
+    - title: Provide Information for Application
       required:
- - component_id
- - java_package_name
+        - component_id
+        - java_package_name
       properties:
         component_id:
           title: Name
@@ -83,7 +83,7 @@ The scaffolder executes the actions defined in _spec.steps_, for example, to pub
 ```yaml
 spec:
   steps:
- - id: publish
+  - id: publish
     name: Publish
     # Use the publish action provided by the GitLab plugin
     action: publish:gitlab
@@ -94,7 +94,7 @@ spec:
       repoVisibility: public
       defaultBranch: main
       sourcePath: ./${{ user.entity.metadata.name }}-${{parameters.component_id}}
- - id: register
+  - id: register
     name: Register
     # Register a new component using the built-in register action
     action: catalog:register
@@ -119,9 +119,9 @@ The _spec.output_ can use the outputs from the `steps` to display useful informa
 ```yaml
   output:
     links:
- - title: Source Code Repository
+      - title: Source Code Repository
         url: {{ '${{ steps.publish.output.remoteUrl }}' }}
- - title: Open Component in catalog
+      - title: Open Component in catalog
         icon: catalog
         entityRef: {{ '${{ steps.register.output.entityRef }}' }}
 ```

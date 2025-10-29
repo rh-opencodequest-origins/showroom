@@ -211,7 +211,7 @@ You can check the `VillainRepository.java` code. It also contains a more specifi
         var count = count();
         var index = (int) (Math.random() * count);
         return findAll().get(index);
- }
+    }
 ```
 
 ### The Villain entity

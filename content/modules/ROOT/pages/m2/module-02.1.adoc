@@ -108,9 +108,9 @@ auth:
 # entities on startup, and restrict the entity types that can be imported.
 catalog:
   rules:
- - allow: [Component, System, API, Resource, Location, Template]
+    - allow: [Component, System, API, Resource, Location, Template]
   locations:
- - type: file
+    - type: file
       target: https://gitlab-gitlab.{openshift_cluster_ingress_domain}/org-name/repo-name/entities.yaml
 
 # A configuration for the TechDocs plugin. This example instructs the plugin to
