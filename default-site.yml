@@ -1,6 +1,6 @@
 ---
 site:
-  title: Platform Engineering Workshop
+  title: OpenCodeQuest Origin (PE Workshop)
   url: https://developers.redhat.com
   start_page: modules::index.adoc
   keys:
