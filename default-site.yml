@@ -1,7 +1,7 @@
 ---
 site:
   title: Platform Engineering Workshop
-  url: https://redhat.com
+  url: https://developers.redhat.com
   start_page: modules::index.adoc
   keys:
     google_analytics: 'G-NS92Z30J1H'
