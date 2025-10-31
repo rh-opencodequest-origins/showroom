@@ -18,7 +18,7 @@ image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog]
 * User2 is : *{user2}*
 * User3 is : *{user3}*
 
-.Click to learn how to login as a Platform Engineer
+.Click to learn how to log in as a Platform Engineer
 [%collapsible]
 ====
 include::../login-pe.adoc[]
@@ -33,7 +33,7 @@ Objects created will be organized thanks to 2 main concepts. The *System* and th
 
 The *System* is a collection for entities that coorporate to perform some function. For instance, in 3-tier application, the 3 components belong to the same system. It eases their management.
 
-The *Domain* is a set of *System* . It encapsultates the systems according to their organizational goal, impact ..
+The *Domain* is a set of *System* . It encapsulates the systems according to their organizational goal, impact ..
 this activity is stored in the _locations-opencodequest.yaml_ file in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entities/-/blob/main/locations-opencodequest.yaml?ref_type=heads[system-domain, window="gitlab"] repository in GitLab.
 
 === Register those objects using the {product_name_rhdh} UI:
@@ -61,7 +61,7 @@ Return to the *Catalog* section, and set the _Kind_ filter to Domain. Your new *
 
 
 
-More informations here : https://backstage.io/docs/features/software-catalog/system-model/#domain
+More information here: https://backstage.io/docs/features/software-catalog/system-model/#domain
 
 +
 image:m3/rhdh-register-template.png[Registering and Entity]

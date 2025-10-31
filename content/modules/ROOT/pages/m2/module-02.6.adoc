@@ -4,7 +4,7 @@
 
 include::../style.adoc[]
 
-Now that the import of User and Group entities and authentication is enabled for those same users, let's focus on importing more Entities from your Git repositories. Having a rich and complete Software Catalog increases the value of the your IDP.
+Now that the import of User and Group entities and authentication is enabled for those same users, let's focus on importing more Entities from your Git repositories. Having a rich and complete Software Catalog increases the value of your IDP.
 
 == Enable GitLab Entity Discovery 
 
@@ -24,8 +24,8 @@ To uncomment multiple lines of code, highlight the lines and press `CMD + /` (on
 . Find the `appConfig.catalog.providers` configuration and uncomment the `--- GITLAB_CATALOG_PROVIDER ---` block as shown below. +
 +
 image:m2/gitlab-catalog-provider.png[GitLab Catalog Provider, width=70%]
-// . Verify that you indentation matches that shown in the screenshot,
-. Commit your changes with the message `feat: add gitlab autodiscovery`.
+// . Verify that your indentation matches that shown in the screenshot,
+. Commit your changes with the message `feat: add GitLab autodiscovery`.
 // +
 // image:m2/gitlab-discovery.png[GitLab code editor showing catalog providers configuration for {product_name_rhdh}]
 . Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"] (login as `{pe-username}` / `{common_password}`).
@@ -46,9 +46,9 @@ include::../debug-pod-placement.adoc[]
 
 == Quiz
 
-Be prepared to answer to our questions based on what you have learnt in this section! 
+Be prepared to answer our questions based on what you have learnt in this section! 
 
-Wrap up the job done to your peers. Explain which capabilities (AuthN / SCM / RBAC) has been added to the internal developer platform
+Wrap up the job done for your peers. Explain which capabilities (AuthN / SCM / RBAC) have been added to the internal developer platform.
 
 
 image::m2/quizz-time.png[{product_name_rhdh} deployment on OpenShift]

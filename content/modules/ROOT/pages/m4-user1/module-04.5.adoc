@@ -5,9 +5,9 @@
 ++++
 
 
-= Developer Activity: Welcome onboard in "Première Classe" - Drink your own champagne !
+= Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advice you to use a *private / incognito window* to be logged out properly !  
+IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
 
 include::../style.adoc[]
 
@@ -18,7 +18,7 @@ include::../style.adoc[]
 
 ## The home page dashboard
 
-On the development home page, all tools needed are represented by different tabs such as :
+On the development home page, all tools needed are represented by different tabs, such as :
 
 * Topology
 * Issues
@@ -34,26 +34,26 @@ It's the entry point for everything !!
 
 Our first mission is to add a new tab to monitor changes performed by our GitOps engine. 
 
-NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs !
+NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
 ## Customize your development project dashboard 
 
-Since the beginning of the workshop,we leverage GitOps mecanisms thanks to ArgoCD. As a developer it would be nice to get an overview of the objects we  manage through our development environment without leaving our new hometown. The Internal Developer Portal !
-To do so, we will enable the ArgoCD view in our dashboard freshly instanciated.
+Since the beginning of the workshop, we have leveraged GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
+To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
 The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
 ### You are the owner of your dashboard
 
-Dashboard definition is located in the git repo instanciated to host your code base. In our Gitlab repository. It's a way to bring tooling and coding consistently. 
+Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
-Let's open the IDE cloud, *Openshift Devspaces* and jump into the dashboard edit !
+Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
 image:m4/hero-home-page-rhdh.png[] 
 
 You may be asked to authenticate again. Please, proceed. 
-You should see the following page while the Dev Spaces is starting up:
+You should see the following page while the Dev Spaces are starting up:
 
 image:m4/dev-spaces-starting-up.png[]
 
@@ -67,20 +67,20 @@ Please open the *catalog-info.yaml* and uncomment the following annotation.
 
 image:m4/uncomment-catalog-info.png[]
 
-* It must look like this. Be sure to respect the right YAML identation 
+* It must look like this. Be sure to respect the right YAML indentation 
 
 image:m4/uncommented-catalog-info.png[]
 
 
 
-NOTE: To simplify the developement flow, we'll commit later with the changes done on our code base. The dashboard will be updated automatically
+NOTE: To simplify the development flow, we'll commit later with the changes done on our code base. The dashboard will be updated automatically.
 
 
 ## The Hero Service
 
 
 
-The Super Heroes microservice stores super-heroes, with their names, powers, and so on.
+The Super Heroes microservice stores superheroes, with their names, powers, and so on.
 We need to expose a REST API allowing CRUD operations on _super heroes_.
 This microservice is a *classical* microservice.
 
@@ -92,7 +92,7 @@ This service will be used by the *fight* microservice.
 
 ## Import the code base 
 
-Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external gitlab repository. Let's import it !
+Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let's import it!
 
 
 ### Open the terminal to import the zip file
@@ -134,8 +134,8 @@ It generates the following in the `hero-service` folder:
 * the `application.properties` configuration file
 
 #Look at the `pom.xml`# 
-You will find here the import of the Quarkus BOM (_bill of materials_), allowing you to omit the version on the different Quarkus dependencies.
-In addition, you can see the `quarkus-maven-plugin`, responsible for the packaging of the application and also providing the development mode support.
+You will find here the import of the Quarkus BOM (_bill of materials_), allowing you to omit the version of the different Quarkus dependencies.
+In addition, you can see the `quarkus-maven-plugin`, responsible for the packaging of the application, and also providing the development mode support.
 
 Regarding the dependencies section, you can see the extension allowing the development of REST applications.
 
@@ -146,11 +146,11 @@ During the project creation, the *hero-service > src > main > java > io > quarku
 
 ### Uncomment the file content
 
-Open it and remove the first of the file:
+Open it and remove the first part of the file:
 
 image:m4/start-comment-line.png[]
 
-and the last one:
+And the last one:
 
 image:m4/end-comment-line.png[]
 
@@ -161,18 +161,18 @@ This file has a set of simple REST endpoints. For instance, returning "hello" to
 ```java
 
 
-    @GET
-    @Path("/hello")
+ @GET
+ @Path("/hello")
     public String hello() {
         return "Hello from Quarkus REST";
-    }
+ }
 
 ``` 
 ## Running the Application
 
 We are now ready to run our application.
 
-You can use either the `quarkus` cli or `Apache Maven` command-line interface in a Terminal.
+You can use either the `quarkus` CLI or the `Apache Maven` command-line interface in a Terminal.
 
 #Run one of the following commands :#
 
@@ -211,27 +211,27 @@ $  quarkus dev
 [info] [Quarkus build analytics] Didn't receive the user's answer after 10 seconds. The question will be asked again next time.
 
 Listening for transport dt_socket at address: 5005
-2024-08-28 11:39:46,023 INFO  [io.qua.dat.dep.dev.DevServicesDatasourceProcessor] (build-21) Dev Services for default datasource (postgresql) started - container ID is b64fe935733f
-2024-08-28 11:39:46,026 INFO  [io.qua.hib.orm.dep.dev.HibernateOrmDevServicesProcessor] (build-34) Setting quarkus.hibernate-orm.database.generation=drop-and-create to initialize Dev Services managed database
+2024-08-28 11:39:46,023 INFO [io.qua.dat.dep.dev.DevServicesDatasourceProcessor] (build-21) Dev Services for default datasource (postgresql) started - container ID is b64fe935733f
+2024-08-28 11:39:46,026 INFO [io.qua.hib.orm.dep.dev.HibernateOrmDevServicesProcessor] (build-34) Setting quarkus.hibernate-orm.database.generation=drop-and-create to initialize Dev Services managed database
 __  ____  __  _____   ___  __ ____  ______ 
  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
 --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-2024-08-28 11:39:46,603 WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.smallrye-openapi.store-schema-directory" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-08-28 11:39:48,103 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
-2024-08-28 11:39:48,105 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "myentity" does not exist, skipping
-2024-08-28 11:39:48,106 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
-2024-08-28 11:39:48,106 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "myentity_seq" does not exist, skipping
-2024-08-28 11:39:48,316 INFO  [io.quarkus] (Quarkus Main Thread) hero-service 1.0-SNAPSHOT on JVM (powered by Quarkus 3.13.2) started in 7.445s. Listening on: http://0.0.0.0:8080
-2024-08-28 11:39:48,317 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2024-08-28 11:39:48,317 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, micrometer, narayana-jta, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2024-08-28 11:39:46,603 WARN [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.smallrye-openapi.store-schema-directory" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2024-08-28 11:39:48,103 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2024-08-28 11:39:48,105 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "myentity" does not exist, skipping
+2024-08-28 11:39:48,106 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2024-08-28 11:39:48,106 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "myentity_seq" does not exist, skipping
+2024-08-28 11:39:48,316 INFO [io.quarkus] (Quarkus Main Thread) hero-service 1.0-SNAPSHOT on JVM (powered by Quarkus 3.13.2) started in 7.445s. Listening on: http://0.0.0.0:8080
+2024-08-28 11:39:48,317 INFO [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2024-08-28 11:39:48,317 INFO [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, micrometer, narayana-jta, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
 
 --
 Tests paused
 Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [:] for the terminal, [h] for more options>
 ```
 
-At some point, a pop up asking for opening the Quarkus dev will be shown:
+At some point, a pop-up asking to open the Quarkus dev will be shown:
 
 image:m4/open-quarkus-dev-in-new-tab.png[]
 
@@ -249,13 +249,13 @@ curl http://localhost:8080/api/heroes/hello
 
 `mvn quarkus:dev` or `quarkus dev` runs Quarkus in development mode.
 This enables hot deployment with background compilation, which means that when you modify your Java files and/or your resource files and invoke a REST endpoint (i.e. cUrl command or refresh your browser), these changes will automatically take effect.
-If there are any issues with compilation an error page will let you know.
+If there are any issues with compilation, an error page will let you know.
 
 The development mode also allows debugging and listens for a debugger on port 5005.
 
 ### Dev UI
 
-Quarkus ships with a Developer UI, which is available in dev mode at /q/dev-ui path by default.
+Quarkus ships with a Developer UI, which is available in dev mode at the/q/dev-ui path by default.
 It will show you something like this:
 
 image:m4/dev-ui.png[]
@@ -270,7 +270,7 @@ It allows you to:
 * view the Build information
 * view and stream various logs
 
-Each extension used in the application will be listed
+Each extension used in the application will be listed.
 
 #Open the Developer Console by navigating to the $HERO_URL/q/dev-ui# 
 
@@ -299,7 +299,7 @@ In the generated `pom.xml` file, you can see 2 test dependencies:
 The generated project contains a simple test.
 The file content to uncomment is located here : *hero-service > src > test > java > io > quarkus > workshop > hero > HeroResourceTest.java*
 
-Open it and remove the first of the file:
+Open it and remove the first part of the file:
 
 image:m4/start-comment-line.png[]
 
@@ -311,20 +311,20 @@ image:m4/end-comment-line.png[]
 By using the `QuarkusTest` runner, the `HeroResourceTest` class instructs JUnit to start the application before the tests.
 Then, the `testHelloEndpoint` method checks the HTTP response status code and content.
 
-You can running the tests with `./mvnw test` in a new Terminal.
+You can run the tests with `./mvnw test` in a new Terminal.
 
 ### Continuous testing
 
 Quarkus supports continuous testing, where tests run immediately after code changes have been saved. 
 This allows you to get instant feedback on your code changes.
 
-#When you start Quarkus in dev mode, down the bottom of the screen you should see the following#:
+#When you start Quarkus in dev mode, down at the bottom of the screen, you should see the following#:
 
 ```shell
 Tests paused, press [r] to resume, [h] for more options>
 ```
 #Press `r and the tests will start running.#
-You should see the status change down the bottom of the screen as they are running, and it should finish with
+You should see the status change at the bottom of the screen as they are running, and it should finish with
 
 ```shell
 All 1 test is passing (0 skipped), 1 test was run in 8053ms. Tests completed at 12:11:25.
@@ -336,12 +336,12 @@ Press [e] to edit command line args (currently ''), [r] to re-run, [o] Toggle te
 
 This microservice:
 
-* interacts with a PostGreSQL database - so it needs a driver
+* interacts with a PostgreSQL database - so it needs a driver
 * uses Hibernate with Panache - so need the dependency on it
 * validates payloads and entities - so need a validator
 * consumes and produces JSON - so we need a mapper
 
-Hibernate ORM is the de-facto JPA implementation and offers you the full breadth of an Object Relational Mapper.
+Hibernate ORM is the de facto JPA implementation and offers you the full breadth of an Object Relational Mapper.
 It makes complex mappings possible, but it does not make simple and common mappings trivial.
 [Hibernate ORM with Panache](https://gitlab-gitlab.{openshift_cluster_ingress_domain}/quarkusio/quarkus/tree/master/extensions/panache) focuses on making your entities trivial and fun to write in Quarkus.
 
@@ -372,27 +372,27 @@ All the needed dependencies to access the database are already in the `pom.xml` 
 
 ## Hero Entity
 
-At this point we need an Entity class.
+At this point, we need an Entity class.
 There is already a `Hero.java` file under *src > main > java > io > quarkus > workshop > hero.java* so you don't need to create it.
-However this file is empty.
-To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity` and add your columns as public fields (no need to have getters and setters).
+However, this file is empty.
+To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity`, and add your columns as public fields (no need to have getters and setters).
 
 ### Uncomment the Hero.java file 
 
 It is located under *src > main > java > io > quarkus > workshop > hero.java*
 
-Open it and remove the first of the file:
+Open it and remove the first part of the file:
 
 image:m4/start-comment-line.png[]
 
-and the last one:
+And the last one:
 
 image:m4/end-comment-line.png[]
 
 
 Notice that you can put all your JPA column annotations and Bean Validation constraint annotations on the public fields.
 
-For our workshop we need returning a random hero.
+For our workshop, we need to return a random hero.
 
 
 ```java
@@ -401,7 +401,7 @@ For our workshop we need returning a random hero.
         var count = count();
         var index = random.nextInt((int) count);
         return findAll().page(index, 1).firstResult();
-    }
+ }
 ```
 
 
@@ -409,14 +409,14 @@ For our workshop we need returning a random hero.
 
 ## Configuring Hibernate
 
-As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don't need at the moment to configure anything regarding the database access. 
-Quarkus will automatically start a Postgresql service and wire up your application to use this service. 
+As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don't need to configure anything regarding the database access at the moment. 
+Quarkus will automatically start a PostgreSQL service and wire up your application to use this service. 
 
-Quarkus development mode is great for apps that combine front-end, services, and database access. By using `quarkus.hibernate-orm.database.generation=drop-and-create` with `import.sql``, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.
+Quarkus development mode is great for apps that combine front-end, services, and database access. By using `quarkus.hibernate-orm.database.generation=drop-and-create` with `import.sql`, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.
 
-Look at the import.sql file located here `/src/resources/import.sql`. Around 500 heroes has been loaded in the database.
+Look at the import.sql file located here `/src/resources/import.sql`. Around 500 heroes have been loaded in the database.
 
-Now check the method findRandom defined above to confirm you can get random heroes ! 
+Now check the method findRandom defined above to confirm you can get random heroes! 
 
 #Open a new Terminal and run the following command#
 

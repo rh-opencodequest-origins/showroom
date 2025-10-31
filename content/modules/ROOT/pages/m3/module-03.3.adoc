@@ -10,12 +10,12 @@ include::../style.adoc[]
 *Time to explore platform engineering for everyone !*
 
 
-Now our platform engineering has the addtional capabilities such as :
+Now our platform engineering has the additional capabilities such as :
 
 image:m2/developerhub-tooling.png[]
 
 * Authentication with Keycloak 
-* Source code management with Gitlab
+* Source code management with GitLab
 * Organization and entities  
 
 Your mission is to onboard your developer team to the OpenCode Quest project.
@@ -23,14 +23,14 @@ Your mission is to onboard your developer team to the OpenCode Quest project.
 
 ## The application
 
-In this workshop you will develop an application that allows super-heroes to fight against villains. 
+In this workshop, you will develop an application that allows superheroes to fight against villains. 
 
 image:m3/fight-ui.png[]
 
 Being a workshop about microservices, you will be developing several microservices communicating synchronously via REST API endpoints:
 
-- `frontend`: a web application that allows users to pick up a random super-hero, a random villain and makes them fight. The Super Hero UI invokes the Hero, Villain and Fight REST endpoints.
-- `hero-service`: a Quarkus microservice that provides CRUD operations on Heroes which are stored in a PostgresSQL database.
+- `frontend`: a web application that allows users to pick up a random superhero, a random villain, and makes them fight. The Super Hero UI invokes the Hero, Villain, and Fight REST endpoints.
+- `hero-service`: a Quarkus microservice that provides CRUD operations on Heroes, which are stored in a PostgreSQL database.
 - `villain-service`: the counterpart of the hero service, for villains.
 - `fight-service`: a microservice that simulates a fight between a hero and a villain. The simulation is done using a _Large Language Model_ (LLM) that is deployed on OpenShift AI/ML Services. The result also includes a short narration of the fight:
 
@@ -44,7 +44,7 @@ image:m3/architecture.png[]
 
 
 Each team member will create a template following the golden rules of the software template. The template is specific to a stack. 
-A set of tools will be also configured. Yes you will leverage the integrations done previously ;) 
+A set of tools will also be configured. Yes, you will leverage the integrations done previously ;) 
 
 A template here will have the following structure : 
 
@@ -53,12 +53,12 @@ A template here will have the following structure :
 * IDE Cloud
 * CI/CD pipeline
 * Container image registry repository
-* Gitops application
+* GitOps application
 
-[Add schema to illustrate users split ?]
-=== Be ready to practise !
+[Add schema to illustrate users' split ?]
+=== Be ready to practise!
 
-Please select one link per user 
+Please select one link per user. 
 
 *{user1} -> The Hero service   xref:m4-user1/module-04.0.adoc[link]*
 

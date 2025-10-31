@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-= Module 7: Continuous Platform improvements
+= Module 7: Continuous Platform Improvements
 
 include::../style.adoc[]
 
@@ -10,7 +10,7 @@ In modern organizations, platform engineering is not a one-time effort but a con
 
 == Objectives
 
-This module addresses the following areas
+This module addresses the following areas.
 
 * *Learn how to enable continuous platform improvements* - Pitfalls of choosing the wrong platform approach, Platform drift and Sprawl, and Streamlined operations
 * *Monitoring & Usage Statistics* - Implementing monitoring tools to track platform usage, ensuring performance optimization and proactive issue resolution.

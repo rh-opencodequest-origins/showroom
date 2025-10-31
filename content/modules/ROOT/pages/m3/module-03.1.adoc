@@ -10,7 +10,7 @@ Let's explore the Template structure using a sample Template in the https://gitl
 
 == Template YAML Structure
 
-At a basic level, the Template Entity is similar to the Component Entity you encountered in the _catalog-info.yaml_ in the prior module; resembling a Kubernetes Custom Resource.
+At a basic level, the Template Entity is similar to the Component Entity you encountered in the _catalog-info.yaml_ in the prior module, resembling a Kubernetes Custom Resource.
 
 ```yaml
 apiVersion: scaffolder.backstage.io/v1beta3
@@ -103,17 +103,17 @@ spec:
       catalogInfoPath: "/catalog-info.yaml"
 ```
 
-Notice how the `parameters` are referenced in the `steps`? Another point of note is that a `user` variable is available to access data related to the user that's using the Template, and subsequent `steps` can access `output` from prior steps. 
+Notice how the `parameters` are referenced in the `steps`? Another point of note is that a `user` variable is available to access data related to the user who's using the Template, and subsequent `steps` can access `output` from prior steps. 
 
-The `output` values are documented on a per plugin basis. You can find the values for the specific version of your installed plugins by accessing the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/create/actions[/create/actions^, window="rhdh"] endpoint on your {product_name_rhdh} instance.
+The `output` values are documented on a per-plugin basis. You can find the values for the specific version of your installed plugins by accessing the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/create/actions[/create/actions^, window="rhdh"] endpoint on your {product_name_rhdh} instance.
 
 == Output
 
-The _spec.output_ can use of the outputs from the `steps` to do display useful information such as: 
+The _spec.output_ can use the outputs from the `steps` to display useful information such as: 
 
 * Links to newly created Components
 * Source Code Repository links
-* Links to Git Merge Requests that are needed etc
+* Links to Git Merge Requests that are needed, etc
 * Markdown text blobs
 
 ```yaml

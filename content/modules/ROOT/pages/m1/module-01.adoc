@@ -9,39 +9,38 @@ include::../style.adoc[]
 
 * Discuss the challenges currently faced by developers and the need for an Internal Developer Platform
 * Learn why a developer platform is necessary for rapid innovation
-* Discover how to onboard on a development project with Internal Developer Platform
+* Discover how to onboard on a development project with an Internal Developer Platform
 
 == Hello Open Code Quest Organization
 
-Open Code Quest Organization is a superhero developer company! With business booming and their online presence growing, the teams are also expanding in number. However, while the team is technically proficient, they tend to work in silos—especially because they are geographically dispersed—which results in difficulties collaborating with each other.
+Open Code Quest Organization is a superhero developer company! With business booming and their online presence growing, the teams are also expanding in number. However, while the team is technically proficient, they tend to work in silos—especially since they are geographically dispersed—which results in difficulties collaborating.
 
 With a rapidly evolving and expanding team, it is getting harder and harder for the team to keep up with
 
 * knowing who is doing what
 * onboarding new team members and getting them to be effective ASAP
 * identifying existing reusable artifacts - reuse please!
-* providing self-service for developers without need to be listening to a please-wait music tone
+* providing self-service for developers without the need to listen to a please-wait music tone
 * offering choices of features, and easy ways to hit the road running
 
-The team heard about the magic words— *Internal Developer Platform (IDP)* —and research showed that Red Hat Developer Hub would be a perfect fit because of its customizability and, in particular, its ability to run on-premises to support air-gapped, sensitive content.
+The team heard about the magic words—*Internal Developer Platform (IDP)*—and research showed that Red Hat Developer Hub would be a perfect fit due to its customizability, particularly its ability to run on-premises to support air-gapped, sensitive content.
 
 
 == Hello {product_name_rhdh}!
 
-{product_name_rhdh} streamlines development through a unified and open platform that reduces cognitive load and frustration for developers. It provides pre-architected and supported approaches that can help OpenCodeQuest Origins  get their applications into production faster and more securely—without sacrificing code quality.
+{product_name_rhdh} streamlines development through a unified and open platform that reduces cognitive load and frustration for developers. It provides pre-architected and supported approaches that can help OpenCodeQuest Origins get their applications into production faster and more securely—without sacrificing code quality.
 
-{product_name_rhdh} and its associated plugins extend the popular upstream Backstage project by providing additional features such as integration with OpenShift, enterprise role-based access control (RBAC), and dynamic plugins - while including all the nice goodies that come with Backstage project itself.
+{product_name_rhdh} and its associated plugins extend the popular upstream Backstage project by providing additional features such as integration with OpenShift, enterprise role-based access control (RBAC), and dynamic plugins - while including all the nice goodies that come with the Backstage project itself.
 
 
-== Hello Internal Development Portal (IDP) !
+== Hello Internal Development Portal (IDP)!
 
-In this workshop, you will walk through in the steps of the platform engineers
+In this workshop, you will walk through the steps of the platform engineers.
 
 * Discover what this Internal Developer Platform is all about
-* Learn how to design, architect and roll out a Thinnest Viable Product (TVP)
+* Learn how to design, architect, and roll out a Thinnest Viable Product (TVP)
 * Gain feedback from developers through a test-drive
 * Onboard existing applications for a single-pane-of-glass approach
 * Setup workflows - from laptop to Production
 
-All of this boiling down to _how to setup Development Teams up for success in a cloud native, AI infused world_!
-
+All of this boils down to _how to set up Development Teams up for success in a cloud native, AI-infused world_!

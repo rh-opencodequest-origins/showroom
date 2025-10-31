@@ -19,11 +19,11 @@ The large overlapping circles and speech bubbles indicate various application de
 
 *Challenges with a Static Platform*
 
-The left side highlights the original platform, which was once suitable for “cloud ready” apps. However, as new security and networking needs emerge, or as developers experiment with different architectures, a single, unchanging platform struggles to accommodate them all. This often leads to difficult onboarding processes and delays in adopting new technologies.
+The left side highlights the original platform, which was once suitable for “cloud-ready” apps. However, as new security and networking needs emerge, or as developers experiment with different architectures, a single, unchanging platform struggles to accommodate them all. This often leads to difficult onboarding processes and delays in adopting new technologies.
 
 *Fragmentation Leads to Different Platforms*
 
-On the right, the diagram shows teams choosing separate platforms for new applications. Meanwhile, legacy apps may stay on the old platform. This splits resources and expertise, making it more complex to maintain consistent standards. Each new need or project risks introducing another independent solution, increasing overhead and inconsistency.
+On the right, the diagram shows teams choosing separate platforms for new applications. Meanwhile, legacy apps may stay on the old platform. This splits resources and expertise, making it more complex to maintain consistent standards. Each new need or project risks introducing another independent solution, increasing overhead, and inconsistency.
 
 By not evolving the existing platform, organizations inadvertently encourage each group to find its own way. Over time, this “platform drift” becomes “platform sprawl,” where many platforms coexist, each requiring specialized upkeep. The picture illustrates how seemingly small decisions—such as onboarding difficulties or adding AI/ML capabilities—can drive teams to adopt new platforms rather than improve the existing one.
 
@@ -45,7 +45,7 @@ image:m7/platform-drift.png[]
 
 *Multiple Platforms for Different Apps*
 
-Above image shows two large circles representing new apps and legacy apps. The speech bubbles indicate teams saying, “We’ll use a different platform.” This illustrates how, rather than adapting an existing platform, different groups often choose new solutions when they introduce or update applications.
+The above image shows two large circles representing new apps and legacy apps. The speech bubbles indicate teams saying, “We’ll use a different platform.” This illustrates how, rather than adapting an existing platform, different groups often choose new solutions when they introduce or update applications.
 
 *Expansion into Many Independent Solutions*
 
@@ -75,11 +75,11 @@ image:m7/evolving-platform.png[]
 
 *Evolving from Basic Capabilities to Advanced Workloads*
 
-The left side of the image shows a platform initially designed for simpler needs such as “cloud ready apps” and “zero trust architectures.” Over time, the platform expands to accommodate more demanding use cases like data science, machine learning, and dynamic serverless architectures.
+The left side of the image shows a platform initially designed for simpler needs, such as “cloud-ready apps” and “zero trust architectures.” Over time, the platform expands to accommodate more demanding use cases like data science, machine learning, and dynamic serverless architectures.
 
 *Golden Paths for Development*
 
-The center highlights “fast moving monoliths,” “dynamic microservices,” and “data science & MLOps workflows.” The concept of “Golden Paths” refers to a set of recommended approaches that developers can follow without needing to configure everything from scratch. By providing these guidelines, the platform streamlines common tasks and ensures consistent practices.
+The center highlights “fast-moving monoliths,” “dynamic microservices,” and “data science & MLOps workflows.” The concept of “Golden Paths” refers to a set of recommended approaches that developers can follow without needing to configure everything from scratch. By providing these guidelines, the platform streamlines common tasks and ensures consistent practices.
 
 *Continual Improvement for Future Readiness*
 
