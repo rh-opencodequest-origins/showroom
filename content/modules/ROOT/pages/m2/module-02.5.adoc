@@ -13,7 +13,7 @@ include::../style.adoc[]
 * GitHub
 * Microsoft Azure
 
-In this activity you'll configure an OpenID Connect authentication provider - this will enable developers within your organization to log in using their single sign-on (SSO) credentials.
+In this activity, you'll configure an OpenID Connect authentication provider - this will enable developers within your organization to log in using their single sign-on (SSO) credentials.
 
 
 == Configure the OpenID Connect Authentication Provider
@@ -54,11 +54,11 @@ signInPage: oidc
 ** Provide a `production` configuration (corresponding to the `environment` defined previously).
 ** Use the `backstage` Realm (`metadataUrl`).
 ** Load the `clientId` and `clientSecret` from environment variables (loaded from the precreated https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/secrets/oauth-client[*oauth-client*] Secret, specified in `extraEnvVarsSecrets` in the _values.yaml_)
-** Map any signing in user identity to a User Entity in {product_name_rhdh} using the specified https://backstage.io/docs/auth/identity-resolver/[resolver^, window="console"]. These Users and Groups have already been synchronised to the catalog due to your work in the prior module.
-* The `signInPage` property is specific to {product_name_rhdh}. It ensures the correct sign-in UI is rendered. In upstream Backstage this requires React code changes.
+** Map any signing-in user identity to a User Entity in {product_name_rhdh} using the specified https://backstage.io/docs/auth/identity-resolver/[resolver^, window="console"]. These Users and Groups have already been synchronised to the catalog due to your work in the prior module.
+* The `signInPage` property is specific to {product_name_rhdh}. It ensures the correct sign-in UI is rendered. In upstream Backstage, this requires React code changes.
 
 . Commit the changes with a message similar to `feat: enable openid connect`
-. Click Refresh on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"]. If prompted, login as `{pe-username}/{common_password}`.
+. Click Refresh on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"]. If prompted, log in as `{pe-username}/{common_password}`.
 
 . Choose  *rhsso* as the identity provider
 image:m2/ocp-sso-login.png[width=60%]
@@ -69,9 +69,9 @@ image:m2/ocp-sso-login.png[width=60%]
 
 == Login using OpenID Connect Authentication
 
-. Once the latest version of your `appConfig` has been synchronized and rolled out, visit your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/[{product_name_rhdh} instance^, window="rhdh"]. You will be prompted to sign-in using OpenID Connect.
+. Once the latest version of your `appConfig` has been synchronized and rolled out, visit your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/[{product_name_rhdh} instance^, window="rhdh"]. You will be prompted to sign in using OpenID Connect.
 +
 image:m2/rhdh-oidc-login.png[OIDC Sign-In Prompt]
-. Login using the username `{pe-username}` and password `{common_password}` in the popup that appears. After logging in, visit the *Settings* page in {product_name_rhdh} to confirm you're logged in as the `{pe-username}` user.
+. Log in using the username `{pe-username}` and password `{common_password}` in the pop-up that appears. After logging in, visit the *Settings* page in {product_name_rhdh} to confirm you're logged in as the `{pe-username}` user.
 +
 image:m2/rhdh-pe1-user.png[Viewing the user details on the Settings UI in {product_name_rhdh}]

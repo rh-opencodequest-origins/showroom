@@ -7,7 +7,7 @@
 
 include::../style.adoc[]
 
-== Find the template to edit  !
+== Find the template to edit!
 
 ++++
 <div class="pe">
@@ -22,8 +22,8 @@ include::../login-pe.adoc[]
 
 
 
-As we did to edit template previously to correct a title, we will do it again ! 
-This flow is a new part of the development lifecycle. Platform engineer share the knowledge about project development on-boarding with developers !
+As we did to edit the template previously to correct a title, we will do it again! 
+This flow is a new part of the development lifecycle. The platform engineer shares the knowledge about project development onboarding with developers!
 
 
 ++++
@@ -38,10 +38,10 @@ image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
 +
 image:m3/template-quarkus-pg-fake-edit-button.png[edit] 
 
-. Click on the 3 dots button as shown on the picture
+. Click on the 3 dots button as shown in the picture.
 +
 
-Remember Templates imported previously are located in Gitlab. We will edit it and commit it inside Gitlab !
+Remember, Templates imported previously are located in GitLab. We will edit it and commit it inside Gitlab!
 +
 
 ++++
@@ -49,20 +49,20 @@ Remember Templates imported previously are located in Gitlab. We will edit it an
 ++++
 
 
-== Mind the step !
+== Mind the step!
 
 image:m3/mind-the-step.png[edit] 
 
 *Explore steps definition*
 
-Our template mission is to onboard a developer with the right resources to start inside a Gitlab Repo and deploy its work seamessly. 
-Accomplish low-value tasks for developers behalf the ops team in the right way
+Our template mission is to onboard a developer with the right resources to start inside a GitLab repo and deploy their work seamlessly. 
+Accomplish low-value tasks for the developers on behalf of the ops team in the right way.
 
-Remember, the platform engineering helps developers to integrate development tools configured seamessly in a project. To do so, we rely on plugins to do the job. it proposes a set of *actions*
+Remember, the platform engineering helps developers to integrate development tools configured seamlessly in a project. To do so, we rely on plugins to do the job. it proposes a set of *actions*
 
 *Gitlab step definition*
 
-For instance, to create a simple Gitlab repository, we use the concept of *action*    
+For instance, to create a simple GitLab repository, we use the concept of *action*    
 
 ```yaml
  - id: publish
@@ -72,14 +72,14 @@ For instance, to create a simple Gitlab repository, we use the concept of *actio
         repoUrl: "${{ parameters.repo.host }}.${{ parameters.openshiftCluster }}?owner=${{ user.entity.metadata.name }}&repo=${{parameters.component_id}}"
         repoVisibility: public
 ```
-The *repoUrl* is built with informations set in the form. The repository will be created with in Gitlab user space *user.entity.metadata.name* and the repository name will be *component_id* set in the Java Package Information section
+The *repoUrl* is built with information set in the form. The repository will be created within Gitlab user space *user.entity.metadata.name*, and the repository name will be *component_id* set in the Java Package Information section.
 
 
 *Explore the Software Catalog AKA catalog-info.yaml*
 
 
-As the platform engineering is the entrypoint for project developments, get the right overview of objects created, integrations performed is paramount !
-This is why the *Sofware Catalog* exists ! A clear definition of UI elements based on external tools involved in the development project. For instance, pipeline status, source code repositories, registry shortcuts ...
+As platform engineering is the entry point for project developments, getting the right overview of objects created and integrations performed is paramount!
+This is why the *Software Catalog* exists! A clear definition of UI elements based on the external tools involved in the development project. For instance, pipeline status, source code repositories, registry shortcuts ...
 
 ```yaml
  - id: register
@@ -93,14 +93,14 @@ The template creates a *Software Catalog* thanks to this action in the git repos
 Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/template-quarkus-simple/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 
 
-== Uncomment the steps !
+== Uncomment the steps!
 
 
-. Find the YAML surrounded by `Gitlab Steps` and uncomment below
+. Find the YAML surrounded by `Gitlab Steps` and uncomment below.
 +
 image:m3/gitlab-register-steps-uncomment.png[edit] 
 
-. Find the YAML surrounded by `publish gitops resources` and `create argoCD resources` and uncomment below
+. Find the YAML surrounded by `publish gitops resources` and `create argoCD resources` and uncomment below.
 +
 image:m3/gitops-steps-uncomment.png[edit] 
 
@@ -131,7 +131,7 @@ image:/m3/template-refresh-button.png[Customizing the Title]
 
 == Summary
 
-Nice work! The template is definetly ready to be used ! 
-Let's developer consume it !
+Nice work! The template is definitely ready to be used! 
+Let's developer consume it!
 
 

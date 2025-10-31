@@ -5,7 +5,7 @@ include::../style.adoc[]
 == Explore updates to Production Argo CD Manifests
 
 * In the previous section, we noted that a Merge Request has been raised on the Prod Argo CD manifest to update the prod image.
-* On {product_name_rhdh}, in the `parasol-store` component's https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/pr[Pull/Merge Requests page, window="rhdh"], you can view the a list of Gitlab Merge Request Statuses.
+* On {product_name_rhdh}, in the `parasol-store` component's https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store/pr[Pull/Merge Requests page, window="rhdh"], you can view a list of Gitlab Merge Request Statuses.
 * Click on the Revision link shown for `parasol-store-prod`. This will take you to the `parasol-store-manifests` repo showing the current commits to the `parasol-store-manifests` repository. 
 +
 image:m5/parasol-store-deployment-summary.png[]
@@ -28,7 +28,7 @@ image:m5/parasol-store-prod-pr-merge.png[width=70%]
 +
 image:m5/parasol-store-go2argo.png[width=80%]
 
-* Click on the *Refresh* button. Login as (`admin` / `{common_password}`) if prompted.
+* Click on the *Refresh* button. Log in as (`admin` / `{common_password}`) if prompted.
 +
 image:m5/parasol-store-prod-argo-sync-start.png[width=70%]
 * The Argo CD app will begin syncing.
@@ -46,4 +46,4 @@ A developer can effortlessly set up an ephemeral development environment, build 
 
 All of this is accessible through a single-pane-of-glass experience on {product_name_rhdh}, eliminating the need to switch between multiple tools and platforms to track both inner-loop and outer-loop progress and statuses. 
 
-The dynamic plugins that you enabled in previous modules provide incredible value to this experience by integrating real-time insights and providing contextual visibility, ensuring a smooth and efficient development lifecycle, there by reducing developer cognitive overload and streamlining the development lifecycle.
+The dynamic plugins that you enabled in previous modules provide incredible value to this experience by integrating real-time insights and providing contextual visibility, ensuring a smooth and efficient development lifecycle, thereby reducing developer cognitive overload and streamlining the development lifecycle.

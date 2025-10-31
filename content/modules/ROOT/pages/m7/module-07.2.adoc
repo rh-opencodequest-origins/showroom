@@ -4,7 +4,7 @@ include::../style.adoc[]
 
 == Monitor Adoption and Usage
 
-Measuring developer engagement and understanding their usage of your internal developer portal is critical to better serving their needs. {product_name_rhdh} includes an https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights^, window="docs"] plugin that can be enbaled by platform engineering teams to view detailed analytics on adoption and engagement within the internal developer portal.
+Measuring developer engagement and understanding their usage of your internal developer portal is critical to better serving their needs. {product_name_rhdh} includes an https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights^, window="docs"] plugin that can be enabled by platform engineering teams to view detailed analytics on adoption and engagement within the internal developer portal.
 
 Key metrics available include:
 
@@ -15,11 +15,11 @@ Key metrics available include:
 * Top TechDocs.
 * Popular searches.
 
-NOTE: The Adoption Insights plugin is current in Developer Preview. Refer to the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights documentation^, window="docs"] for more information related to support.
+NOTE: The Adoption Insights plugin is currently in Developer Preview. Refer to the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights documentation^, window="docs"] for more information related to support.
 
 === Platform Engineer Activity: Enable Adoption Insights
 
-Adoption Insights is enabled similar to other plugins for {product_name_rhdh} - by updating the dynamic plugins configuration and supplying plugin specific configuration.
+Adoption Insights is enabled similarly to other plugins for {product_name_rhdh} - by updating the dynamic plugins configuration and supplying plugin-specific configuration.
 
 . Open your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file, window="gitlab"].
 . Make sure you're logged in to GitLab as `{pe-username}` / `{common_password}`.
@@ -42,15 +42,15 @@ feat: enable adoption insights plugin
 
 . Click the *Commit changes* button.
 
-As you're familiar with by now, you can refresh the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[backstage Application in OpenShift GitOps^, window="argo"] and to deploy the new {product_name_rhdh} configuration. The Adoption Insights plugin will be available from **Administration > Adoption Insights** when the deployment has finished, but no data is available yet.
+As you're familiar with by now, you can refresh the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[backstage Application in OpenShift GitOps^, window="argo"] and deploy the new {product_name_rhdh} configuration. The Adoption Insights plugin will be available from **Administration > Adoption Insights** when the deployment has finished, but no data is available yet.
 
 image:m7/adoption-insights-plugin-dashboard.png[]
 
 === Developer Activity: Generate Data for Adoption Insights
 
-Once the new deployment has finished you'll need to interact with {product_name_rhdh} to generate events that the Adoption Insights dashboard can display. There are a few ways to do this:
+Once the new deployment has finished, you'll need to interact with {product_name_rhdh} to generate events that the Adoption Insights dashboard can display. There are a few ways to do this:
 
-. Open a private browsing session and login as user `{dev-username}` using the password `{common_password}`.
+. Open a private browsing session and log in as user `{dev-username}` using the password `{common_password}`.
 . While logged in as `{dev-username}` and `dev2`:
     . Use the **Search Bar** in the top navigation menu to find APIs and Components.
     . Visit the **Docs** page and view the documentation for your Quarkus application.
@@ -60,10 +60,10 @@ Perform multiple searches and view multiple APIs and Components to generate suff
 
 === Platform Engineer Activity: View Adoption Insights
 
-Now that you've generated some events, login to {product_name_rhdh} as the `{pe-username}` user. Expand the **Administration** section in the side menu and click the **Adoption Insights** link.
+Now that you've generated some events, log in to {product_name_rhdh} as the `{pe-username}` user. Expand the **Administration** section in the side menu and click the **Adoption Insights** link.
 
 image:m7/adoption-insights-with-data.png[]
 
 === Conclusion
 
-Understanding usage patterns and engagement with your internal developer portal can help you better tailor your application platform to address developer needs, and demonstrate to stakeholders that the portal is a valuable developer productivity tool. The Adoption Insights plugin provides you with the data you need for both of these use cases.
+Understanding usage patterns and engagement with your internal developer portal can help you better tailor your application platform to address developer needs and demonstrate to stakeholders that the portal is a valuable developer productivity tool. The Adoption Insights plugin provides you with the data you need for both of these use cases.

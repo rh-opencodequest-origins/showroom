@@ -12,23 +12,23 @@ Your mission today is to equip a team of super developers to make them super her
 
 Many organizations today are facing serious challenges that impact their development teams’ productivity. High cognitive load, lack of standardization, and fragmented domain knowledge are common issues that lead to inefficiencies, increased maintenance costs, and even security vulnerabilities.
 
-Red Hat provides the tools and know-how to help "The Providers" (Platform Engineers) to create "The Product" (their internal developer portal) based on the needs of "The Customers" (all Development Teams within the organization).
+Red Hat provides the tools and know-how to help "The Providers" (Platform Engineers) create "The Product" (their internal developer portal) based on the needs of "The Customers" (all Development Teams within the organization).
 
 == Team Organization
 
 image:common/developers-trio.png[]
 
 
-Today, You will learn how to onboard new team members on an amazing platform. The *Internal Developer Platform (IDP)* ! AKA Platform Engineering. You will be in a team *3 people*. Working closely to embrace severals roles to explore 3 main topics :
+Today, you will learn how to onboard new team members on an amazing platform. The *Internal Developer Platform (IDP)*! AKA Platform Engineering. You will be in a team *3 people*. Working closely to embrace several roles to explore 3 main topics :
 
-* Define the plaftorm engineering in a fictive organization
+* Define the platform engineering in a fictitious organization
 * Develop and deploy your application leveraging your platform engineering previously created
 * Iterate and improve your platform engineering 
 
 The workshop will be paced with *2 different roles*. 
 
 
-As you will be a team of 3, you will drive parts sometimes *individually* or *together*. Together means someone from the team will own the "execution" of a *"Shared Part"* of the workshop and the rest of team will follow it carefully. Each member will do a *"shared part"* in this session
+As you will be a team of 3, you will drive parts sometimes *individually* or *together*. Together means someone from the team will own the "execution" of a *"Shared Part"* of the workshop, and the rest of the team will follow it carefully. Each member will do a *"shared part"* in this session.
 
 
 
@@ -44,8 +44,8 @@ This workshop can also help Development Teams who are in charge of creating a so
 
 == Developer Role
 
-This workshop can also help *Development Teams* who are in charge of creating a software solution, and empower (traditionally speaking) in picking their own tools for coding, building, deploying, running, monitoring and documentation.
-Learn how Red Hat transform the developer onboarding and secure their deliveries from inner loop to the outer loop seamlessly 
+This workshop can also help *Development Teams* who are in charge of creating a software solution, and empower them (traditionally speaking) in picking their own tools for coding, building, deploying, running, monitoring, and documentation.
+Learn how Red Hat transforms the developer onboarding and secures their deliveries from the inner loop to the outer loop seamlessly. 
 
 
 

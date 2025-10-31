@@ -5,7 +5,7 @@
 == *Pick the chosen one* ! 
 
 
-IMPORTANT: This is a *Shared part*. It means, *one person* will be able to go through those steps The work accomplished will be useful for everyone !
+IMPORTANT: This is a *Shared part*. It means, *one person* will be able to go through those steps. The work accomplished will be useful for everyone!
 
 
 image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog]
@@ -14,7 +14,7 @@ image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog]
 
 include::../style.adoc[]
 
-Once you have chosen a user from the team, go head !
+Once you have chosen a user from the team, go ahead!
 {product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[backstage project on OpenShift^, window="console"].
 
 Log in to {product_name_rhdh}:
@@ -29,9 +29,9 @@ image:m2/ocp-sso-login.png[width=60%]
 image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]
 . Click the URL listed under the *Resources* tab; it will be similar to https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}^, window="rhdh"]
 
-The sign-in page will be displayed, with the option to login as a Guest. Click the *Enter* button to use the Guest sign-in.
+The sign-in page will be displayed, with the option to log in as a Guest. Click the *Enter* button to use the Guest sign-in.
 
-NOTE: Ignore the GitHub sign-in method if it's displayed. It is not configured and will not work. 
+NOTE: Ignore the GitHub sign-in method, if it's displayed. It is not configured and will not work. 
 
 image:m2/backstage-guest-signin.png[{product_name_rhdh} deployment on OpenShift, width=60%]
 
