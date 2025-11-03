@@ -93,6 +93,32 @@ The following diagram illustrates the interactions between the Fight service and
 image:m4/fight-architecture.png[]
 
 
+### Import the code base 
+
+Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let's import it !
+
+### Open the terminal to import the zip file
+
+* Click on the "Burger icon" on the upper left side
+* Click on File > Terminal > Open a new terminal
+
+image:m4/open-terminal.png[]
+
+* Run the following command 
+
+[,bash,subs=attributes]
+
+====
+
+wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullcodebase/-/raw/main/fight-service.zip -O fight-service.zip && unzip -o fight-service.zip && rm fight-service.zip
+
+====
+
+
+Confirm you have this directory : 
+
+image:m4/fight-service-directory.png[]
+
 
 ## The Quarkus-LangChain4j Extension
 
