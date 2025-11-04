@@ -19,9 +19,9 @@ The initial use cases for your developer portal are:
 
 == Module Objectives
 
-Satisfying the previously defined use cases involves configuring {product_name_rhdh} to integrate with your existing platforms, tools, and infrastructure. For example, if your organization uses OpenShift Pipelines for continuous integration, you'll need to configure the {product_name_rhdh} instance with the appropriate integration to fetch and display data from an OpenShift cluster used to perform https://tekton.dev/docs/pipelines/pipelineruns/[Pipeline Runs^, window="content"].
+To meet the previous use cases, configure Red Hat Developer Hub (RHDH) to connect with your existing tools and infrastructure. For instance, if you use OpenShift Pipelines for CI, set up RHDH to integrate with your OpenShift cluster to fetch and display data used to perform  https://tekton.dev/docs/pipelines/pipelineruns/[Pipeline Runs^, window="content"].
 
-It could be said that the value of an internal developer portal is proportional to the thought and energy invested into it by the platform engineer(s), and developers using it.
+The value of an internal developer portal depends on the effort and care put into it by platform engineers and developers
 
 image:m2/developerhub-tooling.png[]
 

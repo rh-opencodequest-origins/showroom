@@ -6,7 +6,7 @@
 include::../style.adoc[]
 
 
-. Navigate to the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch[feature branch component, window="rhdh"] you had created. If prompted, log in as `{dev-username}` / `{common_password}`.
+. Navigate to the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/parasol-store-my-feature-branch[feature branch component, window="rhdh"] you had created. If prompted, log in as *`{dev-username}` / `{common_password}`*.
 . Click on the *View Source* link to access the git repo of this Component.
 . You will see an alert asking you to create a *merge request*.
 +

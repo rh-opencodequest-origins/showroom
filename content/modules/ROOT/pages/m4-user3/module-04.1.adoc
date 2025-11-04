@@ -61,7 +61,7 @@ image:m3/template-quarkus-pg-edit-title.png[title]
 
 
 
-Templates are refreshed asynchronously by Red Hat Developer Hub. We will see how to refresh it manually.
+Templates are refreshed asynchronously by Developer Hub. We will see how to refresh it manually.
 
 == Let's find the template to refresh!
 

@@ -2,7 +2,7 @@
 
 = Developer Activity: Instantiate the template 
 
-IMPORTANT: Please make sure you are logged in as a Developer with `{dev-username}` / `{common_password}` as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
+IMPORTANT: Please make sure you are logged in as a Developer with *`{dev-username}` / `{common_password}`* as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
 
 include::../style.adoc[]
 ++++

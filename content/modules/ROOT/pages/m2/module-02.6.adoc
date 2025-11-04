@@ -28,7 +28,7 @@ image:m2/gitlab-catalog-provider.png[GitLab Catalog Provider, width=70%]
 . Commit your changes with the message `feat: add GitLab autodiscovery`.
 // +
 // image:m2/gitlab-discovery.png[GitLab code editor showing catalog providers configuration for {product_name_rhdh}]
-. Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"] (login as `{pe-username}` / `{common_password}`).
+. Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"] (login as *`{pe-username}` / `{common_password}`*).
 
 == Verify GitLab Entity Discovery is Active
 
@@ -48,7 +48,7 @@ include::../debug-pod-placement.adoc[]
 
 Be prepared to answer our questions based on what you have learnt in this section! 
 
-Wrap up the job done for your peers. Explain which capabilities (AuthN / SCM / RBAC) have been added to the internal developer platform.
+Wrap up the job done for your peers. Explain which capabilities (Authentication / Source Code Management / Users ..) have been added to the internal developer platform. The quiz will happen after the break !
 
 
 image::m2/quizz-time.png[{product_name_rhdh} deployment on OpenShift]

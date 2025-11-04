@@ -129,11 +129,11 @@ Your workshop environment has been pre-configured such that this repository in G
 
 With that out of the way, let's get to work on configuring your instance of {product_name_rhdh}!
 
-image::m2/openshift-backstage.png[{product_name_rhdh} deployment on OpenShift]
+image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]
 
 
 = Quiz!
 
-Be prepared to answer our questions based on what you have learnt in this section! 
+Be prepared to answer our questions based on what you have learnt in this section! The Quiz will happen after the break !
 
 image::m2/quizz-time.png[{product_name_rhdh} deployment on OpenShift]

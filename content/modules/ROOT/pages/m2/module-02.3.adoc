@@ -19,7 +19,8 @@ NOTE: https://www.redhat.com/en/topics/devops/what-is-gitops[GitOps] is the prac
 
 image:m2/gitops-helm.png[GitOps Architecture Overview, width=80%]
 
-Since this isn’t a GitOps-focused workshop, we’ve set up the basic GitOps workflow ahead of time. Specifically, we’ve pre-created a https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[rhdh-bootstrap Application in OpenShift GitOps, window="argo"] - you can view this by clicking the link and logging in as the {pe-username} user with the password `{common_password}`.
+Since this isn’t a GitOps-focused workshop, we’ve set up the basic GitOps workflow ahead of time. Specifically, we’ve pre-created a https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[rhdh-bootstrap Application in OpenShift GitOps, window="argo"] - you can view this by clicking the link and "log in via OpenShift" as 
+*`{pe-username}/`{common_password}`*
 
 image:m2/argocd-login.png[GitOps Architecture Overview, width=80%]
 
@@ -89,7 +90,7 @@ include::../debug-pod-placement.adoc[]
 
 [NOTE]
 ====
-You may need to log out to see the title change. Click the Guest user icon in the top right corner and select *Sign out*. Then log back in to the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]  as a Platform Engineer with `{pe-username}` / `{common_password}`.
+You may need to log out to see the title change. Click the Guest user icon in the top right corner and select *Sign out*. Then log back in to the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]  as a Platform Engineer with *`{pe-username}` / `{common_password}`*.
 
 image:m2/rhdh-title-logout.png[] 
 ====

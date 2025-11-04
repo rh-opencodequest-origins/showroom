@@ -2,7 +2,7 @@
 
 = Platform Engineer Activity: Instantiate the template corrected
 
-IMPORTANT: Please make sure you are logged in as a Platform Engineer with `{pe-username}` / `{common_password}` as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
+IMPORTANT: Please make sure you are logged in as a Platform Engineer with *`{pe-username}` / `{common_password}`* as you were guided to in the previous step. We advise you to use a *private/incognito window* to log out properly!  
 
 include::../style.adoc[]
 ++++
