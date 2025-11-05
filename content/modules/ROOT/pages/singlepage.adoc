@@ -73,6 +73,5 @@ include::m4-user3/module-04.7.adoc[]
 
 // module 5
 include::m5/module-05.0.adoc[]
-include::m5/module-05.1.adoc[]
-include::m5/module-05.2.adoc[]
 
+include::m6/module-06.0.adoc[]

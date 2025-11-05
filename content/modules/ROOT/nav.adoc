@@ -44,7 +44,10 @@
 ** xref:m4-user3/module-04.6.adoc[4.6 Developer Activity : From Git to OpenShift"]
 ** xref:m4-user3/module-04.7.adoc[4.7 Secure your appplication deployment]
 
-* xref:m5/module-05.0.adoc[5. OpenCodeQuest]
+* xref:m5/module-05.0.adoc[CONGRATS]
+
+* xref:m6/module-06.0.adoc[Survey]
+
 
 * xref:env.adoc[My lab environment details]
 

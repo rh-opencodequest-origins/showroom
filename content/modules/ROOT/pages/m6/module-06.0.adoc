@@ -1,0 +1,11 @@
+:imagesdir: ../../assets/images
+
+= Your feedback matters
+
+include::../style.adoc[]
+
+
+We will happy to get your feedback about this workshop !
+Please take 2 minutes to complete the https://docs.google.com/forms/d/e/1FAIpQLScf6teT9or9oC4qHZs2WRs_m6Gq6nBTbT3lMWE0weag6Nk00g/viewform?usp=sharing&ouid=117678793794150505871[survey, window="OpenCodeQuest Origins Survey"]
+
+image:m5/survey-link.png[]
