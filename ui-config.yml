@@ -1,5 +1,6 @@
 ---
 type: showroom
+default_width: 50
 tabs:
   - name: Terminal
     path: '/wetty'
