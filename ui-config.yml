@@ -2,4 +2,5 @@
 type: showroom
 tabs:
   - name: Terminal
-    type: 'terminal'
+    path: '/wetty'
+    port: '443'
