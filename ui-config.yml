@@ -10,3 +10,9 @@ tabs:
   - name: RHDH
     url: 'https://backstage-rhdh-${TEAM_ID}.${DOMAIN}'
     external: true
+  - name: ArgoCD (Cluster)
+    url: 'https://openshift-gitops-server-openshift-gitops.${DOMAIN}'
+    external: true
+  - name: ArgoCD (Apps)
+    url: 'https://rhdh-gitops-server-rhdh-gitops.${DOMAIN}'
+    external: true
