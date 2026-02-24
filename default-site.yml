@@ -28,6 +28,3 @@ antora:
   extensions:
     - require: ./content/lib/dev-mode.js
       enabled: false
-
-output:
-  dir: ./www
