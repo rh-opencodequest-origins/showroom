@@ -5,8 +5,8 @@ tabs:
     path: '/wetty'
     port: '443'
   - name: OCP Console
-    url: 'https://console-openshift-console.apps.cluster-rz66n.rz66n.sandbox122.opentlc.com'
+    url: 'https://console-openshift-console.${DOMAIN}'
     external: true
   - name: RHDH
-    url: 'https://backstage-rhdh-team6.apps.cluster-rz66n.rz66n.sandbox122.opentlc.com'
+    url: 'https://backstage-rhdh-${TEAM_ID}.${DOMAIN}'
     external: true
