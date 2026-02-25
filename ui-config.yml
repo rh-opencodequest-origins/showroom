@@ -7,13 +7,13 @@ tabs:
     port: '443'
   - name: OCP Console
     url: 'https://console-openshift-console.${DOMAIN}'
-    external: true
+    external: false
   - name: RHDH
     url: 'https://backstage-rhdh-${TEAM_ID}.${DOMAIN}'
-    external: true
+    external: false
   - name: ArgoCD (Cluster)
     url: 'https://openshift-gitops-server-openshift-gitops.${DOMAIN}'
-    external: true
+    external: false
   - name: ArgoCD (Apps)
     url: 'https://rhdh-gitops-server-rhdh-gitops.${DOMAIN}'
-    external: true
+    external: false
