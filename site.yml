@@ -28,3 +28,4 @@ antora:
   extensions:
     - require: ./content/lib/dev-mode.js
       enabled: false
+    - require: ./content/lib/resolve-page-links.js
