@@ -29,9 +29,17 @@ asciidoc:
     openai-model: mon-modele
     openai-key: ma-clé
     page-links:
-    - url: https://www.redhat.com/fr/technologies/cloud-computing/developer-hub
-      text: Red Hat
-    - url: https://www.redhat.com/en/engage/state-of-platform-engineering-age-of-ai
-      text: State of PE Report
+    - url: https://console-openshift-console.${DOMAIN}
+      text: OCP Console
+    - url: https://backstage-rhdh-${TEAM_ID}.${DOMAIN}
+      text: Developer Hub
+    - url: https://devspaces.${DOMAIN}
+      text: Dev Spaces
+    - url: https://gitlab-gitlab.${DOMAIN}
+      text: GitLab
+    - url: https://openshift-gitops-server-openshift-gitops.${DOMAIN}
+      text: ArgoCD (Cluster)
+    - url: https://rhdh-gitops-server-rhdh-gitops.${DOMAIN}
+      text: ArgoCD (Apps)
     environment_variables:
       TEAM_ID: team1
