@@ -16,7 +16,7 @@ include::../style.adoc[]
 </div>
 ++++
 
-## The home page dashboard
+== The home page dashboard
 
 On the development home page, all tools needed are represented by different tabs, such as :
 
@@ -36,15 +36,15 @@ Our first mission is to add a new tab to monitor changes performed by our GitOps
 
 NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
-## Customize your development project dashboard 
+== Customize your development project dashboard 
 
-Since the beginning of the workshop, we have leveraged GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
+Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
 The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
-### You are the owner of your dashboard
+=== You are the owner of your dashboard
 
 Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
@@ -76,7 +76,7 @@ image:m4/uncommented-catalog-info.png[]
 NOTE: To simplify the development flow, we'll commit later with the changes done on our code base. The dashboard will be updated automatically.
 
 
-## The Hero Service
+== The Hero Service
 
 
 
@@ -90,12 +90,12 @@ This service will be used by the *fight* microservice.
 
 
 
-## Import the code base 
+== Import the code base 
 
 Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let's import it!
 
 
-### Open the terminal to import the zip file
+=== Open the terminal to import the zip file
 
 * Click on the "Burger icon" on the upper left side
 * Click on File > Terminal > Open a new terminal
@@ -117,7 +117,7 @@ image:m4/hero-directory.png[]
 
 
 
-## Directory Structure
+== Directory Structure
 
 Once you bootstrap the project, you get the following directory structure with a few Java classes and other artifacts:
 
@@ -140,11 +140,11 @@ In addition, you can see the `quarkus-maven-plugin`, responsible for the packagi
 Regarding the dependencies section, you can see the extension allowing the development of REST applications.
 
 
-## The JAX-RS Resource
+== The JAX-RS Resource
 
 During the project creation, the *hero-service > src > main > java > io > quarkus > workshop > hero > HeroResource.java* file has been created with the following content. 
 
-### Uncomment the file content
+=== Uncomment the file content
 
 Open it and remove the first part of the file:
 
@@ -158,17 +158,15 @@ image:m4/end-comment-line.png[]
 This file has a set of simple REST endpoints. For instance, returning "hello" to HTTP GET requests to `/api/heroes`.
 
 
-```java
-
-
+[source,java]
+----
  @GET
  @Path("/hello")
     public String hello() {
         return "Hello from Quarkus REST";
  }
-
-``` 
-## Running the Application
+---- 
+== Running the Application
 
 We are now ready to run our application.
 
@@ -182,7 +180,8 @@ or
 
 `quarkus dev`
 
-```shell
+[source,shell]
+----
 $  quarkus dev
 [INFO] Scanning for projects...
 [INFO] 
@@ -229,7 +228,7 @@ __  ____  __  _____   ___  __ ____  ______
 --
 Tests paused
 Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [:] for the terminal, [h] for more options>
-```
+----
 
 At some point, a pop-up asking to open the Quarkus dev will be shown:
 
@@ -241,11 +240,12 @@ You can now check that the endpoint returns `Hello from Quarkus REST` as expecte
 
 #Open a new Terminal and run the following command#
 
-```shell
+[source,shell]
+----
 curl http://localhost:8080/api/heroes/hello
-```
+----
 
-## Development Mode
+== Development Mode
 
 `mvn quarkus:dev` or `quarkus dev` runs Quarkus in development mode.
 This enables hot deployment with background compilation, which means that when you modify your Java files and/or your resource files and invoke a REST endpoint (i.e. cUrl command or refresh your browser), these changes will automatically take effect.
@@ -253,7 +253,7 @@ If there are any issues with compilation, an error page will let you know.
 
 The development mode also allows debugging and listens for a debugger on port 5005.
 
-### Dev UI
+=== Dev UI
 
 Quarkus ships with a Developer UI, which is available in dev mode at the/q/dev-ui path by default.
 It will show you something like this:
@@ -274,13 +274,14 @@ Each extension used in the application will be listed.
 
 #Open the Developer Console by navigating to the $HERO_URL/q/dev-ui# 
 
-## Testing the Application
+== Testing the Application
 
 So far so good, but wouldn't it be better with a few tests, just in case?
 
 In the generated `pom.xml` file, you can see 2 test dependencies:
 
-```xml
+[source,xml]
+----
 <dependency>
     <groupId>io.quarkus</groupId>
     <artifactId>quarkus-junit5</artifactId>
@@ -291,10 +292,9 @@ In the generated `pom.xml` file, you can see 2 test dependencies:
     <artifactId>rest-assured</artifactId>
     <scope>test</scope>
 </dependency>
+----
 
-```
-
-### Uncomment the HeroResourceTest.java
+=== Uncomment the HeroResourceTest.java
 
 The generated project contains a simple test.
 The file content to uncomment is located here : *hero-service > src > test > java > io > quarkus > workshop > hero > HeroResourceTest.java*
@@ -313,26 +313,28 @@ Then, the `testHelloEndpoint` method checks the HTTP response status code and co
 
 You can run the tests with `./mvnw test` in a new Terminal.
 
-### Continuous testing
+=== Continuous testing
 
 Quarkus supports continuous testing, where tests run immediately after code changes have been saved. 
 This allows you to get instant feedback on your code changes.
 
 #When you start Quarkus in dev mode, down at the bottom of the screen, you should see the following#:
 
-```shell
+[source,shell]
+----
 Tests paused, press [r] to resume, [h] for more options>
-```
+----
 #Press `r and the tests will start running.#
 You should see the status change at the bottom of the screen as they are running, and it should finish with
 
-```shell
+[source,shell]
+----
 All 1 test is passing (0 skipped), 1 test was run in 8053ms. Tests completed at 12:11:25.
 Press [e] to edit command line args (currently ''), [r] to re-run, [o] Toggle test output, [:] for the terminal, [h] for more options>
-```
+----
 
 
-## Database dependencies
+== Database dependencies
 
 This microservice:
 
@@ -350,7 +352,8 @@ Because JPA and Bean Validation work well together, we will use Bean Validation 
 All the needed dependencies to access the database are already in the `pom.xml` file. 
 
 
-```xml
+[source,xml]
+----
   <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-jdbc-postgresql</artifactId>
@@ -367,17 +370,17 @@ All the needed dependencies to access the database are already in the `pom.xml` 
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-rest-jackson</artifactId>
         </dependency>
-```
+----
 
 
-## Hero Entity
+== Hero Entity
 
 At this point, we need an Entity class.
 There is already a `Hero.java` file under *src > main > java > io > quarkus > workshop > hero.java* so you don't need to create it.
 However, this file is empty.
 To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity`, and add your columns as public fields (no need to have getters and setters).
 
-### Uncomment the Hero.java file 
+=== Uncomment the Hero.java file 
 
 It is located under *src > main > java > io > quarkus > workshop > hero.java*
 
@@ -395,19 +398,20 @@ Notice that you can put all your JPA column annotations and Bean Validation cons
 For our workshop, we need to return a random hero.
 
 
-```java
+[source,java]
+----
  public static Hero findRandom() {
         Random random = new Random();
         var count = count();
         var index = random.nextInt((int) count);
         return findAll().page(index, 1).firstResult();
  }
-```
+----
 
 
 
 
-## Configuring Hibernate
+== Configuring Hibernate
 
 As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don't need to configure anything regarding the database access at the moment. 
 Quarkus will automatically start a PostgreSQL service and wire up your application to use this service. 
@@ -420,9 +424,10 @@ Now check the method findRandom defined above to confirm you can get random hero
 
 #Open a new Terminal and run the following command#
 
-```shell
+[source,shell]
+----
 curl http://localhost:8080/api/heroes/random
-```
+----
 
 
 

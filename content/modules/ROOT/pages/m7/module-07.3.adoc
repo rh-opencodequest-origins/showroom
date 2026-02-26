@@ -20,7 +20,7 @@ To begin, create the `cluster-monitoring-config` ConfigMap object:
 
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar of OpenShift Console to create a new resource.
 +
-image:m7/create-yaml.png[] 
+image:m7/create-yaml.png[Create YAML resource in OpenShift Console,link=self,window=blank] 
 
 . In the YAML editor, input the following ConfigMap. Setting the `enableUserWorkload` parameter to `true`, enables monitoring of user-defined projects in the OpenShift cluster.
 +
@@ -38,7 +38,7 @@ data:
 ----
 . Click the *Save* button to create this ConfigMap.
 +
-image:m7/save-user-workload.png[]
+image:m7/save-user-workload.png[Save User Workload ConfigMap button,link=self,window=blank]
 
 
 === Enable metrics monitoring on OpenShift
@@ -49,7 +49,7 @@ Next, enable metrics monitoring for  {product_name_rhdh}.
 . Select *Edit > Edit single file*. Log in as a Platform Engineer with *`{pe-username}` / `{common_password}`* when prompted.
 . Find the YAML surrounded by `--- MONITORING ---` and uncomment this section by highlighting the lines and pressing `CMD + /` or `CTRL + /`.
 +
-image:m7/uncomment-monitoring.png[width=50%]
+image:m7/uncomment-monitoring.png[Uncomment monitoring section in values.yaml,width=50%,link=self,window=blank]
 . Scroll down and enter a commit message `feat: Enable monitoring`.
 . Click the *Commit changes* button.
 
@@ -63,7 +63,7 @@ To apply the changes
 . Wait until the Application status is *Healthy*.
 . A new `servicemonitor` for {product_name_rhdh} should now be created. You can verify this by viewing the `backstage` Argo CD application.
 +
-image:m7/new-service-monitor.png[]
+image:m7/new-service-monitor.png[New servicemonitor for Red Hat Developer Hub in Argo CD,link=self,window=blank]
 
 
 === View {product_name_rhdh} metrics on OpenShift
@@ -73,7 +73,7 @@ You can view the {product_name_rhdh}'s metrics  from the Developer perspective o
 . Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/dev-monitoring/ns/rhdh-{team-id}[metrics^, window="console"] page to view this *Observe* menu on OpenShift
 . Click the Metrics tab, and from the `Select query` drop-down, choose `Custom query`
 +
-image:m7/select-custom-query.png[]
+image:m7/select-custom-query.png[Select Custom query from Metrics drop-down,link=self,window=blank]
 . You can query a number of parameters by entering a query into the `Expression` text area,
 +
 image::m7/expression-area.png[]
@@ -85,9 +85,9 @@ image::m7/catalog-entities-count.png[]
 image::m7/scaffolder-task-count.png[]
 .. Other examples are `scaffolder_step_count`, `scaffolder_task_count`, which can yield interesting info about the template usage as well. The screenshot below shows output for `scaffolder_step_count`
 +
-image::m7/scaffolder-step-count.png[]
+image::m7/scaffolder-step-count.png[Scaffolder step count metrics output,link=self,window=blank]
 
-. You can leverage the metrics to build custom Grafana dashboards to visualise them as well.
+. You can use the metrics to build custom Grafana dashboards to visualise them as well.
 
 == Audit logging and Telemetry
 

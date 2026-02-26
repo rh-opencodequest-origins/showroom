@@ -8,7 +8,7 @@
 IMPORTANT: This is a *Shared part*. It means, *one person* will be able to go through those steps. The work accomplished will be useful for everyone!
 
 
-image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog]
+image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog,link=self,window=blank]
 
 * User1 is : *{user1}*
 * User2 is : *{user2}*
@@ -28,21 +28,21 @@ Log in to {product_name_rhdh}:
 
 . Choose  *rhsso* as the identity provider
 
-image:m2/ocp-sso-login.png[width=60%]
+image:m2/ocp-sso-login.png[Choose rhsso as identity provider on OpenShift login,width=60%,link=self,window=blank]
 
 . Select the *rhdh-{team-id}* Deployment in the Topology View.
 +
-image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]
+image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift,link=self,window=blank]
 . Click the URL listed under the *Resources* tab; it will be similar to https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}^, window="rhdh"]
 
 The sign-in page will be displayed, with the option to log in as a Guest. Click the *Enter* button to use the Guest sign-in.
 
 NOTE: Ignore the GitHub sign-in method, if it's displayed. It is not configured and will not work. 
 
-image:m2/backstage-guest-signin.png[{product_name_rhdh} deployment on OpenShift, width=60%]
+image:m2/backstage-guest-signin.png[Guest sign-in option on Developer Hub login page,width=60%,link=self,window=blank]
 
 WARNING: The Guest sign-in option is currently enabled, but you'll configure a production-ready sign-in option based on OpenID Connect shortly. The Guest sign-in option is only meant for development and testing purposes.
 
 Visit the *Catalog* using the link in the menu on the left-hand side of the {product_name_rhdh} UI. You'll find that the *Kind* dropdown provides only **Plugin** and **Package** options. These represent plugins that can be installed in {product_name_rhdh}, but these don't represent any of the software components deployed. A catalog only delivers value to developers once it’s populated; we’ll address that next.
 
-image:m2/rhdh-empty-catalog.png[Empty {product_name_rhdh} Catalog]
+image:m2/rhdh-empty-catalog.png[Empty {product_name_rhdh} Catalog,link=self,window=blank]

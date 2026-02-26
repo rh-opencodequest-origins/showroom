@@ -45,7 +45,8 @@ In all cases, the Entities will be synchronized on a regular schedule to ensure 
 
 If Entity information is stored in a Git repository, the convention is to place it in a catalog-info.yaml.
 
-```yaml
+[source,yaml]
+----
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -68,14 +69,14 @@ spec:
 
   # Reference to the User or Group Entity that is responsible this Component
   owner: "{pe-username}"
-```
+----
 
 Users and Groups can be specified as owners of other Entities. If this seems abstract, don’t worry, you’ll see it in definitive terms shortly. A well-curated Software Catalog will enable your developers to find API documentation and teams that are responsible for the Components powering those APIs, for example.
 
 
 == Plugins
 
-Backstage — and by extension Red Hat Developer Hub — supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.
+Backstage, and by extension Red Hat Developer Hub, supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.
 
 Currently, running an instance of Backstage and adding plugins to upstream Backstage requires a platform engineer to:
 
@@ -97,7 +98,8 @@ The https://backstage.io/docs/conf/[app-config.yaml^, window="content"] is a con
 
 A simple Backstage configuration file looks similar to the following example:
 
-```yaml
+[source,yaml]
+----
 # Define authentication configuration (this example is for testing only!)
 auth:
   providers:
@@ -121,7 +123,7 @@ techdocs:
     type: 'local'
   generator:
     runIn: local
-```
+----
 
 Since you'll be using the {product_name_rhdh} Helm Chart to install and manage your internal developer portal, your configuration is nested under an `upstream.backstage.appConfig` property in a Helm Values file. View your configuration by visiting your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config repository on GitLab^, window="gitlab"].
 
@@ -129,11 +131,11 @@ Your workshop environment has been pre-configured such that this repository in G
 
 With that out of the way, let's get to work on configuring your instance of {product_name_rhdh}!
 
-image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift]
+image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift,link=self,window=blank]
 
 
 = Quiz!
 
 Be prepared to answer our questions based on what you have learnt in this section! The Quiz will happen after the break !
 
-image::m2/quizz-time.png[{product_name_rhdh} deployment on OpenShift]
+image::m2/quizz-time.png[Quiz time announcement,link=self,window=blank]

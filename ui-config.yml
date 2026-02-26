@@ -1,6 +1,10 @@
 ---
 type: showroom
 default_width: 50
+view_switcher:
+  enabled: true
+  default_mode: split
+persist_url_state: true
 tabs:
   - name: Terminal
     path: '/tty1'

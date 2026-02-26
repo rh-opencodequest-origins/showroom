@@ -6,7 +6,7 @@
 
 include::../style.adoc[]
 
-Now that you have leveraged the magic internal developer portal by contributing/committing/deploying in your microservice, you will extend capabilities.
+Now that you have used the magic internal developer portal by contributing/committing/deploying in your microservice, you will extend capabilities.
 
 As you know, the GitOps flow is a part of the continuous deployment, but there is no view related to this flow. In a normal world, this view is more relevant to the Ops teams in charge of deploying. In the platform engineering philosophy, we want to unify the view related to objects created inside a development project.
 
@@ -18,7 +18,7 @@ In your codebase, the catalog-info.yaml :
 
 == Red Hat Advanced Cluster Security (ACS) 
 
-Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl
+Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks using roxctl
 
 The bottom-most task is performing CVE scanning via roxctl image scan.
 

@@ -12,7 +12,8 @@ Let's explore the Template structure using a sample Template in the https://gitl
 
 At a basic level, the Template Entity is similar to the Component Entity you encountered in the _catalog-info.yaml_ in the prior module, resembling a Kubernetes Custom Resource.
 
-```yaml
+[source,yaml]
+----
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
@@ -28,7 +29,7 @@ spec:
   owner: rhdh
   type: service
   # other fields removed for brevity
-```
+----
 
 Where the Template Entity differs is that it contains additional fields. Let's examine each in more detail:
 
@@ -42,7 +43,8 @@ The _spec.parameters_ field is used by platform engineers to enable developers t
 
 Here's an example of the parameters:
 
-```yaml
+[source,yaml]
+----
 spec:
   parameters:
     # Parameters can be spread across multiple forms/pages, each
@@ -65,9 +67,7 @@ spec:
           type: string
           default: com.redhat.rhdh
           description: Maven Group Id
-```
-
-
+----
 
 
 
@@ -80,7 +80,8 @@ Once a developer has entered and confirmed their parameters, the Template is exe
 
 The scaffolder executes the actions defined in _spec.steps_, for example, to publish code to a Git repository and register it in the Software Catalog:
 
-```yaml
+[source,yaml]
+----
 spec:
   steps:
   - id: publish
@@ -101,7 +102,7 @@ spec:
     input:
       repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
       catalogInfoPath: "/catalog-info.yaml"
-```
+----
 
 Notice how the `parameters` are referenced in the `steps`? Another point of note is that a `user` variable is available to access data related to the user who's using the Template, and subsequent `steps` can access `output` from prior steps. 
 
@@ -116,7 +117,8 @@ The _spec.output_ can use the outputs from the `steps` to display useful informa
 * Links to Git Merge Requests that are needed, etc
 * Markdown text blobs
 
-```yaml
+[source,yaml]
+----
   output:
     links:
       - title: Source Code Repository
@@ -124,4 +126,4 @@ The _spec.output_ can use the outputs from the `steps` to display useful informa
       - title: Open Component in catalog
         icon: catalog
         entityRef: {{ '${{ steps.register.output.entityRef }}' }}
-```
+----

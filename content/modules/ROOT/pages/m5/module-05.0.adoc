@@ -1,42 +1,53 @@
 :imagesdir: ../../assets/images
 
 
-= Congrats
+= Congratulations
 
 include::../style.adoc[]
 
-## Let's play
+== Let's play
 
-All services , Villain , Hero and Fight have been deployed through your favorite development tools and Red Hat Developer Hub.
+All services (Villain, Hero, and Fight) have been deployed through your favorite development tools and {product_name_rhdh}.
 
-In order to enjoy the OpenCode Quest and your team work, the UI component has been previoulsy deployed ! 
-In your development namespace in OpenShift : https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/dev{team-id}-workshop-dev?view=graph[]
+To enjoy the Open Code Quest and your team work, the UI component has been previously deployed.
 
-or access the UI : https://dev{team-id}-fight-ui-dev-dev{team-id}-workshop-dev.{openshift_cluster_ingress_domain}[]
+In your development namespace in OpenShift: https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/dev{team-id}-workshop-dev?view=graph[OpenShift Topology^]
 
+Or access the UI directly: https://dev{team-id}-fight-ui-dev-dev{team-id}-workshop-dev.{openshift_cluster_ingress_domain}[Fight UI^]
 
-image:m5/fight-ui.png[]
+image:m5/fight-ui.png[Fight UI showing hero vs villain combat,link=self,window=blank]
 
+== What you've learned
 
+Throughout this workshop, you have experienced the full lifecycle of Platform Engineering with {product_name_rhdh}:
 
-## Ready to improve your developer experience ?
+* How to design and deploy an Internal Developer Platform using {product_name_rhdh}
+* How to integrate authentication (Keycloak), source code management (GitLab), and GitOps (Argo CD)
+* How to create and use software templates to standardize application onboarding
+* How to deploy microservices from the inner loop to production using golden paths
+* How to secure application deployments with policy-driven pipelines
 
-Now, you know what does Platform Engineering bring to your development project !
+== Ready to improve your developer experience?
+
+Now you know what Platform Engineering brings to your development project:
 
 * Consistency between tools
 * End-to-end process to onboard developers
-* Control and monitor how developer tools are consumed 
+* Control and monitoring of how developer tools are consumed
 
-Now, think about an open way to collaborate for your existing and next development project 
+Think about an open way to collaborate for your existing and next development project:
 
-* How to add plugins on the fly ?
+* How to add plugins on the fly?
+* How to share customization from development teams to platform engineering teams?
 
-* How to share customization from development teams to platform engineering teams ?
+Wave your hands and we will show you how to improve your internal developer portal.
 
-Wave your hands and we will show you how to improve your internal developer portal 
+image:m5/hello-gump.gif[Waving hello animation,link=self,window=blank]
 
-image:m5/hello-gump.gif[]
+== References
 
-
-
+* https://developers.redhat.com/rhdh[{product_name_rhdh} documentation^]
+* https://www.redhat.com/en/technologies/cloud-computing/openshift[Red Hat OpenShift^]
+* https://backstage.io[Backstage project^]
+* https://www.redhat.com/en/engage/state-of-platform-engineering-age-of-ai[State of Platform Engineering Report^]
 

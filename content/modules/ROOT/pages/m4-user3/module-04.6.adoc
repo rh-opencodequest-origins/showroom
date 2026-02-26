@@ -90,7 +90,7 @@ Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.co
 
 Remove the dependency as it's not needed in our code.
 
-## Deploy the Fight microservice after fixing the issue
+== Deploy the Fight microservice after fixing the issue
 
 NOTE: Once you have corrected the dependency issue, commit your code! The pipeline will run again!
 

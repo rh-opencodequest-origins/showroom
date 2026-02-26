@@ -21,7 +21,7 @@ image:m2/developerhub-tooling.png[]
 Your mission is to onboard your developer team to the OpenCode Quest project.
 
 
-## The application
+== The application
 
 In this workshop, you will develop an application that allows superheroes to fight against villains. 
 
@@ -36,7 +36,7 @@ Being a workshop about microservices, you will be developing several microservic
 
 image:m3/fight-result.png[]
 
-## The architecture
+== The architecture
 
 image:m3/architecture.png[]
 
@@ -44,7 +44,7 @@ image:m3/architecture.png[]
 
 
 Each team member will create a template following the golden rules of the software template. The template is specific to a stack. 
-A set of tools will also be configured. Yes, you will leverage the integrations done previously ;) 
+A set of tools will also be configured. Yes, you will use the integrations done previously ;) 
 
 A template here will have the following structure : 
 

@@ -64,14 +64,15 @@ Remember, the platform engineering helps developers to integrate development too
 
 For instance, to create a simple GitLab repository, we use the concept of *action*    
 
-```yaml
+[source,yaml]
+----
  - id: publish
       name: Publish
       action: publish:gitlab
       input:
         repoUrl: "${{ parameters.repo.host }}.${{ parameters.openshiftCluster }}?owner=${{ user.entity.metadata.name }}&repo=${{parameters.component_id}}"
         repoVisibility: public
-```
+----
 The *repoUrl* is built with information set in the form. The repository will be created within Gitlab user space *user.entity.metadata.name*, and the repository name will be *component_id* set in the Java Package Information section.
 
 
@@ -81,14 +82,15 @@ The *repoUrl* is built with information set in the form. The repository will be 
 As platform engineering is the entry point for project developments, getting the right overview of objects created and integrations performed is paramount!
 This is why the *Software Catalog* exists! A clear definition of UI elements based on the external tools involved in the development project. For instance, pipeline status, source code repositories, registry shortcuts ...
 
-```yaml
+[source,yaml]
+----
  - id: register
       name: Register
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
         catalogInfoPath: "/catalog-info.yaml"
-```
+----
 The template creates a *Software Catalog* thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
 Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/template-quarkus-simple/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 

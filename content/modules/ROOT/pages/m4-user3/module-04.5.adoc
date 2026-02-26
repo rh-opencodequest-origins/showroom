@@ -11,7 +11,7 @@ IMPORTANT: Please make sure you are logged in as a Developer with *`{dev-usernam
 
 include::../style.adoc[]
 
-## The home page dashboard
+== The home page dashboard
 
 On the development home page, all tools needed are represented by different tabs, such as :
 
@@ -35,15 +35,15 @@ Our first mission is to add a new tab to monitor changes performed by our GitOps
 
 NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
-## Customize your development project dashboard 
+== Customize your development project dashboard
 
-Since the beginning of the workshop, we have leveraged GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
+Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
 The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
-### You are the owner of your dashboard
+=== You are the owner of your dashboard
 
 Dashboard definition is located in the git repo instantiated to host your code base in our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
@@ -78,7 +78,7 @@ Confirm you have this directory :
 
 image:m4/fight-service-directory.png[]
 
-## The Fight Service
+== The Fight Service
 
 The Fight service is a Quarkus intelligent service. 
 Instead of randomly selecting a winner in the battle between heroes and villains, he can interact with a language model (LLM) and delegate the decision to it.
@@ -93,11 +93,11 @@ The following diagram illustrates the interactions between the Fight service and
 image:m4/fight-architecture.png[]
 
 
-### Import the code base 
+=== Import the code base
 
 Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let's import it !
 
-### Open the terminal to import the zip file
+=== Open the terminal to import the zip file
 
 * Click on the "Burger icon" on the upper left side
 * Click on File > Terminal > Open a new terminal
@@ -120,20 +120,21 @@ Confirm you have this directory :
 image:m4/fight-service-directory.png[]
 
 
-## The Quarkus-LangChain4j Extension
+== The Quarkus-LangChain4j Extension
 
 This extension is based on the LangChain4j library, which provides a common API to interact with LLMs. 
 The LangChain4j project is a Java re-implementation of the famous LangChain library.
 
 #Note that the extension is already present in the `pom.xml` file of your Fight service:#
 
-```xml
+[source,xml]
+----
 <dependency>
     <groupId>io.quarkiverse.langchain4j</groupId>
     <artifactId>quarkus-langchain4j-openai</artifactId>
     <version>${quarkus-langchain4j.version}</version>
 </dependency>
-```
+----
 == Configuration
 
 Configuring OpenAI models mandates an API key or API URL among others oto
@@ -176,7 +177,7 @@ quarkus.langchain4j.openai.chat-model.model-name={openai-model}
 
 They are self-explanatory, but you can check the documentation for more information.
 
-## Directory Structure
+== Directory Structure
 Notice that by bootstrapping the project with the specific `OpenCodeQuest - AI-Infused application with Quarkus` template, you get the following directory structure with a few Java classes already created and other artifacts.
 
 image:m4/fight-directory-structure.svg[]
@@ -191,13 +192,13 @@ It generates the following in the `fight-service` folder:
 * an intelligent service `FightSimulatorService.java`. This is where we will define the interaction with the LLM.
 * the `application.properties` configuration file.
 
-## Defining LLM interactions
+== Defining LLM interactions
 
 It’s time to tell the LLM what we want to do. 
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions. 
 We model the interaction using an interface annotated with `@RegisterAiService`.
 
-## Uncomment the FightSimulatorService.java file
+== Uncomment the FightSimulatorService.java file
 
 The file is located in *src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java*
 
@@ -221,7 +222,7 @@ You should describe what you want the LLM to do using natural language.
 The system defines the scope and initial instructions, serving as the first message sent to the LLM. 
 It delineates the AI service’s role in the interaction.
 
-## User Message (Prompt)
+== User Message (Prompt)
 
 ==Notice the presence of the `@UserMessage` annotation `FightSimulatorService`==. 
 It defines primary instructions dispatched to the LLM. 
@@ -229,48 +230,50 @@ It typically encompasses requests and the expected response format.
 As you can note, we are using a prompt template with the following format. 
 This format is expected by the model.
 
-```
+[source,text]
+----
 <|system|>
 system prompt
 <|user|>
 content of the question
 <|assistant|>
 new line for the model's answer
-```
+----
 
-## Parameter Passing and Referencing
+== Parameter Passing and Referencing
 AI methods can take parameters referenced in system and user messages using the {parameter} syntax. Note the `{hero}` and `{villain}` references.
 
-### AI Method Return Type
+=== AI Method Return Type
 
 The fight method returns a `FightResult`. The JSON response will be mapped to that object directly.
 
 
-### Fault Tolerance
+=== Fault Tolerance
 
 The distributed nature of microservices makes external communication unreliable, increasing the need for application resiliency. 
 Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroProfile Fault Tolerance specification.
 
 In the pom, you can see the corresponding smallrye dependencies: 
 
-```java
+[source,xml]
+----
 <dependency>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-smallrye-fault-tolerance</artifactId>
 </dependency>
-```
+----
 
 Then, in the code, #notice the presence of the `@Timeout` annotation in the fight method#
 
 If the LLM invocation is taking too long, the `@Timeout` annotation can stop it after 1 minute, preventing it from hanging indefinitely.
 
-## The Fight Resource
+== The Fight Resource
 
 Now, #let's take a look at the `fight-service/src/main/java/io/quarkus/workshop/fight/FightResource.java`.#
 #This is a JAX-RS resource just like the Hero endpoint where the FightSimulatorService is injected.# 
 #Then the intelligent `fight` method is called from the exposed `fight` method.# 
 
-### Start the Fight service in dev mode
+=== Start the Fight service in dev mode
 
 We are now ready to run our application.
 
@@ -283,7 +286,7 @@ We are now ready to run our application.
 `quarkus dev`
 
 
-## Verify the Fight service
+== Verify the Fight service
 
 #For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui#
 

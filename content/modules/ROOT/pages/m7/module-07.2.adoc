@@ -31,7 +31,7 @@ The Adoption Insights plugin requires additional configuration to display accura
 
 . Scroll down in the _values.yaml_ file and find the `--- ADOPTION INSIGHTS ---` block in the `appConfig.app` configuration.
 +
-image:m7/adoption-insights-plugin-config-commented-block.png[Adoption Insights configuration]
+image:m7/adoption-insights-plugin-config-commented-block.png[Adoption Insights configuration,link=self,window=blank]
 . Highlight and uncomment the configuration in this block of YAML.
 . Scroll down and enter a commit message:
 +
@@ -44,7 +44,7 @@ feat: enable adoption insights plugin
 
 As you're familiar with by now, you can refresh the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[backstage Application in OpenShift GitOps^, window="argo"] and deploy the new {product_name_rhdh} configuration. The Adoption Insights plugin will be available from **Administration > Adoption Insights** when the deployment has finished, but no data is available yet.
 
-image:m7/adoption-insights-plugin-dashboard.png[]
+image:m7/adoption-insights-plugin-dashboard.png[Adoption Insights plugin dashboard in Administration,link=self,window=blank]
 
 === Developer Activity: Generate Data for Adoption Insights
 
@@ -62,7 +62,7 @@ Perform multiple searches and view multiple APIs and Components to generate suff
 
 Now that you've generated some events, log in to {product_name_rhdh} as the `{pe-username}` user. Expand the **Administration** section in the side menu and click the **Adoption Insights** link.
 
-image:m7/adoption-insights-with-data.png[]
+image:m7/adoption-insights-with-data.png[Adoption Insights dashboard with usage data,link=self,window=blank]
 
 === Conclusion
 

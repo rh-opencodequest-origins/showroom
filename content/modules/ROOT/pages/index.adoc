@@ -16,7 +16,7 @@ Red Hat provides the tools and know-how to help "The Providers" (Platform Engine
 
 == Team Organization
 
-image:common/developers-trio.png[]
+image:common/developers-trio.png[Team of three developers for workshop,link=self,window=blank]
 
 
 Today, you will learn how to onboard new team members on an amazing platform. The *Internal Developer Platform (IDP)*! AKA Platform Engineering. You will be in a team *3 people*. Working closely to embrace several roles to explore 3 main topics :

@@ -7,11 +7,11 @@ To do so, go to  https://console-openshift-console.{openshift_cluster_ingress_do
 * Search for `replicas` in the yaml file 
 * Set it to 0
  
-image::common/replica-zero.png[]
+image::common/replica-zero.png[Set replicas to 0 in deployment YAML,link=self,window=blank]
 
 * Click on Save at the left bottom
 
-image::common/save-replicas.png[]
+image::common/save-replicas.png[Save button to apply replica changes,link=self,window=blank]
 
 Automatically, the deployment will be relaunched by OpenShift GitOps !
 

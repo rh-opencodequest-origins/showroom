@@ -1,13 +1,14 @@
 name: modules
 title: Open Code Quest Origins
 version: master
+start_page: index.adoc
 nav:
   - modules/ROOT/nav.adoc
 
 asciidoc:
   attributes:
     product_name_rhdh: Red Hat Developer Hub
-    lab_name: "I'm the lab_name var"
+    lab_name: "Open Code Quest Origins"
     release-version: master
     page-pagination: true
     my_var: "foo"
@@ -22,6 +23,7 @@ asciidoc:
     user3: user3
     common_password: sWtbXGQy
     openshift_cluster_ingress_domain: apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com
+    openshift_cluster_console_url: https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com
     team-id: team1
     openai-url: url-open-ai
     openai-model: mon-modele
