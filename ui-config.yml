@@ -7,7 +7,7 @@ view_switcher:
 persist_url_state: true
 tabs:
   - name: Terminal
-    path: '/wetty'
+    path: '/tty1'
     port: '443'
   - name: OCP Console
     url: 'https://console-openshift-console.${DOMAIN}'
