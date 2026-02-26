@@ -28,18 +28,6 @@ asciidoc:
     openai-url: url-open-ai
     openai-model: mon-modele
     openai-key: ma-clé
-    page-links:
-    - url: https://console-openshift-console.${DOMAIN}
-      text: OCP Console
-    - url: https://backstage-rhdh-${TEAM_ID}.${DOMAIN}
-      text: Developer Hub
-    - url: https://devspaces.${DOMAIN}
-      text: Dev Spaces
-    - url: https://gitlab-gitlab.${DOMAIN}
-      text: GitLab
-    - url: https://openshift-gitops-server-openshift-gitops.${DOMAIN}
-      text: ArgoCD (Cluster)
-    - url: https://rhdh-gitops-server-rhdh-gitops.${DOMAIN}
-      text: ArgoCD (Apps)
+    page-links: []
     environment_variables:
       TEAM_ID: team1

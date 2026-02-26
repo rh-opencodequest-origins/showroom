@@ -3,5 +3,13 @@
     <div class="navbar-brand">
       <span class="navbar-item title">{{site.title}}</span>
     </div>
+    <div class="navbar-end">
+      <a class="navbar-item" href="https://console-openshift-console.{{page.attributes.openshift_cluster_ingress_domain}}" target="_blank" rel="noopener">OCP Console</a>
+      <a class="navbar-item" href="https://backstage-rhdh-{{page.attributes.team-id}}.{{page.attributes.openshift_cluster_ingress_domain}}" target="_blank" rel="noopener">Developer Hub</a>
+      <a class="navbar-item" href="https://devspaces.{{page.attributes.openshift_cluster_ingress_domain}}" target="_blank" rel="noopener">Dev Spaces</a>
+      <a class="navbar-item" href="https://gitlab-gitlab.{{page.attributes.openshift_cluster_ingress_domain}}" target="_blank" rel="noopener">GitLab</a>
+      <a class="navbar-item" href="https://openshift-gitops-server-openshift-gitops.{{page.attributes.openshift_cluster_ingress_domain}}" target="_blank" rel="noopener">ArgoCD (Cluster)</a>
+      <a class="navbar-item" href="https://rhdh-gitops-server-rhdh-gitops.{{page.attributes.openshift_cluster_ingress_domain}}" target="_blank" rel="noopener">ArgoCD (Apps)</a>
+    </div>
   </nav>
 </header>
