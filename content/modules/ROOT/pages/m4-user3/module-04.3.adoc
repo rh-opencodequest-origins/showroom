@@ -44,7 +44,7 @@ Remember, Templates imported previously are located in GitLab. We will edit it a
 ++++
 
 
-=== Mind the step!
+== Mind the step!
 
 image:m3/mind-the-step.png[edit] 
 
@@ -91,10 +91,8 @@ Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_dom
 
 
 
-== Uncomment the steps!
-++++
-<div class="pe">
-++++
+=== Uncomment the steps!
+
 
 . Find the YAML surrounded by `Gitlab Steps` and uncomment below.
 +
@@ -107,7 +105,7 @@ image:m3/gitops-steps-uncomment.png[edit]
 . Scroll down and enter a commit message `uncomment steps`.
 . Click the *Commit changes* button.
 
-== Refresh the template updated 
+=== Refresh the template updated 
 
 
 Templates are refreshed asynchronously by Red Hat Developer Hub. We will see how to refresh it manually.

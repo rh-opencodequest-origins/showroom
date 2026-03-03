@@ -1,11 +1,10 @@
 :imagesdir: ../../assets/images
+include::../style.adoc[]
 
 
 = Platform Engineer Activity: Add steps to the template
 
 
-:imagesdir: ../../assets/images
-include::../style.adoc[]
 
 
 == Find the template to edit!
@@ -44,9 +43,6 @@ image:m3/template-quarkus-pg-fake-edit-button.png[edit]
 Remember, Templates imported previously are located in GitLab. We will edit it and commit it inside Gitlab!
 +
 
-++++
-</div>
-++++
 
 
 == Mind the step!

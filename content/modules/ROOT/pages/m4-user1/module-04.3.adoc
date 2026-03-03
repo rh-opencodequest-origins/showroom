@@ -1,11 +1,10 @@
 :imagesdir: ../../assets/images
 
+include::../style.adoc[]
 
 = Platform Engineer Activity: Add steps to the template
 
-:imagesdir: ../../assets/images
 
-include::../style.adoc[]
 
 == Find the template to edit!
 
@@ -44,9 +43,7 @@ image:m3/template-quarkus-pg-fake-edit-button.png[edit]
 Remember, Templates imported previously are located in GitLab. We will edit it and commit it inside Gitlab!
 +
 
-++++
-</div>
-++++
+
 
 
 == Mind the step!
@@ -73,6 +70,7 @@ For instance, to create a simple GitLab repository, we use the concept of *actio
         repoUrl: "${{ parameters.repo.host }}.${{ parameters.openshiftCluster }}?owner=${{ user.entity.metadata.name }}&repo=${{parameters.component_id}}"
         repoVisibility: public
 ----
+
 The *repoUrl* is built with information set in the form. The repository will be created within Gitlab user space *user.entity.metadata.name*, and the repository name will be *component_id* set in the Java Package Information section.
 
 

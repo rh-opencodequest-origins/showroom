@@ -67,8 +67,11 @@ image:m2/ocp-sso-login.png[width=60%]
 
 
 . Wait until the Application reports being in a *Healthy* state.
-
-.If the application is healthy has started but there is no change on Developer Hub UI, have look here 
+[WARNING]
+====
+If the application is healthy has started but there is no change on Developer Hub UI
+====
+.Get help here
 [%collapsible]
 ====
 include::../debug-pod-placement.adoc[]

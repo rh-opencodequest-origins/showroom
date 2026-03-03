@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: OpenCodeQuest Origin (PE Workshop)</title>
+    <link rel="canonical" href="https://developers.redhat.com/modules/m4-user1/module-04.5.html">
+    <link rel="prev" href="module-04.4.html">
+    <link rel="next" href="module-04.6.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Mono:wght@400;700&family=Red+Hat+Text:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item navbar-logo" href="https://demo.redhat.com" target="_blank">
+        <img src="../../_/img/logo-demo-platform.svg" alt="Red Hat Demo Platform" class="navbar-logo-img">
+      </a>
+      <a class="navbar-item site-title" target="_blank" href="https://developers.redhat.com">OpenCodeQuest Origin (PE Workshop)</a>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Links</a>
+          <div class="navbar-dropdown navbar-dropdown-right">
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="modules" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html" class=" query-params-link">Open Code Quest Origins</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../m1/module-01.html">1. Discovery</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m2/module-02.0.html">2. Design the Internal Developer Platform</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.1.html">2.1. Introduction to concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.2.html">2.2 Activity: Access Developer Hub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.3.html">2.3. Activity: Deploying Developer Hub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.4.html">2.4 Activity: Synchronize user and group entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.5.html">2.5 Activity: Configure OpenID Connect authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.6.html">2.6 Activity: Enabling GitLab entity discovery</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m3/module-03.0.html">3. Create your first software template Red Hat Developer Hub</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m3/module-03.1.html">3.1 Introduction to concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m3/module-03.2.html">3.2 Platform Engineer activity: Import domain and entity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m3/module-03.3.html">3.3 Team split</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="module-04.0.html">4. USER 1 - Hero service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.1.html">4.1 Platform Engineer activity: Correct a template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.2.html">4.2 Platform Engineer activity: Instantiate the corrected template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.3.html">4.3 Platform Engineer activity: Add steps to the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.4.html">4.4 Developer activity: Instantiate the template</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="module-04.5.html">4.5 Developer activity: Welcome onboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.6.html">4.6 Developer activity: From Git to OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.7.html">4.7 Secure your application deployment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.8.html">4.8 Improve your project dashboard</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m4-user2/module-04.0.html">4. USER 2 - Villain service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.1.html">4.1 Platform Engineer activity: Correct a template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.2.html">4.2 Platform Engineer activity: Instantiate the corrected template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.3.html">4.3 Platform Engineer activity: Add steps to the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.4.html">4.4 Developer activity: Instantiate the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.5.html">4.5 Developer activity: Welcome onboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.6.html">4.6 Developer activity: From Git to OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.7.html">4.7 Secure your application deployment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m4-user3/module-04.0.html">4. USER 3 - Fight service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.1.html">4.1 Platform Engineer activity: Correct a template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.2.html">4.2 Platform Engineer activity: Instantiate the corrected template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.3.html">4.3 Platform Engineer activity: Add steps to the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.4.html">4.4 Developer activity: Instantiate the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.5.html">4.5 Developer activity: Welcome onboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.6.html">4.6 Developer activity: From Git to OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user3/module-04.7.html">4.7 Secure your application deployment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m5/module-05.0.html">Congratulations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m5/module-05.2.html">Explore updates to production Argo CD manifests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../m6/module-06.0.html">Survey</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m7/module-07.0.html">7. Continuous platform improvements</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../env.html">My lab environment details</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Open Code Quest Origins</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article" id="content">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Open Code Quest Origins</a></li>
+    <li><a href="module-04.0.html">4. USER 1 - Hero service</a></li>
+    <li><a href="module-04.5.html">4.5 Developer activity: Welcome onboard</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<article class="doc">
+<div class="developer">
+<h1 id="_developer_activity_welcome_on_board_in_première_classe_drink_your_own_champagne" class="sect0"><a class="anchor" href="#_developer_activity_welcome_on_board_in_première_classe_drink_your_own_champagne"></a>Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!</h1>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Please make sure you are logged in as a Developer with <strong><code>mon-user-dev</code> / <code>sWtbXGQy</code></strong> as you were guided to in the previous step. We advise you to use a <strong>private/incognito window</strong> to log out properly!
+</td>
+</tr>
+</table>
+</div>
+<style>
+.doc {
+    max-width: 70rem;
+}
+
+.underline {
+  cursor: pointer;
+}
+
+u {
+    cursor: pointer;
+}
+
+summary  {
+    cursor: pointer;
+}
+.developer {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+
+}
+
+.developer .doc {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(30, 136, 229, 0.15);
+    border-left: 4px solid #1976d2;
+}
+
+.developer h1, .developer h2 {
+    color: #1565c0;
+    border-bottom: 2px solid #bbdefb;
+    padding-bottom: 8px;
+}
+
+.developer h3 {
+    color: #1976d2;
+}
+
+.developer .admonitionblock {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #2196f3;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
+}
+
+.developer .admonitionblock.note {
+    border-left-color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+.developer .admonitionblock.important {
+    border-left-color: #ff9800;
+    background-color: rgba(255, 152, 0, 0.05);
+}
+
+.developer .imageblock img {
+    border: 3px solid #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+}
+
+.developer .listingblock .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #bbdefb;
+    border-radius: 4px;
+}
+
+/* ===== CLASSE PE - THEME ROUGE ===== */
+.pe {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 50%, #ef9a9a 100%);
+}
+
+.pe .doc {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(211, 47, 47, 0.15);
+    border-left: 4px solid #d32f2f;
+}
+
+.pe h1, .pe h2 {
+    color: #c62828;
+    border-bottom: 2px solid #ffcdd2;
+    padding-bottom: 8px;
+}
+
+.pe h3 {
+    color: #d32f2f;
+}
+
+.pe .admonitionblock {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #f44336;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.1);
+}
+
+.pe .admonitionblock.note {
+    border-left-color: #f44336;
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+.pe .admonitionblock.important {
+    border-left-color: #ff5722;
+    background-color: rgba(255, 87, 34, 0.05);
+}
+
+.pe .imageblock img {
+    border: 3px solid #ffebee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.pe .listingblock .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ffcdd2;
+    border-radius: 4px;
+}
+
+/* ===== STYLES COMMUNS ===== */
+.developer .doc, .pe .doc {
+    transition: all 0.3s ease;
+}
+
+.developer .doc:hover, .pe .doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration des liens */
+.developer a {
+    color: #1976d2;
+    text-decoration: none;
+    border-bottom: 1px dotted #1976d2;
+}
+
+.developer a:hover {
+    color: #0d47a1;
+    border-bottom: 1px solid #0d47a1;
+}
+
+.pe a {
+    color: #d32f2f;
+    text-decoration: none;
+    border-bottom: 1px dotted #d32f2f;
+}
+
+.pe a:hover {
+    color: #b71c1c;
+    border-bottom: 1px solid #b71c1c;
+}
+
+/* Boutons et éléments interactifs */
+.developer .btn, .developer button {
+    background-color: #1976d2;
+    border-color: #1976d2;
+    color: white;
+}
+
+.pe .btn, .pe button {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    color: white;
+}
+</style>
+</div>
+<div class="sect1">
+<h2 id="_the_home_page_dashboard"><a class="anchor" href="#_the_home_page_dashboard"></a>The home page dashboard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On the development home page, all tools needed are represented by different tabs, such as :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Topology</p>
+</li>
+<li>
+<p>Issues</p>
+</li>
+<li>
+<p>CI</p>
+</li>
+<li>
+<p>Image Registry</p>
+</li>
+<li>
+<p>Docs etc..</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It maps with the following integrations performed backstage ;)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m3/template-components.png" alt="template components"></span></p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s the entry point for everything !!</p>
+</div>
+<div class="paragraph">
+<p>Our first mission is to add a new tab to monitor changes performed by our GitOps engine.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We will explore tabs through the lab guide. But don&#8217;t be shy and feel free to open the tabs!
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customize_your_development_project_dashboard"><a class="anchor" href="#_customize_your_development_project_dashboard"></a>Customize your development project dashboard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
+To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
+The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/argocd-view.png" alt="argocd view"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_you_are_the_owner_of_your_dashboard"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard"></a>You are the owner of your dashboard</h3>
+<div class="paragraph">
+<p>Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
+Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
+Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
+</div>
+<div class="paragraph">
+<p>You may be asked to authenticate again. Please, proceed.
+You should see the following page while the Dev Spaces are starting up:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
+</div>
+<div class="paragraph">
+<p>Open the IDE cloud here :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
+</div>
+<div class="paragraph">
+<p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove the  <strong>#</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It must look like this. Be sure to respect the right YAML indentation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To simplify the development flow, we&#8217;ll commit later with the changes done on our code base. The dashboard will be updated automatically.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_hero_service"><a class="anchor" href="#_the_hero_service"></a>The Hero Service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Super Heroes microservice stores superheroes, with their names, powers, and so on.
+We need to expose a REST API allowing CRUD operations on <em>super heroes</em>.
+This microservice is a <strong>classical</strong> microservice.</p>
+</div>
+<div class="paragraph">
+<p>It uses HTTP to expose a REST API, and it internally stores data into a database.</p>
+</div>
+<div class="paragraph">
+<p>This service will be used by the <strong>fight</strong> microservice.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_the_code_base"><a class="anchor" href="#_import_the_code_base"></a>Import the code base</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let&#8217;s import it!</p>
+</div>
+<div class="sect2">
+<h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the "Burger icon" on the upper left side</p>
+</li>
+<li>
+<p>Click on File &gt; Terminal &gt; Open a new terminal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/open-terminal.png" alt="open terminal"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Run the following command</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">wget https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/fullcodebase/-/raw/main/hero-service.zip -O hero-service.zip && unzip -o hero-service.zip && rm hero-service.zip</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Confirm you have this directory :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/hero-directory.png" alt="hero directory"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_directory_structure"><a class="anchor" href="#_directory_structure"></a>Directory Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once you bootstrap the project, you get the following directory structure with a few Java classes and other artifacts:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/hero-directory-structure.svg" alt="hero directory structure"></span></p>
+</div>
+<div class="paragraph">
+<p>It generates the following in the <code>hero-service</code> folder:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the Maven structure with a <code>pom.xml</code></p>
+</li>
+<li>
+<p>an <code>io.quarkus.workshop.hero.HeroResource</code> resource exposed on <code>/api/heroes</code></p>
+</li>
+<li>
+<p>an associated unit test <code>HeroResourceTest</code></p>
+</li>
+<li>
+<p>the landing page <code>index.html</code> that is accessible after starting the application</p>
+</li>
+<li>
+<p>the <code>application.properties</code> configuration file</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><mark>Look at the <code>pom.xml</code></mark>
+You will find here the import of the Quarkus BOM (<em>bill of materials</em>), allowing you to omit the version of the different Quarkus dependencies.
+In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for the packaging of the application, and also providing the development mode support.</p>
+</div>
+<div class="paragraph">
+<p>Regarding the dependencies section, you can see the extension allowing the development of REST applications.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_jax_rs_resource"><a class="anchor" href="#_the_jax_rs_resource"></a>The JAX-RS Resource</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During the project creation, the <strong>hero-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero &gt; HeroResource.java</strong> file has been created with the following content.</p>
+</div>
+<div class="sect2">
+<h3 id="_uncomment_the_file_content"><a class="anchor" href="#_uncomment_the_file_content"></a>Uncomment the file content</h3>
+<div class="paragraph">
+<p>Open it and remove the first part of the file:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/start-comment-line.png" alt="start comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>And the last one:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/end-comment-line.png" alt="end comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>This file has a set of simple REST endpoints. For instance, returning "hello" to HTTP GET requests to <code>/api/heroes</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"> @GET
+ @Path("/hello")
+    public String hello() {
+        return "Hello from Quarkus REST";
+ }</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_running_the_application"><a class="anchor" href="#_running_the_application"></a>Running the Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We are now ready to run our application.</p>
+</div>
+<div class="paragraph">
+<p>You can use either the <code>quarkus</code> CLI or the <code>Apache Maven</code> command-line interface in a Terminal.</p>
+</div>
+<div class="paragraph">
+<p><mark>Run one of the following commands :</mark></p>
+</div>
+<div class="paragraph">
+<p><code>./mvnw quarkus:dev</code></p>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="paragraph">
+<p><code>quarkus dev</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$  quarkus dev
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------&lt; com.redhat.workshop:hero-service &gt;------------------
+[INFO] Building hero-service 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- quarkus:3.13.2:dev (default-cli) @ hero-service ---
+[INFO] Invoking resources:3.3.1:resources (default-resources) @ hero-service
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] Invoking quarkus:3.13.2:generate-code (default) @ hero-service
+[INFO] Invoking compiler:3.13.0:compile (default-compile) @ hero-service
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] Invoking resources:3.3.1:testResources (default-testResources) @ hero-service
+[INFO] skip non existing resourceDirectory /projects/hero/src/test/resources
+[INFO] Invoking quarkus:3.13.2:generate-code-tests (default) @ hero-service
+[INFO] Invoking compiler:3.13.0:testCompile (default-testCompile) @ hero-service
+[INFO] Nothing to compile - all classes are up to date.
+
+----------------------------
+--- Help improve Quarkus ---
+----------------------------
+* Learn more: https://quarkus.io/usage/
+* Do you agree to contribute anonymous build time data to the Quarkus community? (y/n and enter)
+[info] [Quarkus build analytics] Didn't receive the user's answer after 10 seconds. The question will be asked again next time.
+
+Listening for transport dt_socket at address: 5005
+2024-08-28 11:39:46,023 INFO [io.qua.dat.dep.dev.DevServicesDatasourceProcessor] (build-21) Dev Services for default datasource (postgresql) started - container ID is b64fe935733f
+2024-08-28 11:39:46,026 INFO [io.qua.hib.orm.dep.dev.HibernateOrmDevServicesProcessor] (build-34) Setting quarkus.hibernate-orm.database.generation=drop-and-create to initialize Dev Services managed database
+__  ____  __  _____   ___  __ ____  ______
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/
+ -/ /_/ / /_/ / __ |/ , _/ ,&lt; / /_/ /\ \
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/
+2024-08-28 11:39:46,603 WARN [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.smallrye-openapi.store-schema-directory" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2024-08-28 11:39:48,103 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2024-08-28 11:39:48,105 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) table "myentity" does not exist, skipping
+2024-08-28 11:39:48,106 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2024-08-28 11:39:48,106 WARN [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) sequence "myentity_seq" does not exist, skipping
+2024-08-28 11:39:48,316 INFO [io.quarkus] (Quarkus Main Thread) hero-service 1.0-SNAPSHOT on JVM (powered by Quarkus 3.13.2) started in 7.445s. Listening on: http://0.0.0.0:8080
+2024-08-28 11:39:48,317 INFO [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2024-08-28 11:39:48,317 INFO [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-postgresql, micrometer, narayana-jta, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+
+--
+Tests paused
+Press [e] to edit command line args (currently ''), [r] to resume testing, [o] Toggle test output, [:] for the terminal, [h] for more options&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At some point, a pop-up asking to open the Quarkus dev will be shown:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/open-quarkus-dev-in-new-tab.png" alt="open quarkus dev in new tab"></span></p>
+</div>
+<div class="paragraph">
+<p><mark>Click on the <code>Open in New Tab</code> button</mark></p>
+</div>
+<div class="paragraph">
+<p>You can now check that the endpoint returns <code>Hello from Quarkus REST</code> as expected.</p>
+</div>
+<div class="paragraph">
+<p><mark>Open a new Terminal and run the following command</mark></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">curl http://localhost:8080/api/heroes/hello</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_development_mode"><a class="anchor" href="#_development_mode"></a>Development Mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>mvn quarkus:dev</code> or <code>quarkus dev</code> runs Quarkus in development mode.
+This enables hot deployment with background compilation, which means that when you modify your Java files and/or your resource files and invoke a REST endpoint (i.e. cUrl command or refresh your browser), these changes will automatically take effect.
+If there are any issues with compilation, an error page will let you know.</p>
+</div>
+<div class="paragraph">
+<p>The development mode also allows debugging and listens for a debugger on port 5005.</p>
+</div>
+<div class="sect2">
+<h3 id="_dev_ui"><a class="anchor" href="#_dev_ui"></a>Dev UI</h3>
+<div class="paragraph">
+<p>Quarkus ships with a Developer UI, which is available in dev mode at the/q/dev-ui path by default.
+It will show you something like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/dev-ui.png" alt="dev ui"></span></p>
+</div>
+<div class="paragraph">
+<p>It allows you to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>quickly visualize all the extensions currently loaded</p>
+</li>
+<li>
+<p>view extension statuses and go directly to extension documentation</p>
+</li>
+<li>
+<p>view and change Configuration</p>
+</li>
+<li>
+<p>manage and visualize Continuous Testing</p>
+</li>
+<li>
+<p>view Dev Services information</p>
+</li>
+<li>
+<p>view the Build information</p>
+</li>
+<li>
+<p>view and stream various logs</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each extension used in the application will be listed.</p>
+</div>
+<div class="paragraph">
+<p><mark>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing_the_application"><a class="anchor" href="#_testing_the_application"></a>Testing the Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>So far so good, but wouldn&#8217;t it be better with a few tests, just in case?</p>
+</div>
+<div class="paragraph">
+<p>In the generated <code>pom.xml</code> file, you can see 2 test dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-junit5&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.rest-assured&lt;/groupId&gt;
+    &lt;artifactId&gt;rest-assured&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uncomment_the_heroresourcetest_java"><a class="anchor" href="#_uncomment_the_heroresourcetest_java"></a>Uncomment the HeroResourceTest.java</h3>
+<div class="paragraph">
+<p>The generated project contains a simple test.
+The file content to uncomment is located here : <strong>hero-service &gt; src &gt; test &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero &gt; HeroResourceTest.java</strong></p>
+</div>
+<div class="paragraph">
+<p>Open it and remove the first part of the file:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/start-comment-line.png" alt="start comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>and the last one:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/end-comment-line.png" alt="end comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>By using the <code>QuarkusTest</code> runner, the <code>HeroResourceTest</code> class instructs JUnit to start the application before the tests.
+Then, the <code>testHelloEndpoint</code> method checks the HTTP response status code and content.</p>
+</div>
+<div class="paragraph">
+<p>You can run the tests with <code>./mvnw test</code> in a new Terminal.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_continuous_testing"><a class="anchor" href="#_continuous_testing"></a>Continuous testing</h3>
+<div class="paragraph">
+<p>Quarkus supports continuous testing, where tests run immediately after code changes have been saved.
+This allows you to get instant feedback on your code changes.</p>
+</div>
+<div class="paragraph">
+<p><mark>When you start Quarkus in dev mode, down at the bottom of the screen, you should see the following</mark>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">Tests paused, press [r] to resume, [h] for more options&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><mark>Press `r and the tests will start running.</mark>
+You should see the status change at the bottom of the screen as they are running, and it should finish with</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">All 1 test is passing (0 skipped), 1 test was run in 8053ms. Tests completed at 12:11:25.
+Press [e] to edit command line args (currently ''), [r] to re-run, [o] Toggle test output, [:] for the terminal, [h] for more options&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_database_dependencies"><a class="anchor" href="#_database_dependencies"></a>Database dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This microservice:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>interacts with a PostgreSQL database - so it needs a driver</p>
+</li>
+<li>
+<p>uses Hibernate with Panache - so need the dependency on it</p>
+</li>
+<li>
+<p>validates payloads and entities - so need a validator</p>
+</li>
+<li>
+<p>consumes and produces JSON - so we need a mapper</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Hibernate ORM is the de facto JPA implementation and offers you the full breadth of an Object Relational Mapper.
+It makes complex mappings possible, but it does not make simple and common mappings trivial.
+[Hibernate ORM with Panache](<a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/quarkusio/quarkus/tree/master/extensions/panache" class="bare">https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/quarkusio/quarkus/tree/master/extensions/panache</a>) focuses on making your entities trivial and fun to write in Quarkus.</p>
+</div>
+<div class="paragraph">
+<p>Because JPA and Bean Validation work well together, we will use Bean Validation to constrain our business model.</p>
+</div>
+<div class="paragraph">
+<p>All the needed dependencies to access the database are already in the <code>pom.xml</code> file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;dependency&gt;
+            &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+            &lt;artifactId&gt;quarkus-jdbc-postgresql&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+            &lt;artifactId&gt;quarkus-hibernate-orm-panache&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+            &lt;artifactId&gt;quarkus-hibernate-validator&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+            &lt;artifactId&gt;quarkus-rest-jackson&lt;/artifactId&gt;
+        &lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hero_entity"><a class="anchor" href="#_hero_entity"></a>Hero Entity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At this point, we need an Entity class.
+There is already a <code>Hero.java</code> file under <strong>src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero.java</strong> so you don&#8217;t need to create it.
+However, this file is empty.
+To define a Panache entity, simply extend <code>PanacheEntity</code>, annotate it with <code>@Entity</code>, and add your columns as public fields (no need to have getters and setters).</p>
+</div>
+<div class="sect2">
+<h3 id="_uncomment_the_hero_java_file"><a class="anchor" href="#_uncomment_the_hero_java_file"></a>Uncomment the Hero.java file</h3>
+<div class="paragraph">
+<p>It is located under <strong>src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero.java</strong></p>
+</div>
+<div class="paragraph">
+<p>Open it and remove the first part of the file:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/start-comment-line.png" alt="start comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>And the last one:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/end-comment-line.png" alt="end comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>Notice that you can put all your JPA column annotations and Bean Validation constraint annotations on the public fields.</p>
+</div>
+<div class="paragraph">
+<p>For our workshop, we need to return a random hero.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java"> public static Hero findRandom() {
+        Random random = new Random();
+        var count = count();
+        var index = random.nextInt((int) count);
+        return findAll().page(index, 1).firstResult();
+ }</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_hibernate"><a class="anchor" href="#_configuring_hibernate"></a>Configuring Hibernate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As Quarkus supports the automatic provisioning of unconfigured services in development and test mode, we don&#8217;t need to configure anything regarding the database access at the moment.
+Quarkus will automatically start a PostgreSQL service and wire up your application to use this service.</p>
+</div>
+<div class="paragraph">
+<p>Quarkus development mode is great for apps that combine front-end, services, and database access. By using <code>quarkus.hibernate-orm.database.generation=drop-and-create</code> with <code>import.sql</code>, any changes to your entities automatically recreate the database schema and repopulate data. This setup works perfectly with Quarkus live reload, instantly applying changes without restarting the app.</p>
+</div>
+<div class="paragraph">
+<p>Look at the import.sql file located here <code>/src/resources/import.sql</code>. Around 500 heroes have been loaded in the database.</p>
+</div>
+<div class="paragraph">
+<p>Now check the method findRandom defined above to confirm you can get random heroes!</p>
+</div>
+<div class="paragraph">
+<p><mark>Open a new Terminal and run the following command</mark></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">curl http://localhost:8080/api/heroes/random</code></pre>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="module-04.4.html" class="query-params-link">4.4 Developer activity: Instantiate the template</a></span>
+  <span class="next"><a href="module-04.6.html" class="query-params-link">4.6 Developer activity: From Git to OpenShift</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>  </div>
+</main>
+</div>
+<footer class="footer">
+  <a href="https://demo.redhat.com" target="_blank" class="poweredBy"><p>Powered by</p><div class="labInfo_poweredBy" style="display: block; width: 260px;"><svg class="labInfo_poweredByLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1508.5 178.739"><g fill="#111"><path d="M316.6 63.2v-56H342a21.279 21.279 0 0 1 7.8 1.3 18.111 18.111 0 0 1 5.9 3.5 15.577 15.577 0 0 1 5 11.8 15.051 15.051 0 0 1-3.1 9.5 16.836 16.836 0 0 1-8.4 5.8l12.5 24.1h-9.3l-11.6-23H325v23Zm24.7-48.6H325v18.7h16.3q5.25 0 8.1-2.7a8.7 8.7 0 0 0 2.8-6.6 8.7 8.7 0 0 0-2.8-6.6c-1.8-1.9-4.5-2.8-8.1-2.8ZM364.1 42.8a20.674 20.674 0 0 1 1.6-8.2 20.288 20.288 0 0 1 4.3-6.7 19.92 19.92 0 0 1 6.5-4.5 19.718 19.718 0 0 1 8-1.6 18.463 18.463 0 0 1 7.8 1.6 18.677 18.677 0 0 1 6.2 4.5 20.927 20.927 0 0 1 4.1 6.8 23.2 23.2 0 0 1 1.5 8.4v2.3H372a13.822 13.822 0 0 0 4.6 8.4 13.6 13.6 0 0 0 9.1 3.3 15.553 15.553 0 0 0 5.7-1 12.858 12.858 0 0 0 4.6-2.6l5.1 5a25.983 25.983 0 0 1-7.4 4.1 24.69 24.69 0 0 1-8.4 1.3 21.306 21.306 0 0 1-8.4-1.6 22.763 22.763 0 0 1-6.8-4.4 20.788 20.788 0 0 1-4.5-6.7 23.2 23.2 0 0 1-1.5-8.4Zm20.2-14.2a11.527 11.527 0 0 0-8 3 13.046 13.046 0 0 0-4.2 7.8h24.2a13.091 13.091 0 0 0-4.2-7.8 11.106 11.106 0 0 0-7.8-3ZM443.1 63.2v-3.8a19.448 19.448 0 0 1-5.8 3.3 18.924 18.924 0 0 1-6.7 1.2 19.824 19.824 0 0 1-14.6-6.1 22.268 22.268 0 0 1-4.4-6.7 21.812 21.812 0 0 1 0-16.4A20.534 20.534 0 0 1 416 28a19.335 19.335 0 0 1 6.6-4.5 20.334 20.334 0 0 1 8.2-1.6 20.7 20.7 0 0 1 6.6 1 19.415 19.415 0 0 1 5.7 3V7.2l8-1.8v57.8Zm-25.2-20.4a13.718 13.718 0 0 0 4 10.1 13.45 13.45 0 0 0 9.8 4.1 14.956 14.956 0 0 0 6.4-1.3 15.954 15.954 0 0 0 4.9-3.6V33.6a14.988 14.988 0 0 0-4.9-3.5 15.271 15.271 0 0 0-6.4-1.3 13.423 13.423 0 0 0-9.9 4 13.806 13.806 0 0 0-3.9 10ZM478.1 63.2v-56h8.4v24h29.8v-24h8.4v56h-8.4V38.8h-29.8v24.4ZM547.2 64a16.483 16.483 0 0 1-10.8-3.5 11.037 11.037 0 0 1-4.2-8.9 10.375 10.375 0 0 1 4.7-9.2 20.76 20.76 0 0 1 11.8-3.2 27.841 27.841 0 0 1 5.8.6 27.374 27.374 0 0 1 5.3 1.6v-4.3a8.143 8.143 0 0 0-2.6-6.5 11.452 11.452 0 0 0-7.4-2.2 20.788 20.788 0 0 0-6 .9 34.616 34.616 0 0 0-6.6 2.6l-3-6a54.169 54.169 0 0 1 8.4-3.1 33.18 33.18 0 0 1 8.3-1.1c5.2 0 9.3 1.3 12.2 3.8s4.4 6.1 4.4 10.8v27h-7.8v-3.5a19.441 19.441 0 0 1-5.8 3.2 23.54 23.54 0 0 1-6.7 1Zm-7.3-12.6a5.646 5.646 0 0 0 2.6 4.8 11.193 11.193 0 0 0 6.6 1.8 16.256 16.256 0 0 0 5.9-1 14.449 14.449 0 0 0 4.9-2.9V47a19.778 19.778 0 0 0-4.8-1.8 24.933 24.933 0 0 0-5.7-.6 11.859 11.859 0 0 0-6.8 1.8 5.728 5.728 0 0 0-2.7 5ZM580.6 53.2v-24H572v-6.7h8.6V12.1l7.9-1.9v12.3h12v6.7h-12v22.1a5.94 5.94 0 0 0 1.4 4.4c.9.9 2.5 1.3 4.6 1.3a23.637 23.637 0 0 0 3-.2 10.857 10.857 0 0 0 2.8-.8v6.7a19.28 19.28 0 0 1-3.8.9 27.484 27.484 0 0 1-3.8.3c-3.9 0-7-.9-9-2.8-2-1.7-3.1-4.4-3.1-7.9Z"></path></g><path d="M127 90.2c12.5 0 30.6-2.6 30.6-17.5a12.678 12.678 0 0 0-.3-3.4L149.8 37c-1.7-7.1-3.2-10.3-15.7-16.6-9.7-5-30.8-13.1-37.1-13.1-5.8 0-7.5 7.5-14.4 7.5-6.7 0-11.6-5.6-17.9-5.6-6 0-9.9 4.1-12.9 12.5 0 0-8.4 23.7-9.5 27.2a4.216 4.216 0 0 0-.3 1.9c0 9.2 36.3 39.4 85 39.4Zm32.5-11.4c1.7 8.2 1.7 9.1 1.7 10.1 0 14-15.7 21.8-36.4 21.8-46.8 0-87.7-27.4-87.7-45.5a17.535 17.535 0 0 1 1.5-7.3C21.8 58.8 0 61.8 0 81c0 31.5 74.6 70.3 133.7 70.3 45.3 0 56.7-20.5 56.7-36.6-.1-12.8-11-27.3-30.9-35.9Z" fill="#e00"></path><path d="M159.5 78.8c1.7 8.2 1.7 9.1 1.7 10.1 0 14-15.7 21.8-36.4 21.8-46.8 0-87.7-27.4-87.7-45.5a17.535 17.535 0 0 1 1.5-7.3l3.7-9.1a4.877 4.877 0 0 0-.3 2c0 9.2 36.3 39.4 85 39.4 12.5 0 30.6-2.6 30.6-17.5a12.678 12.678 0 0 0-.3-3.4Z"></path><path d="M253.5 158.7a2.22 2.22 0 0 1-2.2-2.2V2.2a2.2 2.2 0 0 1 4.4 0v154.2a2.242 2.242 0 0 1-2.2 2.3Z" fill="#111"></path><text data-name="Demo Platform" transform="translate(1186 149)" fill="#111" font-size="82" font-family="'RedHatDisplay', 'Overpass', overpass, helvetica, arial, sans-serif" font-weight="700"><tspan x="-877.892" y="0">Demo Platform</tspan></text></svg></div></div>
+</footer>
+<script defer src="../../_/js/vendor/clipboard.js"></script>
+<script defer src="../../_/js/site.js"></script>
+<script defer src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

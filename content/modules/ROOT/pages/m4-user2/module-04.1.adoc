@@ -1,9 +1,9 @@
 :imagesdir: ../../assets/images
 
+include::../style.adoc[]
 
 = Platform Engineer Activity: Correct a template
 
-include::../style.adoc[]
 
 ++++
 <div class="pe">
@@ -54,7 +54,7 @@ image:m3/template-quarkus-pg-edit-title.png[title]
 . Click the *Commit changes* button.
 
 
-=== Refresh the template 
+== Refresh the template updated 
 
 
 Templates are refreshed asynchronously by Red Hat Developer Hub. We will see how to refresh it manually.
