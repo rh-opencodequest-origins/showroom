@@ -10,6 +10,7 @@ www/
 
 # Ignore IDE and editor files
 .vscode/
+build/
 .idea/
 
 # Ignore logs and temporary files
