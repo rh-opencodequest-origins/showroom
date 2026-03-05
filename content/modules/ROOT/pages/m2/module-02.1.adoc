@@ -39,7 +39,7 @@ Entities are typically imported and synchronized in one of three ways:
 
 . Using plugins that automatically find and import them.
 . Manually registering entities via the UI by providing a link to a repository containing them.
-. Declaring them in the Backstage configuration.
+. Declaring them in the Red Hat Developer Hub configuration.
 
 In all cases, the Entities will be synchronized on a regular schedule to ensure the information in the Software Catalog remains up to date. You'll utilize all three methods throughout this workshop.
 
@@ -76,14 +76,14 @@ Users and Groups can be specified as owners of other Entities. If this seems abs
 
 == Plugins
 
-Backstage, and by extension Red Hat Developer Hub, supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.
+Red Hat Developer Hub (RHDH) leverages a powerful plugin architecture to extend its core capabilities. Integrating these plugins is a critical step in tailoring your Internal Developer Platform (IDP) to meet specific organizational needs.
 
-Currently, running an instance of Backstage and adding plugins to upstream Backstage requires a platform engineer to:
+To transform a standard RHDH instance into a feature-rich platform, a Platform Engineer must perform the following actions:
 
-.Create a Backstage project using Node.js and npm.
-.Manage new releases and updates via Backstage CLI.
+.Create a RHDH project using Node.js and npm.
+.Manage new releases and updates via RHDH CLI.
 .Install plugin(s) from npm.
-.Edit the Backstage React and Node.js source code to load plugins and add customizations.
+.Edit the RHDH React and Node.js source code to load plugins and add customizations.
 .Test their changes.
 .Build a container image and deploy it.
 

@@ -46,8 +46,6 @@ image:m3/template-quarkus-pg-fake-edit-button.png[edit]
 === Update the title of the input form
 
 
-Ajouter double # pour délimiter les sessions 
-
 . Find the YAML surrounded by `update the title below` and replace the title.
 +
 image:m3/template-quarkus-pg-edit-title.png[title]
