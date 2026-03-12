@@ -1,6 +1,6 @@
 :imagesdir: ../../assets/images
 
-= Introduction to Concepts 2
+= Introduction to Concepts
 
 include::../style.adoc[]
 
@@ -104,9 +104,10 @@ With that out of the way, let's get to work on configuring your instance of {pro
 
 image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift,link=self,window=blank]
 
-
+////
 = Quiz!
 
 Be prepared to answer our questions based on what you have learnt in this section! The Quiz will happen after the break !
 
 image::m2/quizz-time.png[Quiz time announcement,link=self,window=blank]
+////

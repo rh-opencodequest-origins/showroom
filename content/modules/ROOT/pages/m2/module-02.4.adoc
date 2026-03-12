@@ -1,17 +1,30 @@
 :imagesdir: ../../assets/images
+include::../style.adoc[]
 
 = Activity: Synchronize User & Group Entities
 
-include::../style.adoc[]
 
-In xref:m2/module-02.1.adoc[module 2.1], you learned that the Software Catalog contains Entities, and saw a sample `appConfig` that contained a `catalog.locations` configuration. That example configuration imported entities from a file located in a hardcoded Git repository. This pattern is known as a https://backstage.io/docs/features/software-catalog/#static-catalog-configuration[static configuration^, window="content"]. {product_name_rhdh} will occasionally poll for updates to the specified file locations and update the Entities in the Software Catalog accordingly.
+In xref:m2/module-02.1.adoc[module 2.1], you learned that the *Software Catalog* contains Entities, and saw a sample `appConfig` that contained a `catalog.locations` configuration. That example configuration imported entities from a file located in a hardcoded Git repository. This pattern is known as a https://backstage.io/docs/features/software-catalog/#static-catalog-configuration[static configuration^, window="content"]. {product_name_rhdh} will occasionally poll for updates to the specified file locations and update the Entities in the Software Catalog accordingly
 
-An option for dynamically importing and synchronizing Entities is via _providers_. Providers are added to {product_name_rhdh} using plugins, and are configured using the `catalog.providers` entry in the `appConfig`. Let's use the Keycloak plugin to synchronize Users and Groups to your Software Catalog.
+To explore how to represent and synchronize objects from external components in Developer Hub, we are going to add the Identity provider *Keycloak*.
 
-NOTE: Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to {product_name_rhdh}.
+Keycloak has users and groups already defined. We will use it to authenticate users into Developer Hub and import the associated groups. 
+In our context, groups reflect the user's team they belongs to. 
+Let's use the Keycloak plugin to synchronize Users and Groups to Red Hat Developer Hub. 
 
-. View your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in the developer-hub-config repository^, window="gitlab"].
-. Select **Edit > Edit single file**. When prompted, log in as *`{pe-username}` / `{common_password}`*.
+
+.Curious ?
+[%collapsible]
+===
+Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to {product_name_rhdh}.
+===
+
+= Enable the Keycloak Plugin
+
+== ✍️ Time to practise ✍️ 
+
+. Open the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[configuration file^, window="gitlab"]. It's same used to update the title 
+. Select **Edit > Edit single file**.
 . You will find the `backstage-community-plugin-catalog-backend-module-keycloak-dynamic` package under the `dynamic.plugins` field that is set to `disabled: false`. This means that this plugin has been enabled in your installation.
 +
 image:m2/keycloak-dynamic-plugin.png[width=60%]
@@ -55,8 +68,9 @@ include::../debug-pod-placement.adoc[]
 ====
 
 
-You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
 
 image:m2/rhdh-users-list.png[User Entities listed in {product_name_rhdh}]
 
 Nice work! You have just enabled a dynamic plugin and configured a catalog provider based on it!
+
+You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 

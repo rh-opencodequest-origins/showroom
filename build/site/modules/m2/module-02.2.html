@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>First step in Red Hat Developer Hub :: OpenCodeQuest Origin (PE Workshop)</title>
+    <title>Red Hat Developer Hub Deployment :: OpenCodeQuest Origin (PE Workshop)</title>
     <link rel="canonical" href="https://developers.redhat.com/modules/m2/module-02.2.html">
     <link rel="prev" href="module-02.1.html">
     <link rel="next" href="module-02.3.html">
@@ -59,13 +59,13 @@
     <a class="nav-link" href="module-02.0.html">2. Design the Internal Developer Platform</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-02.1.html">2.1. Introduction to concepts</a>
+    <a class="nav-link" href="module-02.1.html">2.1 Introduction to concepts</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="module-02.2.html">2.2 Activity: Access Developer Hub</a>
+    <a class="nav-link" href="module-02.2.html">2.2 Activity: Deploying Developer Hub</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-02.3.html">2.3. Activity: Deploying Developer Hub</a>
+    <a class="nav-link" href="module-02.3.html">2.3 Activity: Access Developer Hub</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="module-02.4.html">2.4 Activity: Synchronize user and group entities</a>
@@ -239,48 +239,14 @@
   <ul>
     <li><a href="../index.html">Open Code Quest Origins</a></li>
     <li><a href="module-02.0.html">2. Design the Internal Developer Platform</a></li>
-    <li><a href="module-02.2.html">2.2 Activity: Access Developer Hub</a></li>
+    <li><a href="module-02.2.html">2.2 Activity: Deploying Developer Hub</a></li>
   </ul>
 </nav>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">First step in Red Hat Developer Hub</h1>
-<div class="sect1">
-<h2 id="_pick_the_chosen_one"><a class="anchor" href="#_pick_the_chosen_one"></a><strong>Pick the chosen one</strong> !</h2>
-<div class="sectionbody">
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-This is a <strong>Shared part</strong>. It means, <strong>one person</strong> will be able to go through those steps. The work accomplished will be useful for everyone!
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><span class="image"><a class="image" href="../_images/m2/pe-user-picking.png" target="blank"><img src="../_images/m2/pe-user-picking.png" alt="Empty Red Hat Developer Hub Catalog"></a></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>User1 is : <strong>user1</strong></p>
-</li>
-<li>
-<p>User2 is : <strong>user2</strong></p>
-</li>
-<li>
-<p>User3 is : <strong>user3</strong></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_activity_access_red_hat_developer_hub"><a class="anchor" href="#_activity_access_red_hat_developer_hub"></a>Activity: Access Red Hat Developer Hub</h2>
+<h1 class="page">Red Hat Developer Hub Deployment</h1>
+<div id="preamble">
 <div class="sectionbody">
 <style>
 .doc {
@@ -454,43 +420,71 @@ summary  {
     color: white;
 }
 </style>
-<div class="paragraph">
-<p>Once you have chosen a user from the team, go ahead!
-Red Hat Developer Hub has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1" target="console">backstage project on OpenShift</a>.</p>
+</div>
+</div>
+<h1 id="_first_step_in_red_hat_developer_hub" class="sect0"><a class="anchor" href="#_first_step_in_red_hat_developer_hub"></a>First step in Red Hat Developer Hub</h1>
+<div class="sect1">
+<h2 id="_pick_the_chosen_one"><a class="anchor" href="#_pick_the_chosen_one"></a><strong>Pick the chosen one</strong> !</h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+This is a <strong>Shared part</strong>. It means, <strong>one person</strong> will be able to go through those steps. The work accomplished will be useful for everyone!
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Log in to Red Hat Developer Hub:</p>
+<p><span class="image"><a class="image" href="../_images/m2/pe-user-picking.png" target="blank"><img src="../_images/m2/pe-user-picking.png" alt="Empty Red Hat Developer Hub Catalog"></a></span></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p>Visit the <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1?view=graph" target="console">backstage project</a> in your OpenShift cluster. You can log in with the platform engineer user chosen. Take the user with the <strong>pe</strong> suffix for instance superman-<strong>pe</strong> and the password /<strong>sWtbXGQy</strong></p>
+<p>User1 is : <strong>user1</strong></p>
 </li>
 <li>
-<p>Choose  <strong>rhsso</strong> as the identity provider</p>
+<p>User2 is : <strong>user2</strong></p>
 </li>
-</ol>
+<li>
+<p>User3 is : <strong>user3</strong></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploying_red_hat_developer_hub"><a class="anchor" href="#_deploying_red_hat_developer_hub"></a>Deploying Red Hat Developer Hub</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Platform Engineers can deploy Red Hat Developer Hub on OpenShift using the Operator or Helm Chart. Both of these installation methods are outlined in the <a href="https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.6/html/installing_red_hat_developer_hub_on_openshift_container_platform/index#assembly-install-rhdh-ocp-helm" target="content">Red Hat Developer Hub documentation</a>. In this lab, you’ll use the Helm Chart to deploy and manage your instance of Red Hat Developer Hub. The source code for this Helm Chart can be found at <a href="https://github.com/openshift-helm-charts/charts/tree/main/charts/redhat/redhat/redhat-developer-hub" target="content">openshift-helm-charts repository on GitHub</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_gitops_to_manage_red_hat_developer_hub"><a class="anchor" href="#_using_gitops_to_manage_red_hat_developer_hub"></a>Using GitOps to Manage Red Hat Developer Hub</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The deployment of Red Hat Developer Hub is kept up to date using a GitOps workflow, as illustrated below.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><a class="image" href="../_images/m2/ocp-sso-login.png" target="blank"><img src="../_images/m2/ocp-sso-login.png" alt="Choose rhsso as identity provider on OpenShift login" width="60%"></a></span></p>
+<p><span class="image"><img src="../_images/m2/gitops-helm.png" alt="GitOps Architecture Overview" width="80%"></span></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Select the <strong>rhdh-team1</strong> Deployment in the Topology View.</p>
-<div class="imageblock">
+<details>
+<summary class="title">Curious about GitOps deployment ?</summary>
 <div class="content">
-<a class="image" href="../_images/m2/openshift-backstage-deployment.png" target="blank"><img src="../_images/m2/openshift-backstage-deployment.png" alt="Red Hat Developer Hub deployment on OpenShift"></a>
-</div>
-</div>
-</li>
-<li>
-<p>Click the URL listed under the <strong>Resources</strong> tab; it will be similar to <a href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="rhdh">https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com</a></p>
-</li>
-</ol>
+<div class="paragraph">
+<p>The instance of OpenShift Container Platform used in this workshop environment has been preconfigured with OpenShift GitOps (Argo CD).</p>
 </div>
 <div class="paragraph">
-<p>The sign-in page will be displayed, with the option to log in as a Guest. Click the <strong>Enter</strong> button to use the Guest sign-in.</p>
+<p><span class="image"><img src="../_images/m2/gitops-helm.png" alt="GitOps Architecture Overview" width="80%"></span></p>
+</div>
+<div class="paragraph">
+<p>Since this isn’t a GitOps-focused workshop, we’ve set up the basic GitOps workflow ahead of time. Specifically, we’ve pre-created a <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo">rhdh-bootstrap Application in OpenShift GitOps</a> - you can view this by clicking the link and "log in via OpenShift" as
+<strong><code>mon-user-pe/</code>sWtbXGQy`</strong></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -499,25 +493,256 @@ Red Hat Developer Hub has been pre-deployed with a base configuration in your wo
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Ignore the GitHub sign-in method, if it&#8217;s displayed. It is not configured and will not work.
+<a href="https://www.redhat.com/en/topics/devops/what-is-gitops">GitOps</a> is the practice of automating application deployment using Git repositories as the "source of truth" for an <a href="https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac">infrastructure as code (IaC)</a> for the deployment configuration. The Git repository contains declarative configuration, typically in YAML format, that describes the desired deployment state, and a GitOps tool such as OpenShift GitOps ensures the application is deployed according to the configuration. Drifts from the configuration can automatically be patched.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><span class="image"><a class="image" href="../_images/m2/backstage-guest-signin.png" target="blank"><img src="../_images/m2/backstage-guest-signin.png" alt="Guest sign-in option on Developer Hub login page" width="60%"></a></span></p>
+<p><span class="image"><img src="../_images/m2/argocd-login.png" alt="GitOps Architecture Overview" width="80%"></span></p>
 </div>
 <div class="paragraph">
-<p>Visit the <strong>Catalog</strong> using the link in the menu on the left-hand side of the Red Hat Developer Hub UI. You&#8217;ll find that the <strong>Kind</strong> dropdown provides only <strong>Plugin</strong> and <strong>Package</strong> options. These represent plugins that can be installed in Red Hat Developer Hub, but these don&#8217;t represent any of the software components deployed. A catalog only delivers value to developers once it’s populated; we’ll address that next.</p>
+<p>The  Argo CD Application creates Secrets, ConfigMaps, and another Argo CD Application named <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1-bootstrap" class="bare">https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1-bootstrap</a>. The <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/applications/rhdh-team1" target="argo">ArgoCD</a> Argo CD Application deploys Red Hat Developer Hub using the Helm Chart. The configuration values passed to the Helm Chart are sourced from the <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/developer-hub-config/-/blob/main/values.yaml" target="gitlab">rhdh/developer-hub-config/values.yaml file in GitLab</a>. OpenShift GitOps will detect changes to this file and redeploy Red Hat Developer Hub in response. You can see these two sources in the <strong>Details</strong> tab of the <code>backstage</code> Application as shown.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><a class="image" href="../_images/m2/rhdh-empty-catalog.png" target="blank"><img src="../_images/m2/rhdh-empty-catalog.png" alt="Empty Red Hat Developer Hub Catalog"></a></span></p>
+<p><span class="image"><img src="../_images/m2/gitops-sources.png" alt="GitOps Sources for the Developer Hub Application"></span></p>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_understand_how_gitops_is_working"><a class="anchor" href="#_understand_how_gitops_is_working"></a>Understand how GitOps is Working</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The starting point is the installation of the Internal Developer Portal, Red Hat Developer Hub.
+All resources has been set to let the magic of GitOps run the installation.
+For the purpose of the workshop, you will do a minor change to trigger the installation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Update the App Title of Red Hat Developer Hub</strong></p>
+</div>
+<div class="paragraph">
+<p>The configuration file of the Internal Developer Platform is located in a Gitlab repo.</p>
+</div>
+<div class="sect2">
+<h3 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open this <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/developer-hub-config/-/blob/main/values.yaml" target="gitlab">link</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m2/gitlab-login.png" alt="gitlab login"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When prompted, log in as a Platform Engineer with</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Username or primary email : <code>mon-user-pe</code></p>
+</li>
+<li>
+<p>Password :`sWtbXGQy`</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Remember, it&#8217;s the same user, the platform engineer you have chosen who is performing actions also on Gitlab !</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <strong>Edit &gt; Edit single file</strong>.</p>
+</li>
+<li>
+<p>Find the YAML surrounded by <code>--- APP TITLE ---</code> and uncomment it by highlighting it and pressing <code>CMD + /</code> or <code>CTRL + /</code>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the keyboard shortcut to uncomment through the web browser doesn&#8217;t work , edit the piece of code in your local IDE and paste after !</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m2/gitlab-change-app-title.png" alt="Customizing the Title"></span></p>
+</div>
+<div class="paragraph">
+<p>The uncommented part should look like :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m2/appConfig-title.png" alt="appConfig title"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Scroll down and enter a commit message <code>feat: change application title</code>.</p>
+</li>
+<li>
+<p>Click the <strong>Commit changes</strong> button.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verify_internal_developer_portal_is_deployed"><a class="anchor" href="#_verify_internal_developer_portal_is_deployed"></a>Verify Internal Developer Portal is deployed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s ensure that a new deployment of Red Hat Developer Hub is triggered and your new title is applied.</p>
+</div>
+<div class="sect2">
+<h3 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h3>
+<div class="paragraph">
+<p>2 ways to do it:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Wait few minutes to let our GitOps service observes the change and trigger the installation</p>
+</li>
+<li>
+<p>Trigger the refresh by yourself following those instructions:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo">Developer Hub Application in Argo CD</a></p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m2/argocd-login.png" alt="argocd login"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on Login via OpenShift
+<span class="image"><img src="../_images/m2/ocp-sso-login.png" alt="ocp sso login"></span></p>
+</li>
+<li>
+<p>Click on rhsso</p>
+</li>
+<li>
+<p>When prompted, log in as a Platform Engineer with</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Username or primary email : <code>mon-user-pe</code></p>
+</li>
+<li>
+<p>Password :`sWtbXGQy`</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Depending on your timing, it might already be progressing the latest sync, but if not, click the <strong>Refresh</strong> button. When the sync is in progress, you&#8217;ll see a new Pod starting - this Pod will run the latest version of your configuration.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m2/rhdh-new-pod.png" alt="Red Hat Developer Hub with a Custom Title"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Once the new Pod has started, visit your <a href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="rhdh">Red Hat Developer Hub instance</a>. You should see the new title <strong>PE Developer Hub</strong> in the page header.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m2/rhdh-title.png" alt="Red Hat Developer Hub with a Custom Title"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the pod is ready but there is no change on Developer Hub UI,</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<details>
+<summary class="title">Get help here</summary>
+<div class="content">
+<div class="paragraph">
+<p><strong>Debug stuck deployment</strong></p>
+</div>
+<div class="paragraph">
+<p>The problem is the deployment of Red Hat Developer Hub has been performed on a cluster node different from the initial storage (PVC) location.
+To fix it, we will trigger a new deployment.
+To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">backstage project on OpenShift</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Search for <code>replicas</code> in the yaml file</p>
+</li>
+<li>
+<p>Set it to 0</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../_images/common/replica-zero.png" target="blank"><img src="../_images/common/replica-zero.png" alt="Set replicas to 0 in deployment YAML"></a>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on Save at the left bottom</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="../_images/common/save-replicas.png" target="blank"><img src="../_images/common/save-replicas.png" alt="Save button to apply replica changes"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>Automatically, the deployment will be relaunched by OpenShift GitOps !</p>
+</div>
+<div class="paragraph">
+<p>Congrats, you have fixed the Developer Hub deployment. Come back to your work</p>
+</div>
+</div>
+</details>
+<div class="paragraph">
+<p>Perfect ! The Internal Developer Portal</p>
+</div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="module-02.1.html" class="query-params-link">2.1. Introduction to concepts</a></span>
-  <span class="next"><a href="module-02.3.html" class="query-params-link">2.3. Activity: Deploying Developer Hub</a></span>
+  <span class="prev"><a href="module-02.1.html" class="query-params-link">2.1 Introduction to concepts</a></span>
+  <span class="next"><a href="module-02.3.html" class="query-params-link">2.3 Activity: Access Developer Hub</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

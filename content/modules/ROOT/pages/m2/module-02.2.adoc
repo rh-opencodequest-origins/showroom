@@ -1,4 +1,9 @@
+
 :imagesdir: ../../assets/images
+
+= {product_name_rhdh} Deployment
+
+include::../style.adoc[]
 
 = First step in Red Hat Developer Hub
 
@@ -15,33 +20,134 @@ image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog,link=self,window=
 * User3 is : *{user3}*
 
 
-== Activity: Access {product_name_rhdh}
 
-include::../style.adoc[]
+== Deploying {product_name_rhdh}
 
-Once you have chosen a user from the team, go ahead!
-{product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[backstage project on OpenShift^, window="console"].
+Platform Engineers can deploy {product_name_rhdh} on OpenShift using the Operator or Helm Chart. Both of these installation methods are outlined in the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.6/html/installing_red_hat_developer_hub_on_openshift_container_platform/index#assembly-install-rhdh-ocp-helm[{product_name_rhdh} documentation^, window="content"]. In this lab, you’ll use the Helm Chart to deploy and manage your instance of {product_name_rhdh}. The source code for this Helm Chart can be found at https://github.com/openshift-helm-charts/charts/tree/main/charts/redhat/redhat/redhat-developer-hub[openshift-helm-charts repository on GitHub^, window="content"].
 
-Log in to {product_name_rhdh}:
+== Using GitOps to Manage {product_name_rhdh}
 
-. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can log in with the platform engineer user chosen. Take the user with the *pe* suffix for instance superman-*pe* and the password /*{common_password}*
+The deployment of {product_name_rhdh} is kept up to date using a GitOps workflow, as illustrated below.
 
-. Choose  *rhsso* as the identity provider
+image:m2/gitops-helm.png[GitOps Architecture Overview, width=80%]
 
-image:m2/ocp-sso-login.png[Choose rhsso as identity provider on OpenShift login,width=60%,link=self,window=blank]
 
-. Select the *rhdh-{team-id}* Deployment in the Topology View.
+.Curious about GitOps deployment ? 
+
+[%collapsible]
+====
+
+
+The instance of OpenShift Container Platform used in this workshop environment has been preconfigured with OpenShift GitOps (Argo CD). 
+
+
+image:m2/gitops-helm.png[GitOps Architecture Overview, width=80%]
+
+Since this isn’t a GitOps-focused workshop, we’ve set up the basic GitOps workflow ahead of time. Specifically, we’ve pre-created a https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[rhdh-bootstrap Application in OpenShift GitOps, window="argo"] - you can view this by clicking the link and "log in via OpenShift" as 
+*`{pe-username}/`{common_password}`*
+
+NOTE: https://www.redhat.com/en/topics/devops/what-is-gitops[GitOps] is the practice of automating application deployment using Git repositories as the "source of truth" for an https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac[infrastructure as code (IaC)] for the deployment configuration. The Git repository contains declarative configuration, typically in YAML format, that describes the desired deployment state, and a GitOps tool such as OpenShift GitOps ensures the application is deployed according to the configuration. Drifts from the configuration can automatically be patched.
+
+
+image:m2/argocd-login.png[GitOps Architecture Overview, width=80%]
+
+
+
+The  Argo CD Application creates Secrets, ConfigMaps, and another Argo CD Application named https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}-bootstrap[]. The https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/applications/rhdh-{team-id}[ArgoCD, window="argo"] Argo CD Application deploys {product_name_rhdh} using the Helm Chart. The configuration values passed to the Helm Chart are sourced from the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[rhdh/developer-hub-config/values.yaml file in GitLab, window="gitlab"]. OpenShift GitOps will detect changes to this file and redeploy {product_name_rhdh} in response. You can see these two sources in the *Details* tab of the `backstage` Application as shown.
+
+image:m2/gitops-sources.png[GitOps Sources for the Developer Hub Application]
+
+
+
+====
+
+== Understand how GitOps is Working 
+
+The starting point is the installation of the Internal Developer Portal, Red Hat Developer Hub. 
+All resources has been set to let the magic of GitOps run the installation.
+For the purpose of the workshop, you will do a minor change to trigger the installation.
+
+
+*Update the App Title of {product_name_rhdh}*
+
+The configuration file of the Internal Developer Platform is located in a Gitlab repo.
+
+=== ✍️ Time to practise ✍️ 
+
+
+. Open this https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[link, window="gitlab"]
+
+image:m2/gitlab-login.png[]
+
+. When prompted, log in as a Platform Engineer with 
+* Username or primary email : `{pe-username}`
+* Password :`{common_password}`
+
+
+Remember, it's the same user, the platform engineer you have chosen who is performing actions also on Gitlab !
+
+. Select *Edit > Edit single file*. 
+
+
+. Find the YAML surrounded by `--- APP TITLE ---` and uncomment it by highlighting it and pressing `CMD + /` or `CTRL + /`.
+
+[NOTE]
+====
+If the keyboard shortcut to uncomment through the web browser doesn't work , edit the piece of code in your local IDE and paste after ! 
+====
+
+
+image:m2/gitlab-change-app-title.png[Customizing the Title]
+
+The uncommented part should look like :
+
+image:m2/appConfig-title.png[]
+
+. Scroll down and enter a commit message `feat: change application title`.
+. Click the *Commit changes* button.
+
+
+== Verify Internal Developer Portal is deployed
+
+Let's ensure that a new deployment of {product_name_rhdh} is triggered and your new title is applied.
+
+=== ✍️ Time to practise ✍️ 
+
+2 ways to do it:
+
+* Wait few minutes to let our GitOps service observes the change and trigger the installation 
+* Trigger the refresh by yourself following those instructions:
+
+. Go to the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[Developer Hub Application in Argo CD, window="argo"]
+
+image:m2/argocd-login.png[]
+
+. Click on Login via OpenShift 
+image:m2/ocp-sso-login.png[]
+
+. Click on rhsso 
+. When prompted, log in as a Platform Engineer with 
+* Username or primary email : `{pe-username}`
+* Password :`{common_password}`
+
 +
-image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift,link=self,window=blank]
-. Click the URL listed under the *Resources* tab; it will be similar to https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}^, window="rhdh"]
-
-The sign-in page will be displayed, with the option to log in as a Guest. Click the *Enter* button to use the Guest sign-in.
-
-NOTE: Ignore the GitHub sign-in method, if it's displayed. It is not configured and will not work. 
-
-image:m2/backstage-guest-signin.png[Guest sign-in option on Developer Hub login page,width=60%,link=self,window=blank]
+. Depending on your timing, it might already be progressing the latest sync, but if not, click the *Refresh* button. When the sync is in progress, you'll see a new Pod starting - this Pod will run the latest version of your configuration.
 
 
-Visit the *Catalog* using the link in the menu on the left-hand side of the {product_name_rhdh} UI. You'll find that the *Kind* dropdown provides only **Plugin** and **Package** options. These represent plugins that can be installed in {product_name_rhdh}, but these don't represent any of the software components deployed. A catalog only delivers value to developers once it’s populated; we’ll address that next.
+image:m2/rhdh-new-pod.png[{product_name_rhdh} with a Custom Title]
 
-image:m2/rhdh-empty-catalog.png[Empty {product_name_rhdh} Catalog,link=self,window=blank]
+. Once the new Pod has started, visit your https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh} instance, window="rhdh"]. You should see the new title *PE Developer Hub* in the page header.
++
+image:m2/rhdh-title.png[{product_name_rhdh} with a Custom Title]
+
+[WARNING] 
+====
+If the pod is ready but there is no change on Developer Hub UI,
+====
+.Get help here 
+[%collapsible]
+====
+include::../debug-pod-placement.adoc[]
+====
+
+Perfect ! The Internal Developer Portal 

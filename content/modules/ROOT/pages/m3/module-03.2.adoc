@@ -41,7 +41,7 @@ this activity is stored in the _locations-opencodequest.yaml_ file in the https:
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +
 image:m3/create-icon.png[] 
-. Click the *Register Existing Component* button.
+. Click the *Import an existing Git repository* button.
 +
 image:m3/rhdh-catalog-create.png[The empty Create UI]
 . Enter the following URL in the *Select URL* field and click *Analyze*:

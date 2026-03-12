@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Module 2: Design the Internal Developer Portal :: OpenCodeQuest Origin (PE Workshop)</title>
+    <title>Module 2: Design the Internal Developer Platform :: OpenCodeQuest Origin (PE Workshop)</title>
     <link rel="canonical" href="https://developers.redhat.com/modules/m2/module-02.0.html">
     <link rel="prev" href="../m1/module-01.html">
     <link rel="next" href="module-02.1.html">
@@ -59,13 +59,13 @@
     <a class="nav-link" href="module-02.0.html">2. Design the Internal Developer Platform</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-02.1.html">2.1. Introduction to concepts</a>
+    <a class="nav-link" href="module-02.1.html">2.1 Introduction to concepts</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-02.2.html">2.2 Activity: Access Developer Hub</a>
+    <a class="nav-link" href="module-02.2.html">2.2 Activity: Deploying Developer Hub</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-02.3.html">2.3. Activity: Deploying Developer Hub</a>
+    <a class="nav-link" href="module-02.3.html">2.3 Activity: Access Developer Hub</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="module-02.4.html">2.4 Activity: Synchronize user and group entities</a>
@@ -244,7 +244,7 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Module 2: Design the Internal Developer Portal</h1>
+<h1 class="page">Module 2: Design the Internal Developer Platform</h1>
 <div id="preamble">
 <div class="sectionbody">
 <style>
@@ -464,26 +464,29 @@ summary  {
 <p><span class="image"><img src="../_images/m2/developerhub-tooling.png" alt="developerhub tooling"></span></p>
 </div>
 <div class="paragraph">
-<p>Your workshop environment has been preconfigured with the following software and platform components:</p>
+<p>Your workshop environment has been preconfigured with the following capabilities :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Red Hat Build of Keycloak</p>
+<p>An Internal Developer Portal</p>
 </li>
 <li>
-<p>OpenShift GitOps</p>
+<p>An Identity Provider</p>
 </li>
 <li>
-<p>OpenShift Pipelines</p>
+<p>A Code Source Manager</p>
 </li>
 <li>
-<p>GitLab</p>
+<p>A CI/CD Platform</p>
+</li>
+<li>
+<p>A container Platform</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For this workshop, we’ll assume that your organization has standardized on these tools, and it’s your objective as the platform engineer to integrate them with Red Hat Developer Hub.</p>
+<p>For this workshop, we’ll assume that your organization has standardized on and set these tools. It’s your objective as the platform engineer to integrate them with Red Hat Developer Hub.</p>
 </div>
 <div class="paragraph">
 <p>In this module, you&#8217;ll:</p>
@@ -491,10 +494,10 @@ summary  {
 <div class="ulist">
 <ul>
 <li>
-<p>Identify the platform requirements and dependencies, such as single sign-on (SSO), source code management (SCM), RBAC, resources, and existing assets</p>
+<p>Deploy the Internal Developer Portal</p>
 </li>
 <li>
-<p>Integrate Red Hat Developer Hub with the dependent services, such as GitLab and Keycloak</p>
+<p>Integrate Red Hat Developer Hub with the dependent services</p>
 </li>
 <li>
 <p>Learn about <a href="https://backstage.io/docs/features/software-catalog/" target="content">Backstage Entities</a>, e.g. Components, APIs, and Docs</p>
@@ -508,7 +511,7 @@ summary  {
 </div>
 <nav class="pagination">
   <span class="prev"><a href="../m1/module-01.html" class="query-params-link">1. Discovery</a></span>
-  <span class="next"><a href="module-02.1.html" class="query-params-link">2.1. Introduction to concepts</a></span>
+  <span class="next"><a href="module-02.1.html" class="query-params-link">2.1 Introduction to concepts</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
