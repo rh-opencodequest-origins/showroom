@@ -15,9 +15,9 @@ Let's use the Keycloak plugin to synchronize Users and Groups to Red Hat Develop
 
 .Curious ?
 [%collapsible]
-===
+====
 Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to {product_name_rhdh}.
-===
+====
 
 = Enable the Keycloak Plugin
 
