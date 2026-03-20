@@ -440,12 +440,20 @@ summary  {
 </ul>
 </div>
 <div class="paragraph">
-<p>In this activity, you&#8217;ll configure an OpenID Connect authentication provider - this will enable developers within your organization to log in using their single sign-on (SSO) credentials.</p>
+<p>In this activity, you&#8217;ll configure an OpenID Connect authentication provider.
+This will enable developers within your organization to log in using their single sign-on (SSO) credentials.
+Remember, we have imported users and groups from <strong>Keycloak</strong>. The good news is Keycloak will provide authentication to Red Hat Developer Hub.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_configure_the_openid_connect_authentication_provider"><a class="anchor" href="#_configure_the_openid_connect_authentication_provider"></a>Configure the OpenID Connect Authentication Provider</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -527,8 +535,17 @@ signInPage: oidc</code></pre>
 <li>
 <p>Commit the changes with a message similar to <code>feat: enable openid connect</code></p>
 </li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Click Refresh on the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo"><code>RHDH</code> Application in OpenShift GitOps</a>. If prompted, log in as <code>mon-user-pe/sWtbXGQy</code>.</p>
+<p>Confirm the commit has triggered a Red Hat Developer Hub rollout <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo">Red Hat Developer Application in OpenShift GitOps</a>. If prompted, log in as <code>mon-user-pe/sWtbXGQy</code>.</p>
 </li>
 <li>
 <p>Choose  <strong>rhsso</strong> as the identity provider</p>

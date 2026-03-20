@@ -6,6 +6,7 @@
 
 include::../style.adoc[]
 
+
 {product_name_rhdh} supports four authentication providers:
 
 * Guest (suitable for experimentation and demos only)
@@ -13,10 +14,15 @@ include::../style.adoc[]
 * GitHub
 * Microsoft Azure
 
-In this activity, you'll configure an OpenID Connect authentication provider - this will enable developers within your organization to log in using their single sign-on (SSO) credentials.
+In this activity, you'll configure an OpenID Connect authentication provider.
+This will enable developers within your organization to log in using their single sign-on (SSO) credentials.
+Remember, we have imported users and groups from *Keycloak*. The good news is Keycloak will provide authentication to Red Hat Developer Hub. 
 
 
 == Configure the OpenID Connect Authentication Provider
+
+== ✍️ Time to practise ✍️ 
+
 
 . Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/[developer-hub-config repository on GitLab, window="gitlab"].
 . Open the *values.yaml* file, then select *Edit > Edit single file*.
@@ -58,7 +64,10 @@ signInPage: oidc
 * The `signInPage` property is specific to {product_name_rhdh}. It ensures the correct sign-in UI is rendered. In upstream Backstage, this requires React code changes.
 
 . Commit the changes with a message similar to `feat: enable openid connect`
-. Click Refresh on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"]. If prompted, log in as `{pe-username}/{common_password}`.
+
+== 👀 Observe 👀
+
+. Confirm the commit has triggered a Red Hat Developer Hub rollout https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[ Red Hat Developer Application in OpenShift GitOps^, window="argo"]. If prompted, log in as `{pe-username}/{common_password}`.
 
 . Choose  *rhsso* as the identity provider
 
@@ -76,6 +85,7 @@ If the application is healthy has started but there is no change on Developer Hu
 ====
 include::../debug-pod-placement.adoc[]
 ====
+
 
 
 

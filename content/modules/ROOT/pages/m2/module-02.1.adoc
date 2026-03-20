@@ -6,7 +6,7 @@ include::../style.adoc[]
 
 {product_name_rhdh}, and internal developer portals in general, can be thought of as a modular system where you aggregate and display data related to the software within an organization.
 
-The core features of {product_name_rhdh} are:
+The core features of *{product_name_rhdh}* are:
 
 * Software Catalog
 * Software Templates
@@ -100,9 +100,8 @@ Since you'll be using the {product_name_rhdh} Helm Chart to install and manage y
 
 Your workshop environment has been pre-configured such that this repository in GitLab is continuously monitored and deployed using OpenShift GitOps. We'll cover this in more detail shortly.
 
-With that out of the way, let's get to work on configuring your instance of {product_name_rhdh}!
+With that out of the way, let's get deploy your instance of {product_name_rhdh}!
 
-image::m2/openshift-backstage-deployment.png[{product_name_rhdh} deployment on OpenShift,link=self,window=blank]
 
 ////
 = Quiz!

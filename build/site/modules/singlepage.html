@@ -1341,7 +1341,7 @@ summary  {
 <p>Red Hat Developer Hub, and internal developer portals in general, can be thought of as a modular system where you aggregate and display data related to the software within an organization.</p>
 </div>
 <div class="paragraph">
-<p>The core features of Red Hat Developer Hub are:</p>
+<p>The core features of <strong>Red Hat Developer Hub</strong> are:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1488,12 +1488,7 @@ techdocs:
 <p>Your workshop environment has been pre-configured such that this repository in GitLab is continuously monitored and deployed using OpenShift GitOps. We&#8217;ll cover this in more detail shortly.</p>
 </div>
 <div class="paragraph">
-<p>With that out of the way, let&#8217;s get to work on configuring your instance of Red Hat Developer Hub!</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="_images/m2/openshift-backstage-deployment.png" target="blank"><img src="_images/m2/openshift-backstage-deployment.png" alt="Red Hat Developer Hub deployment on OpenShift"></a>
-</div>
+<p>With that out of the way, let&#8217;s get deploy your instance of Red Hat Developer Hub!</p>
 </div>
 </div>
 </div>
@@ -2262,203 +2257,35 @@ Ignore the GitHub sign-in method, if it&#8217;s displayed. It is not configured 
 <p><span class="image"><a class="image" href="_images/m2/rhdh-empty-catalog.png" target="blank"><img src="_images/m2/rhdh-empty-catalog.png" alt="Empty Red Hat Developer Hub Catalog"></a></span>
 :imagesdir: ../../assets/images</p>
 </div>
-<style>
-.doc {
-    max-width: 70rem;
-}
-
-.underline {
-  cursor: pointer;
-}
-
-u {
-    cursor: pointer;
-}
-
-summary  {
-    cursor: pointer;
-}
-.developer {
-    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
-
-}
-
-.developer .doc {
-    background-color: rgba(255, 255, 255, 0.95);
-    margin: 20px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(30, 136, 229, 0.15);
-    border-left: 4px solid #1976d2;
-}
-
-.developer h1, .developer h2 {
-    color: #1565c0;
-    border-bottom: 2px solid #bbdefb;
-    padding-bottom: 8px;
-}
-
-.developer h3 {
-    color: #1976d2;
-}
-
-.developer .admonitionblock {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-left: 4px solid #2196f3;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 15px 0;
-    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
-}
-
-.developer .admonitionblock.note {
-    border-left-color: #2196f3;
-    background-color: rgba(33, 150, 243, 0.05);
-}
-
-.developer .admonitionblock.important {
-    border-left-color: #ff9800;
-    background-color: rgba(255, 152, 0, 0.05);
-}
-
-.developer .imageblock img {
-    border: 3px solid #e3f2fd;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
-}
-
-.developer .listingblock .content {
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid #bbdefb;
-    border-radius: 4px;
-}
-
-/* ===== CLASSE PE - THEME ROUGE ===== */
-.pe {
-    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 50%, #ef9a9a 100%);
-}
-
-.pe .doc {
-    background-color: rgba(255, 255, 255, 0.95);
-    margin: 20px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(211, 47, 47, 0.15);
-    border-left: 4px solid #d32f2f;
-}
-
-.pe h1, .pe h2 {
-    color: #c62828;
-    border-bottom: 2px solid #ffcdd2;
-    padding-bottom: 8px;
-}
-
-.pe h3 {
-    color: #d32f2f;
-}
-
-.pe .admonitionblock {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-left: 4px solid #f44336;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 15px 0;
-    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.1);
-}
-
-.pe .admonitionblock.note {
-    border-left-color: #f44336;
-    background-color: rgba(244, 67, 54, 0.05);
-}
-
-.pe .admonitionblock.important {
-    border-left-color: #ff5722;
-    background-color: rgba(255, 87, 34, 0.05);
-}
-
-.pe .imageblock img {
-    border: 3px solid #ffebee;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
-}
-
-.pe .listingblock .content {
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid #ffcdd2;
-    border-radius: 4px;
-}
-
-/* ===== STYLES COMMUNS ===== */
-.developer .doc, .pe .doc {
-    transition: all 0.3s ease;
-}
-
-.developer .doc:hover, .pe .doc:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Amélioration des liens */
-.developer a {
-    color: #1976d2;
-    text-decoration: none;
-    border-bottom: 1px dotted #1976d2;
-}
-
-.developer a:hover {
-    color: #0d47a1;
-    border-bottom: 1px solid #0d47a1;
-}
-
-.pe a {
-    color: #d32f2f;
-    text-decoration: none;
-    border-bottom: 1px dotted #d32f2f;
-}
-
-.pe a:hover {
-    color: #b71c1c;
-    border-bottom: 1px solid #b71c1c;
-}
-
-/* Boutons et éléments interactifs */
-.developer .btn, .developer button {
-    background-color: #1976d2;
-    border-color: #1976d2;
-    color: white;
-}
-
-.pe .btn, .pe button {
-    background-color: #d32f2f;
-    border-color: #d32f2f;
-    color: white;
-}
-</style>
 </div>
 </div>
 <h1 id="_activity_synchronize_user_group_entities" class="sect0"><a class="anchor" href="#_activity_synchronize_user_group_entities"></a>Activity: Synchronize User &amp; Group Entities</h1>
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>In <a href="m2/module-02.1.html" class="xref page">module 2.1</a>, you learned that the <strong>Software Catalog</strong> contains Entities, and saw a sample <code>appConfig</code> that contained a <code>catalog.locations</code> configuration. That example configuration imported entities from a file located in a hardcoded Git repository. This pattern is known as a <a href="https://backstage.io/docs/features/software-catalog/#static-catalog-configuration" target="content">static configuration</a>. Red Hat Developer Hub will occasionally poll for updates to the specified file locations and update the Entities in the Software Catalog accordingly</p>
+<p>To explore how to represent and synchronize objects from external tools in Developer Hub, we are going to add users and groups.</p>
 </div>
 <div class="paragraph">
-<p>To explore how to represent and synchronize objects from external components in Developer Hub, we are going to add the Identity provider <strong>Keycloak</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Keycloak has users and groups already defined. We will use it to authenticate users into Developer Hub and import the associated groups.
+<p>They are served by an <strong>Identity Provider</strong>. It is in charge to manage authorisation, authentication, registration and so on. Here, we use <strong>Keycloak</strong>. Users and groups already defined.
 In our context, groups reflect the user&#8217;s team they belongs to.
 Let&#8217;s use the Keycloak plugin to synchronize Users and Groups to Red Hat Developer Hub.</p>
 </div>
+<details>
+<summary class="title">Curious ?</summary>
+<div class="content">
 <div class="paragraph">
-<div class="title">Curious ?</div>
-<p>===
-Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to Red Hat Developer Hub.
-===</p>
+<p>Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to Red Hat Developer Hub.</p>
 </div>
 </div>
+</details>
 </div>
-<h1 id="_enable_the_keycloak_plugin" class="sect0"><a class="anchor" href="#_enable_the_keycloak_plugin"></a>Enable the Keycloak Plugin</h1>
+</div>
+<div class="sect1">
+<h2 id="_enable_the_keycloak_plugin"><a class="anchor" href="#_enable_the_keycloak_plugin"></a>Enable the Keycloak Plugin</h2>
+<div class="sectionbody">
+
+</div>
+</div>
 <div class="sect1">
 <h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
@@ -2535,14 +2362,20 @@ Argo CD has been set up to auto-sync every two minutes. Instead of having to wai
 </li>
 </ol>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Your changes will start to roll out. Confirm this by visiting the <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1?view=graph" target="console">rhdh project</a> on OpenShift and checking that a new Pod is being started, or waiting until the Application in OpenShift GitOps reports <strong>Healthy</strong> instead of <strong>Progressing</strong>.</p>
+<p>Your changes will start to roll out.
+Confirm this by visiting the <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1?view=graph" target="console">Red Hat Developer Hub deployment</a> on OpenShift and checking that a new Pod is being started, or waiting until the Application in OpenShift GitOps reports <strong>Healthy</strong> instead of <strong>Progressing</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/m2/gitops-progressing.png" alt="RHDH Application in Progressing Status"></span></p>
+<p><span class="image"><img src="_images/m2/openshift-backstage-deployment.png" alt="openshift backstage deployment"></span></p>
 </div>
 <div class="paragraph">
-<p>Once the new Pod has started, navigate to <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/k8s/ns/rhdh-team1/core%7Ev1%7EPod" target="console">OpenShift</a>. If needed, log in as `mon-user-pe``The number of Users and Groups has been read from Keycloak.</p>
+<p>Once the new Pod has started, navigate to <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/k8s/ns/rhdh-team1/core%7Ev1%7EPod" target="console">OpenShift</a>. Click on "Logs". The number of Users and Groups has been read from Keycloak.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m2/openshift-pod-logs.png" alt="Red Hat Developer Hub Pod logs as seen in the OpenShift Console"></span></p>
@@ -2594,13 +2427,13 @@ To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.f
 </div>
 </details>
 <div class="paragraph">
-<p>You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in <a href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="rhdh">Red Hat Developer Hub</a> and setting the <strong>Kind</strong> dropdown to User.</p>
-</div>
-<div class="paragraph">
 <p><span class="image"><img src="_images/m2/rhdh-users-list.png" alt="User Entities listed in Red Hat Developer Hub"></span></p>
 </div>
 <div class="paragraph">
-<p>Nice work! You have just enabled a dynamic plugin and configured a catalog provider based on it!
+<p>Nice work! You have just enabled a dynamic plugin and configured a catalog provider based on it!</p>
+</div>
+<div class="paragraph">
+<p>You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in <a href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="rhdh">Red Hat Developer Hub</a> and setting the <strong>Kind</strong> dropdown to User.
 :imagesdir: ../../assets/images</p>
 </div>
 </div>
@@ -2800,12 +2633,20 @@ summary  {
 </ul>
 </div>
 <div class="paragraph">
-<p>In this activity, you&#8217;ll configure an OpenID Connect authentication provider - this will enable developers within your organization to log in using their single sign-on (SSO) credentials.</p>
+<p>In this activity, you&#8217;ll configure an OpenID Connect authentication provider.
+This will enable developers within your organization to log in using their single sign-on (SSO) credentials.
+Remember, we have imported users and groups from <strong>Keycloak</strong>. The good news is Keycloak will provide authentication to Red Hat Developer Hub.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_configure_the_openid_connect_authentication_provider"><a class="anchor" href="#_configure_the_openid_connect_authentication_provider"></a>Configure the OpenID Connect Authentication Provider</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -2887,8 +2728,17 @@ signInPage: oidc</code></pre>
 <li>
 <p>Commit the changes with a message similar to <code>feat: enable openid connect</code></p>
 </li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_2"><a class="anchor" href="#_observe_2"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Click Refresh on the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo"><code>RHDH</code> Application in OpenShift GitOps</a>. If prompted, log in as <code>mon-user-pe/sWtbXGQy</code>.</p>
+<p>Confirm the commit has triggered a Red Hat Developer Hub rollout <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo">Red Hat Developer Application in OpenShift GitOps</a>. If prompted, log in as <code>mon-user-pe/sWtbXGQy</code>.</p>
 </li>
 <li>
 <p>Choose  <strong>rhsso</strong> as the identity provider</p>
@@ -3269,22 +3119,6 @@ To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.f
 </div>
 </div>
 </details>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_quiz"><a class="anchor" href="#_quiz"></a>Quiz</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Be prepared to answer our questions based on what you have learnt in this section!</p>
-</div>
-<div class="paragraph">
-<p>Wrap up the job done for your peers. Explain which capabilities (Authentication / Source Code Management / Users ..) have been added to the internal developer platform. The quiz will happen after the break !</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="_images/m2/quizz-time.png" target="blank"><img src="_images/m2/quizz-time.png" alt="Quiz time announcement"></a>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -4094,6 +3928,13 @@ this activity is stored in the <em>locations-opencodequest.yaml</em> file in the
 </div>
 <div class="sect2">
 <h3 id="_register_those_objects_using_the_red_hat_developer_hub_ui"><a class="anchor" href="#_register_those_objects_using_the_red_hat_developer_hub_ui"></a>Register those objects using the Red Hat Developer Hub UI:</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -4118,14 +3959,12 @@ this activity is stored in the <em>locations-opencodequest.yaml</em> file in the
 </li>
 <li>
 <p>You&#8217;ll be asked to review the entities being imported, as shown:</p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/m3/rhdh-register-template.png" alt="Registering and Entity"></span></p>
-</div>
-</li>
-<li>
-<p>Click <strong>Import</strong> when prompted.</p>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m3/rhdh-register-template.png" alt="Registering and Entity"></span>
+. Click <strong>Import</strong> when prompted.</p>
 </div>
 <div class="paragraph">
 <p>Return to the <strong>Catalog</strong> section, and set the <em>Kind</em> filter to Domain. Your new <strong>opencodequest-team1</strong> domain will be listed. Clicking on the template reveals that it looks a lot like the Component Entity you imported in the previous module.</p>
@@ -4141,6 +3980,11 @@ this activity is stored in the <em>locations-opencodequest.yaml</em> file in the
 <div class="paragraph">
 <p><span class="image"><img src="_images/m3/import-entity-domain-pe.png" alt="Registering and Entity"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_3"><a class="anchor" href="#_observe_3"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -4155,7 +3999,6 @@ Return to the <strong>Catalog</strong> section, and set the <em>Kind</em> filter
 :imagesdir: ../../assets/images</p>
 </li>
 </ol>
-</div>
 </div>
 </div>
 </div>
@@ -4742,6 +4585,11 @@ We have asked our favorite LLM to generate the template for us. We should be car
 <div class="paragraph">
 <p>The Software Template you&#8217;ll be using in this activity is stored in the <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/opencodequest-templates/-/blob/main/scaffolder-templates/quarkus-postgresql/template.yaml?ref_type=heads" target="rhdh">template.yaml</a></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_6"><a class="anchor" href="#_time_to_practise_6"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Register this template using the Red Hat Developer Hub UI:</p>
 </div>
@@ -4986,6 +4834,12 @@ This template has been generated by an AI. Use it carefully ;)
 <div class="sect1">
 <h2 id="_explore_the_template"><a class="anchor" href="#_explore_the_template"></a>Explore the Template</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_7"><a class="anchor" href="#_time_to_practise_7"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -5026,6 +4880,12 @@ This template has been generated by an AI. Use it carefully ;)
 <div class="olist arabic">
 <ol class="arabic">
 <li>
+<p>Click the <strong>Create</strong> icon (plus symbol) in the top menu.</p>
+</li>
+<li>
+<p>Click the <strong>Choose</strong> button on the <strong>OpenCodeQuest - Quarkus CRUD microservice</strong>. The Template parameters collection screen will be displayed.</p>
+</li>
+<li>
 <p>Click on the 3 dots button as shown in the picture.</p>
 <div class="paragraph">
 <p>Remember, Templates imported previously are located in GitLab. We will directly edit it and commit it!</p>
@@ -5038,9 +4898,6 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 <div class="sect2">
 <h3 id="_update_the_title_of_the_input_form"><a class="anchor" href="#_update_the_title_of_the_input_form"></a>Update the title of the input form</h3>
-<div class="paragraph">
-<p>Ajouter double # pour délimiter les sessions</p>
-</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -5090,6 +4947,13 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 <div class="sect2">
 <h3 id="_refresh_it"><a class="anchor" href="#_refresh_it"></a>Refresh it!</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_4"><a class="anchor" href="#_observe_4"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m3/template-refresh-button.png" alt="Customizing the Title"></span></p>
 </div>
@@ -5114,7 +4978,6 @@ The template definition is tied to its definition in the git repository. No GitO
 </td>
 </tr>
 </table>
-</div>
 </div>
 </div>
 </div>
