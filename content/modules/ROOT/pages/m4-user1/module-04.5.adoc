@@ -1,8 +1,6 @@
 :imagesdir: ../../assets/images
 
-++++
-<div class="developer">
-++++
+
 
 
 = Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!
@@ -11,12 +9,15 @@ IMPORTANT: Please make sure you are logged in as a Developer with *`{dev-usernam
 
 include::../style.adoc[]
 
+image:m4/enjoy-stay.jpg[]
 
-++++
-</div>
-++++
+
 
 == The home page dashboard
+
+++++
+<div class="developer">
+++++
 
 On the development home page, all tools needed are represented by different tabs, such as :
 
@@ -36,7 +37,14 @@ Our first mission is to add a new tab to monitor changes performed by our GitOps
 
 NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
+++++
+</div>
+++++
+
+
 == Customize your development project dashboard 
+
+== 👀 Observe 👀
 
 Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -44,11 +52,14 @@ The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
+== ✍️ Time to practise ✍️ 
+
 === You are the owner of your dashboard
 
 Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
 Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+
 
 image:m4/hero-home-page-rhdh.png[] 
 
@@ -94,6 +105,8 @@ This service will be used by the *fight* microservice.
 
 Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let's import it!
 
+== ✍️ Time to practise ✍️ 
+
 
 === Open the terminal to import the zip file
 
@@ -112,6 +125,8 @@ wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullco
 
 
 Confirm you have this directory : 
+
+== 👀 Observe 👀
 
 image:m4/hero-directory.png[]
 
@@ -133,7 +148,9 @@ It generates the following in the `hero-service` folder:
 * the landing page `index.html` that is accessible after starting the application
 * the `application.properties` configuration file
 
-#Look at the `pom.xml`# 
+== 👀 Observe 👀
+
+Look at the `pom.xml`
 You will find here the import of the Quarkus BOM (_bill of materials_), allowing you to omit the version of the different Quarkus dependencies.
 In addition, you can see the `quarkus-maven-plugin`, responsible for the packaging of the application, and also providing the development mode support.
 
@@ -141,6 +158,7 @@ Regarding the dependencies section, you can see the extension allowing the devel
 
 
 == The JAX-RS Resource
+
 
 During the project creation, the *hero-service > src > main > java > io > quarkus > workshop > hero > HeroResource.java* file has been created with the following content. 
 
@@ -166,13 +184,16 @@ This file has a set of simple REST endpoints. For instance, returning "hello" to
         return "Hello from Quarkus REST";
  }
 ---- 
+== ✍️ Time to practise ✍️ 
+
 == Running the Application
+
 
 We are now ready to run our application.
 
 You can use either the `quarkus` CLI or the `Apache Maven` command-line interface in a Terminal.
 
-#Run one of the following commands :#
+Run one of the following commands :
 
 `./mvnw quarkus:dev`
 
@@ -272,7 +293,10 @@ It allows you to:
 
 Each extension used in the application will be listed.
 
-#Open the Developer Console by navigating to the $HERO_URL/q/dev-ui# 
+== ✍️ Time to practise ✍️ 
+
+
+Open the Developer Console by navigating to the $HERO_URL/q/dev-ui
 
 == Testing the Application
 
@@ -296,10 +320,14 @@ In the generated `pom.xml` file, you can see 2 test dependencies:
 
 === Uncomment the HeroResourceTest.java
 
+== ✍️ Time to practise ✍️ 
+
 The generated project contains a simple test.
 The file content to uncomment is located here : *hero-service > src > test > java > io > quarkus > workshop > hero > HeroResourceTest.java*
 
 Open it and remove the first part of the file:
+
+== ✍️ Time to practise ✍️ 
 
 image:m4/start-comment-line.png[]
 
@@ -380,6 +408,8 @@ There is already a `Hero.java` file under *src > main > java > io > quarkus > wo
 However, this file is empty.
 To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity`, and add your columns as public fields (no need to have getters and setters).
 
+== ✍️ Time to practise ✍️ 
+
 === Uncomment the Hero.java file 
 
 It is located under *src > main > java > io > quarkus > workshop > hero.java*
@@ -422,7 +452,9 @@ Look at the import.sql file located here `/src/resources/import.sql`. Around 500
 
 Now check the method findRandom defined above to confirm you can get random heroes! 
 
-#Open a new Terminal and run the following command#
+== ✍️ Time to practise ✍️ 
+
+Open a new Terminal and run the following command
 
 [source,shell]
 ----

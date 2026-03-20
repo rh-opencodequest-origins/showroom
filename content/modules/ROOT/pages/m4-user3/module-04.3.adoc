@@ -12,7 +12,6 @@ include::../style.adoc[]
 <div class="pe">
 ++++
 
-
 .Log as a Platform Engineer
 [%collapsible]
 ====
@@ -24,6 +23,11 @@ include::../login-pe.adoc[]
 As we did to edit the template previously to correct a title, we will do it again! 
 This flow is a new part of the development lifecycle. The platform engineer shares the knowledge about project development onboarding with developers!
 
+++++
+</div>
+++++
+
+== ✍️ Time to practise ✍️ 
 
 . Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
@@ -39,9 +43,6 @@ image:m3/template-quarkus-pg-fake-edit-button.png[edit]
 Remember, Templates imported previously are located in GitLab. We will edit it and commit it inside GitLab!
 +
 
-++++
-</div>
-++++
 
 
 == Mind the step!

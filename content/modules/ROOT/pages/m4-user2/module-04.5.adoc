@@ -1,8 +1,6 @@
 :imagesdir: ../../assets/images
 
-++++
-<div class="developer">
-++++
+
 
 
 = Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!
@@ -11,8 +9,14 @@ IMPORTANT: Please make sure you are logged in as a Developer with *`{dev-usernam
 
 include::../style.adoc[]
 
+image:m4/enjoy-stay.jpg[]
+
+
 == The home page dashboard
 
+++++
+<div class="developer">
+++++
 On the development home page, all tools needed are represented by different tabs such as :
 
 * Topology
@@ -26,18 +30,22 @@ It maps with the following integrations performed backstage ;)
 
 image:m3/template-components.png[]
 
-++++
-</div>
-++++
+
 
 
 It's the entry point for everything !! 
 
 Our first mission is to add a new tab to monitor changes performed by our GitOps engine. 
 
+++++
+</div>
+++++
+
 NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
 == Customize your development project dashboard 
+
+== 👀 Observe 👀
 
 Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal !
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -50,6 +58,8 @@ image:m4/argocd-view.png[]
 Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
 Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+
+== ✍️ Time to practise ✍️ 
 
 image:m4/hero-home-page-rhdh.png[] 
 
@@ -85,6 +95,8 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 
 === Import the code base 
 
+== ✍️ Time to practise ✍️ 
+
 Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let's import it !
 
 === Open the terminal to import the zip file
@@ -107,6 +119,8 @@ wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullco
 
 Confirm you have this directory : 
 
+== 👀 Observe 👀
+
 image:m4/villain-directory.png[]
 
 
@@ -120,7 +134,7 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.
 
 This service will be used by the *fight* microservice.
 
-#The codebase is provided but you will have to bring some guided modifications ;) !#
+The codebase is provided but you will have to bring some guided modifications ;) !
 
 === Directory Structure
 
@@ -136,7 +150,9 @@ You get the following in the `villain-service` folder:
 * example `Dockerfile` files for both native and JVM modes in `src/main/docker`
 * the `application.properties` configuration file
 
-#Look at the `pom.xml`.#
+== 👀 Observe 👀
+
+Look at the `pom.xml`.
 
 The `pom.xml` is basically the same as for heroes, apart from the fact that it contains a few more dependencies: `quarkus-spring-web` and `quarkus-spring-data`.
 
@@ -144,6 +160,8 @@ The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing 
 
 #Be aware that Quarkus Spring compatibility extensions do not utilize the Spring application context.#
 For this reason, attempting to utilize additional Spring libraries will likely not work.
+
+== ✍️ Time to practise ✍️ 
 
 === The Controller
 
@@ -189,7 +207,9 @@ As everything is in place, the `import.sql` file already contains all SQL statem
 As we are following a Spring Data programming model with JPA,we need to extend the JPA-specific Repository interface, JpaRepository. 
 This will enable Quarkus to find this interface and automatically create an implementation for it.
 
-#Uncomment VillainRepository as you did previously#
+== ✍️ Time to practise ✍️ 
+
+Uncomment VillainRepository as you did previously
 
 The file is located in *villain-service > src > main > java > io > quarkus > workshop > villain >VillainRepository.java* 
 
@@ -218,8 +238,9 @@ You can check the `VillainRepository.java` code. It also contains a more specifi
 === The Villain entity
 
 Finally, we have an entity class representing the villains.
+== ✍️ Time to practise ✍️ 
 
-#Uncomment Villain Entity as you did previously#
+Uncomment Villain Entity as you did previously
 
 The file is located in *villain-service > src > main > java > io > quarkus > workshop > villain > Villain.java*  
 
@@ -239,7 +260,9 @@ A test class is provided and contains the basic tests to ensure that the villain
 
 You can check that everything works fine by starting the application in development mode.
 
-#Run one of the following commands:#
+== ✍️ Time to practise ✍️ 
+
+Run one of the following commands:
 
 `./mvnw quarkus:dev`
 
@@ -249,7 +272,7 @@ or
 
 Note that the tests have been successfully run. 
 
-#Also, you can curl the villains endpoint and you should get lots of villains#
+Also, you can curl the villains endpoint and you should get lots of villains
 
 [source,shell]
 ----
