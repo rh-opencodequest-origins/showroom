@@ -6,7 +6,7 @@ include::../style.adoc[]
 
 Your internal developer portal is the main entry point to your platform. Behind it sit clusters, pipelines, templates, policies, and GitOps workflows. Without visibility into how people actually use that portal, platform teams and leadership must rely on anecdotes when deciding what to build, fix, or retire next.
 
-The https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights^, window="docs"] plugin for {product_name_rhdh} turns activity in the portal into **signals you can act on**: who is active, what they search for, which software templates and catalog entities they use, and how documentation is consumed.
+The https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.8/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights^, window="docs"] plugin for {product_name_rhdh} turns activity in the portal into **signals you can act on**: who is active, what they search for, which software templates and catalog entities they use, and how documentation is consumed.
 
 === Why this matters for the portal
 
@@ -29,7 +29,7 @@ Typical metrics include:
 
 Together, these metrics support both day-to-day improvements (what to document or promote next) and strategic decisions (whether the portal is earning a central place in the developer workflow).
 
-NOTE: The Adoption Insights plugin is currently in Developer Preview. Refer to the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights documentation^, window="docs"] for support scope and limitations.
+NOTE: Refer to the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.8/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights documentation^, window="docs"] for configuration options, default behavior, and support details.
 
 === What you will do next
 
