@@ -20,11 +20,11 @@ image:m2/pe-user-picking.png[Empty {product_name_rhdh} Catalog,link=self,window=
 include::../style.adoc[]
 
 Once you have chosen a user from the team, go ahead!
-{product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[backstage project on OpenShift^, window="console"].
+{product_name_rhdh} has been pre-deployed with a base configuration in your workshop environment. You can find and access your instance in the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}[rhdh project on OpenShift^, window="console"].
 
 Log in to {product_name_rhdh}:
 
-. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[backstage project^, window="console"] in your OpenShift cluster. You can log in with the platform engineer user chosen. Take the user with the *pe* suffix for instance superman-*pe* and the password /*{common_password}*
+. Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[rhdh project^, window="console"] in your OpenShift cluster. You can log in with the platform engineer user chosen. Take the user with the *pe* suffix for instance superman-*pe* and the password /*{common_password}*
 
 . Choose  *rhsso* as the identity provider
 

@@ -49,7 +49,7 @@ image:m7/orchestrator-plugin-configuration.png[Orchestrator configuration, width
 +
 This section contains configuration for the orchestrator plugin.
 . Commit your changes with the message `feat: enable orchestrator plugin`.
-. Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`backstage` Application in OpenShift GitOps^, window="argo"].
+. Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"].
 
 === Verify that the Orchestrator and Notification plugins are enabled
 

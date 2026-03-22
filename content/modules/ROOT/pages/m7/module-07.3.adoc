@@ -54,21 +54,21 @@ image:m7/uncomment-monitoring.png[Uncomment monitoring section in values.yaml,wi
 . Click the *Commit changes* button.
 
 
-=== Refresh the `backstage` Argo CD application
+=== Refresh the RHDH Application in OpenShift GitOps
 
 To apply the changes
 
-. Navigate to view the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`backstage` Argo CD Application in OpenShift GitOps^, window="argo"]. Log in as `admin/{common_password}` if prompted.
-. Click the *Refresh* button for the `backstage` Argo CD application.
+. Navigate to view the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"]. Log in as `admin/{common_password}` if prompted.
+. Click the *Refresh* button for the `RHDH` Application.
 . Wait until the Application status is *Healthy*.
-. A new `servicemonitor` for {product_name_rhdh} should now be created. You can verify this by viewing the `backstage` Argo CD application.
+. A new `servicemonitor` for {product_name_rhdh} should now be created. You can verify this by viewing the `RHDH` Application in OpenShift GitOps.
 +
 image:m7/new-service-monitor.png[New servicemonitor for Red Hat Developer Hub in Argo CD,link=self,window=blank]
 
 
 === View {product_name_rhdh} metrics on OpenShift
 
-You can view the {product_name_rhdh}'s metrics  from the Developer perspective of the OpenShift web console within the `backstage` namespace.
+You can view the {product_name_rhdh}'s metrics from the Developer perspective of the OpenShift web console in the `rhdh-{team-id}` project.
 
 . Visit the https://console-openshift-console.{openshift_cluster_ingress_domain}/dev-monitoring/ns/rhdh-{team-id}[metrics^, window="console"] page to view this *Observe* menu on OpenShift
 . Click the Metrics tab, and from the `Select query` drop-down, choose `Custom query`

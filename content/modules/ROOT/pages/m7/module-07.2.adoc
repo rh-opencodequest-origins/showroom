@@ -2,20 +2,9 @@
 
 include::../style.adoc[]
 
-== Monitor Adoption and Usage
+== Hands-on: Enable Adoption Insights
 
-Measuring developer engagement and understanding their usage of your internal developer portal is critical to better serving their needs. {product_name_rhdh} includes an https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights^, window="docs"] plugin that can be enabled by platform engineering teams to view detailed analytics on adoption and engagement within the internal developer portal.
-
-Key metrics available include:
-
-* Active users as a percentage of licensed users.
-* Top templates.
-* Top catalog entities.
-* Top plugins.
-* Top TechDocs.
-* Popular searches.
-
-NOTE: The Adoption Insights plugin is currently in Developer Preview. Refer to the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights documentation^, window="docs"] for more information related to support.
+Read xref:module-07.2a.adoc[Understanding Adoption Insights] for why this plugin matters for visibility into portal usage and platform adoption before you enable it.
 
 === Platform Engineer Activity: Enable Adoption Insights
 
@@ -42,7 +31,7 @@ feat: enable adoption insights plugin
 
 . Click the *Commit changes* button.
 
-As you're familiar with by now, you can refresh the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[backstage Application in OpenShift GitOps^, window="argo"] and deploy the new {product_name_rhdh} configuration. The Adoption Insights plugin will be available from **Administration > Adoption Insights** when the deployment has finished, but no data is available yet.
+As you're familiar with by now, you can refresh the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"] and deploy the new {product_name_rhdh} configuration. The Adoption Insights plugin will be available from **Administration > Adoption Insights** when the deployment has finished, but no data is available yet.
 
 image:m7/adoption-insights-plugin-dashboard.png[Adoption Insights plugin dashboard in Administration,link=self,window=blank]
 
