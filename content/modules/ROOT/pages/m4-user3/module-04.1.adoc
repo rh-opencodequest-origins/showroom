@@ -87,7 +87,6 @@ image:/m3/template-refresh-button.png[Customizing the Title]
 
 
 +
-image:m3/template-quarkus-pg-fake-refreshed.png[Reviewing template parameters in {product_name_rhdh}]
 
 NOTE: The template definition is tied to its definition in the git repository. No GitOps mechanism involved here.
 
