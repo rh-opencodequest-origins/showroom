@@ -27,12 +27,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
     <a class="nav-link" href="m4-user1/module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="m4-user1/module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -189,19 +189,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="m7/module-07.0.html">7. Continuous platform improvements</a>
+    <a class="nav-link" href="m7/module-07.0.html">7. Bonus - Continuous platform improvements</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="m7/module-07.1.html">7.1 Iterate on the platform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+    <a class="nav-link" href="m7/module-07.2a.html">7.2 Understanding Adoption Insights</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="m7/module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="m7/module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -1418,7 +1415,7 @@ summary  {
 <p>Manually registering entities via the UI by providing a link to a repository containing them.</p>
 </li>
 <li>
-<p>Declaring them in the Backstage configuration.</p>
+<p>Declaring them in the Red Hat Developer Hub configuration.</p>
 </li>
 </ol>
 </div>
@@ -1431,10 +1428,10 @@ summary  {
 <h2 id="_plugins"><a class="anchor" href="#_plugins"></a>Plugins</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Backstage, and by extension Red Hat Developer Hub, supports the concept of plugins. Utilizing plugins is a critical part of enabling the desired functionality for your IDP.</p>
+<p>Red Hat Developer Hub (RHDH) leverages a powerful plugin architecture to extend its core capabilities. Integrating these plugins is a critical step in tailoring your Internal Developer Platform (IDP) to meet specific organizational needs.</p>
 </div>
 <div class="paragraph">
-<p>Currently, running an instance of Backstage and adding plugins to upstream Backstage requires a platform engineer to:</p>
+<p>To transform a standard RHDH instance into a feature-rich platform, a Platform Engineer must perform the following actions:</p>
 </div>
 <div class="paragraph">
 <div class="title">Build a container image and deploy it.</div>
@@ -1773,7 +1770,7 @@ For the purpose of the workshop, you will do a minor change to trigger the insta
 <p>The configuration file of the Internal Developer Platform is located in a Gitlab repo.</p>
 </div>
 <div class="sect2">
-<h3 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h3>
+<h3 id="_time_to_pratice"><a class="anchor" href="#_time_to_pratice"></a>✍️ Time to pratice ✍️</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1857,7 +1854,7 @@ For the purpose of the workshop, you will do a minor change to trigger the insta
 <p>Let&#8217;s ensure that a new deployment of Red Hat Developer Hub is triggered and your new title is applied.</p>
 </div>
 <div class="sect2">
-<h3 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h3>
+<h3 id="_time_to_pratice_2"><a class="anchor" href="#_time_to_pratice_2"></a>✍️ Time to pratice ✍️</h3>
 <div class="paragraph">
 <p>2 ways to do it:</p>
 </div>
@@ -1944,7 +1941,7 @@ For the purpose of the workshop, you will do a minor change to trigger the insta
 <div class="paragraph">
 <p>The problem is the deployment of Red Hat Developer Hub has been performed on a cluster node different from the initial storage (PVC) location.
 To fix it, we will trigger a new deployment.
-To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">backstage project on OpenShift</a>.</p>
+To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">rhdh project on OpenShift</a>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2215,7 +2212,12 @@ Red Hat Developer Hub has been pre-deployed with a base configuration in your wo
 </ol>
 </div>
 <div class="paragraph">
-<p><span class="image"><a class="image" href="_images/m2/ocp-sso-login.png" target="blank"><img src="_images/m2/ocp-sso-login.png" alt="Choose rhsso as identity provider on OpenShift login" width="60%"></a></span></p>
+<p><span class="image"><a class="image" href="_images/m2/ocp-sso-login.png" target="blank"><img src="_images/m2/ocp-sso-login.png" alt="Choose rhsso as identity provider on OpenShift login" width="60%"></a></span>
+. Return to the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo"><code>RHDH</code> Application in OpenShift GitOps</a>. Depending on your timing, it might already be progressing the latest sync, but if not, click the <strong>Refresh</strong> button. When the sync is in progress, you&#8217;ll see a new Pod starting - this Pod will run the latest version of your configuration.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="_images/m2/rhdh-new-pod.png" alt="Red Hat Developer Hub with a Custom Title"></span></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2287,7 +2289,7 @@ Let&#8217;s use the Keycloak plugin to synchronize Users and Groups to Red Hat D
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_3"><a class="anchor" href="#_time_to_pratice_3"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -2343,7 +2345,7 @@ Let&#8217;s use the Keycloak plugin to synchronize Users and Groups to Red Hat D
 <p>Click the <strong>Commit</strong> button.</p>
 </li>
 <li>
-<p>Visit the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo"><code>Developer Hub</code> Application in OpenShift GitOps</a> and click <strong>Refresh</strong>.</p>
+<p>Visit the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications/rhdh-team1" target="argo"><code>RHDH</code> Application in OpenShift GitOps</a> and click <strong>Refresh</strong>.</p>
 <div class="paragraph">
 <p>If needed, log in using <code>mon-user-pe</code>/<code>sWtbXGQy</code>.</p>
 </div>
@@ -2389,7 +2391,7 @@ Confirm this by visiting the <a href="https://console-openshift-console.apps.clu
 <div class="paragraph">
 <p>The problem is the deployment of Red Hat Developer Hub has been performed on a cluster node different from the initial storage (PVC) location.
 To fix it, we will trigger a new deployment.
-To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">backstage project on OpenShift</a>.</p>
+To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">rhdh project on OpenShift</a>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2646,7 +2648,7 @@ Remember, we have imported users and groups from <strong>Keycloak</strong>. The 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_4"><a class="anchor" href="#_time_to_pratice_4"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -2771,7 +2773,7 @@ signInPage: oidc</code></pre>
 <div class="paragraph">
 <p>The problem is the deployment of Red Hat Developer Hub has been performed on a cluster node different from the initial storage (PVC) location.
 To fix it, we will trigger a new deployment.
-To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">backstage project on OpenShift</a>.</p>
+To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">rhdh project on OpenShift</a>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3061,67 +3063,6 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_verify_gitlab_entity_discovery_is_active"><a class="anchor" href="#_verify_gitlab_entity_discovery_is_active"></a>Verify GitLab Entity Discovery is Active</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>After a few moments, your new Red Hat Developer Hub configuration will finish rolling out. Check the logs for the new <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/k8s/ns/rhdh-team1/core%7Ev1%7EPod" target="console">Red Hat Developer Hub Pod</a>. You should see that a repository was discovered - that means the repository contains <a href="https://backstage.io/docs/features/software-catalog/descriptor-format/" target="blank">catalog-info.yaml</a> file.</p>
-<div class="paragraph">
-<p><span class="image"><a class="image" href="_images/m2/rhdh-logs-gitlab-discovery.png" target="blank"><img src="_images/m2/rhdh-logs-gitlab-discovery.png" alt="GitLab Autodiscovery Logs in the OpenShift Console"></a></span></p>
-</div>
-</li>
-</ol>
-</div>
-<details>
-<summary class="title">If the pod is running but there is no change on Developer Hub UI, have look here</summary>
-<div class="content">
-<div class="paragraph">
-<p><strong>Debug stuck deployment</strong></p>
-</div>
-<div class="paragraph">
-<p>The problem is the deployment of Red Hat Developer Hub has been performed on a cluster node different from the initial storage (PVC) location.
-To fix it, we will trigger a new deployment.
-To do so, go to  <a href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/topology/ns/rhdh-team1/deployments/rhdh-team1-developer-hub/yaml" target="console">backstage project on OpenShift</a>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Search for <code>replicas</code> in the yaml file</p>
-</li>
-<li>
-<p>Set it to 0</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="_images/common/replica-zero.png" target="blank"><img src="_images/common/replica-zero.png" alt="Set replicas to 0 in deployment YAML"></a>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Click on Save at the left bottom</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="_images/common/save-replicas.png" target="blank"><img src="_images/common/save-replicas.png" alt="Save button to apply replica changes"></a>
-</div>
-</div>
-<div class="paragraph">
-<p>Automatically, the deployment will be relaunched by OpenShift GitOps !</p>
-</div>
-<div class="paragraph">
-<p>Congrats, you have fixed the Developer Hub deployment. Come back to your work</p>
-</div>
-</div>
-</details>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -3336,8 +3277,8 @@ summary  {
 <h2 id="_team_organization"><a class="anchor" href="#_team_organization"></a>Team Organization</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Thanks again to the one who set up the Internal Developer Platform for the team. <strong>Good Guy</strong> !
-Now, for the following parts, everyone will lead a part.
+<p>Thanks to the team member who set up the Internal Developer Platform
+Now that we’ve defined our objectives, Module 4 moves into a collaborative phase. To mirror a real-world Platform Engineering ecosystem, three different users will take turns at the helm. This rotation demonstrates how a seamless platform experience is built through the synergy of specialized roles.
 There are 3 different templates to build and import. Difficulties are the same! (Easy)</p>
 </div>
 <div class="admonitionblock note">
@@ -3933,7 +3874,7 @@ this activity is stored in the <em>locations-opencodequest.yaml</em> file in the
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_5"><a class="anchor" href="#_time_to_pratice_5"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -4273,7 +4214,7 @@ A set of tools will also be configured. Yes, you will use the integrations done 
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_be_ready_to_practise"><a class="anchor" href="#_be_ready_to_practise"></a>Be ready to practise!</h3>
+<h3 id="_be_ready_to_pratice"><a class="anchor" href="#_be_ready_to_pratice"></a>Be ready to pratice!</h3>
 <div class="paragraph">
 <p>Please select one link per user.</p>
 </div>
@@ -4588,7 +4529,7 @@ We have asked our favorite LLM to generate the template for us. We should be car
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_6"><a class="anchor" href="#_time_to_practise_6"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_6"><a class="anchor" href="#_time_to_pratice_6"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Register this template using the Red Hat Developer Hub UI:</p>
@@ -4838,7 +4779,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_7"><a class="anchor" href="#_time_to_practise_7"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_7"><a class="anchor" href="#_time_to_pratice_7"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -4901,7 +4842,7 @@ This template has been generated by an AI. Use it carefully ;)
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Find the YAML surrounded by <code>update the title below</code> and replace the title.</p>
+<p>Find the YAML surrounded by <code>update title below</code> and replace the title.</p>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m3/template-quarkus-pg-edit-title.png" alt="title"></span></p>
 </div>
@@ -4961,12 +4902,6 @@ This template has been generated by an AI. Use it carefully ;)
 <ol class="arabic">
 <li>
 <p>Click on <strong>circle arrows</strong></p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/m3/template-quarkus-pg-fake-refreshed.png" alt="Reviewing template parameters in Red Hat Developer Hub"></span></p>
-</div>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4978,6 +4913,9 @@ The template definition is tied to its definition in the git repository. No GitO
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -5194,7 +5132,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_8"><a class="anchor" href="#_time_to_practise_8"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_8"><a class="anchor" href="#_time_to_pratice_8"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -5515,7 +5453,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_9"><a class="anchor" href="#_time_to_practise_9"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_9"><a class="anchor" href="#_time_to_pratice_9"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -5597,16 +5535,24 @@ This is why the <strong>Software Catalog</strong> exists! A clear definition of 
 </div>
 </div>
 <div class="paragraph">
-<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : &#8594; <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/template-quarkus-simple/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_uncomment_the_steps"><a class="anchor" href="#_uncomment_the_steps"></a>Uncomment the steps!</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_10"><a class="anchor" href="#_time_to_pratice_10"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Open this file describing the template :   <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-with-spring-postgresql/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+</li>
 <li>
 <p>Find the YAML surrounded by <code>Gitlab Steps</code> and uncomment below.</p>
 <div class="paragraph">
@@ -5899,7 +5845,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_10"><a class="anchor" href="#_time_to_practise_10"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_11"><a class="anchor" href="#_time_to_pratice_11"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -5925,10 +5871,6 @@ summary  {
 <p>Pick the right <strong>System</strong> according to your team <strong>team1</strong>. In our example, the team is team1
 <span class="image"><img src="_images/m3/template-pick-system.png" alt="template pick system"></span></p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
 <p>You can simply click <strong>Next</strong>.
 <span class="image"><img src="_images/m3/quarkus-service-step3.png" alt="quarkus service step3"></span></p>
@@ -6224,6 +6166,12 @@ We will explore tabs through the lab guide. But don&#8217;t be shy and feel free
 <div class="sect1">
 <h2 id="_customize_your_development_project_dashboard"><a class="anchor" href="#_customize_your_development_project_dashboard"></a>Customize your development project dashboard</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_6"><a class="anchor" href="#_observe_6"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -6237,14 +6185,25 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <div class="paragraph">
 <p>Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
 Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
-Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+== ✍️ Time to pratice ✍️</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>You may be asked to authenticate again. Please, proceed.
 You should see the following page while the Dev Spaces are starting up:</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
@@ -6255,25 +6214,25 @@ You should see the following page while the Dev Spaces are starting up:</p>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
-</div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Remove the  <strong>#</strong></p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>It must look like this. Be sure to respect the right YAML indentation</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
@@ -6315,6 +6274,11 @@ This microservice is a <strong>classical</strong> microservice.</p>
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let&#8217;s import it!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_12"><a class="anchor" href="#_time_to_pratice_12"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
 <div class="ulist">
@@ -6345,9 +6309,14 @@ This microservice is a <strong>classical</strong> microservice.</p>
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_7"><a class="anchor" href="#_observe_7"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-directory.png" alt="hero directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -6382,8 +6351,13 @@ This microservice is a <strong>classical</strong> microservice.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_8"><a class="anchor" href="#_observe_8"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Look at the <code>pom.xml</code></mark>
+<p>Look at the <code>pom.xml</code>
 You will find here the import of the Quarkus BOM (<em>bill of materials</em>), allowing you to omit the version of the different Quarkus dependencies.
 In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for the packaging of the application, and also providing the development mode support.</p>
 </div>
@@ -6428,6 +6402,12 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 </div>
 </div>
 <div class="sect1">
+<h2 id="_time_to_pratice_13"><a class="anchor" href="#_time_to_pratice_13"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
 <h2 id="_running_the_application"><a class="anchor" href="#_running_the_application"></a>Running the Application</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -6437,7 +6417,7 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 <p>You can use either the <code>quarkus</code> CLI or the <code>Apache Maven</code> command-line interface in a Terminal.</p>
 </div>
 <div class="paragraph">
-<p><mark>Run one of the following commands :</mark></p>
+<p>Run one of the following commands :</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
@@ -6571,9 +6551,14 @@ It will show you something like this:</p>
 <div class="paragraph">
 <p>Each extension used in the application will be listed.</p>
 </div>
-<div class="paragraph">
-<p><mark>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</mark></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_14"><a class="anchor" href="#_time_to_pratice_14"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</p>
 </div>
 </div>
 </div>
@@ -6602,6 +6587,13 @@ It will show you something like this:</p>
 </div>
 <div class="sect2">
 <h3 id="_uncomment_the_heroresourcetest_java"><a class="anchor" href="#_uncomment_the_heroresourcetest_java"></a>Uncomment the HeroResourceTest.java</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_15"><a class="anchor" href="#_time_to_pratice_15"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The generated project contains a simple test.
 The file content to uncomment is located here : <strong>hero-service &gt; src &gt; test &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero &gt; HeroResourceTest.java</strong></p>
@@ -6609,6 +6601,11 @@ The file content to uncomment is located here : <strong>hero-service &gt; src &g
 <div class="paragraph">
 <p>Open it and remove the first part of the file:</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_16"><a class="anchor" href="#_time_to_pratice_16"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/start-comment-line.png" alt="start comment line"></span></p>
 </div>
@@ -6624,7 +6621,6 @@ Then, the <code>testHelloEndpoint</code> method checks the HTTP response status 
 </div>
 <div class="paragraph">
 <p>You can run the tests with <code>./mvnw test</code> in a new Terminal.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_continuous_testing"><a class="anchor" href="#_continuous_testing"></a>Continuous testing</h3>
@@ -6717,6 +6713,11 @@ There is already a <code>Hero.java</code> file under <strong>src &gt; main &gt; 
 However, this file is empty.
 To define a Panache entity, simply extend <code>PanacheEntity</code>, annotate it with <code>@Entity</code>, and add your columns as public fields (no need to have getters and setters).</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_17"><a class="anchor" href="#_time_to_pratice_17"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_uncomment_the_hero_java_file"><a class="anchor" href="#_uncomment_the_hero_java_file"></a>Uncomment the Hero.java file</h3>
 <div class="paragraph">
@@ -6769,8 +6770,13 @@ Quarkus will automatically start a PostgreSQL service and wire up your applicati
 <div class="paragraph">
 <p>Now check the method findRandom defined above to confirm you can get random heroes!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_18"><a class="anchor" href="#_time_to_pratice_18"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open a new Terminal and run the following command</mark></p>
+<p>Open a new Terminal and run the following command</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6974,8 +6980,15 @@ summary  {
 <div class="developer">
 <div class="paragraph">
 <p>This approach will be followed for all the microservices.
-With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.
-To do this, follow these steps:</p>
+With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_19"><a class="anchor" href="#_time_to_pratice_19"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To do this, follow these steps:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -7017,8 +7030,13 @@ From there, you can access your hero microservice by clicking on the pod.</p>
 <div class="paragraph">
 <p>Let&#8217;s switch to the Developer Hub console in your hero component.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_9"><a class="anchor" href="#_observe_9"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the CI tab</mark></p>
+<p>Click the CI tab</p>
 </div>
 <div class="paragraph">
 <p>Once you commit your code, an OpenShift pipeline has been automatically triggered.
@@ -7054,7 +7072,7 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="sect2">
 <h3 id="_dev_deployment"><a class="anchor" href="#_dev_deployment"></a>Dev Deployment</h3>
 <div class="paragraph">
-<p>As a developer, I want to see my handiwork: Did my application really deploy to the dev environment?</p>
+<p>As a developer, I want to see my deployment: Did my application really deploy to the dev environment?</p>
 </div>
 <div class="paragraph">
 <p>You can check that your newly built application has been automatically synced using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.</p>
@@ -7074,8 +7092,13 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-check.png" alt="acs check"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_20"><a class="anchor" href="#_time_to_pratice_20"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the task to get the logs and understand what policy has been violated</mark></p>
+<p>Click the task to get the logs and understand what policy has been violated</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-image-check-error.png" alt="acs image check error"></span></p>
@@ -7083,8 +7106,13 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p>As you can see, it looks like a <strong>SuperHero</strong> has introduced a bad dependency in our code!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_21"><a class="anchor" href="#_time_to_pratice_21"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open the <code>pom.xml</code> file in DevSpaces IDE</mark></p>
+<p>Open the <code>pom.xml</code> file in DevSpaces IDE</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-CVE.png" alt="devspaces CVE"></span></p>
@@ -7099,7 +7127,7 @@ This pipeline was created automatically for your project when you instantiated t
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Remove the dependency as it&#8217;s not needed in our code
+Remove the dependency as it&#8217;s not needed in our code and not compliant to our security rules !
 </td>
 </tr>
 </table>
@@ -7109,6 +7137,22 @@ Remove the dependency as it&#8217;s not needed in our code
 <div class="sect1">
 <h2 id="_deploy_the_hero_microservice_after_fixing_the_issue"><a class="anchor" href="#_deploy_the_hero_microservice_after_fixing_the_issue"></a>Deploy the Hero microservice after fixing the issue</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_22"><a class="anchor" href="#_time_to_pratice_22"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Commit your changes</p>
+</li>
+<li>
+<p>Push your commit</p>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -7116,13 +7160,13 @@ Remove the dependency as it&#8217;s not needed in our code
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Once you have corrected the dependency issue, commit your code! The pipeline will run again!
+The pipeline will run again!
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><mark>Click on Topology</mark></p>
+<p>Click on Topology</p>
 </div>
 <div class="paragraph">
 <p>This should look familiar to you if you regularly use the topology view from OpenShift.
@@ -7140,8 +7184,13 @@ Pre-prod and prod have NOT yet been deployed
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_23"><a class="anchor" href="#_time_to_pratice_23"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the arrow.</mark> This will open a new tab on your browser showing your deployed hero service!</p>
+<p>Click the arrow. This will open a new tab on your browser showing your deployed hero service!</p>
 </div>
 <div class="paragraph">
 <p>Oops!! A <code>Resource Not Found</code> may be shown.</p>
@@ -7150,45 +7199,73 @@ Pre-prod and prod have NOT yet been deployed
 <p><span class="image"><img src="_images/m4/resource-not-found.png" alt="resource not found"></span></p>
 </div>
 <div class="paragraph">
-<p><mark>You can add <code>/api/heroes/hello</code>, <code>/api/heroes/random</code>, or <code>/api/heroes</code> to the URL in your browser to attack the good endpoints and check your work</mark></p>
+<p>You can add <code>/api/heroes/hello</code>, <code>/api/heroes/random</code>, or <code>/api/heroes</code> to the URL in your browser to attack the good endpoints and check your work</p>
 </div>
 <div class="paragraph">
 <p>Note that during the deployment with OpenShift GitOps, we also automatically deployed the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_10"><a class="anchor" href="#_observe_10"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Verify that the fight-ui dev environment is now able to retrieve the characters</mark></p>
+<p>Verify that the fight-ui dev environment is now able to retrieve the characters</p>
 </div>
 <div class="sect2">
 <h3 id="_promote_to_pre_prod"><a class="anchor" href="#_promote_to_pre_prod"></a>Promote to Pre-Prod</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_24"><a class="anchor" href="#_time_to_pratice_24"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>First, access the GitLab UI, there is a convenient link on <mark>the Overview tab</mark></p>
+<p>First, access the GitLab UI, there is a convenient link on the "Overview" tab</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote1.png" alt="promote1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Click on Tags</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on Tags</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote2.png" alt="promote2"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>New Tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on New Tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote3.png" alt="promote3"></span></p>
 </div>
-<div class="paragraph">
-<p>Give the tag a name like <mark>v1.0</mark></p>
-</div>
-<div class="paragraph">
-<p>and click <mark>Create tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Give the tag a name like v1.0</p>
+</li>
+<li>
+<p>Click Create tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote4.png" alt="promote4"></span></p>
 </div>
-<div class="paragraph">
-<p>Back to the portal and the <mark>CI tab</mark> to see the promotion pipeline in action</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Back to the portal and the CI tab to see the promotion pipeline in action</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote5.png" alt="promote5"></span></p>
@@ -7217,17 +7294,29 @@ Pre-prod and prod have NOT yet been deployed
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote7.png" alt="promote7"></span></p>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_promote_to_prod"><a class="anchor" href="#_promote_to_prod"></a>Promote to Prod</h3>
 <div class="paragraph">
-<p>To promote to Production, use the <mark>Create Release feature of the GitLab UI</mark>.</p>
+<p>To promote to Production, use the Create Release feature of the GitLab UI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_25"><a class="anchor" href="#_time_to_pratice_25"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on "Create Release"</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote8.png" alt="promote8"></span></p>
 </div>
 <div class="paragraph">
-<p>Give the release a title and click the <mark>Create release</mark> button.</p>
+<p>Give the release a title and click the "Create release" button.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote9.png" alt="promote9"></span></p>
@@ -7253,24 +7342,36 @@ Promotion to preprod and prod will be done for every service. Each team member a
 </tr>
 </table>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_stop_your_devspaces_workspace"><a class="anchor" href="#_stop_your_devspaces_workspace"></a>Stop your DevSpaces Workspace</h3>
 <div class="paragraph">
 <p>As you now have fully deployed your microservice, you no longer need the DevSpaces workspace, so let&#8217;s just stop it to preserve resources.</p>
 </div>
-<div class="paragraph">
-<p><mark>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_26"><a class="anchor" href="#_time_to_pratice_26"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop1.png" alt="devspaces stop1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Then Click "Dev Spaces: Stop Workspace</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Then Click "Dev Spaces: Stop Workspace</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop2.png" alt="devspaces stop2"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -7450,7 +7551,10 @@ summary  {
 }
 </style>
 <div class="paragraph">
-<p><strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.</p>
+<p>To provide a end-to-end trusted software pipeline, we rely on a set of tools bundled by Red Hat.
+<strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.
+In this part, we focus on Security scanner to detect vulnerabilities (Common Vulneratibilies and Exposures) in the app before running it.
+It is what Red Hat Advanced Cluster Security can offer here :</p>
 </div>
 </div>
 </div>
@@ -7458,7 +7562,16 @@ summary  {
 <h2 id="_red_hat_advanced_cluster_security_acs"><a class="anchor" href="#_red_hat_advanced_cluster_security_acs"></a>Red Hat Advanced Cluster Security (ACS)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl</p>
+<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks.
+The pipeline communicates with Red Hat Advanced Cluster Security with the CLI <strong>roxctl</strong> .</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/rhdh-acs-tasks.png" alt="rhdh acs tasks"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_static_application_security_gates"><a class="anchor" href="#_static_application_security_gates"></a>Static application security gates</h3>
+<div class="paragraph">
+<p>Once the build done, security scans begin .</p>
 </div>
 <div class="paragraph">
 <p>The bottom-most task is performing CVE scanning via roxctl image scan.</p>
@@ -7467,10 +7580,19 @@ summary  {
 <p>The middle task is performing a policy check via roxctl image check. These policies might be things like 'No log4j allowed' or perhaps no curl, wget, or a package manager in a production image.</p>
 </div>
 <div class="paragraph">
-<p>The top-most task is to perform YAML scanning via roxctl deployment check and it might identify that your Deployment.yaml has not properly configured its resource request and limit.</p>
+<p>The top-most task is to perform YAML scanning via roxctl deployment check, and it might identify that your Deployment.yaml has not properly configured its resource request and limit.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_11"><a class="anchor" href="#_observe_11"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS.</p>
 </div>
 <div class="paragraph">
-<p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS</p>
+<p><span class="image"><img src="_images/m4/rhdh-cicd-actions.png" alt="rhdh cicd actions"></span></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/rhdh-acs-1.png" alt="rhdh acs 1"></span>
@@ -7478,21 +7600,25 @@ summary  {
 <span class="image"><img src="_images/m4/rhdh-acs-3.png" alt="rhdh acs 3"></span></p>
 </div>
 <div class="paragraph">
-<p>These 3 aspects of roxctl are a great example of the "shift-left" idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
+<p>These 3 aspects of roxctl are a great example of the <strong>"shift-left"</strong> idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scan_export_sbom"><a class="anchor" href="#_scan_export_sbom"></a>scan-export-sbom</h2>
+<h2 id="_what_makes_this_app_trustworthy"><a class="anchor" href="#_what_makes_this_app_trustworthy"></a>What makes this app trustworthy ?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pushes the SBOM to a CycloneDX repository. Currently, the SBOM is stored in Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
+<p><span class="image"><img src="_images/m4/ingredient-list.jpeg" alt="ingredient list"></span></p>
 </div>
 <div class="paragraph">
-<p>The SBOM is an artifact that deserves special mention. Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
+<p>Another important security point is inspecting the application package content know as <strong>Software Bill Of Material</strong>.
+Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
 </div>
 <div class="paragraph">
-<p>The SBOM is either a JSON or XML file and is stored in the container registry as the ingredient list associated with the container image.</p>
+<p>In the software development world, packages and dependencies used in an application are extracted as Software Bill Of Material as JSON or XML file.</p>
+</div>
+<div class="paragraph">
+<p>Currently, the SBOM is stored in the container registry Red Hat Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
 </div>
 </div>
 </div>
@@ -7795,7 +7921,7 @@ We have asked our favorite LLM to generate the template for us. We should be car
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_11"><a class="anchor" href="#_time_to_practise_11"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_27"><a class="anchor" href="#_time_to_pratice_27"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Register this template using the Red Hat Developer Hub UI:</p>
@@ -8057,7 +8183,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_12"><a class="anchor" href="#_time_to_practise_12"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_28"><a class="anchor" href="#_time_to_pratice_28"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -8123,7 +8249,7 @@ This template has been generated by an AI. Use it carefully ;)
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Find the YAML surrounded by <code>update the title below</code> and replace the title.</p>
+<p>Find the YAML surrounded by <code>update title below</code> and replace the title.</p>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m3/template-quarkus-pg-edit-title.png" alt="title"></span></p>
 </div>
@@ -8168,6 +8294,13 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 <div class="sect2">
 <h3 id="_refresh_it_2"><a class="anchor" href="#_refresh_it_2"></a>Refresh it!</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_12"><a class="anchor" href="#_observe_12"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m3/template-refresh-button.png" alt="Customizing the Title"></span></p>
 </div>
@@ -8175,12 +8308,6 @@ This template has been generated by an AI. Use it carefully ;)
 <ol class="arabic">
 <li>
 <p>Click on <strong>circle arrows</strong></p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/m3/template-quarkus-pg-fake-refreshed.png" alt="Reviewing template parameters in Red Hat Developer Hub"></span></p>
-</div>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -8193,6 +8320,8 @@ The template definition is tied to its definition in the git repository. No GitO
 </tr>
 </table>
 </div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -8409,7 +8538,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_13"><a class="anchor" href="#_time_to_practise_13"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_29"><a class="anchor" href="#_time_to_pratice_29"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -8480,7 +8609,7 @@ Your username is automatically determined by the Template using your current ses
 </div>
 </div>
 <div class="sect1">
-<h2 id="_observe_6"><a class="anchor" href="#_observe_6"></a>👀 Observe 👀</h2>
+<h2 id="_observe_13"><a class="anchor" href="#_observe_13"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Our template execution looks empty !</strong></p>
@@ -8728,7 +8857,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_14"><a class="anchor" href="#_time_to_practise_14"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_30"><a class="anchor" href="#_time_to_pratice_30"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -8810,16 +8939,24 @@ This is why the <strong>Software Catalog</strong> exists! A clear definition of 
 </div>
 </div>
 <div class="paragraph">
-<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : &#8594; <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-with-spring-postgresql/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_uncomment_the_steps_2"><a class="anchor" href="#_uncomment_the_steps_2"></a>Uncomment the steps!</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_31"><a class="anchor" href="#_time_to_pratice_31"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Open this file describing the template :   <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-with-spring-postgresql/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+</li>
 <li>
 <p>Find the YAML surrounded by <code>Gitlab Steps</code> and uncomment below.</p>
 <div class="paragraph">
@@ -9112,7 +9249,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_15"><a class="anchor" href="#_time_to_practise_15"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_32"><a class="anchor" href="#_time_to_pratice_32"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -9375,6 +9512,9 @@ summary  {
     color: white;
 }
 </style>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/enjoy-stay.jpg" alt="enjoy stay"></span></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -9433,6 +9573,12 @@ We will explore tabs through the lab guide. But don&#8217;t be shy and feel free
 <div class="sect1">
 <h2 id="_customize_your_development_project_dashboard_2"><a class="anchor" href="#_customize_your_development_project_dashboard_2"></a>Customize your development project dashboard</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_14"><a class="anchor" href="#_observe_14"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal !
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -9445,28 +9591,51 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <h3 id="_you_are_the_owner_of_your_dashboard_2"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard_2"></a>You are the owner of your dashboard</h3>
 <div class="paragraph">
 <p>Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
-Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
-Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_33"><a class="anchor" href="#_time_to_pratice_33"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
-<div class="paragraph">
-<p>You may be asked to authenticate again. Please, proceed.
-You should see the following page while the Dev Spaces is starting up:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You may be asked to authenticate again. Please, proceed.</p>
+</li>
+<li>
+<p>You should see the following page while the Dev Spaces is starting up:</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Open the IDE cloud here :</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -9474,15 +9643,18 @@ You should see the following page while the Dev Spaces is starting up:</p>
 </li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>It must look like this. Be sure to respect the right YAML identation</p>
+<p>It must look like this. Be sure to respect the right YAML indentation</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
@@ -9501,7 +9673,6 @@ To simplify the development flow, we&#8217;ll commit later with the changes done
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_the_villain_microservice"><a class="anchor" href="#_the_villain_microservice"></a>The Villain Microservice</h2>
 <div class="sectionbody">
@@ -9511,9 +9682,15 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 </div>
 <div class="sect2">
 <h3 id="_import_the_code_base_2"><a class="anchor" href="#_import_the_code_base_2"></a>Import the code base</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_34"><a class="anchor" href="#_time_to_pratice_34"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let&#8217;s import it !</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file_2"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file_2"></a>Open the terminal to import the zip file</h3>
@@ -9547,9 +9724,14 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_15"><a class="anchor" href="#_observe_15"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/villain-directory.png" alt="villain directory"></span></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_architecture"><a class="anchor" href="#_architecture"></a>Architecture</h3>
@@ -9565,7 +9747,7 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 <p>This service will be used by the <strong>fight</strong> microservice.</p>
 </div>
 <div class="paragraph">
-<p><mark>The codebase is provided but you will have to bring some guided modifications ;) !</mark></p>
+<p>The codebase is provided but you will have to bring some guided modifications ;) !</p>
 </div>
 </div>
 <div class="sect2">
@@ -9598,8 +9780,14 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_16"><a class="anchor" href="#_observe_16"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Look at the <code>pom.xml</code>.</mark></p>
+<p>Look at the <code>pom.xml</code>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>pom.xml</code> is basically the same as for heroes, apart from the fact that it contains a few more dependencies: <code>quarkus-spring-web</code> and <code>quarkus-spring-data</code>.</p>
@@ -9612,6 +9800,10 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 For this reason, attempting to utilize additional Spring libraries will likely not work.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_35"><a class="anchor" href="#_time_to_pratice_35"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_the_controller"><a class="anchor" href="#_the_controller"></a>The Controller</h3>
 <div class="paragraph">
@@ -9681,8 +9873,14 @@ The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt;
 <p>As we are following a Spring Data programming model with JPA,we need to extend the JPA-specific Repository interface, JpaRepository.
 This will enable Quarkus to find this interface and automatically create an implementation for it.</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_36"><a class="anchor" href="#_time_to_pratice_36"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Uncomment VillainRepository as you did previously</mark></p>
+<p>Uncomment VillainRepository as you did previously</p>
 </div>
 <div class="paragraph">
 <p>The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; villain &gt;VillainRepository.java</strong></p>
@@ -9714,14 +9912,14 @@ This will enable Quarkus to find this interface and automatically create an impl
     }</code></pre>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_the_villain_entity"><a class="anchor" href="#_the_villain_entity"></a>The Villain entity</h3>
 <div class="paragraph">
-<p>Finally, we have an entity class representing the villains.</p>
+<p>Finally, we have an entity class representing the villains.
+== ✍️ Time to pratice ✍️</p>
 </div>
 <div class="paragraph">
-<p><mark>Uncomment Villain Entity as you did previously</mark></p>
+<p>Uncomment Villain Entity as you did previously</p>
 </div>
 <div class="paragraph">
 <p>The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; villain &gt; Villain.java</strong></p>
@@ -9751,8 +9949,13 @@ A test class is provided and contains the basic tests to ensure that the villain
 <div class="paragraph">
 <p>You can check that everything works fine by starting the application in development mode.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_37"><a class="anchor" href="#_time_to_pratice_37"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Run one of the following commands:</mark></p>
+<p>Run one of the following commands:</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
@@ -9767,7 +9970,7 @@ A test class is provided and contains the basic tests to ensure that the villain
 <p>Note that the tests have been successfully run.</p>
 </div>
 <div class="paragraph">
-<p><mark>Also, you can curl the villains endpoint and you should get lots of villains</mark></p>
+<p>Also, you can curl the villains endpoint and you should get lots of villains</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -9974,8 +10177,15 @@ summary  {
 <div class="developer">
 <div class="paragraph">
 <p>This approach will be followed for all the microservices.
-With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.
-To do this, follow these steps:</p>
+With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_38"><a class="anchor" href="#_time_to_pratice_38"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To do this, follow these steps:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -9990,9 +10200,9 @@ To do this, follow these steps:</p>
 </li>
 </ul>
 </div>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/ds-source-control-view.png" alt="ds source control view"></span></p>
-</div>
 </div>
 <div class="ulist">
 <ul>
@@ -10015,10 +10225,15 @@ From there, you can access your villain microservice by clicking on the pod.</p>
 <h2 id="_exploring_the_pipeline_2"><a class="anchor" href="#_exploring_the_pipeline_2"></a>Exploring the pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s switch to the Developer Hub console, in your villain component.</p>
+<p>Let&#8217;s switch to the Developer Hub console in your villain component.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_17"><a class="anchor" href="#_observe_17"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the CI tab</mark></p>
+<p>Click the CI tab</p>
 </div>
 <div class="paragraph">
 <p>Once you commit your code, an OpenShift pipeline has been automatically triggered.
@@ -10051,13 +10266,10 @@ This pipeline was created automatically for your project when you instantiated t
 <p>More information regarding the pipeline can be seen in the next section [Trusted Application Pipeline](./trusted-apps.md)</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_dev_deployment_2"><a class="anchor" href="#_dev_deployment_2"></a>Dev Deployment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dev_deployment_2"><a class="anchor" href="#_dev_deployment_2"></a>Dev Deployment</h3>
 <div class="paragraph">
-<p>As a developer, I want to see my handiwork. Did my application really deploy to the dev environment?</p>
+<p>As a developer, I want to see my deployment: Did my application really deploy to the dev environment?</p>
 </div>
 <div class="paragraph">
 <p>You can check that your newly built application has been automatically synced using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.</p>
@@ -10067,17 +10279,23 @@ This pipeline was created automatically for your project when you instantiated t
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_houston_weve_got_a_problem_2"><a class="anchor" href="#_houston_weve_got_a_problem_2"></a>Houston, we&#8217;ve got a problem</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At this stage, you should observe an issue during the CI pipeline. The step <strong>acs-image-check</strong> (responsible for verifying that we are not violating any policies in our cluster) is now failing.</p>
+<p>At this stage, you should observe an issue during the CI pipeline. The step <strong>acs-image-check</strong> (responsible of verifying that we are not violating any policies in our cluster) is now failing.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-check.png" alt="acs check"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_39"><a class="anchor" href="#_time_to_pratice_39"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the task to get the logs and understand what policy has been violated</mark></p>
+<p>Click the task to get the logs and understand what policy has been violated</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-image-check-error.png" alt="acs image check error"></span></p>
@@ -10085,8 +10303,13 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p>As you can see, it looks like a <strong>SuperVillain</strong> has introduced a bad dependency in our code!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_40"><a class="anchor" href="#_time_to_pratice_40"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open the <code>pom.xml</code> file in DevSpaces IDE</mark></p>
+<p>Open the <code>pom.xml</code> file in DevSpaces IDE</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-CVE.png" alt="devspaces CVE"></span></p>
@@ -10101,7 +10324,7 @@ This pipeline was created automatically for your project when you instantiated t
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Remove the dependency as it&#8217;s not needed in our code
+Remove the dependency as it&#8217;s not needed in our code and not compliant to our security rules !
 </td>
 </tr>
 </table>
@@ -10111,6 +10334,22 @@ Remove the dependency as it&#8217;s not needed in our code
 <div class="sect1">
 <h2 id="_deploy_the_villain_microservice_after_fixing_the_issue"><a class="anchor" href="#_deploy_the_villain_microservice_after_fixing_the_issue"></a>Deploy the Villain microservice after fixing the issue</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_41"><a class="anchor" href="#_time_to_pratice_41"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Commit your changes</p>
+</li>
+<li>
+<p>Push your commit</p>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -10118,13 +10357,13 @@ Remove the dependency as it&#8217;s not needed in our code
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Once you have corrected the dependency issue, commit your code! The pipeline will run again!
+The pipeline will run again!
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><mark>Click on Topology</mark></p>
+<p>Click on Topology</p>
 </div>
 <div class="paragraph">
 <p>This should look familiar to you if you regularly use the topology view from OpenShift.
@@ -10142,8 +10381,13 @@ Pre-prod and prod have NOT yet been deployed
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_42"><a class="anchor" href="#_time_to_pratice_42"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the arrow.</mark> This will open a new tab on your browser showing your deployed villain service!</p>
+<p>Click the arrow. This will open a new tab on your browser showing your deployed Villain service!</p>
 </div>
 <div class="paragraph">
 <p>Oops!! A <code>Resource Not Found</code> may be shown.</p>
@@ -10152,48 +10396,73 @@ Pre-prod and prod have NOT yet been deployed
 <p><span class="image"><img src="_images/m4/resource-not-found.png" alt="resource not found"></span></p>
 </div>
 <div class="paragraph">
-<p><mark>You can add <code>/api/villain/hello</code>, <code>/api/heroes/random</code>, or <code>/api/villaib</code> to the URL in your browser to attack the good endpoints and check your work</mark></p>
+<p>You can add <code>/api/villain/hello</code>, <code>/api/villain/random</code>, or <code>/api/villain</code> to the URL in your browser to attack the good endpoints and check your work</p>
 </div>
 <div class="paragraph">
-<p>Note that during the deployment with OpenShift GitOps, we also deployed automatically the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
-</div>
-<div class="paragraph">
-<p><mark>Verify that the fight-ui dev environment is now able to retrieve the characters</mark></p>
+<p>Note that during the deployment with OpenShift GitOps, we also automatically deployed the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_promote_to_pre_prod_2"><a class="anchor" href="#_promote_to_pre_prod_2"></a>Promote to Pre-Prod</h2>
+<h2 id="_observe_18"><a class="anchor" href="#_observe_18"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, access the GitLab UI, there is a convenient link on <mark>the Overview tab</mark></p>
+<p>Verify that the fight-ui dev environment is now able to retrieve the characters</p>
+</div>
+<div class="sect2">
+<h3 id="_promote_to_pre_prod_2"><a class="anchor" href="#_promote_to_pre_prod_2"></a>Promote to Pre-Prod</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_43"><a class="anchor" href="#_time_to_pratice_43"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, access the GitLab UI, there is a convenient link on the "Overview" tab</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote1.png" alt="promote1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Click on Tags</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on Tags</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote2.png" alt="promote2"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>New Tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on New Tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote3.png" alt="promote3"></span></p>
 </div>
-<div class="paragraph">
-<p>Give the tag a name like <mark>v1.0</mark></p>
-</div>
-<div class="paragraph">
-<p>and click <mark>Create tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Give the tag a name like v1.0</p>
+</li>
+<li>
+<p>Click Create tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote4.png" alt="promote4"></span></p>
 </div>
-<div class="paragraph">
-<p>Back to the portal and the <mark>CI tab</mark> to see the promotion pipeline in action</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Back to the portal and the CI tab to see the promotion pipeline in action</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote5.png" alt="promote5"></span></p>
@@ -10202,7 +10471,7 @@ Pre-prod and prod have NOT yet been deployed
 <p>This pipeline has a special task called verify-enterprise-contract</p>
 </div>
 <div class="paragraph">
-<p>Enterprise Contract (EC) is a special CLI that compliments Sigstore’s cosign. If you remember the build-sign-image task that produced and stored the .sig and .att artifacts into the container registry, EC evaluates that signature and attestation. EC is based on the rego policy language from Open Policy Agent and allows you to create custom rules to review cosign attestations. By default, EC works with the SLSA provence attestation coming out of Tekton Chains.</p>
+<p>Enterprise Contract (EC) is a special CLI that complements Sigstore’s cosign. If you remember the build-sign-image task that produced and stored the .sig and .att artifacts into the container registry, EC evaluates that signature and attestation. EC is based on the rego policy language from Open Policy Agent and allows you to create custom rules to review cosign attestations. By default, EC works with the SLSA provence attestation coming out of Tekton Chains.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote6.png" alt="promote6"></span></p>
@@ -10225,13 +10494,26 @@ Pre-prod and prod have NOT yet been deployed
 <div class="sect2">
 <h3 id="_promote_to_prod_2"><a class="anchor" href="#_promote_to_prod_2"></a>Promote to Prod</h3>
 <div class="paragraph">
-<p>To promote to Production, use the <mark>Create Release feature of the GitLab UI</mark>.</p>
+<p>To promote to Production, use the Create Release feature of the GitLab UI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_44"><a class="anchor" href="#_time_to_pratice_44"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on "Create Release"</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote8.png" alt="promote8"></span></p>
 </div>
 <div class="paragraph">
-<p>Give the release a title and click the <mark>Create release</mark> button.</p>
+<p>Give the release a title and click the "Create release" button.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote9.png" alt="promote9"></span></p>
@@ -10245,27 +10527,48 @@ Pre-prod and prod have NOT yet been deployed
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote11.png" alt="promote11"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Promotion to preprod and prod should be done for every service (villains/fight)</mark></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Promotion to preprod and prod will be done for every service. Each team member accomplishes this step!
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_stop_your_devspaces_workspace_2"><a class="anchor" href="#_stop_your_devspaces_workspace_2"></a>Stop your DevSpaces Workspace</h3>
 <div class="paragraph">
 <p>As you now have fully deployed your microservice, you no longer need the DevSpaces workspace, so let&#8217;s just stop it to preserve resources.</p>
 </div>
-<div class="paragraph">
-<p><mark>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_45"><a class="anchor" href="#_time_to_pratice_45"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop1.png" alt="devspaces stop1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Then Click "Dev Spaces : Stop Workspace</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Then Click "Dev Spaces: Stop Workspace</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop2.png" alt="devspaces stop2"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -10445,7 +10748,10 @@ summary  {
 }
 </style>
 <div class="paragraph">
-<p><strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.</p>
+<p>To provide a end-to-end trusted software pipeline, we rely on a set of tools bundled by Red Hat.
+<strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.
+In this part, we focus on Security scanner to detect vulnerabilities (Common Vulneratibilies and Exposures) in the app before running it.
+It is what Red Hat Advanced Cluster Security can offer here :</p>
 </div>
 </div>
 </div>
@@ -10453,7 +10759,16 @@ summary  {
 <h2 id="_red_hat_advanced_cluster_security_acs_2"><a class="anchor" href="#_red_hat_advanced_cluster_security_acs_2"></a>Red Hat Advanced Cluster Security (ACS)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl</p>
+<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks.
+The pipeline communicates with Red Hat Advanced Cluster Security with the CLI <strong>roxctl</strong> .</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/rhdh-acs-tasks.png" alt="rhdh acs tasks"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_static_application_security_gates_2"><a class="anchor" href="#_static_application_security_gates_2"></a>Static application security gates</h3>
+<div class="paragraph">
+<p>Once the build done, security scans begin .</p>
 </div>
 <div class="paragraph">
 <p>The bottom-most task is performing CVE scanning via roxctl image scan.</p>
@@ -10464,8 +10779,17 @@ summary  {
 <div class="paragraph">
 <p>The top-most task is to perform YAML scanning via roxctl deployment check, and it might identify that your Deployment.yaml has not properly configured its resource request and limit.</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_19"><a class="anchor" href="#_observe_19"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS</p>
+<p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/rhdh-cicd-actions.png" alt="rhdh cicd actions"></span></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/rhdh-acs-1.png" alt="rhdh acs 1"></span>
@@ -10473,21 +10797,25 @@ summary  {
 <span class="image"><img src="_images/m4/rhdh-acs-3.png" alt="rhdh acs 3"></span></p>
 </div>
 <div class="paragraph">
-<p>These 3 aspects of roxctl are a great example of the "shift-left" idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
+<p>These 3 aspects of roxctl are a great example of the <strong>"shift-left"</strong> idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scan_export_sbom_2"><a class="anchor" href="#_scan_export_sbom_2"></a>scan-export-sbom</h2>
+<h2 id="_what_makes_this_app_trustworthy_2"><a class="anchor" href="#_what_makes_this_app_trustworthy_2"></a>What makes this app trustworthy ?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pushes the SBOM to a CycloneDX repository. Currently, the SBOM is stored in Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
+<p><span class="image"><img src="_images/m4/ingredient-list.jpeg" alt="ingredient list"></span></p>
 </div>
 <div class="paragraph">
-<p>The SBOM is an artifact that deserves special mention. Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
+<p>Another important security point is inspecting the application package content know as <strong>Software Bill Of Material</strong>.
+Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
 </div>
 <div class="paragraph">
-<p>The SBOM is either a JSON or XML file and is stored in the container registry as the ingredient list associated with the container image.</p>
+<p>In the software development world, packages and dependencies used in an application are extracted as Software Bill Of Material as JSON or XML file.</p>
+</div>
+<div class="paragraph">
+<p>Currently, the SBOM is stored in the container registry Red Hat Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
 </div>
 </div>
 </div>
@@ -10790,7 +11118,7 @@ We have asked our favorite LLM to generate the template for us. We should be car
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_16"><a class="anchor" href="#_time_to_practise_16"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_46"><a class="anchor" href="#_time_to_pratice_46"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Register this template using the Red Hat Developer Hub UI:</p>
@@ -11052,7 +11380,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_17"><a class="anchor" href="#_time_to_practise_17"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_47"><a class="anchor" href="#_time_to_pratice_47"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11111,7 +11439,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_observe_7"><a class="anchor" href="#_observe_7"></a>👀 Observe 👀</h2>
+<h2 id="_observe_20"><a class="anchor" href="#_observe_20"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11125,7 +11453,7 @@ This template has been generated by an AI. Use it carefully ;)
 <p>Click the <strong>Choose</strong> button on the <strong>OpenCodeQuest - Quarkus microservice with Spring MVC and Spring Data</strong>. The Template parameters collection screen will be displayed.</p>
 </li>
 <li>
-<p>Find the YAML surrounded by <code>update the title below</code> and replace the title.</p>
+<p>Find the YAML surrounded by <code>update title below</code> and replace the title.</p>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m3/template-quarkus-pg-edit-title.png" alt="title"></span></p>
 </div>
@@ -11177,12 +11505,6 @@ This template has been generated by an AI. Use it carefully ;)
 <ol class="arabic">
 <li>
 <p>Click on <strong>circle arrows</strong></p>
-<div class="paragraph">
-<p><span class="image"><img src="_images/m3/template-quarkus-pg-fake-refreshed.png" alt="Reviewing template parameters in Red Hat Developer Hub"></span></p>
-</div>
-</li>
-</ol>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -11194,6 +11516,9 @@ The template definition is tied to its definition in the git repository. No GitO
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -11411,7 +11736,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_18"><a class="anchor" href="#_time_to_practise_18"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_48"><a class="anchor" href="#_time_to_pratice_48"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11487,7 +11812,7 @@ Your username is automatically determined by the Template using your current ses
 </div>
 </div>
 <div class="sect1">
-<h2 id="_observe_8"><a class="anchor" href="#_observe_8"></a>👀 Observe 👀</h2>
+<h2 id="_observe_21"><a class="anchor" href="#_observe_21"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Our template execution looks empty !</strong></p>
@@ -11735,7 +12060,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_19"><a class="anchor" href="#_time_to_practise_19"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_49"><a class="anchor" href="#_time_to_pratice_49"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11817,13 +12142,22 @@ This is why the <strong>Software Catalog</strong> exists! A clear definition of 
 </div>
 </div>
 <div class="paragraph">
-<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : &#8594; <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-ai/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..</p>
 </div>
 <div class="sect2">
 <h3 id="_uncomment_the_steps_3"><a class="anchor" href="#_uncomment_the_steps_3"></a>Uncomment the steps!</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_50"><a class="anchor" href="#_time_to_pratice_50"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Open this file describing the template :   <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-with-spring-postgresql/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+</li>
 <li>
 <p>Find the YAML surrounded by <code>Gitlab Steps</code> and uncomment below.</p>
 <div class="paragraph">
@@ -11843,7 +12177,6 @@ Check the content here : &#8594; <a href="https://gitlab-gitlab.apps.cluster-fs6
 <p>Click the <strong>Commit changes</strong> button.</p>
 </li>
 </ol>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_refresh_the_template_updated_6"><a class="anchor" href="#_refresh_the_template_updated_6"></a>Refresh the template updated</h3>
@@ -12092,7 +12425,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_20"><a class="anchor" href="#_time_to_practise_20"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_51"><a class="anchor" href="#_time_to_pratice_51"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -12360,6 +12693,9 @@ summary  {
     color: white;
 }
 </style>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/enjoy-stay.jpg" alt="enjoy stay"></span></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -12430,28 +12766,44 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <h3 id="_you_are_the_owner_of_your_dashboard_3"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard_3"></a>You are the owner of your dashboard</h3>
 <div class="paragraph">
 <p>Dashboard definition is located in the git repo instantiated to host your code base in our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
-Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
-Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_52"><a class="anchor" href="#_time_to_pratice_52"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
-<div class="paragraph">
-<p>You may be asked to authenticate again. Please, proceed.
-You should see the following page while the Dev Spaces are starting up:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You may be asked to authenticate again. Please, proceed.</p>
+</li>
+<li>
+<p>You should see the following page while the Dev Spaces are starting up:</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
 </div>
 <div class="paragraph">
-<p>Open the IDE cloud here :</p>
-</div>
-<div class="paragraph">
 <p><span class="image"><img src="_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -12459,15 +12811,18 @@ You should see the following page while the Dev Spaces are starting up:</p>
 </li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>It must look like this. Be sure to respect the right YAML indentation</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
@@ -12484,12 +12839,15 @@ The UI dashboard will be updated once the commit is done. To simplify the develo
 </tr>
 </table>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Confirm you have this directory :</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/fight-service-directory.png" alt="fight service directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -12514,9 +12872,15 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 </div>
 <div class="sect2">
 <h3 id="_import_the_code_base_3"><a class="anchor" href="#_import_the_code_base_3"></a>Import the code base</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_53"><a class="anchor" href="#_time_to_pratice_53"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let&#8217;s import it !</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file_3"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file_3"></a>Open the terminal to import the zip file</h3>
@@ -12547,12 +12911,17 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_22"><a class="anchor" href="#_observe_22"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/fight-service-directory.png" alt="fight service directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -12564,7 +12933,7 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 The LangChain4j project is a Java re-implementation of the famous LangChain library.</p>
 </div>
 <div class="paragraph">
-<p><mark>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</mark></p>
+<p>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12583,8 +12952,13 @@ The LangChain4j project is a Java re-implementation of the famous LangChain libr
 <div class="paragraph">
 <p>Configuring OpenAI models mandates an API key or API URL among others oto</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_54"><a class="anchor" href="#_time_to_pratice_54"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>#Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file #</p>
+<p>Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -12674,6 +13048,12 @@ quarkus.langchain4j.openai.chat-model.model-name={openai-model}</code></pre>
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions.
 We model the interaction using an interface annotated with <code>@RegisterAiService</code>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_55"><a class="anchor" href="#_time_to_pratice_55"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
@@ -12778,32 +13158,44 @@ Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroP
 </div>
 <div class="sect2">
 <h3 id="_start_the_fight_service_in_dev_mode"><a class="anchor" href="#_start_the_fight_service_in_dev_mode"></a>Start the Fight service in dev mode</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_56"><a class="anchor" href="#_time_to_pratice_56"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We are now ready to run our application.</p>
 </div>
 <div class="paragraph">
-<p><mark>Open a Terminal and run one of the following commands</mark></p>
+<p>Open a Terminal and run one of the following commands</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
 </div>
 <div class="paragraph">
-<p><mark>or</mark></p>
+<p>or</p>
 </div>
 <div class="paragraph">
 <p><code>quarkus dev</code></p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_verify_the_fight_service"><a class="anchor" href="#_verify_the_fight_service"></a>Verify the Fight service</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_57"><a class="anchor" href="#_time_to_pratice_57"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</mark></p>
+<p>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</p>
 </div>
 <div class="paragraph">
-<p><mark>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</mark></p>
+<p>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/open-quarkus-dev-in-new-tab.png" alt="open quarkus dev in new tab"></span></p>
@@ -13005,8 +13397,15 @@ summary  {
 <div class="developer">
 <div class="paragraph">
 <p>This approach will be followed for all the microservices.
-With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.
-To do this, follow these steps:</p>
+With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_58"><a class="anchor" href="#_time_to_pratice_58"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To do this, follow these steps:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -13038,7 +13437,7 @@ To do this, follow these steps:</p>
 <div class="paragraph">
 <p>This action will trigger a pipeline, which you can monitor in the CI tab of the RHDH.
 Once the pipeline completes successfully, you will see the corresponding pod in the Topology tab.
-From there, you can access your fight microservice by clicking on the pod.</p>
+From there, you can access your Fight microservice by clicking on the pod.</p>
 </div>
 </div>
 </div>
@@ -13046,10 +13445,15 @@ From there, you can access your fight microservice by clicking on the pod.</p>
 <h2 id="_exploring_the_pipeline_3"><a class="anchor" href="#_exploring_the_pipeline_3"></a>Exploring the pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s switch to the Developer Hub console, in your fight component.</p>
+<p>Let&#8217;s switch to the Developer Hub console in your Fight component.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_23"><a class="anchor" href="#_observe_23"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the CI tab</mark></p>
+<p>Click the CI tab</p>
 </div>
 <div class="paragraph">
 <p>Once you commit your code, an OpenShift pipeline has been automatically triggered.
@@ -13085,7 +13489,7 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="sect2">
 <h3 id="_dev_deployment_3"><a class="anchor" href="#_dev_deployment_3"></a>Dev Deployment</h3>
 <div class="paragraph">
-<p>As a developer, I want to see my handiwork: Did my application really deploy to the dev environment?</p>
+<p>As a developer, I want to see my deployment: Did my application really deploy to the dev environment?</p>
 </div>
 <div class="paragraph">
 <p>You can check that your newly built application has been automatically synced using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.</p>
@@ -13100,22 +13504,32 @@ This pipeline was created automatically for your project when you instantiated t
 <h2 id="_houston_weve_got_a_problem_3"><a class="anchor" href="#_houston_weve_got_a_problem_3"></a>Houston, we&#8217;ve got a problem</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At this stage, you should observe an issue during the CI pipeline. The step <strong>acs-image-check</strong> (responsible for verifying that we are not violating any policies in our cluster) is now failing.</p>
+<p>At this stage, you should observe an issue during the CI pipeline. The step <strong>acs-image-check</strong> (responsible of verifying that we are not violating any policies in our cluster) is now failing.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-check.png" alt="acs check"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_59"><a class="anchor" href="#_time_to_pratice_59"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the task to get the logs and understand what policy has been violated</mark></p>
+<p>Click the task to get the logs and understand what policy has been violated</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-image-check-error.png" alt="acs image check error"></span></p>
 </div>
 <div class="paragraph">
-<p>As you can see, it looks like a <strong>bad dependency</strong> has been introduced in our code!</p>
+<p>As you can see, it looks like a <strong>SuperFight</strong> has introduced a bad dependency in our code!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_60"><a class="anchor" href="#_time_to_pratice_60"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open the <code>pom.xml</code> file in DevSpaces IDE</mark></p>
+<p>Open the <code>pom.xml</code> file in DevSpaces IDE</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-CVE.png" alt="devspaces CVE"></span></p>
@@ -13123,14 +13537,39 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p>Thanks to the [Red Hat Dependency Analytics](<a href="https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics" class="bare">https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics</a>) IDE extension, you can even see that the dependency is automatically underlined, suggesting there&#8217;s an issue with it.</p>
 </div>
-<div class="paragraph">
-<p>Remove the dependency as it&#8217;s not needed in our code.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Remove the dependency as it&#8217;s not needed in our code and not compliant to our security rules !
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_deploy_the_fight_microservice_after_fixing_the_issue"><a class="anchor" href="#_deploy_the_fight_microservice_after_fixing_the_issue"></a>Deploy the Fight microservice after fixing the issue</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_61"><a class="anchor" href="#_time_to_pratice_61"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Commit your changes</p>
+</li>
+<li>
+<p>Push your commit</p>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -13138,13 +13577,13 @@ This pipeline was created automatically for your project when you instantiated t
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Once you have corrected the dependency issue, commit your code! The pipeline will run again!
+The pipeline will run again!
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><mark>Click on Topology</mark></p>
+<p>Click on Topology</p>
 </div>
 <div class="paragraph">
 <p>This should look familiar to you if you regularly use the topology view from OpenShift.
@@ -13162,8 +13601,13 @@ Pre-prod and prod have NOT yet been deployed
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_62"><a class="anchor" href="#_time_to_pratice_62"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the arrow.</mark> This will open a new tab on your browser showing your deployed fight service!</p>
+<p>Click the arrow. This will open a new tab on your browser showing your deployed Fight service!</p>
 </div>
 <div class="paragraph">
 <p>Oops!! A <code>Resource Not Found</code> may be shown.</p>
@@ -13172,45 +13616,73 @@ Pre-prod and prod have NOT yet been deployed
 <p><span class="image"><img src="_images/m4/resource-not-found.png" alt="resource not found"></span></p>
 </div>
 <div class="paragraph">
-<p><mark>You can add <code>/api/villain/hello</code>, <code>/api/heroes/random</code>, or <code>/api/villaib</code> to the URL in your browser to attack the good endpoints and check your work</mark></p>
+<p>You can add <code>/api/fight/hello</code>, <code>/api/fight/random</code>, or <code>/api/fight</code> to the URL in your browser to attack the good endpoints and check your work</p>
 </div>
 <div class="paragraph">
 <p>Note that during the deployment with OpenShift GitOps, we also automatically deployed the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_24"><a class="anchor" href="#_observe_24"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Verify that the fight-ui dev environment is now able to retrieve the characters</mark></p>
+<p>Verify that the fight-ui dev environment is now able to retrieve the characters</p>
 </div>
 <div class="sect2">
 <h3 id="_promote_to_pre_prod_3"><a class="anchor" href="#_promote_to_pre_prod_3"></a>Promote to Pre-Prod</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_63"><a class="anchor" href="#_time_to_pratice_63"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>First, access the GitLab UI, there is a convenient link on <mark>the Overview tab</mark></p>
+<p>First, access the GitLab UI, there is a convenient link on the "Overview" tab</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote1.png" alt="promote1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Click on Tags</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on Tags</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote2.png" alt="promote2"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>New Tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on New Tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote3.png" alt="promote3"></span></p>
 </div>
-<div class="paragraph">
-<p>Give the tag a name like <mark>v1.0</mark></p>
-</div>
-<div class="paragraph">
-<p>and click <mark>Create tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Give the tag a name like v1.0</p>
+</li>
+<li>
+<p>Click Create tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote4.png" alt="promote4"></span></p>
 </div>
-<div class="paragraph">
-<p>Back to the portal and the <mark>CI tab</mark> to see the promotion pipeline in action</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Back to the portal and the CI tab to see the promotion pipeline in action</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote5.png" alt="promote5"></span></p>
@@ -13239,17 +13711,29 @@ Pre-prod and prod have NOT yet been deployed
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote7.png" alt="promote7"></span></p>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_promote_to_prod_3"><a class="anchor" href="#_promote_to_prod_3"></a>Promote to Prod</h3>
 <div class="paragraph">
-<p>To promote to Production, use the <mark>Create Release feature of the GitLab UI</mark>.</p>
+<p>To promote to Production, use the Create Release feature of the GitLab UI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_64"><a class="anchor" href="#_time_to_pratice_64"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on "Create Release"</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote8.png" alt="promote8"></span></p>
 </div>
 <div class="paragraph">
-<p>Give the release a title and click the <mark>Create release</mark> button.</p>
+<p>Give the release a title and click the "Create release" button.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote9.png" alt="promote9"></span></p>
@@ -13263,27 +13747,48 @@ Pre-prod and prod have NOT yet been deployed
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote11.png" alt="promote11"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Promotion to preprod and prod should be done for every service fight</mark></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Promotion to preprod and prod will be done for every service. Each team member accomplishes this step!
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_stop_your_devspaces_workspace_3"><a class="anchor" href="#_stop_your_devspaces_workspace_3"></a>Stop your DevSpaces Workspace</h3>
 <div class="paragraph">
 <p>As you now have fully deployed your microservice, you no longer need the DevSpaces workspace, so let&#8217;s just stop it to preserve resources.</p>
 </div>
-<div class="paragraph">
-<p><mark>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_65"><a class="anchor" href="#_time_to_pratice_65"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop1.png" alt="devspaces stop1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Then Click "Dev Spaces: Stop Workspace</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Then Click "Dev Spaces: Stop Workspace</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop2.png" alt="devspaces stop2"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -13463,7 +13968,10 @@ summary  {
 }
 </style>
 <div class="paragraph">
-<p><strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.</p>
+<p>To provide a end-to-end trusted software pipeline, we rely on a set of tools bundled by Red Hat.
+<strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.
+In this part, we focus on Security scanner to detect vulnerabilities (Common Vulneratibilies and Exposures) in the app before running it.
+It is what Red Hat Advanced Cluster Security can offer here :</p>
 </div>
 </div>
 </div>
@@ -13471,7 +13979,16 @@ summary  {
 <h2 id="_red_hat_advanced_cluster_security_acs_3"><a class="anchor" href="#_red_hat_advanced_cluster_security_acs_3"></a>Red Hat Advanced Cluster Security (ACS)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl</p>
+<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks.
+The pipeline communicates with Red Hat Advanced Cluster Security with the CLI <strong>roxctl</strong> .</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/rhdh-acs-tasks.png" alt="rhdh acs tasks"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_static_application_security_gates_3"><a class="anchor" href="#_static_application_security_gates_3"></a>Static application security gates</h3>
+<div class="paragraph">
+<p>Once the build done, security scans begin .</p>
 </div>
 <div class="paragraph">
 <p>The bottom-most task is performing CVE scanning via roxctl image scan.</p>
@@ -13482,8 +13999,17 @@ summary  {
 <div class="paragraph">
 <p>The top-most task is to perform YAML scanning via roxctl deployment check, and it might identify that your Deployment.yaml has not properly configured its resource request and limit.</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_25"><a class="anchor" href="#_observe_25"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/rhdh-cicd-actions.png" alt="rhdh cicd actions"></span></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/rhdh-acs-1.png" alt="rhdh acs 1"></span>
@@ -13491,21 +14017,25 @@ summary  {
 <span class="image"><img src="_images/m4/rhdh-acs-3.png" alt="rhdh acs 3"></span></p>
 </div>
 <div class="paragraph">
-<p>These 3 aspects of roxctl are a great example of the "shift-left" idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
+<p>These 3 aspects of roxctl are a great example of the <strong>"shift-left"</strong> idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scan_export_sbom_3"><a class="anchor" href="#_scan_export_sbom_3"></a>scan-export-sbom</h2>
+<h2 id="_what_makes_this_app_trustworthy_3"><a class="anchor" href="#_what_makes_this_app_trustworthy_3"></a>What makes this app trustworthy ?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pushes the SBOM to a CycloneDX repository. Currently, the SBOM is stored in Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
+<p><span class="image"><img src="_images/m4/ingredient-list.jpeg" alt="ingredient list"></span></p>
 </div>
 <div class="paragraph">
-<p>The SBOM is an artifact that deserves special mention. Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
+<p>Another important security point is inspecting the application package content know as <strong>Software Bill Of Material</strong>.
+Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
 </div>
 <div class="paragraph">
-<p>The SBOM is either a JSON or XML file and is stored in the container registry as the ingredient list associated with the container image.</p>
+<p>In the software development world, packages and dependencies used in an application are extracted as Software Bill Of Material as JSON or XML file.</p>
+</div>
+<div class="paragraph">
+<p>Currently, the SBOM is stored in the container registry Red Hat Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
 </div>
 </div>
 </div>

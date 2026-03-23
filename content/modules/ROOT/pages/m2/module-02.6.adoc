@@ -30,30 +30,7 @@ image:m2/gitlab-catalog-provider.png[GitLab Catalog Provider configuration,width
 // image:m2/gitlab-discovery.png[GitLab code editor showing catalog providers configuration for {product_name_rhdh}]
 . Click the *Refresh* button on the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications[`RHDH` Application in OpenShift GitOps^, window="argo"] (login as *`{pe-username}` / `{common_password}`*).
 
-== Verify GitLab Entity Discovery is Active
 
-. After a few moments, your new {product_name_rhdh} configuration will finish rolling out. Check the logs for the new https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/core%7Ev1%7EPod[{product_name_rhdh} Pod^, window="console"]. You should see that a repository was discovered - that means the repository contains https://backstage.io/docs/features/software-catalog/descriptor-format/[catalog-info.yaml, window="blank"] file.
-+
-image:m2/rhdh-logs-gitlab-discovery.png[GitLab Autodiscovery Logs in the OpenShift Console,link=self,window=blank]
-
-.If the pod is running but there is no change on Developer Hub UI, have look here 
-[%collapsible]
-====
-include::../debug-pod-placement.adoc[]
-====
-
-
-////
-
-== Quiz
-
-Be prepared to answer our questions based on what you have learnt in this section! 
-
-Wrap up the job done for your peers. Explain which capabilities (Authentication / Source Code Management / Users ..) have been added to the internal developer platform. The quiz will happen after the break !
-
-
-image::m2/quizz-time.png[Quiz time announcement,link=self,window=blank]
-////
 
 == Conclusion
 

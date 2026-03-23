@@ -21,7 +21,7 @@ Remember, we have imported users and groups from *Keycloak*. The good news is Ke
 
 == Configure the OpenID Connect Authentication Provider
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 
 . Visit your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/[developer-hub-config repository on GitLab, window="gitlab"].

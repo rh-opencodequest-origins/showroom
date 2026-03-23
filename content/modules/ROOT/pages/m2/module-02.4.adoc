@@ -19,7 +19,7 @@ Synchronizing Users and Groups to your Software Catalog is important for two rea
 
 == Enable the Keycloak Plugin
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 . Open the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[configuration file^, window="gitlab"]. It's same used to update the title 
 . Select **Edit > Edit single file**.

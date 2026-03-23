@@ -53,28 +53,30 @@ image:m4/argocd-view.png[]
 
 Dashboard definition is located in the git repo instantiated to host your code base in our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
-Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
+
+. Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+. Click here : https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/dev{team-id}-fight
+
 
 image:m4/hero-home-page-rhdh.png[] 
 
-You may be asked to authenticate again. Please, proceed. 
-You should see the following page while the Dev Spaces are starting up:
+. You may be asked to authenticate again. Please, proceed. 
+. You should see the following page while the Dev Spaces are starting up:
 
 image:m4/dev-spaces-starting-up.png[]
 
-Open the IDE cloud here : 
 
 image:m4/catalog-info-location.png[]
 
-Please open the *catalog-info.yaml* and uncomment the following annotation.
+. Please open the *catalog-info.yaml* and uncomment the following annotation.
 
 * Remove the  *#* 
 
 image:m4/uncomment-catalog-info.png[]
 
-* It must look like this. Be sure to respect the right YAML indentation 
+. It must look like this. Be sure to respect the right YAML indentation 
 
 image:m4/uncommented-catalog-info.png[]
 
@@ -82,7 +84,7 @@ image:m4/uncommented-catalog-info.png[]
 
 NOTE: The UI dashboard will be updated once the commit is done. To simplify the development flow, we'll commit later with the changes done on our code base
 
-Confirm you have this directory : 
+. Confirm you have this directory : 
 
 image:m4/fight-service-directory.png[]
 
@@ -103,7 +105,7 @@ image:m4/fight-architecture.png[]
 
 === Import the code base
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let's import it !
 
@@ -152,7 +154,7 @@ Note that the extension is already present in the `pom.xml` file of your Fight s
 Configuring OpenAI models mandates an API key or API URL among others oto
 
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 
 Copy the following configuration in your `fight-service/src/main/resources/application.properties` file 
@@ -212,7 +214,7 @@ It’s time to tell the LLM what we want to do.
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions. 
 We model the interaction using an interface annotated with `@RegisterAiService`.
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 == Uncomment the FightSimulatorService.java file
 
@@ -291,7 +293,7 @@ Now, #let's take a look at the `fight-service/src/main/java/io/quarkus/workshop/
 
 === Start the Fight service in dev mode
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 We are now ready to run our application.
 
@@ -306,7 +308,7 @@ or
 
 == Verify the Fight service
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui
 

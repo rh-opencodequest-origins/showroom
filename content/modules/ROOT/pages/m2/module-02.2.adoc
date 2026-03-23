@@ -72,7 +72,7 @@ For the purpose of the workshop, you will do a minor change to trigger the insta
 
 The configuration file of the Internal Developer Platform is located in a Gitlab repo.
 
-=== ✍️ Time to practise ✍️ 
+=== ✍️ Time to pratice ✍️ 
 
 
 . Open this https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[link, window="gitlab"]
@@ -111,7 +111,7 @@ image:m2/appConfig-title.png[]
 
 Let's ensure that a new deployment of {product_name_rhdh} is triggered and your new title is applied.
 
-=== ✍️ Time to practise ✍️ 
+=== ✍️ Time to pratice ✍️ 
 
 2 ways to do it:
 

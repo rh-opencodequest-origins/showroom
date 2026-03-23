@@ -30,16 +30,16 @@ asciidoc:
     openai-key: ma-clé
     page-links:
     - url: https://console-openshift-console.{openshift_cluster_ingress_domain}
-      text: OCP Console
+      text: OpenShift Container Platform (Console)
     - url: https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}
-      text: Developer Hub
+      text: Internal Developer Portal (Developer Hub)
     - url: https://devspaces.{openshift_cluster_ingress_domain}
-      text: Dev Spaces
+      text: IDE Cloud (DevSpaces)
     - url: https://gitlab-gitlab.{openshift_cluster_ingress_domain}
       text: GitLab
     - url: https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}
-      text: ArgoCD (Cluster)
+      text: GitOps for cluster (ArgoCD)
     - url: https://rhdh-gitops-server-rhdh-gitops.{openshift_cluster_ingress_domain}
-      text: ArgoCD (Apps)
+      text: Gitops for apps (ArgoCD)
     environment_variables:
       TEAM_ID: team1

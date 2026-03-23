@@ -29,12 +29,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
     <a class="nav-link" href="../m4-user1/module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m4-user1/module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -191,19 +191,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../m7/module-07.0.html">7. Continuous platform improvements</a>
+    <a class="nav-link" href="../m7/module-07.0.html">7. Bonus - Continuous platform improvements</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+    <a class="nav-link" href="../m7/module-07.2a.html">7.2 Understanding Adoption Insights</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -482,7 +479,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice"><a class="anchor" href="#_time_to_pratice"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -564,13 +561,22 @@ This is why the <strong>Software Catalog</strong> exists! A clear definition of 
 </div>
 </div>
 <div class="paragraph">
-<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : &#8594; <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-ai/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+<p>The template creates a <strong>Software Catalog</strong> thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..</p>
 </div>
 <div class="sect2">
 <h3 id="_uncomment_the_steps"><a class="anchor" href="#_uncomment_the_steps"></a>Uncomment the steps!</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_2"><a class="anchor" href="#_time_to_pratice_2"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Open this file describing the template :   <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/quarkus-with-spring-postgresql/-/blob/main/template.yaml" target="gitlab">template.yaml</a>.</p>
+</li>
 <li>
 <p>Find the YAML surrounded by <code>Gitlab Steps</code> and uncomment below.</p>
 <div class="paragraph">
@@ -590,7 +596,6 @@ Check the content here : &#8594; <a href="https://gitlab-gitlab.apps.cluster-fs6
 <p>Click the <strong>Commit changes</strong> button.</p>
 </li>
 </ol>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_refresh_the_template_updated"><a class="anchor" href="#_refresh_the_template_updated"></a>Refresh the template updated</h3>

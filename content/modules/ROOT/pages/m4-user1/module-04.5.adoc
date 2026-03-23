@@ -52,18 +52,22 @@ The *CD* shortcut in the dashboard will display this view :
 
 image:m4/argocd-view.png[]
 
-== ✍️ Time to practise ✍️ 
 
 === You are the owner of your dashboard
 
 Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
+
+== ✍️ Time to pratice ✍️ 
+
+
 Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
+. Click here : https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/dev{team-id}-hero
 
 image:m4/hero-home-page-rhdh.png[] 
 
-You may be asked to authenticate again. Please, proceed. 
+. You may be asked to authenticate again. Please, proceed. 
 You should see the following page while the Dev Spaces are starting up:
 
 image:m4/dev-spaces-starting-up.png[]
@@ -72,13 +76,13 @@ Open the IDE cloud here :
 
 image:m4/catalog-info-location.png[]
 
-Please open the *catalog-info.yaml* and uncomment the following annotation.
+. Please open the *catalog-info.yaml* and uncomment the following annotation.
 
-* Remove the  *#* 
+. Remove the  *#* 
 
 image:m4/uncomment-catalog-info.png[]
 
-* It must look like this. Be sure to respect the right YAML indentation 
+. It must look like this. Be sure to respect the right YAML indentation 
 
 image:m4/uncommented-catalog-info.png[]
 
@@ -105,7 +109,7 @@ This service will be used by the *fight* microservice.
 
 Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let's import it!
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 
 === Open the terminal to import the zip file
@@ -184,7 +188,7 @@ This file has a set of simple REST endpoints. For instance, returning "hello" to
         return "Hello from Quarkus REST";
  }
 ---- 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 == Running the Application
 
@@ -293,7 +297,7 @@ It allows you to:
 
 Each extension used in the application will be listed.
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 
 Open the Developer Console by navigating to the $HERO_URL/q/dev-ui
@@ -320,14 +324,14 @@ In the generated `pom.xml` file, you can see 2 test dependencies:
 
 === Uncomment the HeroResourceTest.java
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 The generated project contains a simple test.
 The file content to uncomment is located here : *hero-service > src > test > java > io > quarkus > workshop > hero > HeroResourceTest.java*
 
 Open it and remove the first part of the file:
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 image:m4/start-comment-line.png[]
 
@@ -408,7 +412,7 @@ There is already a `Hero.java` file under *src > main > java > io > quarkus > wo
 However, this file is empty.
 To define a Panache entity, simply extend `PanacheEntity`, annotate it with `@Entity`, and add your columns as public fields (no need to have getters and setters).
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 === Uncomment the Hero.java file 
 
@@ -452,7 +456,7 @@ Look at the import.sql file located here `/src/resources/import.sql`. Around 500
 
 Now check the method findRandom defined above to confirm you can get random heroes! 
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 Open a new Terminal and run the following command
 

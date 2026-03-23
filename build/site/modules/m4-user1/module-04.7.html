@@ -6,7 +6,7 @@
     <title>How secure is your application deployment? :: OpenCodeQuest Origin (PE Workshop)</title>
     <link rel="canonical" href="https://developers.redhat.com/modules/m4-user1/module-04.7.html">
     <link rel="prev" href="module-04.6.html">
-    <link rel="next" href="module-04.8.html">
+    <link rel="next" href="#m4-user1/module-04.8.adoc">
     <meta name="generator" content="Antora 3.1.14">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,12 +29,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
     <a class="nav-link" href="module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -191,19 +191,16 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../m7/module-07.0.html">7. Continuous platform improvements</a>
+    <a class="nav-link" href="../m7/module-07.0.html">7. Bonus - Continuous platform improvements</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+    <a class="nav-link" href="../m7/module-07.2a.html">7.2 Understanding Adoption Insights</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -421,7 +418,10 @@ summary  {
 }
 </style>
 <div class="paragraph">
-<p><strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.</p>
+<p>To provide a end-to-end trusted software pipeline, we rely on a set of tools bundled by Red Hat.
+<strong>Red Hat Advanced Developer Suite</strong> is a set of Red Hat products able to build secure pipelines by signing and verifying your build artifacts.
+In this part, we focus on Security scanner to detect vulnerabilities (Common Vulneratibilies and Exposures) in the app before running it.
+It is what Red Hat Advanced Cluster Security can offer here :</p>
 </div>
 </div>
 </div>
@@ -429,7 +429,16 @@ summary  {
 <h2 id="_red_hat_advanced_cluster_security_acs"><a class="anchor" href="#_red_hat_advanced_cluster_security_acs"></a>Red Hat Advanced Cluster Security (ACS)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks leveraging roxctl</p>
+<p>Back to the pipeline itself, and let’s look at the 3 Advanced Cluster Security tasks.
+The pipeline communicates with Red Hat Advanced Cluster Security with the CLI <strong>roxctl</strong> .</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/rhdh-acs-tasks.png" alt="rhdh acs tasks"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_static_application_security_gates"><a class="anchor" href="#_static_application_security_gates"></a>Static application security gates</h3>
+<div class="paragraph">
+<p>Once the build done, security scans begin .</p>
 </div>
 <div class="paragraph">
 <p>The bottom-most task is performing CVE scanning via roxctl image scan.</p>
@@ -438,10 +447,19 @@ summary  {
 <p>The middle task is performing a policy check via roxctl image check. These policies might be things like 'No log4j allowed' or perhaps no curl, wget, or a package manager in a production image.</p>
 </div>
 <div class="paragraph">
-<p>The top-most task is to perform YAML scanning via roxctl deployment check and it might identify that your Deployment.yaml has not properly configured its resource request and limit.</p>
+<p>The top-most task is to perform YAML scanning via roxctl deployment check, and it might identify that your Deployment.yaml has not properly configured its resource request and limit.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS.</p>
 </div>
 <div class="paragraph">
-<p>A series of dashboards visualizes the reporting from these 3 roxctl tasks. Click on the View Output icon under ACTIONS</p>
+<p><span class="image"><img src="../_images/m4/rhdh-cicd-actions.png" alt="rhdh cicd actions"></span></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/rhdh-acs-1.png" alt="rhdh acs 1"></span>
@@ -449,27 +467,31 @@ summary  {
 <span class="image"><img src="../_images/m4/rhdh-acs-3.png" alt="rhdh acs 3"></span></p>
 </div>
 <div class="paragraph">
-<p>These 3 aspects of roxctl are a great example of the "shift-left" idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
+<p>These 3 aspects of roxctl are a great example of the <strong>"shift-left"</strong> idea by bringing these critical checks into the pipeline itself to be executed on each <code>git push</code>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scan_export_sbom"><a class="anchor" href="#_scan_export_sbom"></a>scan-export-sbom</h2>
+<h2 id="_what_makes_this_app_trustworthy"><a class="anchor" href="#_what_makes_this_app_trustworthy"></a>What makes this app trustworthy ?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pushes the SBOM to a CycloneDX repository. Currently, the SBOM is stored in Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
+<p><span class="image"><img src="../_images/m4/ingredient-list.jpeg" alt="ingredient list"></span></p>
 </div>
 <div class="paragraph">
-<p>The SBOM is an artifact that deserves special mention. Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
+<p>Another important security point is inspecting the application package content know as <strong>Software Bill Of Material</strong>.
+Think of the Software Bill of Materials as the ingredient list. I am sure you have gone to the grocery store, picked up an item, and reviewed its packaging. On the back of the product, there will be a list of ingredients. You can find out that something you might wish to eat includes gluten, perhaps too much sugar, or shellfish (my sister is allergic to shellfish), or perhaps nuts. Well, if you are allergic to nuts, you might also be allergic to Struts :-) You might remember that infamous Struts 2 vulnerability that allowed 143 million Americans’ private data to end up on the dark web Struts 2 hack.</p>
 </div>
 <div class="paragraph">
-<p>The SBOM is either a JSON or XML file and is stored in the container registry as the ingredient list associated with the container image.</p>
+<p>In the software development world, packages and dependencies used in an application are extracted as Software Bill Of Material as JSON or XML file.</p>
+</div>
+<div class="paragraph">
+<p>Currently, the SBOM is stored in the container registry Red Hat Quay and is not in an easily accessible or readable format. Pushing the SBOM to an additional repository allows us to access the raw JSON/XML file for further use outside of the CI process.</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="module-04.6.html" class="query-params-link">4.6 Developer activity: From Git to OpenShift</a></span>
-  <span class="next"><a href="module-04.8.html" class="query-params-link">4.8 Improve your project dashboard</a></span>
+  <span class="next"><a href="#m4-user1/module-04.8.adoc" class="query-params-link">4.8 Improve your project dashboard</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
