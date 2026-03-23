@@ -57,6 +57,7 @@ Dashboard UI components are defined in a file named *catalog-info.yaml*.
 == ✍️ Time to pratice ✍️ 
 
 . Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+. Click here : https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/dev{team-id}-fight
 
 
 image:m4/hero-home-page-rhdh.png[] 

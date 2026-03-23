@@ -57,11 +57,13 @@ image:m4/argocd-view.png[]
 
 Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
+
 == ✍️ Time to pratice ✍️ 
 
 
-. Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
+. Click here : https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/catalog/default/component/dev{team-id}-hero
 
 image:m4/hero-home-page-rhdh.png[] 
 
