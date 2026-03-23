@@ -432,6 +432,9 @@ summary  {
     color: white;
 }
 </style>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/enjoy-stay.jpg" alt="enjoy stay"></span></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -505,6 +508,12 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
 Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
@@ -564,7 +573,6 @@ The UI dashboard will be updated once the commit is done. To simplify the develo
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_the_fight_service"><a class="anchor" href="#_the_fight_service"></a>The Fight Service</h2>
 <div class="sectionbody">
@@ -586,9 +594,15 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 </div>
 <div class="sect2">
 <h3 id="_import_the_code_base"><a class="anchor" href="#_import_the_code_base"></a>Import the code base</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let&#8217;s import it !</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
@@ -619,12 +633,17 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/fight-service-directory.png" alt="fight service directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -636,7 +655,7 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 The LangChain4j project is a Java re-implementation of the famous LangChain library.</p>
 </div>
 <div class="paragraph">
-<p><mark>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</mark></p>
+<p>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -655,8 +674,13 @@ The LangChain4j project is a Java re-implementation of the famous LangChain libr
 <div class="paragraph">
 <p>Configuring OpenAI models mandates an API key or API URL among others oto</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>#Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file #</p>
+<p>Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -746,6 +770,12 @@ quarkus.langchain4j.openai.chat-model.model-name={openai-model}</code></pre>
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions.
 We model the interaction using an interface annotated with <code>@RegisterAiService</code>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
@@ -850,32 +880,44 @@ Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroP
 </div>
 <div class="sect2">
 <h3 id="_start_the_fight_service_in_dev_mode"><a class="anchor" href="#_start_the_fight_service_in_dev_mode"></a>Start the Fight service in dev mode</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We are now ready to run our application.</p>
 </div>
 <div class="paragraph">
-<p><mark>Open a Terminal and run one of the following commands</mark></p>
+<p>Open a Terminal and run one of the following commands</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
 </div>
 <div class="paragraph">
-<p><mark>or</mark></p>
+<p>or</p>
 </div>
 <div class="paragraph">
 <p><code>quarkus dev</code></p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_verify_the_fight_service"><a class="anchor" href="#_verify_the_fight_service"></a>Verify the Fight service</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_6"><a class="anchor" href="#_time_to_practise_6"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</mark></p>
+<p>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</p>
 </div>
 <div class="paragraph">
-<p><mark>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</mark></p>
+<p>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/open-quarkus-dev-in-new-tab.png" alt="open quarkus dev in new tab"></span></p>

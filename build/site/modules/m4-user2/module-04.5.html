@@ -432,6 +432,9 @@ summary  {
     color: white;
 }
 </style>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/enjoy-stay.jpg" alt="enjoy stay"></span></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -490,6 +493,12 @@ We will explore tabs through the lab guide. But don&#8217;t be shy and feel free
 <div class="sect1">
 <h2 id="_customize_your_development_project_dashboard"><a class="anchor" href="#_customize_your_development_project_dashboard"></a>Customize your development project dashboard</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal !
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -505,6 +514,12 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
 Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
@@ -558,7 +573,6 @@ To simplify the development flow, we&#8217;ll commit later with the changes done
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_the_villain_microservice"><a class="anchor" href="#_the_villain_microservice"></a>The Villain Microservice</h2>
 <div class="sectionbody">
@@ -568,9 +582,15 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 </div>
 <div class="sect2">
 <h3 id="_import_the_code_base"><a class="anchor" href="#_import_the_code_base"></a>Import the code base</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let&#8217;s import it !</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
@@ -604,9 +624,14 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_2"><a class="anchor" href="#_observe_2"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/villain-directory.png" alt="villain directory"></span></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_architecture"><a class="anchor" href="#_architecture"></a>Architecture</h3>
@@ -622,7 +647,7 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 <p>This service will be used by the <strong>fight</strong> microservice.</p>
 </div>
 <div class="paragraph">
-<p><mark>The codebase is provided but you will have to bring some guided modifications ;) !</mark></p>
+<p>The codebase is provided but you will have to bring some guided modifications ;) !</p>
 </div>
 </div>
 <div class="sect2">
@@ -655,8 +680,14 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_3"><a class="anchor" href="#_observe_3"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Look at the <code>pom.xml</code>.</mark></p>
+<p>Look at the <code>pom.xml</code>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>pom.xml</code> is basically the same as for heroes, apart from the fact that it contains a few more dependencies: <code>quarkus-spring-web</code> and <code>quarkus-spring-data</code>.</p>
@@ -669,6 +700,10 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 For this reason, attempting to utilize additional Spring libraries will likely not work.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_the_controller"><a class="anchor" href="#_the_controller"></a>The Controller</h3>
 <div class="paragraph">
@@ -738,8 +773,14 @@ The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt;
 <p>As we are following a Spring Data programming model with JPA,we need to extend the JPA-specific Repository interface, JpaRepository.
 This will enable Quarkus to find this interface and automatically create an implementation for it.</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Uncomment VillainRepository as you did previously</mark></p>
+<p>Uncomment VillainRepository as you did previously</p>
 </div>
 <div class="paragraph">
 <p>The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; villain &gt;VillainRepository.java</strong></p>
@@ -771,14 +812,14 @@ This will enable Quarkus to find this interface and automatically create an impl
     }</code></pre>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_the_villain_entity"><a class="anchor" href="#_the_villain_entity"></a>The Villain entity</h3>
 <div class="paragraph">
-<p>Finally, we have an entity class representing the villains.</p>
+<p>Finally, we have an entity class representing the villains.
+== ✍️ Time to practise ✍️</p>
 </div>
 <div class="paragraph">
-<p><mark>Uncomment Villain Entity as you did previously</mark></p>
+<p>Uncomment Villain Entity as you did previously</p>
 </div>
 <div class="paragraph">
 <p>The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; villain &gt; Villain.java</strong></p>
@@ -808,8 +849,13 @@ A test class is provided and contains the basic tests to ensure that the villain
 <div class="paragraph">
 <p>You can check that everything works fine by starting the application in development mode.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Run one of the following commands:</mark></p>
+<p>Run one of the following commands:</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
@@ -824,7 +870,7 @@ A test class is provided and contains the basic tests to ensure that the villain
 <p>Note that the tests have been successfully run.</p>
 </div>
 <div class="paragraph">
-<p><mark>Also, you can curl the villains endpoint and you should get lots of villains</mark></p>
+<p>Also, you can curl the villains endpoint and you should get lots of villains</p>
 </div>
 <div class="listingblock">
 <div class="content">

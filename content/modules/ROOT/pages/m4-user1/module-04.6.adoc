@@ -12,8 +12,11 @@ include::../style.adoc[]
 <div class="developer">
 ++++
 
+
 This approach will be followed for all the microservices.
 With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository. 
+
+== ✍️ Time to practise ✍️ 
 To do this, follow these steps:
 
 * In Dev Spaces, go to the source control view.
@@ -40,7 +43,11 @@ From there, you can access your hero microservice by clicking on the pod.
 
 Let's switch to the Developer Hub console in your hero component.
 
-#Click the CI tab#
+== 👀 Observe 👀
+
+Click the CI tab
+
+
 
 Once you commit your code, an OpenShift pipeline has been automatically triggered.
 This pipeline was created automatically for your project when you instantiated the template.
@@ -65,7 +72,7 @@ More information regarding the pipeline can be seen in the next section [Trusted
 
 
 === Dev Deployment
-As a developer, I want to see my handiwork: Did my application really deploy to the dev environment?
+As a developer, I want to see my deployment: Did my application really deploy to the dev environment?
 
 You can check that your newly built application has been automatically synced using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.
 
@@ -77,25 +84,31 @@ At this stage, you should observe an issue during the CI pipeline. The step **ac
 
 image:m4/acs-check.png[]
 
-#Click the task to get the logs and understand what policy has been violated#
+== ✍️ Time to practise ✍️ 
+
+Click the task to get the logs and understand what policy has been violated
 
 image:m4/acs-image-check-error.png[]
 
 As you can see, it looks like a **SuperHero** has introduced a bad dependency in our code! 
 
-#Open the `pom.xml` file in DevSpaces IDE#
+== ✍️ Time to practise ✍️ 
+
+Open the `pom.xml` file in DevSpaces IDE
 
 image:m4/devspaces-CVE.png[]
 
 Thanks to the [Red Hat Dependency Analytics](https://marketplace.visualstudio.com/items?itemName=redhat.fabric8-analytics) IDE extension, you can even see that the dependency is automatically underlined, suggesting there's an issue with it.
 
-IMPORTANT: Remove the dependency as it's not needed in our code
+IMPORTANT: Remove the dependency as it's not needed in our code, commit and push your changes !
 
 == Deploy the Hero microservice after fixing the issue
 
 NOTE: Once you have corrected the dependency issue, commit your code! The pipeline will run again!
 
-#Click on Topology#
+== ✍️ Time to practise ✍️ 
+
+Click on Topology
 
 This should look familiar to you if you regularly use the topology view from OpenShift.
 image:m4/rhdh-topology-dev.png[]
@@ -103,39 +116,47 @@ image:m4/rhdh-topology-dev.png[]
 
 NOTE: Pre-prod and prod have NOT yet been deployed
 
-#Click the arrow.# This will open a new tab on your browser showing your deployed hero service!
+== ✍️ Time to practise ✍️ 
+
+Click the arrow. This will open a new tab on your browser showing your deployed hero service!
 
 Oops!! A `Resource Not Found` may be shown. 
 
 image:m4/resource-not-found.png[]
 
-#You can add `/api/heroes/hello`, `/api/heroes/random`, or `/api/heroes` to the URL in your browser to attack the good endpoints and check your work#
+
+You can add `/api/heroes/hello`, `/api/heroes/random`, or `/api/heroes` to the URL in your browser to attack the good endpoints and check your work
 
 Note that during the deployment with OpenShift GitOps, we also automatically deployed the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.
 
-#Verify that the fight-ui dev environment is now able to retrieve the characters#
+== 👀 Observe 👀
+
+Verify that the fight-ui dev environment is now able to retrieve the characters
 
 
 === Promote to Pre-Prod
+
+== ✍️ Time to practise ✍️ 
+
 First, access the GitLab UI, there is a convenient link on #the Overview tab#
 
 image:m4/promote1.png[]
 
-#Click on Tags#
+. Click on Tags
 
 image:m4/promote2.png[]
 
-#New Tag#
+. Click on New Tag
 
 image:m4/promote3.png[]
 
-Give the tag a name like #v1.0#
+. Give the tag a name like #v1.0#
 
-and click #Create tag#
+. Click Create tag
 
 image:m4/promote4.png[]
 
-Back to the portal and the #CI tab# to see the promotion pipeline in action
+. Back to the portal and the #CI tab# to see the promotion pipeline in action
 
 image:m4/promote5.png[]
 
@@ -157,11 +178,16 @@ image:m4/promote7.png[]
 
 
 === Promote to Prod
-To promote to Production, use the #Create Release feature of the GitLab UI#.
+
+To promote to Production, use the Create Release feature of the GitLab UI.
+
+== ✍️ Time to practise ✍️ 
+
+. Click on "Create Release"
 
 image:m4/promote8.png[]
 
-Give the release a title and click the #Create release# button.
+Give the release a title and click the "Create release" button.
 
 image:m4/promote9.png[]
 
@@ -178,11 +204,13 @@ NOTE: Promotion to preprod and prod will be done for every service. Each team me
 === Stop your DevSpaces Workspace
 As you now have fully deployed your microservice, you no longer need the DevSpaces workspace, so let's just stop it to preserve resources.
 
-#Click the grey button **"><"** on the bottom left of DevSpaces IDE#
+== ✍️ Time to practise ✍️ 
+
+. Click the grey button **"><"** on the bottom left of DevSpaces IDE
 
 image:m4/devspaces-stop1.png[]
 
-#Then Click "Dev Spaces: Stop Workspace#
+. Then Click "Dev Spaces: Stop Workspace
 
 image:m4/devspaces-stop2.png[]
 

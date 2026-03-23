@@ -493,6 +493,12 @@ We will explore tabs through the lab guide. But don&#8217;t be shy and feel free
 <div class="sect1">
 <h2 id="_customize_your_development_project_dashboard"><a class="anchor" href="#_customize_your_development_project_dashboard"></a>Customize your development project dashboard</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -501,6 +507,11 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/argocd-view.png" alt="argocd view"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_you_are_the_owner_of_your_dashboard"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard"></a>You are the owner of your dashboard</h3>
 <div class="paragraph">
@@ -584,6 +595,11 @@ This microservice is a <strong>classical</strong> microservice.</p>
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let&#8217;s import it!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
 <div class="ulist">
@@ -614,9 +630,14 @@ This microservice is a <strong>classical</strong> microservice.</p>
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_2"><a class="anchor" href="#_observe_2"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/hero-directory.png" alt="hero directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -651,8 +672,13 @@ This microservice is a <strong>classical</strong> microservice.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_3"><a class="anchor" href="#_observe_3"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Look at the <code>pom.xml</code></mark>
+<p>Look at the <code>pom.xml</code>
 You will find here the import of the Quarkus BOM (<em>bill of materials</em>), allowing you to omit the version of the different Quarkus dependencies.
 In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for the packaging of the application, and also providing the development mode support.</p>
 </div>
@@ -697,6 +723,12 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 </div>
 </div>
 <div class="sect1">
+<h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
 <h2 id="_running_the_application"><a class="anchor" href="#_running_the_application"></a>Running the Application</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -706,7 +738,7 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 <p>You can use either the <code>quarkus</code> CLI or the <code>Apache Maven</code> command-line interface in a Terminal.</p>
 </div>
 <div class="paragraph">
-<p><mark>Run one of the following commands :</mark></p>
+<p>Run one of the following commands :</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
@@ -840,9 +872,14 @@ It will show you something like this:</p>
 <div class="paragraph">
 <p>Each extension used in the application will be listed.</p>
 </div>
-<div class="paragraph">
-<p><mark>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</mark></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</p>
 </div>
 </div>
 </div>
@@ -871,6 +908,13 @@ It will show you something like this:</p>
 </div>
 <div class="sect2">
 <h3 id="_uncomment_the_heroresourcetest_java"><a class="anchor" href="#_uncomment_the_heroresourcetest_java"></a>Uncomment the HeroResourceTest.java</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The generated project contains a simple test.
 The file content to uncomment is located here : <strong>hero-service &gt; src &gt; test &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero &gt; HeroResourceTest.java</strong></p>
@@ -878,6 +922,11 @@ The file content to uncomment is located here : <strong>hero-service &gt; src &g
 <div class="paragraph">
 <p>Open it and remove the first part of the file:</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_6"><a class="anchor" href="#_time_to_practise_6"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/start-comment-line.png" alt="start comment line"></span></p>
 </div>
@@ -893,7 +942,6 @@ Then, the <code>testHelloEndpoint</code> method checks the HTTP response status 
 </div>
 <div class="paragraph">
 <p>You can run the tests with <code>./mvnw test</code> in a new Terminal.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_continuous_testing"><a class="anchor" href="#_continuous_testing"></a>Continuous testing</h3>
@@ -986,6 +1034,11 @@ There is already a <code>Hero.java</code> file under <strong>src &gt; main &gt; 
 However, this file is empty.
 To define a Panache entity, simply extend <code>PanacheEntity</code>, annotate it with <code>@Entity</code>, and add your columns as public fields (no need to have getters and setters).</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_7"><a class="anchor" href="#_time_to_practise_7"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_uncomment_the_hero_java_file"><a class="anchor" href="#_uncomment_the_hero_java_file"></a>Uncomment the Hero.java file</h3>
 <div class="paragraph">
@@ -1038,8 +1091,13 @@ Quarkus will automatically start a PostgreSQL service and wire up your applicati
 <div class="paragraph">
 <p>Now check the method findRandom defined above to confirm you can get random heroes!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_8"><a class="anchor" href="#_time_to_practise_8"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open a new Terminal and run the following command</mark></p>
+<p>Open a new Terminal and run the following command</p>
 </div>
 <div class="listingblock">
 <div class="content">

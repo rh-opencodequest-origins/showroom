@@ -5925,10 +5925,6 @@ summary  {
 <p>Pick the right <strong>System</strong> according to your team <strong>team1</strong>. In our example, the team is team1
 <span class="image"><img src="_images/m3/template-pick-system.png" alt="template pick system"></span></p>
 </li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
 <p>You can simply click <strong>Next</strong>.
 <span class="image"><img src="_images/m3/quarkus-service-step3.png" alt="quarkus service step3"></span></p>
@@ -6224,6 +6220,12 @@ We will explore tabs through the lab guide. But don&#8217;t be shy and feel free
 <div class="sect1">
 <h2 id="_customize_your_development_project_dashboard"><a class="anchor" href="#_customize_your_development_project_dashboard"></a>Customize your development project dashboard</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_6"><a class="anchor" href="#_observe_6"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -6232,6 +6234,11 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/argocd-view.png" alt="argocd view"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_11"><a class="anchor" href="#_time_to_practise_11"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_you_are_the_owner_of_your_dashboard"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard"></a>You are the owner of your dashboard</h3>
 <div class="paragraph">
@@ -6315,6 +6322,11 @@ This microservice is a <strong>classical</strong> microservice.</p>
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the hero code base is located in an external GitLab repository. Let&#8217;s import it!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_12"><a class="anchor" href="#_time_to_practise_12"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
 <div class="ulist">
@@ -6345,9 +6357,14 @@ This microservice is a <strong>classical</strong> microservice.</p>
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_7"><a class="anchor" href="#_observe_7"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-directory.png" alt="hero directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -6382,8 +6399,13 @@ This microservice is a <strong>classical</strong> microservice.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_8"><a class="anchor" href="#_observe_8"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Look at the <code>pom.xml</code></mark>
+<p>Look at the <code>pom.xml</code>
 You will find here the import of the Quarkus BOM (<em>bill of materials</em>), allowing you to omit the version of the different Quarkus dependencies.
 In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for the packaging of the application, and also providing the development mode support.</p>
 </div>
@@ -6428,6 +6450,12 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 </div>
 </div>
 <div class="sect1">
+<h2 id="_time_to_practise_13"><a class="anchor" href="#_time_to_practise_13"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
 <h2 id="_running_the_application"><a class="anchor" href="#_running_the_application"></a>Running the Application</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -6437,7 +6465,7 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 <p>You can use either the <code>quarkus</code> CLI or the <code>Apache Maven</code> command-line interface in a Terminal.</p>
 </div>
 <div class="paragraph">
-<p><mark>Run one of the following commands :</mark></p>
+<p>Run one of the following commands :</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
@@ -6571,9 +6599,14 @@ It will show you something like this:</p>
 <div class="paragraph">
 <p>Each extension used in the application will be listed.</p>
 </div>
-<div class="paragraph">
-<p><mark>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</mark></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_14"><a class="anchor" href="#_time_to_practise_14"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</p>
 </div>
 </div>
 </div>
@@ -6602,6 +6635,13 @@ It will show you something like this:</p>
 </div>
 <div class="sect2">
 <h3 id="_uncomment_the_heroresourcetest_java"><a class="anchor" href="#_uncomment_the_heroresourcetest_java"></a>Uncomment the HeroResourceTest.java</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_15"><a class="anchor" href="#_time_to_practise_15"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The generated project contains a simple test.
 The file content to uncomment is located here : <strong>hero-service &gt; src &gt; test &gt; java &gt; io &gt; quarkus &gt; workshop &gt; hero &gt; HeroResourceTest.java</strong></p>
@@ -6609,6 +6649,11 @@ The file content to uncomment is located here : <strong>hero-service &gt; src &g
 <div class="paragraph">
 <p>Open it and remove the first part of the file:</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_16"><a class="anchor" href="#_time_to_practise_16"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/start-comment-line.png" alt="start comment line"></span></p>
 </div>
@@ -6624,7 +6669,6 @@ Then, the <code>testHelloEndpoint</code> method checks the HTTP response status 
 </div>
 <div class="paragraph">
 <p>You can run the tests with <code>./mvnw test</code> in a new Terminal.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_continuous_testing"><a class="anchor" href="#_continuous_testing"></a>Continuous testing</h3>
@@ -6717,6 +6761,11 @@ There is already a <code>Hero.java</code> file under <strong>src &gt; main &gt; 
 However, this file is empty.
 To define a Panache entity, simply extend <code>PanacheEntity</code>, annotate it with <code>@Entity</code>, and add your columns as public fields (no need to have getters and setters).</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_17"><a class="anchor" href="#_time_to_practise_17"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_uncomment_the_hero_java_file"><a class="anchor" href="#_uncomment_the_hero_java_file"></a>Uncomment the Hero.java file</h3>
 <div class="paragraph">
@@ -6769,8 +6818,13 @@ Quarkus will automatically start a PostgreSQL service and wire up your applicati
 <div class="paragraph">
 <p>Now check the method findRandom defined above to confirm you can get random heroes!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_18"><a class="anchor" href="#_time_to_practise_18"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open a new Terminal and run the following command</mark></p>
+<p>Open a new Terminal and run the following command</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6974,8 +7028,15 @@ summary  {
 <div class="developer">
 <div class="paragraph">
 <p>This approach will be followed for all the microservices.
-With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.
-To do this, follow these steps:</p>
+With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_19"><a class="anchor" href="#_time_to_practise_19"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To do this, follow these steps:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -7017,8 +7078,13 @@ From there, you can access your hero microservice by clicking on the pod.</p>
 <div class="paragraph">
 <p>Let&#8217;s switch to the Developer Hub console in your hero component.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_9"><a class="anchor" href="#_observe_9"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the CI tab</mark></p>
+<p>Click the CI tab</p>
 </div>
 <div class="paragraph">
 <p>Once you commit your code, an OpenShift pipeline has been automatically triggered.
@@ -7054,7 +7120,7 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="sect2">
 <h3 id="_dev_deployment"><a class="anchor" href="#_dev_deployment"></a>Dev Deployment</h3>
 <div class="paragraph">
-<p>As a developer, I want to see my handiwork: Did my application really deploy to the dev environment?</p>
+<p>As a developer, I want to see my deployment: Did my application really deploy to the dev environment?</p>
 </div>
 <div class="paragraph">
 <p>You can check that your newly built application has been automatically synced using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.</p>
@@ -7074,8 +7140,13 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-check.png" alt="acs check"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_20"><a class="anchor" href="#_time_to_practise_20"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the task to get the logs and understand what policy has been violated</mark></p>
+<p>Click the task to get the logs and understand what policy has been violated</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/acs-image-check-error.png" alt="acs image check error"></span></p>
@@ -7083,8 +7154,13 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p>As you can see, it looks like a <strong>SuperHero</strong> has introduced a bad dependency in our code!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_21"><a class="anchor" href="#_time_to_practise_21"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open the <code>pom.xml</code> file in DevSpaces IDE</mark></p>
+<p>Open the <code>pom.xml</code> file in DevSpaces IDE</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-CVE.png" alt="devspaces CVE"></span></p>
@@ -7099,7 +7175,7 @@ This pipeline was created automatically for your project when you instantiated t
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Remove the dependency as it&#8217;s not needed in our code
+Remove the dependency as it&#8217;s not needed in our code, commit and push your changes !
 </td>
 </tr>
 </table>
@@ -7121,8 +7197,13 @@ Once you have corrected the dependency issue, commit your code! The pipeline wil
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_22"><a class="anchor" href="#_time_to_practise_22"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click on Topology</mark></p>
+<p>Click on Topology</p>
 </div>
 <div class="paragraph">
 <p>This should look familiar to you if you regularly use the topology view from OpenShift.
@@ -7140,8 +7221,13 @@ Pre-prod and prod have NOT yet been deployed
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_23"><a class="anchor" href="#_time_to_practise_23"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the arrow.</mark> This will open a new tab on your browser showing your deployed hero service!</p>
+<p>Click the arrow. This will open a new tab on your browser showing your deployed hero service!</p>
 </div>
 <div class="paragraph">
 <p>Oops!! A <code>Resource Not Found</code> may be shown.</p>
@@ -7150,45 +7236,73 @@ Pre-prod and prod have NOT yet been deployed
 <p><span class="image"><img src="_images/m4/resource-not-found.png" alt="resource not found"></span></p>
 </div>
 <div class="paragraph">
-<p><mark>You can add <code>/api/heroes/hello</code>, <code>/api/heroes/random</code>, or <code>/api/heroes</code> to the URL in your browser to attack the good endpoints and check your work</mark></p>
+<p>You can add <code>/api/heroes/hello</code>, <code>/api/heroes/random</code>, or <code>/api/heroes</code> to the URL in your browser to attack the good endpoints and check your work</p>
 </div>
 <div class="paragraph">
 <p>Note that during the deployment with OpenShift GitOps, we also automatically deployed the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_10"><a class="anchor" href="#_observe_10"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Verify that the fight-ui dev environment is now able to retrieve the characters</mark></p>
+<p>Verify that the fight-ui dev environment is now able to retrieve the characters</p>
 </div>
 <div class="sect2">
 <h3 id="_promote_to_pre_prod"><a class="anchor" href="#_promote_to_pre_prod"></a>Promote to Pre-Prod</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_24"><a class="anchor" href="#_time_to_practise_24"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>First, access the GitLab UI, there is a convenient link on <mark>the Overview tab</mark></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote1.png" alt="promote1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Click on Tags</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on Tags</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote2.png" alt="promote2"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>New Tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on New Tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote3.png" alt="promote3"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Give the tag a name like <mark>v1.0</mark></p>
-</div>
-<div class="paragraph">
-<p>and click <mark>Create tag</mark></p>
+</li>
+<li>
+<p>Click Create tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote4.png" alt="promote4"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Back to the portal and the <mark>CI tab</mark> to see the promotion pipeline in action</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote5.png" alt="promote5"></span></p>
@@ -7217,17 +7331,29 @@ Pre-prod and prod have NOT yet been deployed
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote7.png" alt="promote7"></span></p>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_promote_to_prod"><a class="anchor" href="#_promote_to_prod"></a>Promote to Prod</h3>
 <div class="paragraph">
-<p>To promote to Production, use the <mark>Create Release feature of the GitLab UI</mark>.</p>
+<p>To promote to Production, use the Create Release feature of the GitLab UI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_25"><a class="anchor" href="#_time_to_practise_25"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on "Create Release"</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote8.png" alt="promote8"></span></p>
 </div>
 <div class="paragraph">
-<p>Give the release a title and click the <mark>Create release</mark> button.</p>
+<p>Give the release a title and click the "Create release" button.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/promote9.png" alt="promote9"></span></p>
@@ -7253,24 +7379,36 @@ Promotion to preprod and prod will be done for every service. Each team member a
 </tr>
 </table>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_stop_your_devspaces_workspace"><a class="anchor" href="#_stop_your_devspaces_workspace"></a>Stop your DevSpaces Workspace</h3>
 <div class="paragraph">
 <p>As you now have fully deployed your microservice, you no longer need the DevSpaces workspace, so let&#8217;s just stop it to preserve resources.</p>
 </div>
-<div class="paragraph">
-<p><mark>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_26"><a class="anchor" href="#_time_to_practise_26"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop1.png" alt="devspaces stop1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Then Click "Dev Spaces: Stop Workspace</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Then Click "Dev Spaces: Stop Workspace</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/devspaces-stop2.png" alt="devspaces stop2"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -7795,7 +7933,7 @@ We have asked our favorite LLM to generate the template for us. We should be car
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_11"><a class="anchor" href="#_time_to_practise_11"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_27"><a class="anchor" href="#_time_to_practise_27"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Register this template using the Red Hat Developer Hub UI:</p>
@@ -8057,7 +8195,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_12"><a class="anchor" href="#_time_to_practise_12"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_28"><a class="anchor" href="#_time_to_practise_28"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -8409,7 +8547,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_13"><a class="anchor" href="#_time_to_practise_13"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_29"><a class="anchor" href="#_time_to_practise_29"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -8480,7 +8618,7 @@ Your username is automatically determined by the Template using your current ses
 </div>
 </div>
 <div class="sect1">
-<h2 id="_observe_6"><a class="anchor" href="#_observe_6"></a>👀 Observe 👀</h2>
+<h2 id="_observe_11"><a class="anchor" href="#_observe_11"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Our template execution looks empty !</strong></p>
@@ -8728,7 +8866,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_14"><a class="anchor" href="#_time_to_practise_14"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_30"><a class="anchor" href="#_time_to_practise_30"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -9112,7 +9250,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_15"><a class="anchor" href="#_time_to_practise_15"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_31"><a class="anchor" href="#_time_to_practise_31"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -9375,6 +9513,9 @@ summary  {
     color: white;
 }
 </style>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/enjoy-stay.jpg" alt="enjoy stay"></span></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -9433,6 +9574,12 @@ We will explore tabs through the lab guide. But don&#8217;t be shy and feel free
 <div class="sect1">
 <h2 id="_customize_your_development_project_dashboard_2"><a class="anchor" href="#_customize_your_development_project_dashboard_2"></a>Customize your development project dashboard</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_12"><a class="anchor" href="#_observe_12"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal !
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
@@ -9448,6 +9595,12 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
 Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_32"><a class="anchor" href="#_time_to_practise_32"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
@@ -9501,7 +9654,6 @@ To simplify the development flow, we&#8217;ll commit later with the changes done
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_the_villain_microservice"><a class="anchor" href="#_the_villain_microservice"></a>The Villain Microservice</h2>
 <div class="sectionbody">
@@ -9511,9 +9663,15 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 </div>
 <div class="sect2">
 <h3 id="_import_the_code_base_2"><a class="anchor" href="#_import_the_code_base_2"></a>Import the code base</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_33"><a class="anchor" href="#_time_to_practise_33"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let&#8217;s import it !</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file_2"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file_2"></a>Open the terminal to import the zip file</h3>
@@ -9547,9 +9705,14 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_13"><a class="anchor" href="#_observe_13"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/villain-directory.png" alt="villain directory"></span></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_architecture"><a class="anchor" href="#_architecture"></a>Architecture</h3>
@@ -9565,7 +9728,7 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 <p>This service will be used by the <strong>fight</strong> microservice.</p>
 </div>
 <div class="paragraph">
-<p><mark>The codebase is provided but you will have to bring some guided modifications ;) !</mark></p>
+<p>The codebase is provided but you will have to bring some guided modifications ;) !</p>
 </div>
 </div>
 <div class="sect2">
@@ -9598,8 +9761,14 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_14"><a class="anchor" href="#_observe_14"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Look at the <code>pom.xml</code>.</mark></p>
+<p>Look at the <code>pom.xml</code>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>pom.xml</code> is basically the same as for heroes, apart from the fact that it contains a few more dependencies: <code>quarkus-spring-web</code> and <code>quarkus-spring-data</code>.</p>
@@ -9612,6 +9781,10 @@ It uses HTTP to expose a REST API, and it internally stores data in a database.<
 For this reason, attempting to utilize additional Spring libraries will likely not work.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_34"><a class="anchor" href="#_time_to_practise_34"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="sect2">
 <h3 id="_the_controller"><a class="anchor" href="#_the_controller"></a>The Controller</h3>
 <div class="paragraph">
@@ -9681,8 +9854,14 @@ The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt;
 <p>As we are following a Spring Data programming model with JPA,we need to extend the JPA-specific Repository interface, JpaRepository.
 This will enable Quarkus to find this interface and automatically create an implementation for it.</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_35"><a class="anchor" href="#_time_to_practise_35"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Uncomment VillainRepository as you did previously</mark></p>
+<p>Uncomment VillainRepository as you did previously</p>
 </div>
 <div class="paragraph">
 <p>The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; villain &gt;VillainRepository.java</strong></p>
@@ -9714,14 +9893,14 @@ This will enable Quarkus to find this interface and automatically create an impl
     }</code></pre>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="_the_villain_entity"><a class="anchor" href="#_the_villain_entity"></a>The Villain entity</h3>
 <div class="paragraph">
-<p>Finally, we have an entity class representing the villains.</p>
+<p>Finally, we have an entity class representing the villains.
+== ✍️ Time to practise ✍️</p>
 </div>
 <div class="paragraph">
-<p><mark>Uncomment Villain Entity as you did previously</mark></p>
+<p>Uncomment Villain Entity as you did previously</p>
 </div>
 <div class="paragraph">
 <p>The file is located in <strong>villain-service &gt; src &gt; main &gt; java &gt; io &gt; quarkus &gt; workshop &gt; villain &gt; Villain.java</strong></p>
@@ -9751,8 +9930,13 @@ A test class is provided and contains the basic tests to ensure that the villain
 <div class="paragraph">
 <p>You can check that everything works fine by starting the application in development mode.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_36"><a class="anchor" href="#_time_to_practise_36"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Run one of the following commands:</mark></p>
+<p>Run one of the following commands:</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
@@ -9767,7 +9951,7 @@ A test class is provided and contains the basic tests to ensure that the villain
 <p>Note that the tests have been successfully run.</p>
 </div>
 <div class="paragraph">
-<p><mark>Also, you can curl the villains endpoint and you should get lots of villains</mark></p>
+<p>Also, you can curl the villains endpoint and you should get lots of villains</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10790,7 +10974,7 @@ We have asked our favorite LLM to generate the template for us. We should be car
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_16"><a class="anchor" href="#_time_to_practise_16"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_37"><a class="anchor" href="#_time_to_practise_37"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Register this template using the Red Hat Developer Hub UI:</p>
@@ -11052,7 +11236,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_17"><a class="anchor" href="#_time_to_practise_17"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_38"><a class="anchor" href="#_time_to_practise_38"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11111,7 +11295,7 @@ This template has been generated by an AI. Use it carefully ;)
 </div>
 </div>
 <div class="sect1">
-<h2 id="_observe_7"><a class="anchor" href="#_observe_7"></a>👀 Observe 👀</h2>
+<h2 id="_observe_15"><a class="anchor" href="#_observe_15"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11411,7 +11595,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_18"><a class="anchor" href="#_time_to_practise_18"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_39"><a class="anchor" href="#_time_to_practise_39"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -11487,7 +11671,7 @@ Your username is automatically determined by the Template using your current ses
 </div>
 </div>
 <div class="sect1">
-<h2 id="_observe_8"><a class="anchor" href="#_observe_8"></a>👀 Observe 👀</h2>
+<h2 id="_observe_16"><a class="anchor" href="#_observe_16"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Our template execution looks empty !</strong></p>
@@ -11735,7 +11919,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_19"><a class="anchor" href="#_time_to_practise_19"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_40"><a class="anchor" href="#_time_to_practise_40"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -12092,7 +12276,7 @@ summary  {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_20"><a class="anchor" href="#_time_to_practise_20"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_practise_41"><a class="anchor" href="#_time_to_practise_41"></a>✍️ Time to practise ✍️</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -12360,6 +12544,9 @@ summary  {
     color: white;
 }
 </style>
+<div class="paragraph">
+<p><span class="image"><img src="_images/m4/enjoy-stay.jpg" alt="enjoy stay"></span></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -12433,6 +12620,12 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
 Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_42"><a class="anchor" href="#_time_to_practise_42"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
@@ -12492,7 +12685,6 @@ The UI dashboard will be updated once the commit is done. To simplify the develo
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_the_fight_service"><a class="anchor" href="#_the_fight_service"></a>The Fight Service</h2>
 <div class="sectionbody">
@@ -12514,9 +12706,15 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 </div>
 <div class="sect2">
 <h3 id="_import_the_code_base_3"><a class="anchor" href="#_import_the_code_base_3"></a>Import the code base</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_43"><a class="anchor" href="#_time_to_practise_43"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let&#8217;s import it !</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file_3"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file_3"></a>Open the terminal to import the zip file</h3>
@@ -12547,12 +12745,17 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe_17"><a class="anchor" href="#_observe_17"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Confirm you have this directory :</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/fight-service-directory.png" alt="fight service directory"></span></p>
-</div>
 </div>
 </div>
 </div>
@@ -12564,7 +12767,7 @@ Unlike traditional code, you are going to explain the behavior of the AI using n
 The LangChain4j project is a Java re-implementation of the famous LangChain library.</p>
 </div>
 <div class="paragraph">
-<p><mark>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</mark></p>
+<p>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -12583,8 +12786,13 @@ The LangChain4j project is a Java re-implementation of the famous LangChain libr
 <div class="paragraph">
 <p>Configuring OpenAI models mandates an API key or API URL among others oto</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_44"><a class="anchor" href="#_time_to_practise_44"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>#Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file #</p>
+<p>Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -12674,6 +12882,12 @@ quarkus.langchain4j.openai.chat-model.model-name={openai-model}</code></pre>
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions.
 We model the interaction using an interface annotated with <code>@RegisterAiService</code>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_45"><a class="anchor" href="#_time_to_practise_45"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
@@ -12778,32 +12992,44 @@ Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroP
 </div>
 <div class="sect2">
 <h3 id="_start_the_fight_service_in_dev_mode"><a class="anchor" href="#_start_the_fight_service_in_dev_mode"></a>Start the Fight service in dev mode</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_46"><a class="anchor" href="#_time_to_practise_46"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We are now ready to run our application.</p>
 </div>
 <div class="paragraph">
-<p><mark>Open a Terminal and run one of the following commands</mark></p>
+<p>Open a Terminal and run one of the following commands</p>
 </div>
 <div class="paragraph">
 <p><code>./mvnw quarkus:dev</code></p>
 </div>
 <div class="paragraph">
-<p><mark>or</mark></p>
+<p>or</p>
 </div>
 <div class="paragraph">
 <p><code>quarkus dev</code></p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="_verify_the_fight_service"><a class="anchor" href="#_verify_the_fight_service"></a>Verify the Fight service</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_practise_47"><a class="anchor" href="#_time_to_practise_47"></a>✍️ Time to practise ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</mark></p>
+<p>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</p>
 </div>
 <div class="paragraph">
-<p><mark>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</mark></p>
+<p>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/m4/open-quarkus-dev-in-new-tab.png" alt="open quarkus dev in new tab"></span></p>
