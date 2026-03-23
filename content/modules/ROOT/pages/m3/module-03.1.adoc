@@ -5,10 +5,13 @@
 include::../style.adoc[]
 
 As mentioned earlier, Templates are defined using YAML and rendered as a rich form in the {product_name_rhdh} UI when used by development teams.
+Explore https://backstage.io/docs/features/software-templates/[template definition ^, window="template doc"]
+
 
 Let's explore the Template structure using a sample Template in the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/template-quarkus-simple[rhdh/template-quarkus-simple^, window="gitlab"] repository in GitLab. 
 
-== Template YAML Structure
+== Template Structure
+
 
 At a basic level, the Template Entity is similar to the Component Entity you encountered in the _catalog-info.yaml_ in the prior module, resembling a Kubernetes Custom Resource.
 
@@ -104,26 +107,4 @@ spec:
       catalogInfoPath: "/catalog-info.yaml"
 ----
 
-Notice how the `parameters` are referenced in the `steps`? Another point of note is that a `user` variable is available to access data related to the user who's using the Template, and subsequent `steps` can access `output` from prior steps. 
-
-The `output` values are documented on a per-plugin basis. You can find the values for the specific version of your installed plugins by accessing the https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}/create/actions[/create/actions^, window="rhdh"] endpoint on your {product_name_rhdh} instance.
-
-== Output
-
-The _spec.output_ can use the outputs from the `steps` to display useful information such as: 
-
-* Links to newly created Components
-* Source Code Repository links
-* Links to Git Merge Requests that are needed, etc
-* Markdown text blobs
-
-[source,yaml]
-----
-  output:
-    links:
-      - title: Source Code Repository
-        url: {{ '${{ steps.publish.output.remoteUrl }}' }}
-      - title: Open Component in catalog
-        icon: catalog
-        entityRef: {{ '${{ steps.register.output.entityRef }}' }}
-----
+Notice how the `parameters` are referenced in the `steps`. Another point of note is that a `user` variable is available to access data related to the user who's using the Template, and subsequent `steps` can access `output` from prior steps. 

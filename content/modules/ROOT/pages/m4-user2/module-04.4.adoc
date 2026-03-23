@@ -27,6 +27,8 @@ We will create the villain service from a Developer Hub template. It will instan
 
 == Run the Template
 
+== ✍️ Time to practise ✍️ 
+
 . Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
 +
@@ -36,8 +38,10 @@ image:m3/rhdh-create.png[The {product_name_rhdh} Create UI]
 . In Step 2, you'll be prompted to enter a set of application parameters and choose the *System"* and the *"entity"*. Thankfully, application parameters are set.
 . Pick the right *System* according to your team *{team-id}*. In our example, the team is team1 
 image:m3/template-pick-system.png[] 
+////
 . Pick the right *Owner* according to your team *{team-id}*. In our example, the team is team1 
 image:m3/template-pick-owner.png[] 
+////
 . You can simply click *Next*.
 image:m3/quarkus-service-step3.png[] 
 

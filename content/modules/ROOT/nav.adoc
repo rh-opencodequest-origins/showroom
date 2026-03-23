@@ -1,9 +1,9 @@
 * xref:m1/module-01.adoc[1. Discovery]
 
 * xref:m2/module-02.0.adoc[2. Design the Internal Developer Platform]
-** xref:m2/module-02.1.adoc[2.1. Introduction to concepts]
-** xref:m2/module-02.2.adoc[2.2 Activity: Access Developer Hub]
-** xref:m2/module-02.3.adoc[2.3. Activity: Deploying Developer Hub]
+** xref:m2/module-02.1.adoc[2.1 Introduction to concepts]
+** xref:m2/module-02.2.adoc[2.2 Activity: Deploying Developer Hub]
+** xref:m2/module-02.3.adoc[2.3 Activity: Access Developer Hub]
 ** xref:m2/module-02.4.adoc[2.4 Activity: Synchronize user and group entities]
 ** xref:m2/module-02.5.adoc[2.5 Activity: Configure OpenID Connect authentication]
 ** xref:m2/module-02.6.adoc[2.6 Activity: Enabling GitLab entity discovery]

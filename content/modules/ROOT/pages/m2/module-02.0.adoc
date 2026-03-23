@@ -1,6 +1,6 @@
 :imagesdir: ../assets/images
 
-= Module 2: Design the Internal Developer Portal
+= Module 2: Design the Internal Developer Platform
 
 include::../style.adoc[]
 
@@ -25,18 +25,19 @@ The value of an internal developer portal depends on the effort and care put int
 
 image:m2/developerhub-tooling.png[]
 
-Your workshop environment has been preconfigured with the following software and platform components:
+Your workshop environment has been preconfigured with the following capabilities :
 
-* Red Hat Build of Keycloak
-* OpenShift GitOps
-* OpenShift Pipelines
-* GitLab
+* An Internal Developer Portal 
+* An Identity Provider 
+* A Code Source Manager
+* A CI/CD Platform
+* A container Platform
 
-For this workshop, we’ll assume that your organization has standardized on these tools, and it’s your objective as the platform engineer to integrate them with {product_name_rhdh}.
+For this workshop, we’ll assume that your organization has standardized on and set these tools. It’s your objective as the platform engineer to integrate them with {product_name_rhdh}.
 
 In this module, you'll:
 
-* Identify the platform requirements and dependencies, such as single sign-on (SSO), source code management (SCM), RBAC, resources, and existing assets
-* Integrate {product_name_rhdh} with the dependent services, such as GitLab and Keycloak
+* Deploy the Internal Developer Portal 
+* Integrate {product_name_rhdh} with the dependent services
 * Learn about https://backstage.io/docs/features/software-catalog/[Backstage Entities^, window="content"], e.g. Components, APIs, and Docs
 * Prepare the platform for developer onboarding

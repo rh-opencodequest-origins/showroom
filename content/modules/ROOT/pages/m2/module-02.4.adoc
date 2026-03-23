@@ -2,16 +2,27 @@
 
 = Activity: Synchronize User & Group Entities
 
-include::../style.adoc[]
 
-In xref:m2/module-02.1.adoc[module 2.1], you learned that the Software Catalog contains Entities, and saw a sample `appConfig` that contained a `catalog.locations` configuration. That example configuration imported entities from a file located in a hardcoded Git repository. This pattern is known as a https://backstage.io/docs/features/software-catalog/#static-catalog-configuration[static configuration^, window="content"]. {product_name_rhdh} will occasionally poll for updates to the specified file locations and update the Entities in the Software Catalog accordingly.
 
-An option for dynamically importing and synchronizing Entities is via _providers_. Providers are added to {product_name_rhdh} using plugins, and are configured using the `catalog.providers` entry in the `appConfig`. Let's use the Keycloak plugin to synchronize Users and Groups to your Software Catalog.
+To explore how to represent and synchronize objects from external tools in Developer Hub, we are going to add users and groups.
 
-NOTE: Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to {product_name_rhdh}.
+They are served by an *Identity Provider*. It is in charge to manage authorisation, authentication, registration and so on. Here, we use *Keycloak*. Users and groups already defined. 
+In our context, groups reflect the user's team they belongs to.
+Let's use the Keycloak plugin to synchronize Users and Groups to Red Hat Developer Hub. 
 
-. View your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file in the developer-hub-config repository^, window="gitlab"].
-. Select **Edit > Edit single file**. When prompted, log in as *`{pe-username}` / `{common_password}`*.
+
+.Curious ?
+[%collapsible]
+====
+Synchronizing Users and Groups to your Software Catalog is important for two reasons. Doing so will enable developers and platform engineers to associate Users and Groups with other Entities in the Software Catalog - very useful for finding out which individual or team is responsible for a particular microservice or database, for example. Secondly, only users who have a corresponding User Entity in the Software Catalog can successfully log in to {product_name_rhdh}.
+====
+
+== Enable the Keycloak Plugin
+
+== ✍️ Time to practise ✍️ 
+
+. Open the https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[configuration file^, window="gitlab"]. It's same used to update the title 
+. Select **Edit > Edit single file**.
 . You will find the `backstage-community-plugin-catalog-backend-module-keycloak-dynamic` package under the `dynamic.plugins` field that is set to `disabled: false`. This means that this plugin has been enabled in your installation.
 +
 image:m2/keycloak-dynamic-plugin.png[width=60%]
@@ -40,11 +51,14 @@ If needed, log in using `{pe-username}`/`{common_password}`.
 +
 NOTE: Argo CD has been set up to auto-sync every two minutes. Instead of having to wait for auto-sync to kick in, you are instructed to manually sync the Argo CD application.
 
-Your changes will start to roll out. Confirm this by visiting the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[rhdh project, window="console"] on OpenShift and checking that a new Pod is being started, or waiting until the RHDH Application in OpenShift GitOps reports *Healthy* instead of *Progressing*.
+== 👀 Observe 👀
 
-image:m2/gitops-progressing.png[RHDH Application in Progressing Status]
+Your changes will start to roll out. 
+Confirm this by visiting the https://console-openshift-console.{openshift_cluster_ingress_domain}/topology/ns/rhdh-{team-id}?view=graph[Red Hat Developer Hub deployment, window="console"] on OpenShift and checking that a new Pod is being started, or waiting until the Application in OpenShift GitOps reports *Healthy* instead of *Progressing*.
 
-Once the new Pod has started, navigate to https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/core%7Ev1%7EPod[OpenShift^, window="console"]. If needed, log in as `{pe-username}``The number of Users and Groups has been read from Keycloak.
+image:m2/openshift-backstage-deployment.png[]
+
+Once the new Pod has started, navigate to https://console-openshift-console.{openshift_cluster_ingress_domain}/k8s/ns/rhdh-{team-id}/core%7Ev1%7EPod[OpenShift^, window="console"]. Click on "Logs". The number of Users and Groups has been read from Keycloak.
 
 image:m2/openshift-pod-logs.png[{product_name_rhdh} Pod logs as seen in the OpenShift Console]
 
@@ -55,8 +69,9 @@ include::../debug-pod-placement.adoc[]
 ====
 
 
-You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 
 
 image:m2/rhdh-users-list.png[User Entities listed in {product_name_rhdh}]
 
 Nice work! You have just enabled a dynamic plugin and configured a catalog provider based on it!
+
+You can further confirm that the Users and Groups have been synchronized by visiting the Software Catalog in https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"] and setting the *Kind* dropdown to User. 

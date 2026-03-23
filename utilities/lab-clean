@@ -2,5 +2,5 @@
 #
 
 echo "Removing old site..."
-rm -rf ./www/*
+rm -rf ./build/*
 echo "Old site removed"

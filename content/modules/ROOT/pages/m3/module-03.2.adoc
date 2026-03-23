@@ -38,10 +38,13 @@ this activity is stored in the _locations-opencodequest.yaml_ file in the https:
 
 === Register those objects using the {product_name_rhdh} UI:
 
+
+== ✍️ Time to practise ✍️ 
+
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +
 image:m3/create-icon.png[] 
-. Click the *Register Existing Component* button.
+. Click the *Import an existing Git repository* button.
 +
 image:m3/rhdh-catalog-create.png[The empty Create UI]
 . Enter the following URL in the *Select URL* field and click *Analyze*:
@@ -53,7 +56,7 @@ https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/rhdh-entiti
 
 ----
 . You'll be asked to review the entities being imported, as shown:
-+
+
 image:m3/rhdh-register-template.png[Registering and Entity]
 . Click *Import* when prompted.
 
@@ -68,6 +71,8 @@ image:m3/rhdh-register-template.png[Registering and Entity]
  Click *Import* when prompted.
 
 image:m3/import-entity-domain-pe.png[Registering and Entity]
+
+== 👀 Observe 👀
 
 1. Click on *Catalog* section
 2. Set the _Kind_  filter to: *Domain*

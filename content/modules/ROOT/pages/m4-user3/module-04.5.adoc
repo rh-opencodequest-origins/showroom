@@ -1,8 +1,5 @@
 :imagesdir: ../../assets/images
 
-++++
-<div class="developer">
-++++
 
 
 = Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!
@@ -11,7 +8,13 @@ IMPORTANT: Please make sure you are logged in as a Developer with *`{dev-usernam
 
 include::../style.adoc[]
 
+image:m4/enjoy-stay.jpg[]
+
 == The home page dashboard
+
+++++
+<div class="developer">
+++++
 
 On the development home page, all tools needed are represented by different tabs, such as :
 
@@ -25,9 +28,7 @@ It maps with the following integrations performed backstage ;)
 
 image:m3/template-components.png[]
 
-++++
-</div>
-++++
+
 
 It's the entry point for everything !! 
 
@@ -35,11 +36,16 @@ Our first mission is to add a new tab to monitor changes performed by our GitOps
 
 NOTE: We will explore tabs through the lab guide. But don't be shy and feel free to open the tabs!
 
+++++
+</div>
+++++
+
 == Customize your development project dashboard
 
 Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
 To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
 The *CD* shortcut in the dashboard will display this view :
+
 
 image:m4/argocd-view.png[]
 
@@ -48,6 +54,8 @@ image:m4/argocd-view.png[]
 Dashboard definition is located in the git repo instantiated to host your code base in our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
 Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+
+== ✍️ Time to practise ✍️ 
 
 image:m4/hero-home-page-rhdh.png[] 
 
@@ -95,6 +103,8 @@ image:m4/fight-architecture.png[]
 
 === Import the code base
 
+== ✍️ Time to practise ✍️ 
+
 Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let's import it !
 
 === Open the terminal to import the zip file
@@ -115,6 +125,8 @@ wget https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/fullco
 ====
 
 
+== 👀 Observe 👀
+
 Confirm you have this directory : 
 
 image:m4/fight-service-directory.png[]
@@ -125,7 +137,7 @@ image:m4/fight-service-directory.png[]
 This extension is based on the LangChain4j library, which provides a common API to interact with LLMs. 
 The LangChain4j project is a Java re-implementation of the famous LangChain library.
 
-#Note that the extension is already present in the `pom.xml` file of your Fight service:#
+Note that the extension is already present in the `pom.xml` file of your Fight service:
 
 [source,xml]
 ----
@@ -140,8 +152,10 @@ The LangChain4j project is a Java re-implementation of the famous LangChain libr
 Configuring OpenAI models mandates an API key or API URL among others oto
 
 
+== ✍️ Time to practise ✍️ 
 
-#Copy the following configuration in your `fight-service/src/main/resources/application.properties` file #
+
+Copy the following configuration in your `fight-service/src/main/resources/application.properties` file 
 
 [,bash,subs=attributes]
 
@@ -197,6 +211,8 @@ It generates the following in the `fight-service` folder:
 It’s time to tell the LLM what we want to do. 
 The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions. 
 We model the interaction using an interface annotated with `@RegisterAiService`.
+
+== ✍️ Time to practise ✍️ 
 
 == Uncomment the FightSimulatorService.java file
 
@@ -275,22 +291,26 @@ Now, #let's take a look at the `fight-service/src/main/java/io/quarkus/workshop/
 
 === Start the Fight service in dev mode
 
+== ✍️ Time to practise ✍️ 
+
 We are now ready to run our application.
 
-#Open a Terminal and run one of the following commands#
+Open a Terminal and run one of the following commands
 
 `./mvnw quarkus:dev`
 
-#or#
+or
 
 `quarkus dev`
 
 
 == Verify the Fight service
 
-#For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui#
+== ✍️ Time to practise ✍️ 
 
-#by clicking the `Open in New Tab` button, a pop-up will be shown#
+For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui
+
+by clicking the `Open in New Tab` button, a pop-up will be shown
 
 image:m4/open-quarkus-dev-in-new-tab.png[]
 

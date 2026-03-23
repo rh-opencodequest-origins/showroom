@@ -43,6 +43,7 @@ include::../debug-pod-placement.adoc[]
 ====
 
 
+////
 
 == Quiz
 
@@ -52,6 +53,7 @@ Wrap up the job done for your peers. Explain which capabilities (Authentication 
 
 
 image::m2/quizz-time.png[Quiz time announcement,link=self,window=blank]
+////
 
 == Conclusion
 

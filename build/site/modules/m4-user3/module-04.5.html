@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne! :: OpenCodeQuest Origin (PE Workshop)</title>
+    <link rel="canonical" href="https://developers.redhat.com/modules/m4-user3/module-04.5.html">
+    <link rel="prev" href="module-04.4.html">
+    <link rel="next" href="module-04.6.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Mono:wght@400;700&family=Red+Hat+Text:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item navbar-logo" href="https://demo.redhat.com" target="_blank">
+        <img src="../../_/img/logo-demo-platform.svg" alt="Red Hat Demo Platform" class="navbar-logo-img">
+      </a>
+      <a class="navbar-item site-title" target="_blank" href="https://developers.redhat.com">OpenCodeQuest Origin (PE Workshop)</a>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Links</a>
+          <div class="navbar-dropdown navbar-dropdown-right">
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="modules" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html" class=" query-params-link">Open Code Quest Origins</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../m1/module-01.html">1. Discovery</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m2/module-02.0.html">2. Design the Internal Developer Platform</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.1.html">2.1 Introduction to concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.2.html">2.2 Activity: Deploying Developer Hub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.3.html">2.3 Activity: Access Developer Hub</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.4.html">2.4 Activity: Synchronize user and group entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.5.html">2.5 Activity: Configure OpenID Connect authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m2/module-02.6.html">2.6 Activity: Enabling GitLab entity discovery</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m3/module-03.0.html">3. Create your first software template Red Hat Developer Hub</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m3/module-03.1.html">3.1 Introduction to concepts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m3/module-03.2.html">3.2 Platform Engineer activity: Import domain and entity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m3/module-03.3.html">3.3 Team split</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m4-user1/module-04.0.html">4. USER 1 - Hero service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.1.html">4.1 Platform Engineer activity: Correct a template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.2.html">4.2 Platform Engineer activity: Instantiate the corrected template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.3.html">4.3 Platform Engineer activity: Add steps to the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.4.html">4.4 Developer activity: Instantiate the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.5.html">4.5 Developer activity: Welcome onboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.6.html">4.6 Developer activity: From Git to OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.7.html">4.7 Secure your application deployment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user1/module-04.8.html">4.8 Improve your project dashboard</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m4-user2/module-04.0.html">4. USER 2 - Villain service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.1.html">4.1 Platform Engineer activity: Correct a template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.2.html">4.2 Platform Engineer activity: Instantiate the corrected template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.3.html">4.3 Platform Engineer activity: Add steps to the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.4.html">4.4 Developer activity: Instantiate the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.5.html">4.5 Developer activity: Welcome onboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.6.html">4.6 Developer activity: From Git to OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m4-user2/module-04.7.html">4.7 Secure your application deployment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="module-04.0.html">4. USER 3 - Fight service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.1.html">4.1 Platform Engineer activity: Correct a template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.2.html">4.2 Platform Engineer activity: Instantiate the corrected template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.3.html">4.3 Platform Engineer activity: Add steps to the template</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.4.html">4.4 Developer activity: Instantiate the template</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="module-04.5.html">4.5 Developer activity: Welcome onboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.6.html">4.6 Developer activity: From Git to OpenShift</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-04.7.html">4.7 Secure your application deployment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m5/module-05.0.html">Congratulations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m5/module-05.2.html">Explore updates to production Argo CD manifests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../m6/module-06.0.html">Survey</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../m7/module-07.0.html">7. Continuous platform improvements</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../env.html">My lab environment details</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Open Code Quest Origins</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article" id="content">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Open Code Quest Origins</a></li>
+    <li><a href="module-04.0.html">4. USER 3 - Fight service</a></li>
+    <li><a href="module-04.5.html">4.5 Developer activity: Welcome onboard</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Developer Activity: Welcome on board in "Première Classe" - Drink your own champagne!</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Please make sure you are logged in as a Developer with <strong><code>mon-user-dev</code> / <code>sWtbXGQy</code></strong> as you were guided to in the previous step. We advise you to use a <strong>private/incognito window</strong> to log out properly!
+</td>
+</tr>
+</table>
+</div>
+<style>
+.doc {
+    max-width: 70rem;
+}
+
+.underline {
+  cursor: pointer;
+}
+
+u {
+    cursor: pointer;
+}
+
+summary  {
+    cursor: pointer;
+}
+.developer {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+
+}
+
+.developer .doc {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(30, 136, 229, 0.15);
+    border-left: 4px solid #1976d2;
+}
+
+.developer h1, .developer h2 {
+    color: #1565c0;
+    border-bottom: 2px solid #bbdefb;
+    padding-bottom: 8px;
+}
+
+.developer h3 {
+    color: #1976d2;
+}
+
+.developer .admonitionblock {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #2196f3;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.1);
+}
+
+.developer .admonitionblock.note {
+    border-left-color: #2196f3;
+    background-color: rgba(33, 150, 243, 0.05);
+}
+
+.developer .admonitionblock.important {
+    border-left-color: #ff9800;
+    background-color: rgba(255, 152, 0, 0.05);
+}
+
+.developer .imageblock img {
+    border: 3px solid #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+}
+
+.developer .listingblock .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #bbdefb;
+    border-radius: 4px;
+}
+
+/* ===== CLASSE PE - THEME ROUGE ===== */
+.pe {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 50%, #ef9a9a 100%);
+}
+
+.pe .doc {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(211, 47, 47, 0.15);
+    border-left: 4px solid #d32f2f;
+}
+
+.pe h1, .pe h2 {
+    color: #c62828;
+    border-bottom: 2px solid #ffcdd2;
+    padding-bottom: 8px;
+}
+
+.pe h3 {
+    color: #d32f2f;
+}
+
+.pe .admonitionblock {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid #f44336;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.1);
+}
+
+.pe .admonitionblock.note {
+    border-left-color: #f44336;
+    background-color: rgba(244, 67, 54, 0.05);
+}
+
+.pe .admonitionblock.important {
+    border-left-color: #ff5722;
+    background-color: rgba(255, 87, 34, 0.05);
+}
+
+.pe .imageblock img {
+    border: 3px solid #ffebee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.pe .listingblock .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ffcdd2;
+    border-radius: 4px;
+}
+
+/* ===== STYLES COMMUNS ===== */
+.developer .doc, .pe .doc {
+    transition: all 0.3s ease;
+}
+
+.developer .doc:hover, .pe .doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Amélioration des liens */
+.developer a {
+    color: #1976d2;
+    text-decoration: none;
+    border-bottom: 1px dotted #1976d2;
+}
+
+.developer a:hover {
+    color: #0d47a1;
+    border-bottom: 1px solid #0d47a1;
+}
+
+.pe a {
+    color: #d32f2f;
+    text-decoration: none;
+    border-bottom: 1px dotted #d32f2f;
+}
+
+.pe a:hover {
+    color: #b71c1c;
+    border-bottom: 1px solid #b71c1c;
+}
+
+/* Boutons et éléments interactifs */
+.developer .btn, .developer button {
+    background-color: #1976d2;
+    border-color: #1976d2;
+    color: white;
+}
+
+.pe .btn, .pe button {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    color: white;
+}
+</style>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_home_page_dashboard"><a class="anchor" href="#_the_home_page_dashboard"></a>The home page dashboard</h2>
+<div class="sectionbody">
+<div class="developer">
+<div class="paragraph">
+<p>On the development home page, all tools needed are represented by different tabs, such as :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Topology</p>
+</li>
+<li>
+<p>Issues</p>
+</li>
+<li>
+<p>CI</p>
+</li>
+<li>
+<p>Image Registry</p>
+</li>
+<li>
+<p>Docs etc..</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It maps with the following integrations performed backstage ;)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m3/template-components.png" alt="template components"></span></p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s the entry point for everything !!</p>
+</div>
+<div class="paragraph">
+<p>Our first mission is to add a new tab to monitor changes performed by our GitOps engine.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We will explore tabs through the lab guide. But don&#8217;t be shy and feel free to open the tabs!
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customize_your_development_project_dashboard"><a class="anchor" href="#_customize_your_development_project_dashboard"></a>Customize your development project dashboard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since the beginning of the workshop, we have used GitOps mechanisms thanks to ArgoCD. As a developer, it would be nice to get an overview of the objects we manage through our development environment without leaving our new hometown. The Internal Developer Portal!
+To do so, we will enable the ArgoCD view in our dashboard, freshly instantiated.
+The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/argocd-view.png" alt="argocd view"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_you_are_the_owner_of_your_dashboard"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard"></a>You are the owner of your dashboard</h3>
+<div class="paragraph">
+<p>Dashboard definition is located in the git repo instantiated to host your code base in our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
+Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
+Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
+</div>
+<div class="paragraph">
+<p>You may be asked to authenticate again. Please, proceed.
+You should see the following page while the Dev Spaces are starting up:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
+</div>
+<div class="paragraph">
+<p>Open the IDE cloud here :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
+</div>
+<div class="paragraph">
+<p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove the  <strong>#</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It must look like this. Be sure to respect the right YAML indentation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The UI dashboard will be updated once the commit is done. To simplify the development flow, we&#8217;ll commit later with the changes done on our code base
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Confirm you have this directory :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/fight-service-directory.png" alt="fight service directory"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_fight_service"><a class="anchor" href="#_the_fight_service"></a>The Fight Service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Fight service is a Quarkus intelligent service.
+Instead of randomly selecting a winner in the battle between heroes and villains, he can interact with a language model (LLM) and delegate the decision to it.
+Furthermore, this consultation will not only provide a winner but also a detailed description of how the fight unfolded.</p>
+</div>
+<div class="paragraph">
+<p>First, let’s have a look at the big picture. When integrating an LLM into a Quarkus application,
+You need to describe what you want the AI to do.
+Unlike traditional code, you are going to explain the behavior of the AI using natural language.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram illustrates the interactions between the Fight service and the LLM.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/fight-architecture.png" alt="fight architecture"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_import_the_code_base"><a class="anchor" href="#_import_the_code_base"></a>Import the code base</h3>
+<div class="paragraph">
+<p>Our workspace directory looks empty. In order to start the project quickly, the fight code base is located in an external GitLab repository. Let&#8217;s import it !</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Click on the "Burger icon" on the upper left side</p>
+</li>
+<li>
+<p>Click on File &gt; Terminal &gt; Open a new terminal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/open-terminal.png" alt="open terminal"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Run the following command</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>wget <a href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/fullcodebase/-/raw/main/fight-service.zip" class="bare">https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/peteam1/fullcodebase/-/raw/main/fight-service.zip</a> -O fight-service.zip &amp;&amp; unzip -o fight-service.zip &amp;&amp; rm fight-service.zip</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Confirm you have this directory :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/fight-service-directory.png" alt="fight service directory"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_quarkus_langchain4j_extension"><a class="anchor" href="#_the_quarkus_langchain4j_extension"></a>The Quarkus-LangChain4j Extension</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This extension is based on the LangChain4j library, which provides a common API to interact with LLMs.
+The LangChain4j project is a Java re-implementation of the famous LangChain library.</p>
+</div>
+<div class="paragraph">
+<p><mark>Note that the extension is already present in the <code>pom.xml</code> file of your Fight service:</mark></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.quarkiverse.langchain4j&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-langchain4j-openai&lt;/artifactId&gt;
+    &lt;version&gt;${quarkus-langchain4j.version}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Configuring OpenAI models mandates an API key or API URL among others oto</p>
+</div>
+<div class="paragraph">
+<p>#Copy the following configuration in your <code>fight-service/src/main/resources/application.properties</code> file #</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>quarkus.langchain4j.openai.base-url=url-open-ai</p>
+</div>
+<div class="paragraph">
+<p>quarkus.langchain4j.openai.chat-model.model-name=mon-modele</p>
+</div>
+<div class="paragraph">
+<p>quarkus.langchain4j.openai.api-key=ma-clé</p>
+</div>
+<div class="paragraph">
+<p>quarkus.langchain4j.openai.chat-model.temperature=1</p>
+</div>
+<div class="paragraph">
+<p>quarkus.langchain4j.log-requests=true</p>
+</div>
+<div class="paragraph">
+<p>quarkus.langchain4j.log-responses=true</p>
+</div>
+<div class="paragraph">
+<p>quarkus.langchain4j.openai.timeout=60s</p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-haskell hljs" data-lang="haskell">main :: IO ()
+main = putStrLn "Hello, World!"
+quarkus.langchain4j.openai.base-url={openai-url}
+quarkus.langchain4j.openai.chat-model.model-name={openai-model}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Update the values with the ones given by your teachers.</strong></p>
+</div>
+<div class="paragraph">
+<p>They are self-explanatory, but you can check the documentation for more information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_directory_structure"><a class="anchor" href="#_directory_structure"></a>Directory Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Notice that by bootstrapping the project with the specific <code>OpenCodeQuest - AI-Infused application with Quarkus</code> template, you get the following directory structure with a few Java classes already created and other artifacts.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/fight-directory-structure.svg" alt="fight directory structure"></span></p>
+</div>
+<div class="paragraph">
+<p>It generates the following in the <code>fight-service</code> folder:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the Maven structure with a <code>pom.xml</code></p>
+</li>
+<li>
+<p>an <code>io.quarkus.workshop.fight.FightResource.java</code> resource exposed on <code>/api/fights</code>.</p>
+</li>
+<li>
+<p>a straightforward Java record <code>Fight.java</code> that encapsulates the hero and villain inputs for a fight.</p>
+</li>
+<li>
+<p>the corresponding <code>Hero.java</code> and <code>Villain.java</code>.</p>
+</li>
+<li>
+<p>a Java record <code>FightResult.java</code>. Quarkus automatically creates an instance of <code>FightResult</code> from the LLM’s JSON response.</p>
+</li>
+<li>
+<p>an intelligent service <code>FightSimulatorService.java</code>. This is where we will define the interaction with the LLM.</p>
+</li>
+<li>
+<p>the <code>application.properties</code> configuration file.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_llm_interactions"><a class="anchor" href="#_defining_llm_interactions"></a>Defining LLM interactions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It’s time to tell the LLM what we want to do.
+The Quarkus LangChain4J extension provides a declarative way to describe LLM interactions.
+We model the interaction using an interface annotated with <code>@RegisterAiService</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uncomment_the_fightsimulatorservice_java_file"><a class="anchor" href="#_uncomment_the_fightsimulatorservice_java_file"></a>Uncomment the FightSimulatorService.java file</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The file is located in <strong>src/main/java/io/quarkus/workshop/fight/FightSimulatorService.java</strong></p>
+</div>
+<div class="paragraph">
+<p>Open it and remove the first part of the file:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/start-comment-line.png" alt="start comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>And the last one:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/end-comment-line.png" alt="end comment line"></span></p>
+</div>
+<div class="paragraph">
+<p>The rest of the application would be able to use the LLM by injecting the <code>FightSimulatorService</code> interface and calling the methods.</p>
+</div>
+<div class="paragraph">
+<p>Speaking about methods, that’s where the magic happens.
+These methods accept parameters and are annotated with <code>@SystemMessage</code> and <code>@UserMessage</code> to define instructions directed to the LLM.
+You should describe what you want the LLM to do using natural language.</p>
+</div>
+<div class="paragraph">
+<p>The system defines the scope and initial instructions, serving as the first message sent to the LLM.
+It delineates the AI service’s role in the interaction.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_message_prompt"><a class="anchor" href="#_user_message_prompt"></a>User Message (Prompt)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>==Notice the presence of the <code>@UserMessage</code> annotation <code>FightSimulatorService</code>==.
+It defines primary instructions dispatched to the LLM.
+It typically encompasses requests and the expected response format.
+As you can note, we are using a prompt template with the following format.
+This format is expected by the model.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">&lt;|system|&gt;
+system prompt
+&lt;|user|&gt;
+content of the question
+&lt;|assistant|&gt;
+new line for the model's answer</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameter_passing_and_referencing"><a class="anchor" href="#_parameter_passing_and_referencing"></a>Parameter Passing and Referencing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AI methods can take parameters referenced in system and user messages using the {parameter} syntax. Note the <code>{hero}</code> and <code>{villain}</code> references.</p>
+</div>
+<div class="sect2">
+<h3 id="_ai_method_return_type"><a class="anchor" href="#_ai_method_return_type"></a>AI Method Return Type</h3>
+<div class="paragraph">
+<p>The fight method returns a <code>FightResult</code>. The JSON response will be mapped to that object directly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fault_tolerance"><a class="anchor" href="#_fault_tolerance"></a>Fault Tolerance</h3>
+<div class="paragraph">
+<p>The distributed nature of microservices makes external communication unreliable, increasing the need for application resiliency.
+Quarkus addresses this by offering SmallRye Fault Tolerance, based on the MicroProfile Fault Tolerance specification.</p>
+</div>
+<div class="paragraph">
+<p>In the pom, you can see the corresponding smallrye dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+        &lt;groupId&gt;io.quarkus&lt;/groupId&gt;
+        &lt;artifactId&gt;quarkus-smallrye-fault-tolerance&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, in the code, <mark>notice the presence of the <code>@Timeout</code> annotation in the fight method</mark></p>
+</div>
+<div class="paragraph">
+<p>If the LLM invocation is taking too long, the <code>@Timeout</code> annotation can stop it after 1 minute, preventing it from hanging indefinitely.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_fight_resource"><a class="anchor" href="#_the_fight_resource"></a>The Fight Resource</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now, <mark>let&#8217;s take a look at the <code>fight-service/src/main/java/io/quarkus/workshop/fight/FightResource.java</code>.</mark>
+<mark>This is a JAX-RS resource just like the Hero endpoint where the FightSimulatorService is injected.</mark>
+<mark>Then the intelligent <code>fight</code> method is called from the exposed <code>fight</code> method.</mark></p>
+</div>
+<div class="sect2">
+<h3 id="_start_the_fight_service_in_dev_mode"><a class="anchor" href="#_start_the_fight_service_in_dev_mode"></a>Start the Fight service in dev mode</h3>
+<div class="paragraph">
+<p>We are now ready to run our application.</p>
+</div>
+<div class="paragraph">
+<p><mark>Open a Terminal and run one of the following commands</mark></p>
+</div>
+<div class="paragraph">
+<p><code>./mvnw quarkus:dev</code></p>
+</div>
+<div class="paragraph">
+<p><mark>or</mark></p>
+</div>
+<div class="paragraph">
+<p><code>quarkus dev</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verify_the_fight_service"><a class="anchor" href="#_verify_the_fight_service"></a>Verify the Fight service</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>For verifying the Fight service is up and running, open the Developer Console by navigating to the $FIGHT_URL/q/dev-ui</mark></p>
+</div>
+<div class="paragraph">
+<p><mark>by clicking the <code>Open in New Tab</code> button, a pop-up will be shown</mark></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/m4/open-quarkus-dev-in-new-tab.png" alt="open quarkus dev in new tab"></span></p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="module-04.4.html" class="query-params-link">4.4 Developer activity: Instantiate the template</a></span>
+  <span class="next"><a href="module-04.6.html" class="query-params-link">4.6 Developer activity: From Git to OpenShift</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>  </div>
+</main>
+</div>
+<footer class="footer">
+  <a href="https://demo.redhat.com" target="_blank" class="poweredBy"><p>Powered by</p><div class="labInfo_poweredBy" style="display: block; width: 260px;"><svg class="labInfo_poweredByLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1508.5 178.739"><g fill="#111"><path d="M316.6 63.2v-56H342a21.279 21.279 0 0 1 7.8 1.3 18.111 18.111 0 0 1 5.9 3.5 15.577 15.577 0 0 1 5 11.8 15.051 15.051 0 0 1-3.1 9.5 16.836 16.836 0 0 1-8.4 5.8l12.5 24.1h-9.3l-11.6-23H325v23Zm24.7-48.6H325v18.7h16.3q5.25 0 8.1-2.7a8.7 8.7 0 0 0 2.8-6.6 8.7 8.7 0 0 0-2.8-6.6c-1.8-1.9-4.5-2.8-8.1-2.8ZM364.1 42.8a20.674 20.674 0 0 1 1.6-8.2 20.288 20.288 0 0 1 4.3-6.7 19.92 19.92 0 0 1 6.5-4.5 19.718 19.718 0 0 1 8-1.6 18.463 18.463 0 0 1 7.8 1.6 18.677 18.677 0 0 1 6.2 4.5 20.927 20.927 0 0 1 4.1 6.8 23.2 23.2 0 0 1 1.5 8.4v2.3H372a13.822 13.822 0 0 0 4.6 8.4 13.6 13.6 0 0 0 9.1 3.3 15.553 15.553 0 0 0 5.7-1 12.858 12.858 0 0 0 4.6-2.6l5.1 5a25.983 25.983 0 0 1-7.4 4.1 24.69 24.69 0 0 1-8.4 1.3 21.306 21.306 0 0 1-8.4-1.6 22.763 22.763 0 0 1-6.8-4.4 20.788 20.788 0 0 1-4.5-6.7 23.2 23.2 0 0 1-1.5-8.4Zm20.2-14.2a11.527 11.527 0 0 0-8 3 13.046 13.046 0 0 0-4.2 7.8h24.2a13.091 13.091 0 0 0-4.2-7.8 11.106 11.106 0 0 0-7.8-3ZM443.1 63.2v-3.8a19.448 19.448 0 0 1-5.8 3.3 18.924 18.924 0 0 1-6.7 1.2 19.824 19.824 0 0 1-14.6-6.1 22.268 22.268 0 0 1-4.4-6.7 21.812 21.812 0 0 1 0-16.4A20.534 20.534 0 0 1 416 28a19.335 19.335 0 0 1 6.6-4.5 20.334 20.334 0 0 1 8.2-1.6 20.7 20.7 0 0 1 6.6 1 19.415 19.415 0 0 1 5.7 3V7.2l8-1.8v57.8Zm-25.2-20.4a13.718 13.718 0 0 0 4 10.1 13.45 13.45 0 0 0 9.8 4.1 14.956 14.956 0 0 0 6.4-1.3 15.954 15.954 0 0 0 4.9-3.6V33.6a14.988 14.988 0 0 0-4.9-3.5 15.271 15.271 0 0 0-6.4-1.3 13.423 13.423 0 0 0-9.9 4 13.806 13.806 0 0 0-3.9 10ZM478.1 63.2v-56h8.4v24h29.8v-24h8.4v56h-8.4V38.8h-29.8v24.4ZM547.2 64a16.483 16.483 0 0 1-10.8-3.5 11.037 11.037 0 0 1-4.2-8.9 10.375 10.375 0 0 1 4.7-9.2 20.76 20.76 0 0 1 11.8-3.2 27.841 27.841 0 0 1 5.8.6 27.374 27.374 0 0 1 5.3 1.6v-4.3a8.143 8.143 0 0 0-2.6-6.5 11.452 11.452 0 0 0-7.4-2.2 20.788 20.788 0 0 0-6 .9 34.616 34.616 0 0 0-6.6 2.6l-3-6a54.169 54.169 0 0 1 8.4-3.1 33.18 33.18 0 0 1 8.3-1.1c5.2 0 9.3 1.3 12.2 3.8s4.4 6.1 4.4 10.8v27h-7.8v-3.5a19.441 19.441 0 0 1-5.8 3.2 23.54 23.54 0 0 1-6.7 1Zm-7.3-12.6a5.646 5.646 0 0 0 2.6 4.8 11.193 11.193 0 0 0 6.6 1.8 16.256 16.256 0 0 0 5.9-1 14.449 14.449 0 0 0 4.9-2.9V47a19.778 19.778 0 0 0-4.8-1.8 24.933 24.933 0 0 0-5.7-.6 11.859 11.859 0 0 0-6.8 1.8 5.728 5.728 0 0 0-2.7 5ZM580.6 53.2v-24H572v-6.7h8.6V12.1l7.9-1.9v12.3h12v6.7h-12v22.1a5.94 5.94 0 0 0 1.4 4.4c.9.9 2.5 1.3 4.6 1.3a23.637 23.637 0 0 0 3-.2 10.857 10.857 0 0 0 2.8-.8v6.7a19.28 19.28 0 0 1-3.8.9 27.484 27.484 0 0 1-3.8.3c-3.9 0-7-.9-9-2.8-2-1.7-3.1-4.4-3.1-7.9Z"></path></g><path d="M127 90.2c12.5 0 30.6-2.6 30.6-17.5a12.678 12.678 0 0 0-.3-3.4L149.8 37c-1.7-7.1-3.2-10.3-15.7-16.6-9.7-5-30.8-13.1-37.1-13.1-5.8 0-7.5 7.5-14.4 7.5-6.7 0-11.6-5.6-17.9-5.6-6 0-9.9 4.1-12.9 12.5 0 0-8.4 23.7-9.5 27.2a4.216 4.216 0 0 0-.3 1.9c0 9.2 36.3 39.4 85 39.4Zm32.5-11.4c1.7 8.2 1.7 9.1 1.7 10.1 0 14-15.7 21.8-36.4 21.8-46.8 0-87.7-27.4-87.7-45.5a17.535 17.535 0 0 1 1.5-7.3C21.8 58.8 0 61.8 0 81c0 31.5 74.6 70.3 133.7 70.3 45.3 0 56.7-20.5 56.7-36.6-.1-12.8-11-27.3-30.9-35.9Z" fill="#e00"></path><path d="M159.5 78.8c1.7 8.2 1.7 9.1 1.7 10.1 0 14-15.7 21.8-36.4 21.8-46.8 0-87.7-27.4-87.7-45.5a17.535 17.535 0 0 1 1.5-7.3l3.7-9.1a4.877 4.877 0 0 0-.3 2c0 9.2 36.3 39.4 85 39.4 12.5 0 30.6-2.6 30.6-17.5a12.678 12.678 0 0 0-.3-3.4Z"></path><path d="M253.5 158.7a2.22 2.22 0 0 1-2.2-2.2V2.2a2.2 2.2 0 0 1 4.4 0v154.2a2.242 2.242 0 0 1-2.2 2.3Z" fill="#111"></path><text data-name="Demo Platform" transform="translate(1186 149)" fill="#111" font-size="82" font-family="'RedHatDisplay', 'Overpass', overpass, helvetica, arial, sans-serif" font-weight="700"><tspan x="-877.892" y="0">Demo Platform</tspan></text></svg></div></div>
+</footer>
+<script defer src="../../_/js/vendor/clipboard.js"></script>
+<script defer src="../../_/js/site.js"></script>
+<script defer src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
