@@ -39,7 +39,7 @@ this activity is stored in the _locations-opencodequest.yaml_ file in the https:
 === Register those objects using the {product_name_rhdh} UI:
 
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +

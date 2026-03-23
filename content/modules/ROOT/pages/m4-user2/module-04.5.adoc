@@ -57,28 +57,30 @@ image:m4/argocd-view.png[]
 
 Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It's a way to bring tooling and coding consistently. 
 Dashboard UI components are defined in a file named *catalog-info.yaml*.
-Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
+
+. Let's open the IDE cloud, *Openshift Devspaces*, and jump into the dashboard edit!
+
 
 image:m4/hero-home-page-rhdh.png[] 
 
-You may be asked to authenticate again. Please, proceed. 
-You should see the following page while the Dev Spaces is starting up:
+. You may be asked to authenticate again. Please, proceed. 
+. You should see the following page while the Dev Spaces is starting up:
 
 image:m4/dev-spaces-starting-up.png[]
 
-Open the IDE cloud here : 
+. Open the IDE cloud here : 
 
 image:m4/catalog-info-location.png[]
 
-Please open the *catalog-info.yaml* and uncomment the following annotation.
+. Please open the *catalog-info.yaml* and uncomment the following annotation.
 
 * Remove the  *#* 
 
 image:m4/uncomment-catalog-info.png[]
 
-* It must look like this. Be sure to respect the right YAML indentation 
+. It must look like this. Be sure to respect the right YAML indentation 
 
 image:m4/uncommented-catalog-info.png[]
 
@@ -95,7 +97,7 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 
 === Import the code base 
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let's import it !
 
@@ -161,7 +163,7 @@ The Quarkus Spring compatibility extensions map Spring APIs to APIs in existing 
 #Be aware that Quarkus Spring compatibility extensions do not utilize the Spring application context.#
 For this reason, attempting to utilize additional Spring libraries will likely not work.
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 === The Controller
 
@@ -207,7 +209,7 @@ As everything is in place, the `import.sql` file already contains all SQL statem
 As we are following a Spring Data programming model with JPA,we need to extend the JPA-specific Repository interface, JpaRepository. 
 This will enable Quarkus to find this interface and automatically create an implementation for it.
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 Uncomment VillainRepository as you did previously
 
@@ -238,7 +240,7 @@ You can check the `VillainRepository.java` code. It also contains a more specifi
 === The Villain entity
 
 Finally, we have an entity class representing the villains.
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 Uncomment Villain Entity as you did previously
 
@@ -260,7 +262,7 @@ A test class is provided and contains the basic tests to ensure that the villain
 
 You can check that everything works fine by starting the application in development mode.
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 Run one of the following commands:
 

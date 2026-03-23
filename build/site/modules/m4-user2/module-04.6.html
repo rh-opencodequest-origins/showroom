@@ -29,12 +29,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
     <a class="nav-link" href="../m4-user1/module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m4-user1/module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -197,13 +197,10 @@
     <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+    <a class="nav-link" href="../m7/module-07.2a.html">7.2 Understanding Adoption Insights</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -440,8 +437,15 @@ summary  {
 <div class="developer">
 <div class="paragraph">
 <p>This approach will be followed for all the microservices.
-With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.
-To do this, follow these steps:</p>
+With ArgoCD, deploying to the OpenShift cluster is as simple as committing and pushing your changes to the GitLab repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice"><a class="anchor" href="#_time_to_pratice"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To do this, follow these steps:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -456,9 +460,9 @@ To do this, follow these steps:</p>
 </li>
 </ul>
 </div>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/ds-source-control-view.png" alt="ds source control view"></span></p>
-</div>
 </div>
 <div class="ulist">
 <ul>
@@ -481,10 +485,15 @@ From there, you can access your villain microservice by clicking on the pod.</p>
 <h2 id="_exploring_the_pipeline"><a class="anchor" href="#_exploring_the_pipeline"></a>Exploring the pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s switch to the Developer Hub console, in your villain component.</p>
+<p>Let&#8217;s switch to the Developer Hub console in your villain component.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_observe"><a class="anchor" href="#_observe"></a>👀 Observe 👀</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the CI tab</mark></p>
+<p>Click the CI tab</p>
 </div>
 <div class="paragraph">
 <p>Once you commit your code, an OpenShift pipeline has been automatically triggered.
@@ -517,13 +526,10 @@ This pipeline was created automatically for your project when you instantiated t
 <p>More information regarding the pipeline can be seen in the next section [Trusted Application Pipeline](./trusted-apps.md)</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_dev_deployment"><a class="anchor" href="#_dev_deployment"></a>Dev Deployment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dev_deployment"><a class="anchor" href="#_dev_deployment"></a>Dev Deployment</h3>
 <div class="paragraph">
-<p>As a developer, I want to see my handiwork. Did my application really deploy to the dev environment?</p>
+<p>As a developer, I want to see my deployment: Did my application really deploy to the dev environment?</p>
 </div>
 <div class="paragraph">
 <p>You can check that your newly built application has been automatically synced using OpenShift GitOps (ArgoCD) if you switch to the Overview Tab.</p>
@@ -533,17 +539,23 @@ This pipeline was created automatically for your project when you instantiated t
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_houston_weve_got_a_problem"><a class="anchor" href="#_houston_weve_got_a_problem"></a>Houston, we&#8217;ve got a problem</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>At this stage, you should observe an issue during the CI pipeline. The step <strong>acs-image-check</strong> (responsible for verifying that we are not violating any policies in our cluster) is now failing.</p>
+<p>At this stage, you should observe an issue during the CI pipeline. The step <strong>acs-image-check</strong> (responsible of verifying that we are not violating any policies in our cluster) is now failing.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/acs-check.png" alt="acs check"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_2"><a class="anchor" href="#_time_to_pratice_2"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the task to get the logs and understand what policy has been violated</mark></p>
+<p>Click the task to get the logs and understand what policy has been violated</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/acs-image-check-error.png" alt="acs image check error"></span></p>
@@ -551,8 +563,13 @@ This pipeline was created automatically for your project when you instantiated t
 <div class="paragraph">
 <p>As you can see, it looks like a <strong>SuperVillain</strong> has introduced a bad dependency in our code!</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_3"><a class="anchor" href="#_time_to_pratice_3"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Open the <code>pom.xml</code> file in DevSpaces IDE</mark></p>
+<p>Open the <code>pom.xml</code> file in DevSpaces IDE</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/devspaces-CVE.png" alt="devspaces CVE"></span></p>
@@ -567,7 +584,7 @@ This pipeline was created automatically for your project when you instantiated t
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Remove the dependency as it&#8217;s not needed in our code
+Remove the dependency as it&#8217;s not needed in our code and not compliant to our security rules !
 </td>
 </tr>
 </table>
@@ -577,6 +594,22 @@ Remove the dependency as it&#8217;s not needed in our code
 <div class="sect1">
 <h2 id="_deploy_the_villain_microservice_after_fixing_the_issue"><a class="anchor" href="#_deploy_the_villain_microservice_after_fixing_the_issue"></a>Deploy the Villain microservice after fixing the issue</h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_4"><a class="anchor" href="#_time_to_pratice_4"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Commit your changes</p>
+</li>
+<li>
+<p>Push your commit</p>
+</li>
+</ol>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -584,13 +617,13 @@ Remove the dependency as it&#8217;s not needed in our code
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Once you have corrected the dependency issue, commit your code! The pipeline will run again!
+The pipeline will run again!
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p><mark>Click on Topology</mark></p>
+<p>Click on Topology</p>
 </div>
 <div class="paragraph">
 <p>This should look familiar to you if you regularly use the topology view from OpenShift.
@@ -608,8 +641,13 @@ Pre-prod and prod have NOT yet been deployed
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_5"><a class="anchor" href="#_time_to_pratice_5"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><mark>Click the arrow.</mark> This will open a new tab on your browser showing your deployed villain service!</p>
+<p>Click the arrow. This will open a new tab on your browser showing your deployed Villain service!</p>
 </div>
 <div class="paragraph">
 <p>Oops!! A <code>Resource Not Found</code> may be shown.</p>
@@ -618,48 +656,73 @@ Pre-prod and prod have NOT yet been deployed
 <p><span class="image"><img src="../_images/m4/resource-not-found.png" alt="resource not found"></span></p>
 </div>
 <div class="paragraph">
-<p><mark>You can add <code>/api/villain/hello</code>, <code>/api/heroes/random</code>, or <code>/api/villaib</code> to the URL in your browser to attack the good endpoints and check your work</mark></p>
+<p>You can add <code>/api/villain/hello</code>, <code>/api/villain/random</code>, or <code>/api/villain</code> to the URL in your browser to attack the good endpoints and check your work</p>
 </div>
 <div class="paragraph">
-<p>Note that during the deployment with OpenShift GitOps, we also deployed automatically the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
-</div>
-<div class="paragraph">
-<p><mark>Verify that the fight-ui dev environment is now able to retrieve the characters</mark></p>
+<p>Note that during the deployment with OpenShift GitOps, we also automatically deployed the Database containing all the superheroes using the EDB Cluster CRD that automatically manages our database.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_promote_to_pre_prod"><a class="anchor" href="#_promote_to_pre_prod"></a>Promote to Pre-Prod</h2>
+<h2 id="_observe_2"><a class="anchor" href="#_observe_2"></a>👀 Observe 👀</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, access the GitLab UI, there is a convenient link on <mark>the Overview tab</mark></p>
+<p>Verify that the fight-ui dev environment is now able to retrieve the characters</p>
+</div>
+<div class="sect2">
+<h3 id="_promote_to_pre_prod"><a class="anchor" href="#_promote_to_pre_prod"></a>Promote to Pre-Prod</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_6"><a class="anchor" href="#_time_to_pratice_6"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First, access the GitLab UI, there is a convenient link on the "Overview" tab</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote1.png" alt="promote1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Click on Tags</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on Tags</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote2.png" alt="promote2"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>New Tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on New Tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote3.png" alt="promote3"></span></p>
 </div>
-<div class="paragraph">
-<p>Give the tag a name like <mark>v1.0</mark></p>
-</div>
-<div class="paragraph">
-<p>and click <mark>Create tag</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Give the tag a name like v1.0</p>
+</li>
+<li>
+<p>Click Create tag</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote4.png" alt="promote4"></span></p>
 </div>
-<div class="paragraph">
-<p>Back to the portal and the <mark>CI tab</mark> to see the promotion pipeline in action</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Back to the portal and the CI tab to see the promotion pipeline in action</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote5.png" alt="promote5"></span></p>
@@ -668,7 +731,7 @@ Pre-prod and prod have NOT yet been deployed
 <p>This pipeline has a special task called verify-enterprise-contract</p>
 </div>
 <div class="paragraph">
-<p>Enterprise Contract (EC) is a special CLI that compliments Sigstore’s cosign. If you remember the build-sign-image task that produced and stored the .sig and .att artifacts into the container registry, EC evaluates that signature and attestation. EC is based on the rego policy language from Open Policy Agent and allows you to create custom rules to review cosign attestations. By default, EC works with the SLSA provence attestation coming out of Tekton Chains.</p>
+<p>Enterprise Contract (EC) is a special CLI that complements Sigstore’s cosign. If you remember the build-sign-image task that produced and stored the .sig and .att artifacts into the container registry, EC evaluates that signature and attestation. EC is based on the rego policy language from Open Policy Agent and allows you to create custom rules to review cosign attestations. By default, EC works with the SLSA provence attestation coming out of Tekton Chains.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote6.png" alt="promote6"></span></p>
@@ -691,13 +754,26 @@ Pre-prod and prod have NOT yet been deployed
 <div class="sect2">
 <h3 id="_promote_to_prod"><a class="anchor" href="#_promote_to_prod"></a>Promote to Prod</h3>
 <div class="paragraph">
-<p>To promote to Production, use the <mark>Create Release feature of the GitLab UI</mark>.</p>
+<p>To promote to Production, use the Create Release feature of the GitLab UI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_7"><a class="anchor" href="#_time_to_pratice_7"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click on "Create Release"</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote8.png" alt="promote8"></span></p>
 </div>
 <div class="paragraph">
-<p>Give the release a title and click the <mark>Create release</mark> button.</p>
+<p>Give the release a title and click the "Create release" button.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote9.png" alt="promote9"></span></p>
@@ -711,27 +787,48 @@ Pre-prod and prod have NOT yet been deployed
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/promote11.png" alt="promote11"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Promotion to preprod and prod should be done for every service (villains/fight)</mark></p>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Promotion to preprod and prod will be done for every service. Each team member accomplishes this step!
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_stop_your_devspaces_workspace"><a class="anchor" href="#_stop_your_devspaces_workspace"></a>Stop your DevSpaces Workspace</h3>
 <div class="paragraph">
 <p>As you now have fully deployed your microservice, you no longer need the DevSpaces workspace, so let&#8217;s just stop it to preserve resources.</p>
 </div>
-<div class="paragraph">
-<p><mark>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_to_pratice_8"><a class="anchor" href="#_time_to_pratice_8"></a>✍️ Time to pratice ✍️</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click the grey button <strong>"&gt;&lt;"</strong> on the bottom left of DevSpaces IDE</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/devspaces-stop1.png" alt="devspaces stop1"></span></p>
 </div>
-<div class="paragraph">
-<p><mark>Then Click "Dev Spaces : Stop Workspace</mark></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Then Click "Dev Spaces: Stop Workspace</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/devspaces-stop2.png" alt="devspaces stop2"></span></p>
-</div>
 </div>
 </div>
 </div>

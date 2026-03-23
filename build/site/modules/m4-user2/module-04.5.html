@@ -29,12 +29,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
     <a class="nav-link" href="../m4-user1/module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m4-user1/module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -197,13 +197,10 @@
     <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+    <a class="nav-link" href="../m7/module-07.2a.html">7.2 Understanding Adoption Insights</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -511,34 +508,51 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <h3 id="_you_are_the_owner_of_your_dashboard"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard"></a>You are the owner of your dashboard</h3>
 <div class="paragraph">
 <p>Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
-Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
-Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice"><a class="anchor" href="#_time_to_pratice"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
-<div class="paragraph">
-<p>You may be asked to authenticate again. Please, proceed.
-You should see the following page while the Dev Spaces is starting up:</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You may be asked to authenticate again. Please, proceed.</p>
+</li>
+<li>
+<p>You should see the following page while the Dev Spaces is starting up:</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Open the IDE cloud here :</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -546,15 +560,18 @@ You should see the following page while the Dev Spaces is starting up:</p>
 </li>
 </ul>
 </div>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>It must look like this. Be sure to respect the right YAML identation</p>
+<p>It must look like this. Be sure to respect the right YAML indentation</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
@@ -587,7 +604,7 @@ While users are encouraged to use Quarkus extensions, this compatibility layer i
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_2"><a class="anchor" href="#_time_to_pratice_2"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Our workspace directory looks empty. In order to start the project quickly, the villain code base is located in an external GitLab repository. Let&#8217;s import it !</p>
@@ -702,7 +719,7 @@ For this reason, attempting to utilize additional Spring libraries will likely n
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_3"><a class="anchor" href="#_time_to_pratice_3"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_the_controller"><a class="anchor" href="#_the_controller"></a>The Controller</h3>
@@ -777,7 +794,7 @@ This will enable Quarkus to find this interface and automatically create an impl
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_4"><a class="anchor" href="#_time_to_pratice_4"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Uncomment VillainRepository as you did previously</p>
@@ -816,7 +833,7 @@ This will enable Quarkus to find this interface and automatically create an impl
 <h3 id="_the_villain_entity"><a class="anchor" href="#_the_villain_entity"></a>The Villain entity</h3>
 <div class="paragraph">
 <p>Finally, we have an entity class representing the villains.
-== ✍️ Time to practise ✍️</p>
+== ✍️ Time to pratice ✍️</p>
 </div>
 <div class="paragraph">
 <p>Uncomment Villain Entity as you did previously</p>
@@ -852,7 +869,7 @@ A test class is provided and contains the basic tests to ensure that the villain
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_5"><a class="anchor" href="#_time_to_pratice_5"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Run one of the following commands:</p>

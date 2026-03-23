@@ -29,12 +29,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
     <a class="nav-link" href="module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -197,13 +197,10 @@
     <a class="nav-link" href="../m7/module-07.1.html">7.1 Iterate on the platform</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.2.html">7.2 Monitor adoption and usage</a>
+    <a class="nav-link" href="../m7/module-07.2a.html">7.2 Understanding Adoption Insights</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m7/module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="../m7/module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -507,24 +504,30 @@ The <strong>CD</strong> shortcut in the dashboard will display this view :</p>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/argocd-view.png" alt="argocd view"></span></p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_time_to_practise"><a class="anchor" href="#_time_to_practise"></a>✍️ Time to practise ✍️</h2>
-<div class="sectionbody">
 <div class="sect2">
 <h3 id="_you_are_the_owner_of_your_dashboard"><a class="anchor" href="#_you_are_the_owner_of_your_dashboard"></a>You are the owner of your dashboard</h3>
 <div class="paragraph">
 <p>Dashboard definition is located in the git repo instantiated to host your code base. In our GitLab repository. It&#8217;s a way to bring tooling and coding consistently.
 Dashboard UI components are defined in a file named <strong>catalog-info.yaml</strong>.
-Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+== ✍️ Time to pratice ✍️</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s open the IDE cloud, <strong>Openshift Devspaces</strong>, and jump into the dashboard edit!</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/hero-home-page-rhdh.png" alt="hero home page rhdh"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>You may be asked to authenticate again. Please, proceed.
 You should see the following page while the Dev Spaces are starting up:</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/dev-spaces-starting-up.png" alt="dev spaces starting up"></span></p>
@@ -535,25 +538,25 @@ You should see the following page while the Dev Spaces are starting up:</p>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/catalog-info-location.png" alt="catalog info location"></span></p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
 <p>Please open the <strong>catalog-info.yaml</strong> and uncomment the following annotation.</p>
-</div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Remove the  <strong>#</strong></p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/uncomment-catalog-info.png" alt="uncomment catalog info"></span></p>
 </div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>It must look like this. Be sure to respect the right YAML indentation</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/uncommented-catalog-info.png" alt="uncommented catalog info"></span></p>
@@ -598,7 +601,7 @@ This microservice is a <strong>classical</strong> microservice.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_2"><a class="anchor" href="#_time_to_practise_2"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice"><a class="anchor" href="#_time_to_pratice"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_open_the_terminal_to_import_the_zip_file"><a class="anchor" href="#_open_the_terminal_to_import_the_zip_file"></a>Open the terminal to import the zip file</h3>
@@ -723,7 +726,7 @@ In addition, you can see the <code>quarkus-maven-plugin</code>, responsible for 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_3"><a class="anchor" href="#_time_to_practise_3"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_2"><a class="anchor" href="#_time_to_pratice_2"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 
 </div>
@@ -876,7 +879,7 @@ It will show you something like this:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_4"><a class="anchor" href="#_time_to_practise_4"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_3"><a class="anchor" href="#_time_to_pratice_3"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Open the Developer Console by navigating to the $HERO_URL/q/dev-ui</p>
@@ -913,7 +916,7 @@ It will show you something like this:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_5"><a class="anchor" href="#_time_to_practise_5"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_4"><a class="anchor" href="#_time_to_pratice_4"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The generated project contains a simple test.
@@ -925,7 +928,7 @@ The file content to uncomment is located here : <strong>hero-service &gt; src &g
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_6"><a class="anchor" href="#_time_to_practise_6"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_5"><a class="anchor" href="#_time_to_pratice_5"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="../_images/m4/start-comment-line.png" alt="start comment line"></span></p>
@@ -1037,7 +1040,7 @@ To define a Panache entity, simply extend <code>PanacheEntity</code>, annotate i
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_7"><a class="anchor" href="#_time_to_practise_7"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_6"><a class="anchor" href="#_time_to_pratice_6"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_uncomment_the_hero_java_file"><a class="anchor" href="#_uncomment_the_hero_java_file"></a>Uncomment the Hero.java file</h3>
@@ -1094,7 +1097,7 @@ Quarkus will automatically start a PostgreSQL service and wire up your applicati
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_to_practise_8"><a class="anchor" href="#_time_to_practise_8"></a>✍️ Time to practise ✍️</h2>
+<h2 id="_time_to_pratice_7"><a class="anchor" href="#_time_to_pratice_7"></a>✍️ Time to pratice ✍️</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Open a new Terminal and run the following command</p>

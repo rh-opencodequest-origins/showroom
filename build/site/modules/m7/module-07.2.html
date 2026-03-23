@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: OpenCodeQuest Origin (PE Workshop)</title>
     <link rel="canonical" href="https://developers.redhat.com/modules/m7/module-07.2.html">
-    <link rel="prev" href="module-07.1.html">
-    <link rel="next" href="module-07.3.html">
+    <link rel="prev" href="module-07.2a.html">
+    <link rel="next" href="../env.html">
     <meta name="generator" content="Antora 3.1.14">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,12 +29,12 @@
         <div class="navbar-item navbar-item-right-dropdown has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Links</a>
           <div class="navbar-dropdown navbar-dropdown-right">
-            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OCP Console</a>
-            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Developer Hub</a>
-            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Dev Spaces</a>
+            <a class="navbar-item navbar-item-right-content" href="https://console-openshift-console.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">OpenShift Container Platform (Console)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://backstage-rhdh-team1.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Internal Developer Portal (Developer Hub)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://devspaces.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">IDE Cloud (DevSpaces)</a>
             <a class="navbar-item navbar-item-right-content" href="https://gitlab-gitlab.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitLab</a>
-            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Cluster)</a>
-            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">ArgoCD (Apps)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">GitOps for cluster (ArgoCD)</a>
+            <a class="navbar-item navbar-item-right-content" href="https://rhdh-gitops-server-rhdh-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com" target="_blank">Gitops for apps (ArgoCD)</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
     <a class="nav-link" href="../m4-user1/module-04.7.html">4.7 Secure your application deployment</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../m4-user1/module-04.8.html">4.8 Improve your project dashboard</a>
+    <a class="nav-link" href="#m4-user1/module-04.8.adoc">4.8 Improve your project dashboard</a>
   </li>
 </ul>
   </li>
@@ -196,14 +196,11 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="module-07.1.html">7.1 Iterate on the platform</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="module-07.2a.html">7.2 Understanding Adoption Insights</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="module-07.2.html">7.2 Monitor adoption and usage</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-07.3.html">7.3 Observability</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="module-07.4.html">7.4 Enable the Orchestrator plugin and developer self-service</a>
+    <a class="nav-link" href="module-07.2.html">7.2 Activity: Enable Adoption Insights</a>
   </li>
 </ul>
   </li>
@@ -239,7 +236,7 @@
   <ul>
     <li><a href="../index.html">Open Code Quest Origins</a></li>
     <li><a href="module-07.0.html">7. Continuous platform improvements</a></li>
-    <li><a href="module-07.2.html">7.2 Monitor adoption and usage</a></li>
+    <li><a href="module-07.2.html">7.2 Activity: Enable Adoption Insights</a></li>
   </ul>
 </nav>
 </div>
@@ -418,47 +415,10 @@ summary  {
 }
 </style>
 <div class="sect1">
-<h2 id="_monitor_adoption_and_usage"><a class="anchor" href="#_monitor_adoption_and_usage"></a>Monitor Adoption and Usage</h2>
+<h2 id="_hands_on_enable_adoption_insights"><a class="anchor" href="#_hands_on_enable_adoption_insights"></a>Hands-on: Enable Adoption Insights</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Measuring developer engagement and understanding their usage of your internal developer portal is critical to better serving their needs. Red Hat Developer Hub includes an <a href="https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index" target="docs">Adoption Insights</a> plugin that can be enabled by platform engineering teams to view detailed analytics on adoption and engagement within the internal developer portal.</p>
-</div>
-<div class="paragraph">
-<p>Key metrics available include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Active users as a percentage of licensed users.</p>
-</li>
-<li>
-<p>Top templates.</p>
-</li>
-<li>
-<p>Top catalog entities.</p>
-</li>
-<li>
-<p>Top plugins.</p>
-</li>
-<li>
-<p>Top TechDocs.</p>
-</li>
-<li>
-<p>Popular searches.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The Adoption Insights plugin is currently in Developer Preview. Refer to the <a href="https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.5/html-single/adoption_insights_in_red_hat_developer_hub/index" target="docs">Adoption Insights documentation</a> for more information related to support.
-</td>
-</tr>
-</table>
+<p>Read <a href="#module-07.2a.adoc" class="xref unresolved">Understanding Adoption Insights</a> for why this plugin matters for visibility into portal usage and platform adoption before you enable it.</p>
 </div>
 <div class="sect2">
 <h3 id="_platform_engineer_activity_enable_adoption_insights"><a class="anchor" href="#_platform_engineer_activity_enable_adoption_insights"></a>Platform Engineer Activity: Enable Adoption Insights</h3>
@@ -512,7 +472,7 @@ The Adoption Insights plugin is currently in Developer Preview. Refer to the <a 
 </ol>
 </div>
 <div class="paragraph">
-<p>As you&#8217;re familiar with by now, you can refresh the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications" target="argo">backstage Application in OpenShift GitOps</a> and deploy the new Red Hat Developer Hub configuration. The Adoption Insights plugin will be available from <strong>Administration &gt; Adoption Insights</strong> when the deployment has finished, but no data is available yet.</p>
+<p>As you&#8217;re familiar with by now, you can refresh the <a href="https://openshift-gitops-server-openshift-gitops.apps.cluster-fs6v5.fs6v5.sandbox613.opentlc.com/applications" target="argo"><code>RHDH</code> Application in OpenShift GitOps</a> and deploy the new Red Hat Developer Hub configuration. The Adoption Insights plugin will be available from <strong>Administration &gt; Adoption Insights</strong> when the deployment has finished, but no data is available yet.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><a class="image" href="../_images/m7/adoption-insights-plugin-dashboard.png" target="blank"><img src="../_images/m7/adoption-insights-plugin-dashboard.png" alt="Adoption Insights plugin dashboard in Administration"></a></span></p>
@@ -564,8 +524,8 @@ The Adoption Insights plugin is currently in Developer Preview. Refer to the <a 
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="module-07.1.html" class="query-params-link">7.1 Iterate on the platform</a></span>
-  <span class="next"><a href="module-07.3.html" class="query-params-link">7.3 Observability</a></span>
+  <span class="prev"><a href="module-07.2a.html" class="query-params-link">7.2 Understanding Adoption Insights</a></span>
+  <span class="next"><a href="../env.html" class="query-params-link">My lab environment details</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

@@ -29,7 +29,7 @@ This flow is a new part of the development lifecycle. The platform engineer shar
 </div>
 ++++
 
-== ✍️ Time to practise ✍️ 
+== ✍️ Time to pratice ✍️ 
 
 . Access https://backstage-rhdh-{team-id}.{openshift_cluster_ingress_domain}[{product_name_rhdh}^, window="rhdh"].
 . Click the *Create* icon (plus symbol) in the top menu.
@@ -92,11 +92,14 @@ This is why the *Software Catalog* exists! A clear definition of UI elements bas
         catalogInfoPath: "/catalog-info.yaml"
 ----
 The template creates a *Software Catalog* thanks to this action in the git repository where your project will live. It will be updatable by developers. We will see how later ..
-Check the content here : -> https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/template-quarkus-simple/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 
 
 == Uncomment the steps!
 
+
+== ✍️ Time to pratice ✍️ 
+
+. Open this file describing the template :   https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/quarkus-with-spring-postgresql/-/blob/main/template.yaml[template.yaml, window="gitlab"].
 
 . Find the YAML surrounded by `Gitlab Steps` and uncomment below.
 +

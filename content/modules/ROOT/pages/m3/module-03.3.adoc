@@ -56,7 +56,7 @@ A template here will have the following structure :
 * GitOps application
 
 [Add schema to illustrate users' split ?]
-=== Be ready to practise!
+=== Be ready to pratice!
 
 Please select one link per user. 
 
