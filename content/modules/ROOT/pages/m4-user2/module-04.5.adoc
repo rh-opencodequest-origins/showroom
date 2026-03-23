@@ -78,7 +78,7 @@ Please open the *catalog-info.yaml* and uncomment the following annotation.
 
 image:m4/uncomment-catalog-info.png[]
 
-* It must look like this. Be sure to respect the right YAML identation 
+* It must look like this. Be sure to respect the right YAML indentation 
 
 image:m4/uncommented-catalog-info.png[]
 

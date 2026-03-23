@@ -29,6 +29,9 @@ Log in to {product_name_rhdh}:
 . Choose  *rhsso* as the identity provider
 
 image:m2/ocp-sso-login.png[Choose rhsso as identity provider on OpenShift login,width=60%,link=self,window=blank]
+. Return to the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"]. Depending on your timing, it might already be progressing the latest sync, but if not, click the *Refresh* button. When the sync is in progress, you'll see a new Pod starting - this Pod will run the latest version of your configuration.
++
+image:m2/rhdh-new-pod.png[{product_name_rhdh} with a Custom Title]
 
 . Select the *rhdh-{team-id}* Deployment in the Topology View.
 +

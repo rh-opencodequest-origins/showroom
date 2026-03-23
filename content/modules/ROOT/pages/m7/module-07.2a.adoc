@@ -1,0 +1,36 @@
+:imagesdir: ../../assets/images
+
+include::../style.adoc[]
+
+== Understanding Adoption Insights
+
+Your internal developer portal is the main entry point to your platform. Behind it sit clusters, pipelines, templates, policies, and GitOps workflows. Without visibility into how people actually use that portal, platform teams and leadership must rely on anecdotes when deciding what to build, fix, or retire next.
+
+The https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.8/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights^, window="docs"] plugin for {product_name_rhdh} turns activity in the portal into **signals you can act on**: who is active, what they search for, which software templates and catalog entities they use, and how documentation is consumed.
+
+=== Why this matters for the portal
+
+The portal is where developers discover how to work with your standards and tools. Adoption Insights shows whether search, navigation, and catalog content line up with real behavior. When teams cannot find a capability or bypass the catalog, that pattern shows up in data—not only in hallway conversations—so you can improve information architecture and onboarding.
+
+=== Why this matters for the platform
+
+A platform is successful when teams *use* it, not only when it is installed. Golden paths, templates, and integrations pay off when adoption grows. Adoption Insights links portal activity to templates, entities, plugins, and TechDocs so you can see which parts of the platform developers trust and which parts they avoid. That supports prioritization, capacity planning, and clear answers when stakeholders ask whether the developer experience investment is paying off.
+
+=== What you can measure
+
+Typical metrics include:
+
+* Active users as a percentage of licensed users.
+* Top templates.
+* Top catalog entities.
+* Top plugins.
+* Top TechDocs.
+* Popular searches.
+
+Together, these metrics support both day-to-day improvements (what to document or promote next) and strategic decisions (whether the portal is earning a central place in the developer workflow).
+
+NOTE: Refer to the https://docs.redhat.com/en/documentation/red_hat_developer_hub/1.8/html-single/adoption_insights_in_red_hat_developer_hub/index[Adoption Insights documentation^, window="docs"] for configuration options, default behavior, and support details.
+
+=== What you will do next
+
+In xref:module-07.2.adoc[the next activity], you will improve your {product_name_rhdh} instance by enabling the Adoption Insights plugin. The dynamic plugin configuration and related `appConfig` settings are already present in your GitLab repository in `values.yaml` (marked with `--- ADOPTION INSIGHTS PLUGIN ---` and `--- ADOPTION INSIGHTS ---`); you will uncomment those blocks and commit so OpenShift GitOps can roll out the change.

@@ -48,8 +48,7 @@
 
 * xref:m7/module-07.0.adoc[7. Continuous platform improvements]
 ** xref:m7/module-07.1.adoc[7.1 Iterate on the platform]
-** xref:m7/module-07.2.adoc[7.2 Monitor adoption and usage]
-** xref:m7/module-07.3.adoc[7.3 Observability]
-** xref:m7/module-07.4.adoc[7.4 Enable the Orchestrator plugin and developer self-service]
+** xref:m7/module-07.2a.adoc[7.2 Understanding Adoption Insights]
+** xref:m7/module-07.2.adoc[7.2 Activity: Enable Adoption Insights]
 
 * xref:env.adoc[My lab environment details]

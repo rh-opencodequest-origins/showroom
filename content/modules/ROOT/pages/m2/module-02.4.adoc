@@ -45,7 +45,7 @@ This block of configuration instructs the Keycloak provider to synchronize *User
 
 . Scroll down and enter a commit message: `feat: enable the Keycloak catalog provider`
 . Click the *Commit* button.
-. Visit the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`Developer Hub` Application in OpenShift GitOps^, window="argo"] and click *Refresh*. 
+. Visit the https://openshift-gitops-server-openshift-gitops.{openshift_cluster_ingress_domain}/applications/rhdh-{team-id}[`RHDH` Application in OpenShift GitOps^, window="argo"] and click *Refresh*. 
 +
 If needed, log in using `{pe-username}`/`{common_password}`.
 +
