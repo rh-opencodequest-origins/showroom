@@ -10,6 +10,8 @@ Read xref:module-07.2a.adoc[Understanding Adoption Insights] for why this plugin
 
 Adoption Insights is enabled similarly to other plugins for {product_name_rhdh} - by updating the dynamic plugins configuration and supplying plugin-specific configuration.
 
+== ✍️ Time to pratice ✍️ 
+
 . Open your https://gitlab-gitlab.{openshift_cluster_ingress_domain}/pe{team-id}/developer-hub-config/-/blob/main/values.yaml[values.yaml file, window="gitlab"].
 . Make sure you're logged in to GitLab as *`{pe-username}` / `{common_password}`*.
 . Select *Edit > Edit single file*.
@@ -38,6 +40,9 @@ image:m7/adoption-insights-plugin-dashboard.png[Adoption Insights plugin dashboa
 === Developer Activity: Generate Data for Adoption Insights
 
 Once the new deployment has finished, you'll need to interact with {product_name_rhdh} to generate events that the Adoption Insights dashboard can display. There are a few ways to do this:
+
+== ✍️ Time to pratice ✍️ 
+
 
 . Open a private browsing session and log in as user `{dev-username}` using the password `{common_password}`.
 . While logged in as `{dev-username}` and `dev2`:
