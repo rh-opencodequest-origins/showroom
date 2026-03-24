@@ -73,7 +73,7 @@ Register this template using the {product_name_rhdh} UI:
 . Select the image:common/plus-icon.png[width=15px] icon on the top navigation bar to access the *Self-service* menu.
 +
 image:m3/create-icon.png[] 
-. Click the *Register Existing Component* button.
+. Click the *Import an existing git repository* button.
 +
 image:m3/rhdh-catalog-create.png[The empty Create UI]
 . Enter the following URL in the *Select URL* field and click *Analyze*:
