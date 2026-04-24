@@ -1,8 +1,6 @@
 :imagesdir: ../../assets/images
 
-HELPER GIT quand dev profil is not PE in gitlab 
 
-git -c credential.helper= push
 
 
 = Developer Activity: From Git to OpenShift!

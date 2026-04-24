@@ -49,5 +49,6 @@
 ** xref:m7/module-07.1.adoc[7.1 Iterate on the platform]
 ** xref:m7/module-07.2a.adoc[7.2 Understanding Adoption Insights]
 ** xref:m7/module-07.2.adoc[7.2 Activity: Enable Adoption Insights]
+* xref:refresh-git-creds.adoc[Helper - How to refresh git credentials]
 
 * xref:env.adoc[My lab environment details]
