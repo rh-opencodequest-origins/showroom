@@ -2,8 +2,8 @@
 type: showroom
 default_width: 50
 view_switcher:
-  enabled: false
-  default_mode: split
+  enabled: true
+  default_mode: instructions
 persist_url_state: true
 tabs:
   - name: Terminal
