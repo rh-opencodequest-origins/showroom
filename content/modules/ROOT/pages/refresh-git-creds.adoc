@@ -3,8 +3,8 @@
 In your developer workspace (IDE), if there is a difference between the user logged in Devspaces (i.e user-pe) and gitlab user performing git actions (i.e user-dev)
 please run the following command in your IDE 
 
-````
+```
 git -c credential.helper= push
 
-````
+```
 
